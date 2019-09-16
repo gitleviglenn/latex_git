@@ -1,0 +1,131 @@
+\documentclass[11pt]{amsart}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{gensymb}
+
+\title{A Study of Convective Aggregation}
+\author{Levi G. Silvers}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\section{Introduction}
+
+Interest in convective self-aggregation has steadily grown over the past 20 years since the initial hints (Held et al. 1993) that simulations of radiative convective equilibrium with interactive clouds systems had a tendency to settle into a conglomerate state of strong convection.  Many questions about this final and seamingly steady state have been raised and few of them satisfactorily answered.  Initially it was unclear if the aggregation was simply a numerical artifact of the idealised experimental configuration.  Many studies have attempted, with some success, to determine what physical mechanisms are responsible for the aggregation.  Interest is now turning to the question of how convective aggregation applies to or is relevant for our understanding of the convective systems we observe.  Due to the idealised experimental configuration, comparison with and inferences based on observations are not trivial.  
+\begin{itemize}
+  \item{Do models with nearly identical initial and boundary conditions equilibrate to the same state?}
+  \item{Are there clear factors that the convective aggregation depends on?}  \huge{ 28\degree}
+\end{itemize}
+
+\section{Experimental Configuration}
+
+\begin{itemize}
+  \item{Radiative Convective Equilibrium: No land, rotation, diurnal cycle, or horizontal gradients of ozone.}
+  \item{Large Domain $3.2 \times 10^6 km^2 \approx 10 \times$ Area of Germany}
+  \item{Constant Sea Surface Temperature (SST) =301K}
+  \item{Horizontally homogeneous initial conditions, $\theta$ initially perturbed by 0.1K on lowest 3 model levels.}
+  \item{All 3 models use same size of domain, SST, zenith angle, and incoming solar insolation.}
+  \item{The UCLA model has a different ozone profile and thus the tropopause is lower then in the ICON models.}
+\end{itemize}
+
+\section{Results}
+
+The evolution of the Outgoing Longwave Radiation (OLR) and latent heat flux show that the three models are close to equilibrium after 50-80 of simulation.  The individual models adjust at different rates, and all show significant amounts of variability about their mean states.  Note that all three models have fluctuations of between 5-10 $W/m^2$ in their OLR.  Although the two ICON models have identical dynamics, the parameterised physics are quite different, and the resolution is dramatically different.  Considering these differences and the large difference in the energetic state as given by the the latent heat flux/domain mean precipitation it level of agreement between the models with the evolution of OLR is interesting.  
+
+Because the boundary conditions and forcing are homogeneous across the domains the basic characteristics of the simulated atmospheres can be seen by looking at the domain mean profiles of meaningful variables.  Examining the mean profiles reveals interesting similarities and differences between the simulations.  These profiles are shown for the end period of each models simulations in Figs. (\ref{fig:vprof}-\ref{fig:vprof_zoom}).   Of particular note are the following points: 
+\begin{itemize}
+  \item{All models have very dry tropospheres}
+  \item{The high resolution ICON model is several degrees colder then the other two models, and has much more upper level cloud cover.}
+  \item{The two high resolution models are quite similar in the lowest 2 km, and distinct from the nwp ICON model.}
+  \item{UCLA has essentially zero ice, while the two ICON models have comparable quantities of ice.}
+\end{itemize}
+The structure of the atmospheric boundary layer is known to be critical to the development of deep convection and the response to radiative forcing.  It is therefore expected that differences between the models in the lowest kilometres will have a significant role in the overall behaviour and structure of the atmospheres.  The structure of the lowest 2 $km$ can be more clearly seen in Fig. (\ref{fig:vprof_zoom}).  All models have different heights and strengths of the inversion level as seen in the domain mean temperature.  This results in differing heights for the maximum of low-level cloud cover and cloud liquid water.  Although the models all have an identical fixed surface temperature of 301K, the lowest model level in the atmosphere, equilibrates to different values for each of the models.  Thus we see that the ICON NWP model has the highest temperature in the first model level, followed by the UCLA LES, and then the ICON LES.  The UCLA LES has a relatively low inversion (0.6-0.8 $km$) and the largest maximum in cloud cover and cloud liquid water.  Although the ICON LES has a higher inversion (1.0-1.4 $km$) level, cloud cover maximum, and cloud liquid water maximum than the UCLA LES these two models show a low-level atmospheric structure that is quite similar.  In contrast, the ICON NWP model can barely be said to have an inversion layer and the low-level cloud cover and cloud liquid water are spread out over a much deeper region of the lower troposphere than the other two models.  
+
+An obvious advantage of high resolution models is their ability to resolve smaller scale motions.  The mean vertical motion of a region which is 200 $km^2$ will obviously have a much smaller range of values than the mean of a region which is 10 $km^2$.  We see this clearly illustrated in Fig. \ref{fig:wpdf} where ICON NWP is shown to have a dramatically different distribution of values for the vertical velocity.  
+
+
+\begin{figure}[!htb]
+   \centering
+   \begin{minipage}{0.45\linewidth}
+     \includegraphics[width=3.4in]{agg_figs/latheat_3mods_iconuclales_180days.eps}
+   \end{minipage}
+   \begin{minipage}{0.45\textwidth} %  figure placement: here, top, bottom, or page
+     \includegraphics[width=3.4in]{agg_figs/olr_3mods_tseries.eps}
+   \end{minipage}
+  \caption{Evolution in time of the latent heat flux. ($W/m^2$) (left).  Evolution in time of the outgoing longwave radiation ($W/m^2$) (right)}
+  \label{fig:olr_latht}
+\end{figure}
+
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+       \includegraphics[width=6.5in]{agg_figs/vprof_3mods_final.eps}
+   \caption{Domain mean profiles averaged over the last period of each models integration.}
+   \label{fig:vprof}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+       \includegraphics[width=6.5in]{agg_figs/vprof_3mods_final_zoom.eps}
+   \caption{Domain mean profiles averaged over the last period of each models integration.  Zoomed in on the lowest 5km}
+   \label{fig:vprof_zoom}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+       \includegraphics[width=3.in]{agg_figs/w_pdf_3mods_12dnwp.eps}
+   \caption{Domain mean profiles averaged over the last period of each models integration.  Zoomed in on the lowest 5km}
+   \label{fig:wpdf}
+\end{figure}
+
+\begin{figure}[!htb]
+   \centering
+   \begin{minipage}{0.45\linewidth}
+     \includegraphics[width=3.4in]{agg_figs/rce_ecs_20km_301_3M_nwp_wolr.eps}
+   \end{minipage}
+   \begin{minipage}{0.45\textwidth} %  figure placement: here, top, bottom, or page
+     \includegraphics[width=3.4in]{agg_figs/rce_ecs_20km_301_3M_iconles_wolr.eps}
+   \end{minipage}
+  \caption{Outgoing Longwave Radiation at model top for ICON NWP with vertical velocity greater than 0.1 m/s from mid troposphere overplayed in contours (left).  On the right is the same plot as on left except for ICON LES.}
+  \label{fig:olr_latht}
+\end{figure}
+
+\begin{figure}[!htb]
+   \centering
+   \begin{minipage}{0.45\linewidth}
+     \includegraphics[width=3.4in]{agg_figs/rce_ecs_20km_301_3M_ucla_wwvp.eps}
+   \end{minipage}
+   \begin{minipage}{0.45\textwidth} %  figure placement: here, top, bottom, or page
+     %\includegraphics[width=3.4in]{agg_figs/rce_ecs_20km_301_3M_ucla_wolr.eps}
+     \includegraphics[width=3.4in]{agg_figs/rce_ecs_20km_301_3M_ucla_wwvp.eps}
+   \end{minipage}
+  \caption{Outgoing Longwave Radiation at model top for ICON NWP with vertical velocity greater than 0.1 m/s from mid troposphere overplayed in contours (left).  On the right is the same plot as on left except for ICON LES.}
+  \label{fig:olr_latht}
+\end{figure}
+
+
+\subsection{Measures of Aggregation}
+
+Thus far the phenomena of convective aggregation has been poorly defined and often recognised simply along the lines of, "you know it when you see it."  However, there are clear characteristics that have been consistently associated with aggregation in the previous literature.  These include a visual confirmation of the convective structures forming a conglomerate (often) single mass with the rest of the domain being nearly free of convection, an abnormally dry troposphere (Bretherton et al. 2005), a transition to a higher value of OLR (Wing and Emanuel 2014), and in a loose sense a large subsidence fraction.   Upgradient flux of MSE?   
+
+The two high resolution models agree very well in their subsidence fractions.  This subsidence fraction however is much lower than that of the ICON NWP model.  It appears that despite a high degree of convective clustering, the high resolution models have a large amount of very weak vertical motions throughout the domain which drives down the value of the subsidence fraction.  In this situation then the subsidence fraction does not appear to be a particularly informative measure of the degree to which a simulation has aggregated.  
+
+Allison Wing recently stated that convective aggregation is, "A spontaneous transition from randomly distributed to organised convection despite homogeneous boundary conditions".  The use here of the word spontaneous is unclear and probably not necessary to aggregation.  It seems possible that a system which does have homogeneous boundary conditions could also aggregate.  One of the dominant mechanisms of convective aggregation seems to be that once the aggregation occurs, the system remains in that state.  We do not have examples of the convection breaking up.  It is hard to imagine a proof of this permanence but based on the previous literature it does seem likely.  
+
+\section{Conclusions}
+
+\begin{itemize}
+  \item{Similar Characteristics between the models}
+  \item{Different Characteristics between the models}
+\end{itemize}
+
+
+
+\end{document}  

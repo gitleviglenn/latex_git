@@ -1,0 +1,99 @@
+\documentclass[11pt]{amsart}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{gensymb}
+
+\title{Using the Walker Circulation to connect low-level cloud changes to deep convective entrainment}
+\author{Levi G. Silvers}
+%\date{2016}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\section{Key Points}
+\begin{itemize}
+  \item{How do clouds influence the Walker Circulation?}
+  \item{To what extent are the deep convective clouds and the low-level clouds in the Walker Cell coupled?}
+  \item{When simulating the Walker Circulation, how well does a GCM compare to a CRM?}  
+\end{itemize}
+
+\section{Streamfunction}
+
+For a two-dimensional flow in the $\lambda,p$ plane we can write the mass conservation equation in terms of a 
+mass streamfunction $\psi$ as: 
+\begin{equation}
+u =  -\frac{\partial \psi}{\partial p}   \,\, {\rm and} \,\, \omega =\frac{\partial \psi}{a \rm{cos} \phi \partial \lambda}
+\end{equation}
+with $a$ as the radius of Earth.
+This satisfies the continuity eqation: 
+\begin{equation}
+\frac{\partial}{a \rm{cos} \phi\partial\lambda}\left(-\frac{\partial \psi}{\partial p}\right)+\frac{\partial}{\partial p}\left(\frac{\partial \psi}{a \rm{cos}\phi \partial \lambda}\right)=0.
+\end{equation}
+The streamfunction is therefore defined in two ways and can be solved with either equation.  The choice is often made based on the 
+boundary conditions.  Dimensionally, $\psi$ must have units of velocity multiplied by pressure, or $kg/s^3$.  Often, the streamfunction
+is computed as a mass streamfunction with units of $kg/s$.  Density does not appear above
+because pressure is being used as the vertical coordinate.   With height as the vertical coordinate, mass is given by $\rho dxdydz$, 
+assuming a hydrostatic atmosphere and rewriting in terms of pressure gives mass given by $-(1/g) dxdydp$.
+Scaling the equations above by $a/g$ will result in $\psi$ having units of $kg/s$.  
+
+Solving for $\psi$ by integrating the vertical velocity is possible, but requires a boundary condition along one edge of the domain between the surface and the 
+top of the atmosphere.  In contrast, solving for $\psi$ by integrating the horizontal velocity allows us to set $\psi=0$ along the upper edge of the domain.  
+This is both simple, and physically motivated.  
+
+Below solves for $\psi$ by integrating the vertical velocity $w$ over $x$ yields
+\begin{equation}
+\int_0^{x'} \rho(x,p)w(x,p)d{x'}=\int_0^{x'}\frac{\partial \psi(x,p)}{\partial x'}d{x'}
+\end{equation}
+\begin{equation}
+\int_0^{x'} \rho(x,p)w(x,p)d{x'}= \psi(x,p)-\psi(0,p)
+\end{equation}
+\begin{equation}
+\psi(x,p)=\int_0^{x'} \rho(x,p)w(x,p)d{x'} + \psi(0,p)
+\end{equation}
+
+We now need an expression for $\psi(0,p)$, this can be found by integrating the zonal velocity $u$ in $p$.
+\begin{equation}
+\int_{p_{sfc}}^{p'} u(x,p') d{p'} = g\int_{p_{sfc}}^{p'}\frac{\partial\psi}{\partial p'}d{p'}
+\end{equation}
+\begin{equation}
+\int_{p_{sfc}}^{p'} u(x,p') d{p'} = g\psi(x,p)-g\psi(x,p_{sfc}).
+\end{equation}
+So at $x=0$ we have: 
+\begin{equation}
+\psi(0,p)=\frac{1}{g}\int_{p_{sfc}}^{p'} u(0,p') d{p'}+\psi(0,p_{sfc}),
+\end{equation}
+which leads to 
+\begin{equation}
+\psi(x,p)=\int_0^{x'} \rho(x,p)w(x,p)d{x'} + \frac{1}{g}\int_{p_{sfc}}^{p'} u(0,p') d{p'}+\psi(0,p_{sfc}).
+\end{equation}
+The term $\psi(0,p_{sfc})$ is simply a constant boundary condition at the atmospheric level closest to the surface and at the first horizontal grid point.   By initializing the $\psi$ field as 0 everywhere I have chosen this to be zero.  Note that while the $u(0,p')$ term is essentially a boundary condition for the computation of $\psi(x,p)$ by integrating $w(x,p)$, it is still dependent on pressure and therefore will change at each level of the atmosphere.      Writing this out in terms of grid points using $i,j$ for $x,p$ we have:
+\begin{equation}
+\psi_{i,j}= \rho_{i,j} w_{i,j}\Delta x+\sum_{j=p_{sfc}}^j \left(\frac{1}{g}u_{i,j}(p_j-p_{j-1})\right).
+\end{equation}
+In the previous equation, $w, u,$ and $\rho$ have all been averaged in space and time and $p$ is the pressure on full model levels.  The density, $\rho$ is computed as $ \rho_{i,j}=\frac{p_j}{R T_{v;i,j}}  $  where $R$ and $T_v$ are the gas constant for dry air ($287 \rm{J/kg K}$) and the virtual temperature ($T_v=T(1+q/\epsilon)/(1+q)$), respectively.  The specific humidity is given by $q$ and $\epsilon = 0.622$.
+
+\section{Figures}
+
+% looks like there is an Overfull \hbox here and the figure is not printing....
+\begin{figure}[htb]
+  \includegraphics{randomfigs/condensate_3mods.eps}
+\end{figure}
+
+ \begin{figure}[htb] %  figure placement: here, top, bottom, or page
+   \centering
+        %\includegraphics[width=5.0in]{agu/silvers_etal_2016/rce_20km_tqv_20mmto80mm_cathy.eps}
+        \includegraphics[width=5.0in]{/Users/silvers/code/matlabscripts/WalkerCirc/figs_ctl/psi_log_1km.pdf}
+   \caption{Column integrated water vapor ($\rm{mm}$).  The SST$=301$ K for all domains. 
+   %and the time of the snapshots is the same as for Fig. \ref{fig:precvsdom}, but the color scale differs.
+   For comparison, the black bar in the 3M, 12M, 50M, and 200M domains represents a length of 830km, corresponding to the short edge length of the 3/4M domain.}
+   \label{fig:tqv5dom}
+\end{figure}
+
+
+
+
+\end{document}  

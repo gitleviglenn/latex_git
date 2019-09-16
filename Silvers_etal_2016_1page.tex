@@ -1,0 +1,66 @@
+\documentclass[11pt]{amsart}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{gensymb}
+
+\title{Radiative Convective Equilibrium as A Framework for Studying the Interaction Between Convection and its Large-scale Environment}
+\author{Levi G. Silvers, Bjorn Stevens, Thorsten Mauritsen, Marco Giorgetta}
+%\date{2016}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+%\keypoints{
+%\item Radiative Convective Equilibrium (RCE) is a useful framework to compare, contrast, and harmonize the two extremes of explicit and parameterized convection.
+%\item Consistent climates across a range of domain sizes encourage the use of RCE to enhance our ability to model clouds (or cloud systems).  
+%\item The response of low clouds to warming, and hence estimation of the climate feedback parameter, is not robust across configurations.
+%}
+
+%\section{Abstract}
+%An uncertain representation of convective clouds has emerged as one of the key barriers to our understanding of climate sensitivity.  The large gap in resolved spatial scales between General Circulation Models (GCMs) and high resolution models has made a systematic study of convective clouds across model configurations difficult.
+%It is shown here that the simulated atmosphere of a GCM in Radiative Convective Equilibrium (RCE) is sufficiently similar across a range of domain sizes to justify the use of RCE to study both a GCM and a high resolution model on the same domain with the goal of improved constraints on the parameterized clouds.
+%Simulations of RCE with parameterized convection have been analyzed on domains with areas spanning more than two orders of magnitude 
+%($\mathrm{0.80 - 204 \times 10^6 km^2}$), all having the same grid spacing of $13 \mathrm{km}$.    
+%The simulated climates on different domains are qualitatively similar in their degree of convective organization, the precipitation rates, and the vertical structure of the clouds and water vapor, with the similarity increasing as the domain size increases.  Sea surface temperature perturbation experiments are used to estimate the climate feedback parameter for the differently configured experiments, and the cloud radiative effect is computed to examine the role which clouds play in the response.   Despite the similar climate states between the domains the feedback parameter varies by more than a factor of two; the hydrological sensitivity parameter is better behaved, varying by a factor of 1.4.  The sensitivity of the climate feedback parameter to domain size is related foremost to a non-systematic response of low-level clouds as well as an increasingly negative longwave feedback on larger domains. 
+
+\section{Summary}
+Convective parameterizations remain a significant barrier to our understanding of both variability and sensitivity in the Earth system.  This is further complicated by the large gap of scales between General Circulation Models (GCM) and high resolution models.  We show that radiative convective equilibrium is 
+a useful tool in this context and study parameterized GCM experiments on domains with areas spanning more than two orders of magnitude 
+($\mathrm{0.80 - 204 \times 10^6 km^2}$), all having the same grid spacing of $13 \mathrm{km}$.  The simulated climates on different domains are qualitatively similar in their degree of convective organization, the precipitation rates, and the vertical structure of the clouds and water vapor, with the similarity increasing as the domain size increases.   Despite the similar climate states between the domains the feedback parameter varies by more than a factor of two.  The sensitivity of the climate feedback parameter to domain size is related foremost to a non-systematic response of low-level clouds as well as an increasingly negative longwave feedback on larger domains.
+
+\section{Key Points}
+\begin{itemize}
+  \item{Radiative Convective Equilibrium (RCE) is a useful framework to compare, contrast, and harmonize the two extremes of explicit and parameterized convection}
+  \item{Consistent climates across a range of domain sizes encourage the use of RCE to enhance our ability to model clouds (or cloud systems)}
+  \item{The response of low clouds to warming, and hence estimation of the climate feedback parameter, is not robust across configurations}  
+\end{itemize}
+
+
+ \begin{figure}[htb] %  figure placement: here, top, bottom, or page
+   \centering
+        \includegraphics[width=5.0in]{agu/silvers_etal_2016/rce_20km_tqv_20mmto80mm_cathy.eps}
+   \caption{Column integrated water vapor ($\rm{mm}$).  The SST$=301$ K for all domains. 
+   %and the time of the snapshots is the same as for Fig. \ref{fig:precvsdom}, but the color scale differs.
+   For comparison, the black bar in the 3M, 12M, 50M, and 200M domains represents a length of 830km, corresponding to the short edge length of the 3/4M domain.}
+   \label{fig:tqv5dom}
+\end{figure}
+
+\begin{figure}
+  \centering 
+    \includegraphics[width=2.5in]{agu/silvers_etal_2016/feedbk_vs_5dom_cmip5_reds.eps}
+   \caption{Feedback parameter as a function of domain size.  
+  Bars correspond to a 97.5 \% confidence interval with a one-sided t-test.  A de-correlation time of three weeks was assumed for all domains.  The feedback parameters from CMIP5 models are shown by the black markers.}
+   \label{fig:lambdaecs}
+\end{figure}
+
+
+
+
+\end{document}  

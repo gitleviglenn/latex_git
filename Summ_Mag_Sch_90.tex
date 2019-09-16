@@ -1,0 +1,276 @@
+\documentclass[11pt]{report}
+% this is a shell to write new latex programs in....
+
+% additional packages
+%--------------------latex
+\usepackage{amsmath}
+\usepackage{times}
+\usepackage{indentfirst}
+\usepackage[dvips]{graphicx}
+
+% page layout stuff (set as desired)
+%------------------
+\newlength{\lpgmargin} \setlength{\lpgmargin}{1.0in}
+\newlength{\rpgmargin} \setlength{\rpgmargin}{1.0in}
+\newlength{\tpgmargin} \setlength{\tpgmargin}{1.0in}
+\newlength{\bpgmargin} \setlength{\bpgmargin}{1.0in}
+
+\setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.0in}
+\setlength{\footskip}{0.5in}
+
+% page layout stuff (leave as is)
+%------------------
+\setlength{\hoffset}{-1in}
+\setlength{\voffset}{-1in}
+\setlength{\oddsidemargin}{\lpgmargin}
+\setlength{\topmargin}{\tpgmargin}
+\setlength{\marginparsep}{0in}
+\setlength{\marginparwidth}{0in}
+\setlength{\textwidth}{\paperwidth}
+   \addtolength{\textwidth}{-\lpgmargin}
+   \addtolength{\textwidth}{-\rpgmargin}
+\setlength{\textheight}{\paperheight}
+   \addtolength{\textheight}{-\tpgmargin}
+   \addtolength{\textheight}{-\bpgmargin}
+   \addtolength{\textheight}{-\headheight}
+   \addtolength{\textheight}{-\headsep}
+   \addtolength{\textheight}{-\footskip}
+
+% page style stuff (set as desired)
+%-----------------
+%\pagestyle{plain}
+\pagestyle{plain}
+
+%=============================================================================
+
+\begin{document}
+
+%\centerline{\LARGE \textbf{TeX Shell}}
+Paper Summary
+
+Title: \textbf{The Generalization of Semigeostrophic Theory to the 
+               $\beta$-Plane}
+
+Authors: Gudrun Magnusdottir and Wayne Schubert
+
+J. Atmos. Sci., 1990
+
+\vspace{0.25in}
+
+%\chapter{1. Introduction}
+\begin{enumerate}
+\item{\textbf{Introduction}}
+
+Brian Hoskins combined the geostrophic momentum approximation with the
+geostrophic coordinate transformation to derive the system of semigeostrophic
+equations.  These are almost as simple as the geostrophic equations, but they
+succeed at representing fluid behavior (fronts, jets, etc.) that is beyond the
+range of physical validity in the geostrophic system.  This derivation depends on
+the assumption of a constant Coriolis parameter.
+
+A completely different approach to the semigeostrophic equations was developed
+by Salmon, Shutts, and several others.  They started by using Hamiltonian
+methods and were able to include a variable Coriolis parameter.  The stated goal
+of the this paper by Magnusdottir and Schubert is ``to examine this question of a
+variable Coriolis parameter in semigeostrophic theory, not through the use of
+Hamiltonian methods, but by more conventional and elementary methods of
+analysis.''  The derivation of a $\beta$-plane version of semigeostrophc theory
+depends on the use of isentropic and geostrophic coordinates.  This allows the
+entire system to be reduced to one predictive and one diagnostic equation.  The
+potential pseudodensity is predicted and the inversion of this quantity leads to
+the recovery of the balanced wind and mass fields.  
+	
+\item{\textbf{Semigeostrophic equations on the $\beta$-plane}}
+
+The governing equations are 
+\begin{equation}
+    \frac{Du_g}{Dt}-(f(Y)v+\beta(y-Y)v_g)+\frac{\partial M}{\partial x}=0,
+\end{equation}   
+
+\begin{equation}
+    \frac{Dv_g}{Dt}+(f(Y)u+\beta(y-Y)u_g)+\frac{\partial M}{\partial y}=0,
+\end{equation}
+
+\begin{equation}
+    \frac{\partial M}{\partial \theta}=\Pi,
+\end{equation}
+
+\begin{equation}
+    \frac{D\sigma}{Dt}+\sigma\left(\frac{\partial u}{\partial x}+
+    \frac{\partial v}{\partial y}+\frac{\partial\dot{\theta}}{\partial\theta}
+    \right)=0,
+\end{equation}
+\begin{equation}
+    (v_g,-u_g)=\frac{1}{f(Y)}\left(\frac{\partial M}{\partial x},
+    \frac{\partial M}{\partial y}\right),
+\end{equation}
+and 
+\begin{equation}
+    (X,Y)=\left(x+\frac{v_g}{f(Y)},y-\frac{u_g}{f(Y)}\right).
+\end{equation}
+
+\item{\textbf{Vorticity, potential vorticity, and potential pseudodensity
+equations}}
+
+The predictive equation in flux form is: 
+\begin{equation}
+    \frac{\partial\sigma^*}{\partial T}+\frac{\partial}{\partial X}\left(
+    -\frac{\sigma^*}{f}\frac{\partial M^*}{\partial Y}\right)+
+    \frac{\partial}{\partial Y}\left(\frac{\sigma^*}{f}
+    \frac{\partial M^*}{\partial X}\right)+
+    \frac{\partial}{\partial\Theta}(\sigma^*\dot{\theta})=0
+\end{equation}
+where $\sigma^*=(f/\zeta)\sigma$ and the total derivative in geostrophic space
+has been used.  
+
+\item{\textbf{Invertibility principle}}
+
+The potential pseudodensity ($\sigma^*$) is a combination of the mass field and the wind field, both
+of these are
+related to $M^*$ and as a result, $\sigma^*$ depends only on $M^*$.  To do this we need to use the
+geostrophic, hydrostatic, and coordinate transformation relations.  The invertibility system is
+given by eqs. 4.3a,b,c.  Has this been solved?  A multigrid solver developed by Fulton (1989) was
+mentioned to solve the $f$-plane case.  Is there any chance of a similar multigrid solver being
+developed for the spherical version of semi-geostrophic case?  
+
+\item{\textbf{Concluding remarks}} 
+
+A closed system for predicting the potential pseudodensity has been derived.  The advantage of this
+system of the quasi-geostrophic system is the implicit inclusion of the ageostrophic advection in
+the coordinate transformation.  A general method of derivation for similar semigeostrophic systems
+emerges from this paper.  This system starts with the geostrophic relations, geostrophic
+coordinates, and the 'canonical' momentum equations.  These relations are then used to derive the
+appropriate momentum equations, and the ageostrophic advection will automatically be implicit.  This
+has already been extended to the hemispheric case in spherical coordinates.  Can a different balance
+condition be assumed that allows a fully global theory to be developed?  
+
+Geostrophic Relations: 
+\begin{equation}
+    \left(v_g,-u_g\right)=\frac{1}{f(Y)}\left(\frac{\partial M}{\partial x},
+    \frac{\partial M}{\partial y}\right).
+\end{equation}
+Geostrophic Coordinates: 
+\begin{equation}
+    \left(X,Y\right)=\left(x+\frac{v_g}{f(Y)},y-\frac{u_g}{f(Y)}\right).
+\end{equation}
+The `desired' canonical momentum equation: 
+\begin{equation}
+    f\frac{DY}{Dt}=\frac{\partial M^*}{\partial X}, \qquad 
+    -f\frac{DX}{Dt}=\frac{\partial M^*}{\partial Y}
+\end{equation}
+These equations can then be used to derive the corresponding zonal and meridional momentum equations
+for the semigeostrophic system.  
+\end{enumerate}
+
+Paper Summary
+
+Title: \textbf{Semigeostrophic Theory on the Hemisphere}
+
+Authors: Gudrun Magnusdottir and Wayne Schubert
+
+J. Atmos. Sci., 1991
+
+\vspace{0.25in}
+
+\begin{enumerate}
+
+\item{\textbf{Introduction}}
+The original semigeostrophic theory developed by Hoskins, only applied to the $f$-plane.  Using an
+approach based on Hamilton's principle, Salmon and Shutts were able to include the effects of a
+variable Coriolis parameter.  Using a more `conventional' approach, outlined above, Magnusdottir
+and Schubert (1990) were able to generalize the theory to the $\beta$-plane.  In this paper, the
+authors further generalize the geostrophic balance and coordinates to derive a hemispheric version
+of the theory.  This theory is appropriate for the study of midlatitude dynamics when the
+sphericity of the Earth is an important feature of the system.  The primary weakness of this theory
+is its lack of validity in the equatorial regions.
+
+``Both the definitions of the geostrophic wind and the spherical geostrophic coordinates are
+generalizations of the $\beta$-plane definitions.''  Is this problematic?  The $\beta$-plane is
+mathematically a bit odd and doesn't correspond to a physically realizeable situation.  Should the
+hemispheric version of semigeostrophic theory be derived from a more physically sound base?  
+
+\item{\textbf{Generalizations of the geostrophic momentum approximation and geostrophic 
+coordinates}}
+
+The equations for the spherical geostrophic momentum approximation reduce to the primitive
+equations when ($u_g,v_g$) are replaced by ($u,v$) and $\Phi$ is replaced by $\phi$.  Maybe they
+aren't really based on the $\beta$-plane equations in a problematic way as much as a simplification
+of the primitive equations.  
+
+The geostrophic relations are: 
+\begin{equation}
+    \left(v_g\frac{\cos\Phi}{\cos\phi},-u_g\frac{\cos\phi}{\cos\Phi}\right)=
+    \frac{1}{2\Omega\sin\Phi}\left(\frac{\partial M}{a\cos\phi\partial\lambda},
+    \frac{\partial M}{a\partial\phi}\right), 
+\end{equation}    
+the geostrophic coordinates are:
+\begin{equation}
+    (\Lambda,\sin\Phi)=\left(\lambda+\frac{v_g}{a2\Omega\sin\Phi\cos\Phi},
+    sin\phi-\frac{u_g\cos\Phi}{a2\Omega\sin\Phi}\right).
+\end{equation}
+
+These definitions are justified because they lead to the canonical momentum equations
+\begin{equation}
+    2\Omega\sin\Phi a\frac{D\Phi}{Dt}=\frac{\partial M^*}{a\cos\Phi\partial\Lambda},
+\end{equation}
+\begin{equation}
+    -2\Omega\sin\Phi a\cos\Phi\frac{D\Lambda}{Dt}=\frac{\partial M^*}{a\partial\Phi}
+\end{equation}
+
+This system maintains several fundamental conservation principles of the primitive equations.  The
+absolute angular momentum, the kinetic energy (evaluated geostrophically), potential vorticity, and
+potential pseudodensity.  
+
+\end{enumerate}
+
+Paper Summary
+
+Title: \textbf{Vorticity Coordinates, Transformed Primitive Equations, and a Canonical Form for
+Balanced Models}
+
+Authors: Wayne Schubert and Gudrun Magnusdottir
+
+J. Atmos. Sci., 1994
+
+\vspace{0.25in}
+
+Following the general method of derivation outlined above, this paper derives the generalized 
+Geostrophic relations as: 
+\begin{equation}
+    u=\frac{\partial \chi}{\partial x}+\frac{1}{2}f\left[(X-x)\frac{\partial Y}{\partial x}
+    -(Y-y)\left(\frac{\partial X}{\partial x}+1\right)\right],
+\end{equation}
+and 
+\begin{equation}
+    v=\frac{\partial \chi}{\partial y}+\frac{1}{2}f\left[(X-x)\frac{\partial Y}{\partial y}
+    -(Y-y)\left(\frac{\partial X}{\partial y}+1\right)\right].
+\end{equation}
+These can be reduced to the `normal' geostrophic relations as discussed on page 3311. 
+These equations are also known as the Clebsch representations of the velocity field.  The view of
+the Clebsch equations being generalizations of the geostrophic coordinates is realized by makeing
+the geostrophic approximation, can the same thing be done with the rotational part of the wind?    
+
+
+
+
+
+
+Notes to self:  There are at least two important elements of semigeostrophic theory.  First, the
+implicit inclusion of the ageostrophic wind allowing the semigeostrophic system to use the total
+wind for advection rather than just the geostrophic part of the wind.  The second component is the
+nonlinear invertibility principle. It seems likely that the first of these is much more important,
+if we can keep the ageostrophic wind in the advective terms, but we have to linearize the
+invertibility priniciple to solve it, the model will still be much better than the geostrophic
+system.  
+
+
+
+
+
+
+
+
+
+
+\end{document}
