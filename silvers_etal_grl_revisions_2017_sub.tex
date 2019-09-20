@@ -1,0 +1,891 @@
+%% 2/18/2016
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AGUJournalSample.tex: this sample file is for articles formatted with LaTeX
+%
+% This sample file includes commands and instructions
+% given in the order necessary to produce a final output that will
+% satisfy AGU requirements.
+%
+% PLEASE DO NOT USE YOUR OWN MACROS
+% DO NOT USE \newcommand, \renewcommand, or \def.
+%
+% FOR FIGURES, DO NOT USE \psfrag or \subfigure.
+% DO NOT USE \psfrag or \subfigure commands.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Step 1: Set the \documentclass
+%
+% There are two options for article format:
+%
+% 1) PLEASE USE THE DRAFT OPTION TO SUBMIT YOUR PAPERS.
+% The draft option produces double spaced output.
+% 
+% 2) numberline will give you line numbers.
+
+% Tip:
+%  To add line numbers to lines in equations:
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+
+%% To submit your paper:
+%\documentclass[linenumbers,draft]{agujournal}
+\documentclass[linenumbers]{agujournal}
+
+% Now, type in the journal name: \journalname{<Journal Name>}
+% ie,
+\journalname{Geophysical Research Letters}
+
+%% Choose from this list of Journals:
+%
+% JGR-Atmospheres
+% JGR-Biogeosciences
+% JGR-Earth Surface
+% JGR-Oceans
+% JGR-Planets
+% JGR-Solid Earth
+% JGR-Space Physics
+% Global Biochemical Cycles
+% Geophysical Research Letters
+% Paleoceanography
+% Radio Science
+% Reviews of Geophysics
+% Tectonics
+% Space Weather
+% Water Resource Research
+% Geochemistry, Geophysics, Geosystems
+% Journal of Advances in Modeling Earth Systems (JAMES)
+% Earth's Future
+% Earth and Space Science
+
+\usepackage{pdflscape}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  ENTER Title Page commands:
+%
+%% ------------------------------------------------------------------------ %%
+
+% (A title should be specific, informative, and brief. Use
+% abbreviations only if they are defined in the abstract. Titles that
+% start with general terms then specific results are optimized in
+% searches)
+
+% Example: \title{This is a test title}
+
+% (List authors by first name or initial followed by last name and
+% separated by commas. Use \affil{} to number affiliations, and
+% \thanks{} for author notes.  
+% Additional author notes should be indicated with \thanks{} (for
+% example, for current addresses). 
+
+% Example: \authors{A. B. Author\affil{1}\thanks{Current address, Antartica}, B. C. Author\affil{2,3}, and D. E.
+% Author\affil{3,4}\thanks{Also funded by Monsanto.}}
+
+% (include name and email addresses of the corresponding author.  More
+% than one corresponding author is allowed in this LaTeX file and for
+% publication; but only one corresponding author is allowed in our
+% editorial system.)  
+
+%% Corresponding Author:
+% Corresponding author mailing address and e-mail address:
+
+% Example: \correspondingauthor{First and Last Name}{email@address.edu}
+
+% Authors are individuals who have significantly contributed to the
+% research and preparation of the article. Group authors are allowed, if
+% each author in the group is separately identified in an appendix.)
+
+% \affiliation{1}{First Affiliation}
+% \affiliation{2}{Second Affiliation}
+% \affiliation{3}{Third Affiliation}
+% \affiliation{4}{Fourth Affiliation}
+
+%% Keypoints, final entry on title page.
+% Example: 
+% \begin{keypoints}
+% \item	List up to three key points (at least one is required)
+% \item	Key Points summarize the main points and conclusions of the article
+% \item	Each must be 100 characters or less with no special
+% characters or punctuation 
+% \end{keypoints}
+
+%% \begin{abstract} begins second page 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Track Changes:
+% To add words, \added{<word added>}
+% To delete words, \deleted{<word deleted>}
+% To replace words, \replace{<word to be replaced>}{<replacement word>}
+% To explain why change was made: \explain{<explanation>}
+
+% At the end of the document, use \listofchanges, which will list the
+% changes and the page and line number where the change was made.
+
+% When final version, \listofchanges will not produce anything,
+% \added{} word will be printed, \deleted{} will take away the word,
+% \replaced{}{} will print only the 2nd argument.
+% \explain will not print anything.
+
+% Optional argument:
+% You can also add additional information to be printed with the list
+% of changes, to indicate the initials of the person changing the text,
+% and the time and/or date of the change, or any other comment by using
+% the optional [] argument:
+% \added[AH, 3:30pm, Feb 18, 2016]{added term}
+% will yield 
+% [AH, 3:30pm, Feb 18, 2016] added term on page...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TITLE
+%
+%% ------------------------------------------------------------------------ %%
+
+
+\title{The diversity of cloud responses to twentieth-century sea surface temperatures}
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  AUTHORS AND AFFILIATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+\authors{Levi G. Silvers\affil{1}, David Paynter\affil{2}, and Ming Zhao\affil{2}}
+
+% \authors{A. B. Smith\affil{1}\thanks{Current address, McMurdo Station,
+% Antartica},
+% Eric Brown\affil{1,2}, Rick Williams\affil{3},
+% John B. McDougall\affil{4}, and S. Visconti\affil{5}\thanks{Also
+% funded by Monsanto.}}
+
+\affiliation{1}{Princeton University/GFDL, Princeton, New Jersey, USA}
+\affiliation{2}{GFDL/NOAA, Princeton, New Jersey, USA}
+
+%\affiliation{1}{Department of Hydrology and Water Resources,
+%University of Arizona, Tucson, Arizona, USA.}
+%\affiliation{2}{Department of Geography, Ohio State University,
+%Columbus, Ohio, USA.}
+%\affiliation{3}{Department of Space Sciences, University of
+%Michigan, Ann Arbor, Michigan, USA.}
+%\affiliation{4}{Division of Hydrologic Sciences, Desert Research
+%Institute, Reno, Nevada, USA.}
+%\affiliation{5}{Dipartimento di Idraulica, Trasporti ed
+%Infrastrutture Civili, Politecnico di Torino, Turin, Italy.}
+
+
+%% Corresponding Author
+%(include name and email addresses of the corresponding author.  More
+%than one corresponding author is allowed in this Word file and for
+%publication; but only one corresponding author is allowed in our
+%editorial system.)  
+
+\correspondingauthor{L. G. Silvers}{silvers@princeton.edu}
+
+%  List up to three key points (at least one is required)
+%  Key Points summarize the main points and conclusions of the article
+%  Each must be 100 characters or less with no special characters or punctuation 
+
+\begin{keypoints}
+\item Three climate models driven by observed sea surface temperatures increase then decrease climate sensitivity over the twentieth century
+\item Substantial changes of the climate feedback parameter are mirrored by the global mean low-level cloud anomalies
+\item This variability is connected to atmospheric stability and not due to stratocumulus dominated regions, but to the broader tropics
+\end{keypoints}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  ABSTRACT
+%
+%% ------------------------------------------------------------------------ %%
+
+
+\begin{abstract}
+Low-level clouds are shown to be the conduit between the observed sea surface temperatures (SST) 
+and large decadal fluctuations of the top of the atmosphere (TOA) radiative imbalance.  The influence 
+of low-level clouds on the climate feedback is shown for global mean time
+series as well as particular geographic regions.  The changes of clouds are found to be 
+important for a mid-century period of high sensitivity and a late century period of low 
+sensitivity.  These conclusions are drawn from analysis of amip-piForcing simulations using three 
+atmospheric general circulation models (AM2.1, AM3, and AM4.0).  All three models confirm the importance 
+of the relationship between the global climate sensitivity and the eastern Pacific 
+trends of SST and low-level clouds.  However, this work argues that the variability of the 
+climate feedback parameter is not driven by stratocumulus dominated regions in the eastern ocean basins, 
+but rather by the cloudy response in the rest of the tropics.
+\end{abstract}
+
+% +12 -3 -6
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TEXT
+%
+%% ------------------------------------------------------------------------ %%
+
+%%% Suggested section heads:
+% \section{Introduction}
+% 
+% The main text should start with an introduction. Except for short
+% manuscripts (such as comments and replies), the text should be divided
+% into sections, each with its own heading. 
+
+% Headings should be sentence fragments and do not begin with a
+% lowercase letter or number. Examples of good headings are:
+
+% \section{Materials and Methods}
+% Here is text on Materials and Methods.
+
+% \subsection{A descriptive heading about methods}
+% More about Methods.
+% 
+% \section{Data} (Or section title might be a descriptive heading about data)
+% 
+% \section{Results} (Or section title might be a descriptive heading about the
+% results)
+% 
+% \section{Conclusions}
+
+
+\section{Introduction}
+Determining how the atmosphere responds to anthropogenic forcing is complicated by the strong decadal variability which is present in the global mean TOA flux of energy ($N$  $\rm{W m^{-2}}$).  Over the historical period (\replaced{here meaning after}{post} 1870) these fluctuations of $N$ include \replaced{both natural and anthropogenic}{forced (natural and anthropogenic) and internal} variability.   One measure of the climate sensitivity is to regress $N$ under fixed radiative forcing versus the change of surface air temperature $T$ as the atmosphere adjusts to a radiative perturbation \citep{Gregory_etal_2004}.  The climate feedback parameter $\alpha$ ($\rm{W m^{-2} K^{-1}}$) is then given by the slope of the regression line.   This technique has been applied to climate models forced with historical SSTs and fixed radiative forcing to obtain an estimate of $\alpha$ over the historical period.   Previously examined models \citep{Gregory_Andrews_2016, Zhou_etal_2016}  (GA16 and Z16 hereafter, respectively) have shown a period of high (small $\alpha$) sensitivity (1925-1955) followed by a period of low (large $\alpha$) sensitivity (1975-2005) irrespective of their long term or equilibrated sensitivity.  It has been conjectured (Z16) that an increase of eastern Pacific low-level clouds played a significant role in the low sensitivity of the later period.  To our knowledge, the influence of clouds on the global energy budget during the high sensitivity early period has not been investigated.  This raises several questions.  What role do clouds over the rest of the globe play?  Was the period of high-sensitivity in the mid twentieth century similarly influenced by particular changes of cloud fields?  If so, what do these influences of clouds on the Earth's energy budget tell us about the cloud feedback that we should expect in \deleted{the} future climate\added{s}?
+
+The impact of low-cloud cover on the radiation budget of Earth has been the source of active research for decades \citep[e.g.,][] {Randall_etal_1984, Klein_Hartmann_1993,Bony_etal_2004, Bony_Dufresne_2005}.   Recently \citet{Qu_etal_2014,Qu_etal_2015} provided a thorough examination of the dependencies between low-cloud cover, the estimated inversion strength (EIS), and surface temperature in both observations, and an ensemble of models from CMIP3 and CMIP5.  They, as did most previous studies \citep [e.g.,][]{Klein_Hartmann_1993,Wood_Bretherton_2006} focused on 5 oceanic regions which are important for stratocumulus decks of radiatively active low-level clouds.  Only recently have the fields of stability, low-level clouds, and low-level temperature begun to be investigated over larger swaths of the globe  \citep {Webb_etal_2015, Rose_Rayborn_2016, Grise_Medeiros_2016, Zhou_etal_2016}.  
+
+\replaced{The global energy budget of Earth is often considered in a mean, equilibrated context despite known fluctuations in $N$ (and $\alpha$) on monthly, yearly, and decadal scales (Figure 1a). The decadal variability of the energy budget is also present in the global mean cloud radiative effect (CRE; Figure 1b and Z16).}  
+{A linearized forcing-feedback framework has often been used to study the global mean energy budget and asses $\alpha$ despite its known temporal variations %\citep[e.g.,][]{Gregory_etal_2004, Forster_Gregory_2006, Mauritsen_etal_2013}, GA16, Armour, 2017).  
+[e.g., \textit{Gregory et al.}, 2004; \textit{Forster and Gregory}, 2006; \textit{Mauritsen et al.}, 2013, GA16, \textit{Armour}, 2017].
+This decadal variability of the energy budget is reflected in $\alpha$ and, specifically, in the cloud radiative effect (CRE; Figure 1 a,c,e,f and Z16).}   A better understanding of the role played by clouds in determining $\alpha$ will be useful regardless of whether the changes are due to radiative forcings, natural variability, anthropogenic influences, or changes in the uptake of heat into the oceans \citep{Haugstad_etal_2017}.  
+
+This paper examines the atmospheric response to \replaced{changing}{prescribed} SST patterns in simulations of the years 1870-2005.  The use of three atmospheric general circulation models (AGCMs) developed at the Geophysical Fluid Dynamics Laboratory (GFDL;  AM2.1, AM3, and AM4.0) provides a comparison of models with significantly different treatments of the clouds.  
+Interdecadal variability of the global feedback parameter has been previously studied \replaced{using the amip-piForcing experiments [GA16,Z16].  However,}{ [GA16, Z16] but} the regional differences between cloud fields during periods of differing sensitivity are still not clearly understood.
+\replaced{The amip-piForcing}{These} experiment\added{s} preclude\deleted{s} an analysis of atmosphere-ocean feedback processes, or a direct prediction of how the climate would respond to forcing perturbations.  
+However, \replaced{it}{we} utilizes the best estimate of observed SST and sea-ice concentrations \replaced{and}{to} facilitate an analysis of how \deleted{an} AGCM\added{s} respond\deleted{s} to these boundary conditions.
+By identifying the \replaced{relationships between these variables and}{response of AGCMs to} key geographic regions of change we intend to move closer to a process level understanding of the connection between SST patterns, clouds, and the climate sensitivity.
+
+%\clearpage
+
+\section{Methods}
+
+\subsection{Description of amip-PiForcing experiments, AM2.1, AM3, and AM4.0}  
+
+This work uses the amip-piForcing experiment to investigate the atmospheric response to surface forcing between the years 1870 and 2005.  
+The experiment drives AGCMs with observationally based SST and sea-ice concentrations while the forcing due to greenhouse gases, aerosol, and solar forcing, is held constant at assumed pre-industrial levels.  However, due to the different time at which these models \replaced{where}{were} actively used \replaced{there are small differences in the boundary conditions}{the SST and sea-ice fields differed slightly among models}.  
+The amip-piForcing experiment \added{develops some of the ideas from \citet{Andrews_2014} and} is one of the CFMIP3 experiments, for additional details and examples see \citet{Webb_etal_2017}, GA16 and Z16.  
+For each of the three AGCMs five ensemble members have been used.
+
+\replaced{One of the largest differences among the three GFDL atmospheric models analyzed in this paper is that they each have unique representations of convective clouds.  
+The AM4.0 and AM3 models include an aerosol indirect effect with a prognostic cloud drop number.  The AM2.1 model specified the cloud drop number to be 100 (300) 
+over ocean (land).  Further documentation of the earlier two GFDL AGCMS can be found in \mbox{\citet{GFDL_GAMDT_2004}} (AM2.1) and \mbox{\citet{Donner_etal_2011}} (AM3).   
+Documentation of the AM4.0 model is in the review stage and will be published as \mbox{\textit{Zhao et al.} [2017 a,b].}}{Cumulus cloud parameterizations are one of the largest differences among the GFDL atmospheric models analyzed here.   The AM2.1 model uses the Relaxed-Arakawa-Schubert 
+\mbox{\citep{Moorthi_Suarez_1992}} scheme, AM3 uses the Donner-Deep scheme for deep convection \mbox{\citep{Donner_1993}} and the University of Washington scheme (UWShCu, 
+\mbox{\citep{Bretherton_etal_2004}}) for shallow convection.  AM4.0 uses a version of the UWShCu scheme that has been modified to include two bulk plumes which account for shallow 
+and deep convection.  Documentation of the GFDL AGCMS can be found in \mbox{\citet{GFDL_GAMDT_2004}}, \mbox{\citet{Donner_etal_2011}}, and \mbox{\textit{Zhao et al.} [2017 a,b; submitted]}.}   
+Some of the details of the convection scheme in AM4.0 
+are given in \citet{Zhao_etal_2016}, and a study looking at the influence of CREs on the intertropical convergence zone with a recent prototype AM4 in aquaplanet mode 
+are described in \citet{Popp_Silvers_2017}.
+
+
+\subsection{Methodology of Analysis}        
+
+\begin{figure}
+   \includegraphics[width=6.5in]{../figures/alpha_tseries_6pan.pdf}
+  \caption{Time series analysis of AM4.0(black), AM3(green), and AM2.1(blue).  Thick lines are ensemble means, shading gives range of ensemble members.  A) Global climate feedback parameter $\alpha$ ($\rm{W/m^2 K}$),  
+  B) Same as  A) but with contributions from 4 tropical windows (small-dashed) and the rest of tropics (long-dashed),  C)  $\alpha$ ($\rm{W/m^2 K}$) decomposed into the CRE (lower) and CLR (upper) components,   D)  Global mean Low-Cloud Cover parameter $R_{LCC}$ ($\rm{\% /K}$).  Global $\alpha_{CRE}$ ($\rm{W/m^2 K}$) is decomposed into the short-wave CRE (E) and the long-wave CRE (F).   All time series computed by regression against global, yearly mean surface temperature change.}
+  \label{fig:alphacre}
+\end{figure}
+
+We are interested in the influence of clouds on the decadal variability of the TOA net global mean radiative flux ($N$).  As in GA16 the global mean energy budget is given by $N=F-\alpha T$, where we have assumed that $R = \alpha T$ and $\alpha$ is the climate feedback parameter.  Our interest is in the covariation of $R$ (global mean \replaced{top of the atmosphere}{TOA} radiative flux change due to some perturbation to the climate) and $T$ (global mean surface air temperature change) rather than the change relative to a control state.  
+Smaller values of $\alpha$ require a larger $T$ to balance the imposed perturbation to the system.  
+We compute the climate feedback parameter in the same was as in GA16 (their differential climate feedback parameter $\tilde{\alpha}$).  That is, linear regression is used to compute the relationship between $R$ and $T$, given by $\alpha$.  The regression is applied to the global yearly mean values over moving 30\added{-year} windows.  
+In the same way we have computed the covariation of the CRE, \added{short-wave (SW) CRE, long-wave (LW) CRE, and the clear-sky fluxes} with $T$, as well as the anomalous global low-cloud cover (LCC; \added{clouds below 680 hPa}) with $T$ ($\alpha_{CRE}$, \added{$\alpha_{SW CRE}$, $\alpha_{LW CRE}$, $\alpha_{CLR}$} and \replaced{\mbox{$\alpha_{LCC}$}}{\mbox{$R_{LCC}$}}, respectively \added{; $R$ denoting regression method}).             
+These time series \deleted{of $\alpha$, $\alpha_{CRE}$, and 
+$R_{LCC}$} are shown in Figure 
+\ref{fig:alphacre} with each point representing the mid-point of a 30 year window.  
+We emphasize that the terminology `climate sensitivity' and `climate feedback parameter' here simply refer to measures of the change of radiative balance at TOA with fixed radiative forcing and prescribed SST.  
+This \added{method of computing climate sensitivity} is in keeping with previous studies [{\textit{Cess et al.}}, 1989; {\textit{Silvers et al.}}, 2016; GA16] and we assume there is useful \replaced{overlap}{correspondence} between the interaction of clouds and the TOA energy budget found here and in a fully coupled Earth system.  
+For amip-piForcing experiments, $F=0$, and the `effective' climate sensitivity can be inferred as $F_{2\times} / \alpha$ where $F_{2\times}$ is an appropriate representative value of radiative forcing due to doubled (relative to pre-industrial) $\rm{CO}_2$ concentrations (we use $F_{2\times}=3.4 \rm{W m}^{-2}$  \citep{Flato_etal_2013}).  This is distinct from the equilibrium climate sensitivity (ECS), defined as the equilibrium response to doubled $\rm{CO}_2$ concentrations. 
+
+The strong connection between global clouds and $\alpha$ is shown in Figure \ref{fig:alphacre}.  \replaced{Accordingly, we compute trends at each grid point for LCC, EIS, and SST.  
+To compute these spatial patterns of change linear regression was used at each grid point.  The figures focus on ocean regions because it is primarily there that low stratiform clouds are found.}{To investigate the spatial patterns of this connection, we use linear regression to compute trends over time at each grid point for SST, SW CRE, LW CRE, LCC, and EIS (Figs. \ref{fig:am4tsfc}, \ref{fig:trends_lcceis_ts}a).  
+Global figures focus on ocean regions because it is primarily there that low stratiform clouds are found.
+}                
+            
+Previous studies have shown lower-tropospheric stability (LTS \deleted{or EIS}) to be a useful diagnostic tool that connects low-cloud changes to the characteristics of the large-scale environment, especially within traditionally defined stratocumulus regions \citep{Klein_Hartmann_1993,Wood_Bretherton_2006, Medeiros_etal_2008, Webb_etal_2015}.               
+We analyze the EIS, which can be thought of as a correction to the LTS based on the moist adiabatic profile.  The LTS used by \citet{Klein_Hartmann_1993} was defined as $\rm{LTS}=\theta_{700 hPa}-\theta_{sfc}$ where $\theta$ is the potential temperature and the subscript indicates the level at which the values are taken.   
+For EIS we use 
+the approximation made by \citet{Wood_Bretherton_2006}:
+\begin{equation}
+    \rm{EIS} = \rm{LTS} - \Gamma^{850}_m (z_{700}-\rm{LCL})
+\end{equation}
+Utilizing the moist adiabat ($\Gamma_m^{850}$), height on the 700 hPa surface ($\rm{z_{700}}$), and the lifting condensation level (LCL).  
+  Further details of the boundary conditions, parameterizations, and EIS computation are given in the supporting material (SM).  
+
+\section{Results}
+\subsection{Contrasting time periods of global feedback}
+
+\begin{figure}
+  \includegraphics[width=5.in]{../figures/Fig2_tsfc_radflux_6pan_landmask_clon200.pdf}
+  \caption{Top row, trends of observationally derived SST values during periods of high and low sensitivity.  To highlight the pattern the mean trend for each period was subtracted.
+Middle row, trends of simulated (AM4.0) shortwave (SW) CRE; Bottom row, longwave (LW) CRE.  Left (right) column shows trends between 1925-1955 (1975-2005).  SST fields are from AMIP boundary conditions, PCMDI-AMIP, \citet{Taylor_etal_2000}.  Black boxes in top right panel show window regions discussed in text.}
+  \label{fig:am4tsfc}
+\end{figure}
+
+\deleted{Fluctuations of the climate feedback indicate changes in the TOA radiative imbalance for a given amount of warming that a system undergoes.}  
+\replaced{The evolution of \mbox{$-\alpha$} over the historical period (1870-2005) is shown in Figs. 1a,b}{Strong decadal variability of \mbox{$-\alpha$} 
+and global low-cloud cover (\mbox{$R_{LCC}$}) is shown in Figure 1}.  
+The thick lines indicate ensemble mean values for the three different AGCMs, shading indicates the range of ensemble members.  Immediately apparent is the period with high sensitivity (small $\alpha$) centered around approximately 1940.  After this the sensitivity of all three models steadily decreases for the remainder of the simulations.  This decadal variability is mirrored in the evolution of \deleted{the CRE ($\alpha_{CRE}$, Fig. 1c),} \added{$\alpha_{CRE}$, $\alpha_{SW CRE}$, and $R_{LCC}$} (Fig. 1c,d,e), while the corresponding time series of clear sky fluxes and $\alpha_{LW CRE}$ remain largely constant (Fig. 1c,f), indicating that the the global energy budget is tightly coupled to fluctuations of the total cloud field.   
+The time series of \replaced{$\alpha_{LCC}$}{$R_{LCC}$} in Fig. 1.d shows that the evolution of global mean LCC anomalies closely tracks with the feedback parameter.  This is surprising because we expected radiative effects from high clouds to \replaced{also}{have a larger} influence on $\alpha$, and while the importance of tropical low-level clouds to the uncertainty of climate sensitivity has been demonstrated (Bony and Dufresne, 2005), the contribution of \added {global mean} low-level clouds to the temporal variability of $\alpha$ has been less clear.  
+To quantify the influence of regional changes in LCC on the TOA radiative budget the \replaced{long-wave CRE(LWCRE)}{LW CRE} and \replaced{short-wave CRE(SWCRE)}{SW CRE} trends are computed over the two periods of 
+\replaced{interest.  Global trends for AM4.0 are shown in Figure \ref{fig:am4tsfc}}{interest (Figure \ref{fig:am4tsfc})}.   \replaced{To identify which regions of the globe are contributing to the variability of $\alpha$ we decompose $\alpha$ into contributions from particular windows.}{To explore contributions from key geographic regions $\alpha$ is spatially decomposed into windows.} 
+
+\replaced{The window locations were chosen to represent regions of importance highlighted by our results and previous literature.   To investigate the eastern Pacific region discussed in Z16 we expand the Peruvian and Californian windows from \mbox{\citet{Klein_Hartmann_1993}}.   The Indian, south Atlantic, and southern ocean windows were chosen because of the large trends in LCC there (Fig. \ref{fig:trends_lcceis_ts}; A map showing window locations is given in Fig. 2 of SM.)}{Locations of the windows were chosen to represent regions of importance for stratocumulus between $\pm 30^{\circ}$ based on observations (\citet{Wood_2012}, his Fig. 4.a) and our results (Fig. \ref{fig:trends_lcceis_ts}).  The windows used for this analysis are shown in Figs. \ref{fig:am4tsfc} and \ref{fig:trends_lcceis_ts}.}
+\explain{shifted down a few lines}
+\deleted{Mean LCC, SWCRE, and EIS in each window over both time periods are tabulated in Table 1 of SM.  Large changes in LCC, SWCRE, and EIS are seen between the early and late periods in Figs. \ref{fig:am4tsfc} and \ref{fig:trends_lcceis_ts}.   From the early to late period the 30-year trends in the eastern Pacific increased by 2.8\%(LCC), decreased by 3.3 $\rm{W m}^{-2}$ (SWCRE), and increased by 0.2 K (EIS).  The other windows show equal or larger changes.   Trends in the south Indian window showed LCC increased by 3.8\%, SWCRE decreased by 6.7 $\rm{W m}^{-2}$, and EIS increased by 0.5 K.}  
+\replaced{Decomposing $\alpha$ into regions shows that the variability of $\alpha$ is almost entirely due to the tropical latitudes between $\pm 30^{\circ}$ (thin solid lines, Fig. 1.b).}  
+{The feedback parameter has been computed over particular regions ($i$) using
+\begin{equation}
+   \overline{T}\alpha_{i} = \frac{\int N dA_i}{\int dA} =N_{i}w_i
+\end{equation}
+with  each $\alpha_i$ computed using linear regression of $N_{i}w_i$ on $\overline{T}$ with a sliding 30-year window and $w_i$ representing the relative area of each window.
+For the regions examined during this study $\sum_{i}\alpha_{i}\approx \alpha$ and the variability of $\alpha$ is shown to be almost entirely due to the tropics ($\pm 30^{\circ}$; Fig. 1.b, long-dashed lines).}
+Further, tropical regions typically dominated by stratocumulus do not contribute to the variability (Fig. 1.b; \replaced{dotted}{small-dashed} lines equal sum of $\alpha$ over windows shown in Figs \ref{fig:am4tsfc},\ref{fig:trends_lcceis_ts}).  
+\deleted{There is also a substantial contribution to the magnitude of $\alpha$ by the latitudes poleward of 30 degrees (not shown).}
+\explain{This is not critical, and manuscript needs to be shortened.}   
+
+Because there is such a contrast between the `early' period (1925-1955) and the `late' period (1975-2005) in the time series shown in Figure 1 we focus on a comparison between the atmospheric responses to the changing SSTs during these periods.  Between 1925 and 1955 the average global feedback parameter for AM4.0, AM3, and AM2.1 changes from values of (-1.6, -1.0, and -1.8 \, $\rm{W m}^{-2} K^{-1}$) to (-2.7, -2.4, and -2.3 $\rm{W m}^{-2} K^{-1}$) between 1975 and 1989.  
+This represents a dramatic change in $\alpha$ and determining the cause will be an important part of our ability to understand how clouds respond to SST patterns and thus influence the global energy budget on decadal time scales.  \added{Mean LCC, SWCRE, and EIS in each window over both time periods are tabulated in Table 1 of SM.  From the early to late period the 30-year trends in the eastern Pacific increased by 2.8\%(LCC), decreased by 3.3 $\rm{W m}^{-2}$ (SWCRE), and increased by 0.2 K (EIS).  The other windows show equal or larger changes.   Trends in the south Indian window showed LCC increased by 3.8\%, SWCRE decreased by 6.7 $\rm{W m}^{-2}$, and EIS increased by 0.5 K.}
+
+Changing SST patterns are the primary atmospheric driver in these experiments.
+Anomalous patterns of SST change over each period (trends minus mean trend over that period) are shown in Figure \ref{fig:am4tsfc}.  The later period (1975-2005) is characterized by an east-west dipole in the Pacific ocean.  
+As highlighted by Z16, this leads to an increase of LCC in the eastern regions and decreasing cloud feedback.  In contrast, the earlier period SST trend is characterized by negative tropical anomalies and positive anomalies in the higher latitudes.  
+We find that the particular response of the low-level clouds to SST patterns differs dramatically between the two periods.  In the early period, the midlatitudes are marked by strongly decreasing low-level cloud.  In the late period the southern hemisphere oceans are almost entirely covered by increasing amounts of low-level cloud (Fig. 3).   
+As discussed in the next two sections, there is a clear connection between these SST patterns\added{,} \deleted{and} the LCC\added{,} and EIS fields. 
+
+
+\subsection{Dependence of LCC on EIS and SST}
+
+The known importance of low-level clouds in the global response to climatic perturbations and the importance of SSTs to the low-level cloud fields motivate us to look at how the LCC evolves during the historical period.  We create the anomaly time series, $\Delta \rm{LCC}$, $\Delta \rm{EIS}$, and $\Delta \rm{SST}$ by spatially averaging over the region of interest, removing the climatological time mean, and computing yearly mean values for each variable. 
+To probe the dependence of LCC on low-level stability multiple linear regression is used to decompose $\Delta \rm{LCC}$ into a linear combination of $\Delta \rm{EIS}$ and $\Delta \rm{SST}$.  The anomalous changes of tropical marine LCC were shown [\textit{Qu et al.}, 2014; Z16] to be well explained by a linear combination of the change in EIS and SST.  
+The coefficients $\gamma$ and $\beta$ can thus be determined for particular experiments or models in the following assumed relationship:
+
+    \begin{equation} 
+    \Delta \rm{LCC} \approx \gamma \Delta \rm{EIS} + \beta \Delta \rm{SST}.
+    \label{eqLCC}
+    \end{equation}  
+    
+\begin{figure}
+    %\includegraphics[width=6.0in]{../figures/Fig3_LCC_EIS_ts_pm60_legend.eps}
+    \includegraphics[width=6.0in]{../figures/Fig3_LCC_EIS_ts_pm60.pdf}
+    \caption{a) Trends of simulated low-cloud cover (first and second rows) and estimated inversion strength (third and fourth rows).  Rows 1 and 3 show trends between 1925-1955, rows 2 and 4 show trends between 1975-2005.  Column 1,2, and 3 show AM2.1, AM3, and AM4.0, respectively.   b) Mean ($\pm 60^{\circ}$, 9-year running mean) time evolution of low-cloud cover ($\Delta \rm{LCC}$) for AM2.1(blue), AM3(green), AM4.0(black).  Thick lines show simulated $\Delta \rm{LCC}$, thin lines show $\Delta \rm{LCC}$ approximated using Eq. \ref{eqLCC} with coefficients determined by multiple linear regression (SM Table 2).  Dashed lines show $\beta\Delta \rm{SST}$ term.  Black boxes show window regions discussed in text.}
+  \label{fig:trends_lcceis_ts}
+\end{figure}
+
+\replaced{Values of $\gamma$ and $\beta$ for each of the three AGCMs are given in Table 2 of SM.   Time-series of the mean ($\pm 60^{\circ}$) values of anomalous low cloud cover $\Delta \rm{LCC}$ are shown in Fig. \ref{fig:trends_lcceis_ts}b, time series computed for the ($\pm 30^{\circ}$) are shown in SM Fig. 4.  Thick lines show the ensemble mean $\Delta \rm{LCC}$  values for each of the three AGCMs, thin lines show the $\Delta \rm{LCC}$ computed with equation \ref{eqLCC}, and dotted lines show $\beta \Delta \rm{SST}$.
+Based on high correlations between $\Delta \rm{LCC}$ and the linear combination of $\Delta \rm{EIS}$ and $\Delta \rm{SST}$ the above relationship is an excellent approximation.  
+The relative contributions of EIS and SST to the low-cloud cover is model dependent.}
+{Between $\pm 30^{\circ}$, $(\gamma, \beta)=
+(4,7,-0.13; \rm{AM}2.1),(5.6,-0.53; \rm{AM}3)$, and $(4.8,-0.39; \rm{AM}4.0)$ indicating a model dependent relative contribution from EIS and SST to LCC.  Time series of the mean values of anomalous low cloud cover $\Delta \rm{LCC}$ are shown in Fig. \ref{fig:trends_lcceis_ts}b ($\pm 60^{\circ}$) and SM Fig. 3 ($\pm 30^{\circ}$).  Thick lines show the $\Delta \rm{LCC}$  values for each of the three AGCMs, thin lines show the $\Delta \rm{LCC}$ computed with equation \ref{eqLCC}, and \replaced{dotted}{dashed} lines show $\beta \Delta \rm{SST}$.
+High correlations between $\Delta \rm{LCC}$ and the linear combination of $\Delta \rm{EIS}$ and $\Delta \rm{SST}$ indicate the above relationship is an excellent approximation.}  
+\explain{This paragraph was edited to incorporate details from the SM.}
+Because the three models examined here all use prescribed SSTs, this difference likely indicates differences in the relative importance of the EIS fields which are in turn driven by the mid-tropospheric temperature, in this case the temperature \replaced{on the $700 \rm{hPa}$ surface}{at $700 \rm{hPa}$}.  
+\explain{unnecessary, and not exactly clear information}
+\deleted{The connection between the temperature field at particular levels with parameterization schemes (convection, turbulence) provides a useful link between details of the parameterizations and the LCC field. }   
+\explain{moved to end of next paragraph}
+\deleted{The successful reconstruction of the mean $\Delta \rm{LCC}$ both in the tropics and between $\pm 60$, as well as the close mirroring between the global fields of LCC and EIS trends (Fig. \ref{fig:trends_lcceis_ts}) indicate how closely tied to the SST pattern the LCC and EIS are.}
+
+Several noteworthy points can be drawn from Figure \ref{fig:trends_lcceis_ts} and SM Table 2.  Increasing EIS leads to increasing LCC but increasing SST leads to decreasing LCC.  
+\replaced{As shown by the correlation coefficients in SM Table 2 the particular decomposition used by Z16 to explain the variance in the change of the low-cloud cover is not directly applicable to other models but is specific to CAM5.3.}{The linear decomposition works well for all three GFDL models and CAM5.3, but with differing degrees of dependence among the models on the $\Delta \rm{SST}$ and $\Delta \rm{EIS}$ terms.}     The \replaced{remarkably}{relatively} flat $\beta \Delta \rm{SST}$ time series in Figure \ref{fig:trends_lcceis_ts} indicate that when the midlatitudes are included,  the anomalies of EIS become dominant over the anomalies of SST in determining the changes of LCC.   The precipitous drop of anomolous LCC (Fig. \ref{fig:trends_lcceis_ts} b) corresponds well to the minimum of \replaced{$\alpha_{LCC}$}{$R_{LCC}$} and maxima in $\alpha_{CRE}$ and $\alpha$ around 1940 (Fig. 1).  
+\added{The successful reconstruction of the mean $\Delta \rm{LCC}$ in the tropics and between $\pm 60$, as well as the close mirroring between the fields of LCC and EIS trends (Fig. \ref{fig:trends_lcceis_ts}) indicate how closely tied to the SST pattern the LCC and EIS are.}
+
+\subsection{Response of clouds to EIS and SST patterns}
+
+The known connections between LCC and SST \citep{Qu_etal_2014, Zhou_etal_2016, Myers_Norris_2016} combined with the strong linear dependence of LCC anomalies on the EIS field shown in the previous subsection encourage examination of the global trends of LCC and EIS.   
+A strong relationship between LCC and EIS in many regions of the globe is seen (Fig. \ref{fig:trends_lcceis_ts}) with the \replaced{thirty}{30}-year trends of LCC and EIS between the late (1975-2005) and early (1925-1955) periods. 
+The response of LCC and EIS to the SST patterns is largely consistent among the three models.   Both time periods have an increase of EIS and LCC in the equatorial eastern Pacific ocean.   During the early period the LCC decreases in much of the Southern Hemispheric oceans and northern midlatitudes.
+During the later period there is an increase of LCC throughout much of the Southern Hemispheric oceans and a decrease of LCC in the north Atlantic and northwest Pacific.    This is consistent with a \replaced{positive cloud feedback}{positive CRE} (large climate sensitivity) during the early period and a \replaced{small cloud feedback}{negative CRE} (low climate sensitivity) during the later period (Fig. \ref{fig:alphacre}).  Also prominent is the strong Atlantic basin correspondence between LCC and EIS trends during both periods, and the strong shift in the Atlantic from broadly negative trends in the early period to an inter-hemispheric dipole in the late period.  These patterns of LCC modeled during the late period match fairly well with trends of total cloud cover obtained from bias corrected ISCCP observations (SM Fig. 3).  
+ 
+The trends of LCC (Fig. \ref{fig:trends_lcceis_ts}, 1st and 2nd rows) closely mirror the trends of EIS (Fig. \ref{fig:trends_lcceis_ts}, 3rd and 4th rows) and are related to the SST patterns during both periods.  In particular, increasing EIS and LCC occur in regions of decreasing SST (north- and south-eastern Pacific, the Indian ocean, the southern Atlantic, and the southern Ocean).  This relationship has been thoroughly discussed in the literature in the context of stratocumulus regions and subsiding circulations \citep [e.g.,][]{Klein_Hartmann_1993, Wood_Bretherton_2006, Myers_Norris_2013, Qu_etal_2014, Qu_etal_2015}.  Figure \ref{fig:trends_lcceis_ts} shows the relationship to also be important across much of the world ocean.   For example, in the early period we see the dominant changes of LCC to be influenced by decreases of EIS over regions with increased SST.  There is a clear connection between EIS, SST, and LCC outside of the regions of stratocumulus clouds. 
+
+
+\section{Conclusions}
+
+We show that low-level clouds in the trade-wind regions ($\pm 30^{\circ}$) drive the strong decadal variability of the climate feedback parameter over the historical 20th century.  This is distinct from the well known fact that low-level clouds are also the main source of uncertainty \replaced{in}{of} the ECS \replaced{of}{among} GCMs.  
+Changes in the LCC fields track excellently with $\alpha$, $\alpha_{CRE}$, and \added{$\alpha_{SW CRE}$}, and are consistent with a period of high sensitivity (small $\alpha$, negative LCC anomalies, and CREs near zero) between 1925-1955 and low sensitivity (large $\alpha$, positive LCC anomalies, and negative CREs) between 1975-2005.   These changes in the cloud fields are ultimately driven by differences in the SST patterns between the two time periods.  The variability is not simply due to a weakening or strengthening of Stratocumulus cloud decks, but rather it is marked by changes in the trade-wind regions as a whole and in particular, the tropical Atlantic.   The southern ocean low-level clouds also have contrasting trends between the two periods.
+
+We have decomposed $\alpha$ into specific geographic regions showing the decadal variability of $\alpha$ to be almost
+entirely due to the tropical region between $\pm 30^{\circ}$ (Fig 1.b).   Large regional changes in the trend of LCC mirror changes in EIS and SWCRE even outside of the regions traditionally thought to be influenced by EIS (Figs. 2,3).  Although specific regions traditionally identified with persistent stratocumulus cloud decks show physically consistent relationships between the LCC, SWCRE, and EIS between the two periods of differing sensitivity, they only contribute a total of around $10\%$ to the magnitude of global mean $\alpha$ \added{(Fig 1.b)}.  As computed here the sum of these regions occupy about $6\%$ of the globe.
+\added{The same computations with the windows from \citet{Qu_etal_2014} accounts for around $13\%$ of $\alpha$ while occupying about $9\%$ of the globe (SM Fig1).}  \replaced{Their contribution shows little decadal variability (Fig. 1.b.)}{In all cases, contributions to the decadal variability of $\alpha$ from tropical windows are minimal.}   
+
+Following the work of \citet{Qu_etal_2014, Qu_etal_2015}, and Z16 we use multiple linear regression to estimate the dependence of $\Delta \rm{LCC}$ on $\Delta \rm{EIS}$ and $\Delta \rm{SST}$ for three AGCMs over the historical period.  
+The linear model of LCC change works well when applied to both $\pm 30^{\circ}$ and  $\pm 60^{\circ}$.
+\deleted{We find that} The spatial distribution of EIS trends corresponds well to trends of LCC in regions with stratocumulus, trade-wind cumulus, and shallow cumulus clouds.  This indicates that the strong influence of EIS on LCC holds for disparate patterns of SST and across an $\alpha$ range (in this study) of $2.2 \rm{W m}^{-2} \rm{K}^{-1}$ . 
+
+Despite the broad similarity of simulations among the three AGCMs used in this study there are differences.  The sensitivities of AM2.1 and AM4.0 are lower than AM3 in the mid twentieth-century consistent with a stronger mid-latitude decrease of low-level clouds in AM3 during that period.  While $\Delta \rm{LCC}$ of all three AGCMs have a linear dependence on $\Delta \rm{EIS}$ and $\Delta \rm{SST}$, the relative dependence on each variable differs among models (SM Table 2).  Over the second half of the twentieth century AM4.0 and AM3 show a strong decrease of $\alpha$ while $\alpha_{CRE}$ decreases by $1.5 \rm{W m}^{-2} \rm{K}^{-1}$ (Fig. \ref{fig:alphacre}).  In contrast, AM2.1 has a weak decrease of $\alpha$ and a decrease of $\alpha_{CRE}$ of only $0.9 \rm{W m}^{-2} \rm{K}^{-1}$ between the two periods.
+
+
+Recently Gregory and Andrews (GA16) \replaced{showed the}{computed an} effective climate sensitivity over the historical period to be 2K.  This is significantly less than the sensitivity from the corresponding AOGCMs in response to 4x$\rm{CO}_2$ experiments \citep{Andrews_etal_2012}.  
+Similarly, the effective climate sensitivities of AM2.1 (1.7K), AM3 (2.0K), and AM4.0 (1.9K) over the historical period are significantly lower than the ECS of the parent AOGCMs (ESM2M (3.3K) and CM3(4.8K), computed from multi-millennia equilibrium runs).  \deleted{The Cess sensitivities of AM2.1, AM3, and AM4.0 are (0.58, 0.73, and 0.57 $\rm{K} $ $ \rm{W}^{-1} \rm{m}^2$, respectively).}  Much of the uncertainty in \replaced{both}{the} ECS \deleted{and the Cess sensitivity} has been attributed to cloud feedbacks 
+\citep{Cess_etal_1989, Bony_Dufresne_2005}.  \added{Despite large differences in ECS and effective climate sensitivities among AM2.1, AM3, and AM4.0}
+\deleted{nevertheless} this study demonstrates that the cloudy response to changing SST patterns over the historical period is similar \replaced{among AM2.1, AM3, and AM4.0}{for these AGCMs}. 
+
+Assuming that $\alpha$ is constant has provided a useful approximation of the Earth's energetic response to perturbations despite the knowledge \citep [e.g.,][]{Senior_Mitchell_2000, Andrews_etal_2012, Armour_etal_2013, Andrews_etal_2015} that $\alpha$ is not constant and that the energetic response is nonlinear.  
+Previous work has shown how dependent the equilibrium sensitivity is on low-level clouds in both `fully-comprehensive' Earth-system models \citep{Vial_etal_2013, Sherwood_etal_2014, Paynter_Frolicher_2015} 
+as well extremely simplified cases \citep{Silvers_etal_2016}.   Our analysis of the historical period reveals how dependent $\alpha$ is on changes in the global low-level cloud fields.  While \replaced{$\alpha$}{the effective climate sensitivity} over the historical period is distinct from the \replaced{equilibrium climate sensitivity}{ECS}, the influence of clouds on the global energy budget is important for both.   Because our AGCMs are driven by prescribed \replaced{lower boundary conditions with}{SST and sea ice concentrations and} constant atmospheric forcing the relative strength of the feedbacks seen in this study may differ from the feedbacks of a fully interactive Earth system model.  But while the cloud feedbacks in the full Earth system may have a more nuanced response, 
+this work clearly documents how the atmospheric cloudy response to particular SST patterns plays a dominant role in the energy budget at the TOA.
+
+Recent work has increasingly highlighted the critical role of cloud base cloudiness in determining the climate sensitivity of GCMs 
+\citep{Brient_etal_2015, Vial_etal_2017}.   
+The atmospheric stability (EIS or LTS) provides an excellent diagnostic tool with which to determine how parameterized turbulence and convection influence the low-level atmospheric temperature.  This paper shows that EIS simulates LCC very well throughout the global oceans during periods of both high and low sensitivity.   Our demonstration of the strong connection between atmospheric stability, LCC, and $\alpha$ indicates a useful link between GCM parameterizations and the climate sensitivity.  
+
+
+
+
+%%% End of body of article
+
+%  ACKNOWLEDGMENTS
+
+\acknowledgments
+We thank Mike Winton, Nadir Jeevanjee and two anonymous reviewers for helpful reviews.  Larry Horowitz,  Fanrong Zeng and Tom Delworth are thanked for making data from 
+AM2.1 and AM3 available.  Relevant data and scripts used in the analysis are available from LGS upon request.  This paper was prepared by LGS under award NA14OAR4320106 
+from the National Oceanic and Atmospheric Administration, U.S. Department of Commerce.  The statements, conclusions, and recommendations
+are those of the authors and do not necessarily reflect the views of the National Oceanic and Atmospheric Administration, or the 
+U.S Department of Commerce.
+
+
+
+
+%%  REFERENCE LIST AND TEXT CITATIONS
+
+\begin{thebibliography}{32}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{\textit{Andrews}(2014)}]{Andrews_2014}
+Andrews, T. (2014), Using an {AGCM} to diagnose historical effective radiative
+  forcing and mechanisms of recent decadal climate change, \textit{JCLI}, 
+  \textit{27}, 1193--1209.
+  
+\bibitem[{\textit{Andrews et~al.}(2012)\textit{Andrews, Gregory, Webb, and
+  Taylor}}]{Andrews_etal_2012}
+Andrews, T., J.~M. Gregory, M.~J. Webb, and K.~E. Taylor (2012), Forcing,
+  feedbacks and climate sensitivity in {CMIP5} coupled atmosphere-ocean climate
+  models, \textit{Geophys.\ Res.\ Lett.}, \textit{39}, 1--7,
+  \doi{10.1029/2012GL051607}.
+
+\bibitem[{\textit{Andrews et~al.}(2015)\textit{Andrews, Gregory, and
+  Webb}}]{Andrews_etal_2015}
+Andrews, T., J.~M. Gregory, and M.~J. Webb (2015), The dependence of radiative
+  forcing and feedback on evolving patterns of surface temperature change in
+  climate models, \textit{JCLI}, \textit{28}, 1630--1648.
+
+\bibitem[{\textit{Armour}(2017)}]{Armour_2017}
+Armour, K. (2017), Energy budget constraints on climate sensitivity in light of
+  inconstant climate feedbacks, \textit{Nat.\ Cim.\ Change}, \textit{7},
+  \doi{10.1038/NCLIMATE3278}.
+
+\bibitem[{\textit{Armour et~al.}(2013)\textit{Armour, Bitz, and
+  Roe}}]{Armour_etal_2013}
+Armour, K.~C., C.~M. Bitz, and G.~H. Roe (2013), Time-varying climate
+  sensitivity from regional feedbacks, \textit{JCLI}, \textit{26},
+  4518--4534.
+
+\bibitem[{\textit{Bony and Dufresne}(2005)}]{Bony_Dufresne_2005}
+Bony, S., and J.~L. Dufresne (2005), Marine boundary layer clouds at the heart
+  of tropical cloud feedback uncertainties in climate models, \textit{Geophys.\
+  Res.\ Lett.}, \textit{32}, \doi{10.1029/2005GL023851}.
+
+\bibitem[{\textit{Bony et~al.}(2004)\textit{Bony, Dufresne, Treut, Morcrette,
+  and Senior}}]{Bony_etal_2004}
+Bony, S., J.~L. Dufresne, H.~L. Treut, J.-J. Morcrette, and C.~Senior (2004),
+  On dynamic and thermodynamic components of cloud changes, \textit{Clim.\
+  Dynam.}, \textit{22}, \doi{10.1007/s00382-003-0369-6}.
+
+\bibitem[{\textit{Bretherton et~al.}(2004)\textit{Bretherton, Peters, and
+  Back}}]{Bretherton_etal_2004}
+Bretherton, C.~S., M.~E. Peters, and L.~E. Back (2004), A new parameterization
+  for shallow cumulus convection and its application to marine subtropical
+  cloud-topped boundary layers. part i: Description and 1-d results,
+  \textit{Mon.\ Wea.\ Rev.}, \textit{132}, 864--882.
+
+\bibitem[{\textit{Brient et~al.}(2015)\textit{Brient, Schneider, Tan, Bony, Qu,
+  and Hall}}]{Brient_etal_2015}
+Brient, F., T.~Schneider, Z.~Tan, S.~Bony, X.~Qu, and A.~Hall (2015),
+  Shallowness of tropical low clouds as a predictor of climate models' response
+  to warming, \textit{Clim.\ Dynam.}, \textit{45},
+  \doi{10.1007/s00382-015-2846-0}.
+
+\bibitem[{\textit{Cess et~al.}(1989)\textit{Cess, Potter, and
+  Blanchet}}]{Cess_etal_1989}
+Cess, R.~D., G.~L. Potter, and J.~Blanchet (1989), Interpretation of
+  cloud-climate feedback as produced by 14 atmospheric general circulation
+  models, \textit{Science}, \textit{245}, 513--516.
+
+\bibitem[{\textit{Donner}(1993)}]{Donner_1993}
+Donner, L.~J. (1993), A Cumulus Parameterization Including Mass Fluxes, 
+Vertical Momentum Dynamics, and Mesoscale Effects, \textit{JAS},
+  \textit{50}, 889--906, \doi{0.1175/1520-0469(1993)050<0889:ACPIMF>2.0.CO;2}.
+
+\bibitem[{\textit{Donner and Coauthors}(2011)}]{Donner_etal_2011}
+Donner, L.~J., and Coauthors (2011), The dynamical core, physical
+  parameterizations, and basic simulation characteristics of the atmospheric
+  component {AM3} of the {GFDL} global coupled model {CM3}, \textit{JCLI},
+  \textit{24}, 3484--3519, \doi{10.1175/2011JCLI3955.1}.
+
+\bibitem[{\textit{Forster and Gregory}(2006)}]{Forster_Gregory_2006}
+Forster, P.~M., and J.~M. Gregory, (2006), The Climate Sensitivity and Its
+Components Diagnosed from Earth Radiation Budget Data, \textit{JCLI}, 
+\textit{19}, 39--52, \doi{10.1175/JCLI3611.1}.
+
+\bibitem[{\textit{Flato et al.}(2013)}]{Flato_etal_2013}
+Flato et al. (2013), Evaluation of Climate Models, in \textit{Climate Change 2013: The Physical Science Basis.  
+Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental 
+Panal on Climate Change}, edited by G. Flato et al., 741--882, Cambridge Univ.
+Press, \doi{10.1017/cbo9781107415324.020}.
+
+\bibitem[{\textit{GFDL-GAMDT}(2004)}]{GFDL_GAMDT_2004}
+GFDL-GAMDT (2004), The new {GFDL} global atmosphere and land model {AM2}/{LM2}:
+  Evaluation with prescribed {SST} simulations, \textit{JCLI}, \textit{17},
+  4641--4673, \doi{10.1175/JCLI-3223.1}.
+
+\bibitem[{\textit{Gregory and Andrews}(2016)}]{Gregory_Andrews_2016}
+Gregory, J.~M., and T.~Andrews (2016), Variation in climate sensitivity and
+  feedback parameters during the historical period, \textit{Geophys.\ Res.\
+  Lett.}, \textit{43}, 3911--3920, \doi{10.1002/2016GL068406}.
+
+\bibitem[{\textit{Gregory et~al.}(2004)\textit{Gregory, Ingram, Palmer, Jones,
+  Stott, Thorpe, Lowe, Johns, and Williams}}]{Gregory_etal_2004}
+Gregory, J.~M., W.~J. Ingram, M.~A. Palmer, G.~S. Jones, P.~A. Stott, R.~B.
+  Thorpe, J.~A. Lowe, T.~Johns, and K.~Williams (2004), A new method for
+  diagnosing radiative forcing and climate sensitivity, \textit{Geophys.\ Res.\
+  Lett.}, \textit{31}, 1--4, \doi{10.1029/2003GL018747}.
+
+\bibitem[{\textit{Grise and Medeiros}(2016)}]{Grise_Medeiros_2016}
+Grise, K.~M., and B.~Medeiros (2016), Understanding the varied influence of
+  midlatitude jet position on clouds and cloud radiative effects in
+  observations and global climate models, \textit{JCLI}, \textit{29},
+  9005--9025, \doi{10.1175/JCLI-D-16-0295.1}.
+
+\bibitem[{\textit{Haugstad et~al.}(2017)\textit{Haugstad, Armour, Battisti, and
+  Rose}}]{Haugstad_etal_2017}
+Haugstad, A.~D., K.~C. Armour, D.~S. Battisti, and B.~E.~J. Rose (2017),
+  Relative roles of surface temperature and climate forcing patterns in the
+  inconstancy of radiative feedbacks, \textit{Geophys.\ Res.\ Lett.},
+  \textit{44}, \doi{10.1002/2017GL074372}.
+
+\bibitem[{\textit{Klein and Hartmann}(1993)}]{Klein_Hartmann_1993}
+Klein, S.~A., and D.~L. Hartmann (1993), The seasonal cycle of low stratiform
+  clouds, \textit{JCLI}, \textit{6}, 1587--1606,
+  \doi{10.1175/1520-0442(1993)006<1587:TSCOLS>2.0.CO;2}.
+
+\bibitem[{\textit{Mauritsen et~al.}(2013)\textit{Mauritsen, Graversen, Klocke,
+  Langen, Stevens, and Tomassini}}]{Mauritsen_etal_2013}
+Mauritsen, T., R.~G. Graversen, D.~Klocke, P.~L. Langen, B.~Stevens, and
+  L.~Tomassini (2013), Climate feedback efficiency and synergy, \textit{Clim.\
+  Dynam.}, \textit{41}, 2539--2554.
+
+\bibitem[{\textit{Medeiros et~al.}(2008)\textit{Medeiros, Stevens, Held, Zhao,
+  Williamson, Olson, and Bretherton}}]{Medeiros_etal_2008}
+Medeiros, B., B.~Stevens, I.~M. Held, M.~Zhao, D.~L. Williamson, J.~G. Olson,
+  and C.~S. Bretherton (2008), Aquaplanets, climate sensitivity, and low
+  clouds, \textit{JCLI}, \textit{21}, 4974--4991.
+
+\bibitem[{\textit{Moorthi and Suarez}(1992)}]{Moorthi_Suarez_1992}
+Moorthi, S., and M.~Suarez (1992), Relaxed arakawa schubert: A parameterization
+  of moist convection for general circulation models, \textit{Mon.\ Wea.\
+  Rev.}, \textit{120}, 978--1002.
+
+\bibitem[{\textit{Myers and Norris}(2013)}]{Myers_Norris_2013}
+Myers, T.~A., and J.~R. Norris (2013), Observational evidence that enhanced
+  subsidence reduces subtropical marine boundary layer cloudiness, \textit{JCLI}, 
+  \textit{26}, 7507--7524, \doi{10.1175/JCLI-D-12-00736.1}.
+
+\bibitem[{\textit{Myers and Norris}(2016)}]{Myers_Norris_2016}
+Myers, T.~A., and J.~R. Norris (2016), Reducing the uncertainty in subtropical
+  cloud feedback, \textit{Geophys.\ Res.\ Lett.}, \textit{43},
+  \doi{10.1002/2015GL067416}.
+
+\bibitem[{\textit{Paynter and Fr\"{o}licher}(2015)}]{Paynter_Frolicher_2015}
+Paynter, D., and T.~Fr\"{o}licher (2015), Sensitivity of radiative forcing,
+  ocean heat uptake, and climate feedback to changes in anthropogenic
+  greenhouse gases and aerosols, \textit{J.\ Geophys.\ Res.}, \textit{120},
+  9837--9854, \doi{10.1002/2015JD023364}.
+
+\bibitem[{\textit{Popp and Silvers}(2017)}]{Popp_Silvers_2017}
+Popp, M., and L.~G. Silvers (2017), Double and single {ITCZ}s with and without
+  clouds, \textit{JCLI}, \doi{10.1175/JCLI-D-17-0062.1}.
+  
+\bibitem[{\textit{Qu et~al.}(2014)\textit{Qu, Hall, Klein, and
+  Caldwell}}]{Qu_etal_2014}
+Qu, X., A.~Hall, S.~A. Klein, and P.~M. Caldwell (2014), On the spread of
+  changes in marine low cloud cover in climate model simulations of the 21st
+  century, \textit{Clim.\ Dynam.}, \textit{42},
+  \doi{10.1007/s00382-013-1945-z}.
+
+\bibitem[{\textit{Qu et~al.}(2015)\textit{Qu, Hall, Klein, and
+  Caldwell}}]{Qu_etal_2015}
+Qu, X., A.~Hall, S.~A. Klein, and P.~M. Caldwell (2015), The strength of the
+  tropical inversion and its response to climate change in 18 {CMIP5} models,
+  \textit{Clim.\ Dynam.}, \textit{45}, \doi{10.1007/s00382-014-2441-9}.
+
+\bibitem[{\textit{Randall et~al.}(1984)\textit{Randall, J.~A.~Coakley, Fairall,
+  Kropfli, and Lenschow}}]{Randall_etal_1984}
+Randall, D.~A., J.~J.~A.~Coakley, C.~Fairall, R.~A. Kropfli, and D.~H. Lenschow
+  (1984), Outlook for research on subtropical marine stratiform clouds,
+  \textit{Bull.\ Amer.\ Meteor.\ Soc.}, \textit{65}, 1290--1301.
+
+\bibitem[{\textit{Rose and Rayborn}(2016)}]{Rose_Rayborn_2016}
+Rose, B.~E., and J.~Rayborn (2016), The effects of ocean heat uptake on
+  transient climate sensitivity, \textit{Curr. Clim. Change Rep.},
+  \doi{10.1007/s40641-016-0048-4}.
+
+\bibitem[{\textit{Senior and Mitchell}(2000)}]{Senior_Mitchell_2000}
+Senior, C.~A., and J.~F.~B. Mitchell (2000), The time-dependence of climate
+  sensitivity, \textit{Geophys.\ Res.\ Lett.}, \textit{27}, 2685--2688,
+  \doi{10.1029/2012GL051607}.
+
+\bibitem[{\textit{Sherwood et~al.}(2014)\textit{Sherwood, Bony, and
+  Dufresne}}]{Sherwood_etal_2014}
+Sherwood, S.~C., S.~Bony, and J.~L. Dufresne (2014), Spread in model climate
+  sensitivity traced to atmospheric convective mixing, \textit{Nature},
+  \textit{505}, 37--42, \doi{10.1038/nature12829}.
+
+\bibitem[{\textit{Silvers et~al.}(2016)\textit{Silvers, Stevens, Mauritsen, and
+  Giorgetta}}]{Silvers_etal_2016}
+Silvers, L.~G., B.~Stevens, T.~Mauritsen, and M.~Giorgetta (2016), Radiative
+  convective equilibrium as a framework for studying the interaction between
+  convection and its large-scale environment, \textit{J.\ Adv. \ Model. \ Earth
+  \ Syst.}, \textit{8}, \doi{10.1002/2016MS000629}.
+  
+\bibitem[{\textit{Taylor et~al.}(2000)}]{Taylor_etal_2000}
+Taylor, K. ~E., and D. Williamson, and F. Zwiers (2000), The sea
+  surface temperature and sea-ice concentration boundary conditions
+  of {AMIP} {II} simulations, {PCMDI}, Rep. 60, 20 pp., \doi{10.1175/JCLI-D-17-0062.1}.  
+
+\bibitem[{\textit{Vial et~al.}(2013)\textit{Vial, Dufresne, and
+  Bony}}]{Vial_etal_2013}
+Vial, J., J.-L. Dufresne, and S.~Bony (2013), On the interpretation of
+  inter-model spread in {CMIP5} climate sensitivity estimates, \textit{Clim.\
+  Dynam.}, \textit{41}, 3339--3362, \doi{10.1007/s00382-013-1725-9}.
+  
+\bibitem[{\textit{Vial et~al.}(2017)\textit{Vial, Bony, Stevens, and
+  Vogel}}]{Vial_etal_2017}
+Vial, J., S.~Bony, B.~Stevens, and R.~Vogel (2017), Mechanisms and model
+  diversity of trade-wind shallow cumulus cloud feedbacks: A review,
+  \textit{Surv. Geophys. Rev.}, \doi{10.1007/s10712-017-9418-2}.
+
+\bibitem[{\textit{Webb et~al.}(2015)\textit{Webb, Lock, Bretherton, Bony, Cole,
+  Idelkadi, Kang, Koshiro, Kawai, Ogura, Roehrig, Shin, Mauritsen, Sherwood,
+  Vial, Watanabe, Woelfle, and Zhao}}]{Webb_etal_2015}
+Webb, M.~J., A.~P. Lock, C.~S. Bretherton, S.~Bony, J.~N. Cole, A.~Idelkadi,
+  S.~M. Kang, T.~Koshiro, H.~Kawai, T.~Ogura, R.~Roehrig, Y.~Shin,
+  T.~Mauritsen, S.~C. Sherwood, J.~Vial, M.~Watanabe, M.~D. Woelfle, and
+  M.~Zhao (2015), The impact of parameterized convection on cloud feedback,
+  \textit{Philos.\ Trans.\ Roy.\ Soc.\ London\ A}, \textit{373},
+  \doi{10.1098/rsta.2014.0414}.
+
+\bibitem[{\textit{Webb et~al.}(2017)\textit{Webb, Andrews, Bodas-Salcedo, Bony,
+  Bretherton, Chadwick, Chepfer, Douville, Good, Kay, Klein, Marchand,
+  Medeiros, Siebesma, Skinner, Stevens, Tselioudis, Tsushima, and
+  Watanabe}}]{Webb_etal_2017}
+Webb, M.~J., T.~Andrews, A.~Bodas-Salcedo, S.~Bony, C.~S. Bretherton,
+  R.~Chadwick, H.~Chepfer, H.~Douville, P.~Good, J.~E. Kay, S.~A. Klein,
+  R.~Marchand, B.~Medeiros, A.~P. Siebesma, C.~B. Skinner, B.~Stevens,
+  G.~Tselioudis, Y.~Tsushima, and M.~Watanabe (2017), The cloud feedback model
+  intercomparison project ({CFMIP}) contribution to {CMIP6}, \textit{Geosci. \
+  Model \ Dev.}, \textit{10}, \doi{10.5194/gmd-10-359-2017}.
+  
+\bibitem[{\textit{Wood}(2012)}]{Wood_2012}
+Wood, R., (2012), {REVIEW} Stratocumulus Clouds, \textit{Mon.\ Wea.\
+  Rev.}, \textit{140},
+  2373--2423, \doi{10.1175/MWR-D-11-00121.1}.
+
+\bibitem[{\textit{Wood and Bretherton}(2006)}]{Wood_Bretherton_2006}
+Wood, R., and C.~S. Bretherton (2006), On the relationship between stratiform
+  low cloud cover and lower-tropospheric stability, \textit{JCLI}, \textit{19},
+  6425--6432, \doi{10.1175/JCLI3988.1}.
+
+\bibitem[{\textit{Zhao et~al.}(2016)\textit{Zhao, Golaz, Held, Ramaswamy, Lin,
+  Ming, Ginoux, Wyman, Donner, and Paynter}}]{Zhao_etal_2016}
+Zhao, M., J.-C. Golaz, I.~M. Held, V.~Ramaswamy, S.-J. Lin, Y.~Ming, P.~Ginoux,
+  B.~Wyman, L.~J. Donner, and D.~Paynter (2016), Uncertainty in model climate
+  sensitivity traced to representations of cumulus precipitation microphysics,
+  \textit{JCLI}, \textit{29}, 543--560, \doi{10.1175/JCLI-D-15-0191.1}.
+
+\bibitem[{\textit{Zhou et~al.}(2016)\textit{Zhou, Zelinka, and
+  Klein}}]{Zhou_etal_2016}
+Zhou, C., M.~D. Zelinka, and S.~A. Klein (2016), Impact of decadal cloud
+  variations on the earth's energy budget, \textit{Nat.\ Geosci.}, \textit{9},
+  \doi{10.1038/ngeo2828}.
+
+\end{thebibliography}
+
+%
+
+%%%
+\listofchanges
+%%%
+
+\end{document}
+
+%\listofchanges
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Supporting Information
+%% (Optional) See AGUSuppInfoSamp.tex/pdf for requirements 
+%% for Supporting Information.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+More Information and Advice:
+
+%% ------------------------------------------------------------------------ %%
+%
+%  SECTION HEADS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Capitalize the first letter of each word (except for
+% prepositions, conjunctions, and articles that are
+% three or fewer letters).
+
+% AGU follows standard outline style; therefore, there cannot be a section 1 without
+% a section 2, or a section 2.3.1 without a section 2.3.2.
+% Please make sure your section numbers are balanced.
+% ---------------
+% Level 1 head
+%
+% Use the \section{} command to identify level 1 heads;
+% type the appropriate head wording between the curly
+% brackets, as shown below.
+%
+%An example:
+%\section{Level 1 Head: Introduction}
+%
+% ---------------
+% Level 2 head
+%
+% Use the \subsection{} command to identify level 2 heads.
+%An example:
+%\subsection{Level 2 Head}
+%
+% ---------------
+% Level 3 head
+%
+% Use the \subsubsection{} command to identify level 3 heads
+%An example:
+%\subsubsection{Level 3 Head}
+%
+%---------------
+% Level 4 head
+%
+% Use the \subsubsubsection{} command to identify level 3 heads
+% An example:
+%\subsubsubsection{Level 4 Head} An example.
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  IN-TEXT LISTS
+%
+%% ------------------------------------------------------------------------ %%
+%
+% Do not use bulleted lists; enumerated lists are okay.
+% \begin{enumerate}
+% \item
+% \item
+% \item
+% \end{enumerate}
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Single-line equations are centered.
+% Equation arrays will appear left-aligned.
+
+Math coded inside display math mode \[ ...\]
+ will not be numbered, e.g.,:
+ \[ x^2=y^2 + z^2\]
+
+ Math coded inside \begin{equation} and \end{equation} will
+ be automatically numbered, e.g.,:
+ \begin{equation}
+ x^2=y^2 + z^2
+ \end{equation}
+
+
+% To create multiline equations, use the
+% \begin{eqnarray} and \end{eqnarray} environment
+% as demonstrated below.
+\begin{eqnarray}
+  x_{1} & = & (x - x_{0}) \cos \Theta \nonumber \\
+        && + (y - y_{0}) \sin \Theta  \nonumber \\
+  y_{1} & = & -(x - x_{0}) \sin \Theta \nonumber \\
+        && + (y - y_{0}) \cos \Theta.
+\end{eqnarray}
+
+%If you don't want an equation number, use the star form:
+%\begin{eqnarray*}...\end{eqnarray*}
+
+% Break each line at a sign of operation
+% (+, -, etc.) if possible, with the sign of operation
+% on the new line.
+
+% Indent second and subsequent lines to align with
+% the first character following the equal sign on the
+% first line.
+
+% Use an \hspace{} command to insert horizontal space
+% into your equation if necessary. Place an appropriate
+% unit of measure between the curly braces, e.g.
+% \hspace{1in}; you may have to experiment to achieve
+% the correct amount of space.
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATION NUMBERING: COUNTER
+%
+%% ------------------------------------------------------------------------ %%
+
+% You may change equation numbering by resetting
+% the equation counter or by explicitly numbering
+% an equation.
+
+% To explicitly number an equation, type \eqnum{}
+% (with the desired number between the brackets)
+% after the \begin{equation} or \begin{eqnarray}
+% command.  The \eqnum{} command will affect only
+% the equation it appears with; LaTeX will number
+% any equations appearing later in the manuscript
+% according to the equation counter.
+%
+
+% If you have a multiline equation that needs only
+% one equation number, use a \nonumber command in
+% front of the double backslashes (\\) as shown in
+% the multiline equation above.
+
+% If you are using line numbers, remember to surround
+% equations with \begin{linenomath*}...\end{linenomath*}
+
+%  To add line numbers to lines in equations:
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+
+
+

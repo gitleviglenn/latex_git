@@ -1,0 +1,303 @@
+\begin{thebibliography}{49}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{\textit{Arnold and Randall}(2015)}]{Arnold_Randall_2015}
+Arnold, N.~P., and D.~A. Randall (2015), Global-scale convective aggregation:
+  Implications for the madden-{J}ulian oscillation, \textit{J.\ Adv. \ Model. \
+  Earth \ Syst.}, \textit{7}, \doi{10.1002/2015MS000498}.
+
+\bibitem[{\textit{Bechtold et~al.}(2008)\textit{Bechtold, K\"{o}hler, Jung,
+  Doblas-Reyes, Leutbecher, Rodwell, Vitart, and Balsamo}}]{Bechtold_etal_2008}
+Bechtold, P., M.~K\"{o}hler, T.~Jung, F.~Doblas-Reyes, M.~Leutbecher, M.~J.
+  Rodwell, F.~Vitart, and G.~Balsamo (2008), Advances in simulating atmospheric
+  variability with the ecmwf model: From synoptic to decadal time-scales,
+  \textit{Quart. J. Roy. Meteor. Soc.}, \textit{134}, 1337--1351,
+  \doi{10.1002/qj.289}.
+
+\bibitem[{\textit{Bechtold et~al.}(2014)\textit{Bechtold, Semane, Lopez,
+  Chaboureau, Beljaars, and Bormann}}]{Bechtold_etal_2014}
+Bechtold, P., N.~Semane, P.~Lopez, J.-P. Chaboureau, A.~Beljaars, and
+  N.~Bormann (2014), Representing equilibrium and nonequilibrium convection in
+  large-scale models, \textit{J. Atmos. Sci.}, \textit{71}, 734--753,
+  \doi{10.1175/JAS-D-13-0163.1}.
+
+\bibitem[{\textit{Becker and Stevens}(2014)}]{Becker_Stevens_2014}
+Becker, T., and B.~Stevens (2014), Climate and climate sensitivity to changing
+  co$_2$ on an idealized land planet, \textit{J.\ Adv. \ Model. \ Earth \
+  Syst.}, \textit{6}, \doi{10.1002/2014MS000369}.
+
+\bibitem[{\textit{Bony and Dufresne}(2005)}]{Bony_Dufresne_2005}
+Bony, S., and J.~L. Dufresne (2005), Marine boundary layer clouds at the heart
+  of tropical cloud feedback uncertainties in climate models, \textit{Geophys.\
+  Res.\ Lett.}, \textit{32}, \doi{10.1029/2005GL023851}.
+
+\bibitem[{\textit{Bony et~al.}(2015)\textit{Bony, Stevens, Frierson, Jakob,
+  Kageyama, Pincus, Shepherd, Sherwood, Siebesma, Sobel, Watanabe, and
+  Webb}}]{Bony_etal_2015}
+Bony, S., B.~Stevens, D.~M. Frierson, C.~Jakob, M.~Kageyama, R.~Pincus, T.~G.
+  Shepherd, S.~C. Sherwood, A.~P. Siebesma, A.~H. Sobel, M.~Watanabe, and M.~J.
+  Webb (2015), Clouds, circulation, and climate sensitivity, \textit{Nat.\
+  Geosci.}, \textit{8}, \doi{10.1038/NGEO2398}.
+
+\bibitem[{\textit{Bretherton et~al.}(2005)\textit{Bretherton, Blossey, and
+  Khairoutdinov}}]{Bretherton_etal_2005}
+Bretherton, C.~S., P.~N. Blossey, and M.~Khairoutdinov (2005), An
+  energy-balance analysis of deep convective self-aggregation above uniform
+  sst, \textit{J. Atmos. Sci.}, \textit{62}, 4273--4292.
+
+\bibitem[{\textit{Brient et~al.}(2015)\textit{Brient, Schneider, Tan, Bony, Qu,
+  and Hall}}]{Brient_etal_2015}
+Brient, F., T.~Schneider, Z.~Tan, S.~Bony, X.~Qu, and A.~Hall (2015),
+  Shallowness of tropical low clouds as a predictor of climate models' response
+  to warming, \textit{Clim.\ Dynam.}, \textit{45},
+  \doi{10.1007/s00382-015-2846-0}.
+
+\bibitem[{\textit{Cess et~al.}(1989)\textit{Cess, Potter, and
+  Blanchet}}]{Cess_etal_1989}
+Cess, R.~D., G.~L. Potter, and J.~Blanchet (1989), Interpretation of
+  cloud-climate feedback as produced by 14 atmospheric general circulation
+  models, \textit{Science}, \textit{245}, 513--516.
+
+\bibitem[{\textit{Coppin and Bony}(2015)}]{Coppin_Stevens_2015}
+Coppin, D., and S.~Bony (2015), Physical mechanisms controlling the initiation
+  of convective self-aggregation in a general circulation model, \textit{J.\
+  Adv. \ Model. \ Earth \ Syst.}, \textit{7}, \doi{10.1002/2015MS000571}.
+
+\bibitem[{\textit{Derbyshire et~al.}(2004)\textit{Derbyshire, Beau, Bechtold,
+  Grandpeix, Piriou, Redelsperger, and Soares}}]{Derbyshire_etal_2004}
+Derbyshire, S.~H., I.~Beau, P.~Bechtold, J.-Y. Grandpeix, J.-M. Piriou, J.-L.
+  Redelsperger, and P.~Soares (2004), Sensitivity of moist convection to
+  environmental humidity, \textit{Quart. J. Roy. Meteor. Soc.}, \textit{130},
+  3055--3079.
+
+\bibitem[{\textit{Dipankar et~al.}(2015)\textit{Dipankar, Stevens, Heinze,
+  Moseley, Z\"{a}ngl, Giorgetta, and Brdar}}]{Dipanker_etal_2015}
+Dipankar, A., B.~Stevens, R.~Heinze, C.~Moseley, G.~Z\"{a}ngl, M.~Giorgetta,
+  and S.~Brdar (2015), Large eddy simulation using the general circulation
+  model icon, \textit{J. Adv. Model. Earth Syst.}, \textit{7},
+  \doi{10.1002/2015MS000431}.
+
+\bibitem[{\textit{Emanuel et~al.}(2014)\textit{Emanuel, Wing, and
+  Vincent}}]{Emanuel_etal_2014}
+Emanuel, K., A.~A. Wing, and E.~M. Vincent (2014), Radiative-convective
+  instability, \textit{J. Adv. Model. Earth Syst.}, \textit{6},
+  \doi{10.1002/2013MS000270}.
+
+\bibitem[{\textit{Gassmann}(2011)}]{Gassmann_2011}
+Gassmann, A. (2011), Inspection of hexagonal and triangular c-grid
+  discretizations on the shallow water equations, \textit{J.\ Comput.\ Phys.},
+  \textit{230}, 2706--2721, \doi{10.1002/2013MS000270}.
+
+\bibitem[{\textit{Hartmann and Larson}(2002)}]{Hartmann_Larson_2002}
+Hartmann, D.~L., and K.~Larson (2002), An important constraint on tropical
+  cloud-climate feedback, \textit{Geophys.\ Res.\ Lett.}, \textit{29},
+  \doi{10.1029/2002GL015835}.
+
+\bibitem[{\textit{Held et~al.}(1993)\textit{Held, Hemler, and
+  Ramaswamy}}]{Held_etal_1993}
+Held, I.~M., R.~S. Hemler, and V.~Ramaswamy (1993), Radiative-convective
+  equilibrium with explicit two-dimensional moist convection, \textit{J. Atmos.
+  Sci.}, \textit{50}, 3909--3927,
+  \doi{http://dx.doi.org/10.1175/1520-0469(1993)050<3909:RCEWET>2.0.CO;2}.
+
+\bibitem[{\textit{Held et~al.}(2007)\textit{Held, Zhao, and
+  Wyman}}]{Held_etal_2007}
+Held, I.~M., M.~Zhao, and B.~Wyman (2007), Dynamic radiative-convective
+  equilibria using gcm column physics, \textit{J. Atmos. Sci.}, \textit{64},
+  228--238, \doi{10.1175/JAS3825.11}.
+
+\bibitem[{\textit{Jeevanjee and Romps}(2013)}]{Jeevanjee_Romps_2013}
+Jeevanjee, N., and D.~M. Romps (2013), Convective self-aggregation, cold pools,
+  and domain size, \textit{Geophys.\ Res.\ Lett.}, \textit{40}, 994--99,
+  \doi{10.1002/grl.50204}.
+
+\bibitem[{\textit{Klemp et~al.}(2008)\textit{Klemp, Dudhia, and
+  Hassiotis}}]{Klemp_etal_2008}
+Klemp, J.~B., J.~Dudhia, and A.~D. Hassiotis (2008), An upper gravity-wave
+  absorbing layer for nwp applications, \textit{Mon. Wea. Rev.}, \textit{136},
+  3987--4004, \doi{10.1175/2008MWR2596.1}.
+
+\bibitem[{\textit{Manabe and Strickler}(1964)}]{Manabe_Strickler_1964}
+Manabe, S., and R.~F. Strickler (1964), Thermal equilibrium of the atmosphere
+  with a convective adjustment, \textit{J. Atmos. Sci.}, \textit{21}, 361--385.
+
+\bibitem[{\textit{Manabe and Wetherald}(1967)}]{Manabe_Wetherald_1967}
+Manabe, S., and R.~T. Wetherald (1967), Thermal equilibrium of the atmosphere
+  with a given distribution of relative humidity, \textit{J. Atmos. Sci.},
+  \textit{24}, 241--259.
+
+\bibitem[{\textit{Mauritsen and Stevens}(2015)}]{Mauritsen_Stevens_2015}
+Mauritsen, T., and B.~Stevens (2015), Missing iris effect as a possible cause
+  of muted hydrological change and high climate sensitivity in models,
+  \textit{Nat.\ Geosci.}, \textit{8}, 346--351.
+
+\bibitem[{\textit{Mauritsen et~al.}(2013)\textit{Mauritsen, Graversen, Klocke,
+  Langen, Stevens, and Tomassini}}]{Mauritsen_etal_2013}
+Mauritsen, T., R.~G. Graversen, D.~Klocke, P.~L. Langen, B.~Stevens, and
+  L.~Tomassini (2013), Climate feedback efficiency and synergy, \textit{Clim.\
+  Dynam.}, \textit{41}, 2539--2554.
+
+\bibitem[{\textit{McWilliams}(2007)}]{McWilliams_2007}
+McWilliams, J.~C. (2007), Irreducible imprecision in atmospheric and oceanic
+  simulations, \textit{Proc.\ Natl.\ Acad.\ Sci.\ (USA)}, \textit{104},
+  8709--8713, \doi{10.1073/pnas.0702971104}.
+
+\bibitem[{\textit{Mlawer et~al.}(1997)\textit{Mlawer, Taubman, Brown, Iacono,
+  and Clough}}]{Mlawer_etal_1997}
+Mlawer, E.~J., S.~J. Taubman, P.~D. Brown, M.~J. Iacono, and S.~A. Clough
+  (1997), Radiative transfer for inhomogeneous atmospheres: Rrtm, a validated
+  correlated-k model for the longwave, \textit{J.\ Geophys.\ Res.},
+  \textit{102}, 16,663--16,682.
+
+\bibitem[{\textit{M\"{o}bis and Stevens}(2012)}]{Moebis_Stevens_2012}
+M\"{o}bis, B., and B.~Stevens (2012), Factors controlling the position of the
+  intertropical convergence zone on an aquaplanet, \textit{J.\ Adv. \ Model. \
+  Earth \ Syst.}, \textit{4}, \doi{10.1029/2012MS000199}.
+
+\bibitem[{\textit{Muller and Held}(2012)}]{Muller_Held_2012}
+Muller, C.~J., and I.~Held (2012), Detailed investigation of the
+  self-aggregation of convection in cloud-resolving simulations, \textit{J.
+  Atmos. Sci.}, \textit{69}, 2551--2565, \doi{10.1175/JAS-D-11-0257.1}.
+
+\bibitem[{\textit{Myhre et~al.}(1998)\textit{Myhre, Highwood, Shine, and
+  Stordal}}]{Myhre_etal_1998}
+Myhre, G., E.~J. Highwood, K.~P. Shine, and F.~Stordal (1998), New estimates of
+  radiative forcing due to well mixed greenhouse gases, \textit{Geophys.\ Res.\
+  Lett.}, \textit{25}, 2715--2718.
+
+\bibitem[{\textit{Nam et~al.}(2012)\textit{Nam, Bony, Dufresne, and
+  Chepfer}}]{Nam_etal_2012}
+Nam, C., S.~Bony, J.-L. Dufresne, and H.~Chepfer (2012), The `too few, too
+  bright' tropical low-cloud problem in cmip5 models, \textit{Geophys.\ Res.\
+  Lett}, \textit{39}, \doi{10.1029/2012GL053421}.
+
+\bibitem[{\textit{Nuijens et~al.}(2015)\textit{Nuijens, Medeiros, Sandu, and
+  Ahlgrimm}}]{Nuijens_etal_2015}
+Nuijens, L., B.~Medeiros, I.~Sandu, and M.~Ahlgrimm (2015), The behavior of
+  trade-wind cloudiness in observations and models: The major cloud components
+  and their variability, \textit{J. Adv. Model. Earth Syst.}, \textit{7},
+  600--616, \doi{10.1002/2014MS000390}.
+
+\bibitem[{\textit{Oueslati and Bellon}(2013)}]{Oueslati_Bellon_2013}
+Oueslati, B., and G.~Bellon (2013), Convective entrainment and large-scale
+  organization of tropical precipitation: Sensitivity of the {CNRM-CM5}
+  hierarchy of models, \textit{J.\ Climate}, \textit{26}, 2931--2946.
+
+\bibitem[{\textit{Popke et~al.}(2013)\textit{Popke, Stevens, and
+  Voigt}}]{Popke_etal_2013}
+Popke, D., B.~Stevens, and A.~Voigt (2013), Climate and climate change in a
+  radiative-convective equilibrium version of echam6, \textit{J. Adv. Model.
+  Earth Syst.}, \textit{5}, 1--14, \doi{10.1029/2012MS000191}.
+
+\bibitem[{\textit{Redelsperger et~al.}(2002)\textit{Redelsperger, Parsons, and
+  Guichard}}]{Redelsperger_etal_2002}
+Redelsperger, J., D.~Parsons, and F.~Guichard (2002), Recovery process and
+  factors limiting cloud-top height following the arrival of a dry intrusion
+  observed during {TOGA-COARE}, \textit{J.\ Atmos.\ Sci.}, \textit{59}.
+
+\bibitem[{\textit{Reed et~al.}(2015)\textit{Reed, Medeiros, Bacmeister, and
+  Lauritzen}}]{Reed_etal_2015}
+Reed, K.~A., B.~Medeiros, J.~T. Bacmeister, and P.~H. Lauritzen (2015), Global
+  radiative-convective equilibrium in the community atmosphere model, version
+  5, \textit{J.\ Atmos.\ Sci.}, \textit{72}, 2183--2197,
+  \doi{10.1175/JAS-D-14-0268.1}.
+
+\bibitem[{\textit{Rieck et~al.}(2012)\textit{Rieck, Nuijens, and
+  Stevens}}]{Rieck_etal_2012}
+Rieck, M., L.~Nuijens, and B.~Stevens (2012), Marine boundary layer cloud
+  feedbacks in a constant relative humidity atmosphere, \textit{J.\ Atmos.\
+  Sci.}, \textit{69}, 2538--2550, \doi{10.1175/JAS-D-11-0203.1}.
+
+\bibitem[{\textit{Rio et~al.}(2009)\textit{Rio, Hourdin, Grandpeix, and
+  Lafore}}]{Rio_etal_2009}
+Rio, C., F.~Hourdin, J.-Y. Grandpeix, and J.-P. Lafore (2009), Shifting the
+  diurnal cycle of parameterized deep convection over land, \textit{Geophys.\
+  Res.\ Lett}, \textit{36}, \doi{10.1029/2008GL036799}.
+
+\bibitem[{\textit{Sherwood et~al.}(2014)\textit{Sherwood, Bony, and
+  Dufresne}}]{Sherwood_etal_2014}
+Sherwood, S.~C., S.~Bony, and J.~L. Dufresne (2014), Spread in model climate
+  sensitivity traced to atmospheric convective mixing, \textit{Nature},
+  \textit{505}, 37--42, \doi{10.1038/nature12829}.
+
+\bibitem[{\textit{Sherwood et~al.}(2015)\textit{Sherwood, Bony, Boucher,
+  Bretherton, Forster, Gregory, and Stevens}}]{Sherwood_etal_2015}
+Sherwood, S.~C., S.~Bony, O.~Boucher, C.~Bretherton, P.~M. Forster, J.~M.
+  Gregory, and B.~Stevens (2015), Adjustments in the forcing-feedback framework
+  for understanding climate change, \textit{Bull.\ Amer.\ Meteor.\ Soc.},
+  \textit{96}, 217--228, \doi{10.1175/BAMS-D-13-00167.1}.
+
+\bibitem[{\textit{Stevens and Bony}(2013)}]{Stevens_Bony_2013}
+Stevens, B., and S.~Bony (2013), What are climate models missing?,
+  \textit{Science}, \textit{340}, 1053--1054, \doi{10.1126/science.1237554}.
+
+\bibitem[{\textit{Stevens et~al.}(2013)\textit{Stevens, Giorgetta, Esch,
+  Mauritsen, Crueger, Rast, Salzmann, Schmidt, Bader, Block, Brokopf, Fast,
+  Kinne, Kornblueh, Lohmann, Pincus, Reichler, and
+  Roeckner}}]{Stevens_etal_2013}
+Stevens, B., M.~Giorgetta, M.~Esch, T.~Mauritsen, T.~Crueger, S.~Rast,
+  M.~Salzmann, H.~Schmidt, J.~Bader, K.~Block, R.~Brokopf, I.~Fast, S.~Kinne,
+  L.~Kornblueh, U.~Lohmann, R.~Pincus, T.~Reichler, and E.~Roeckner (2013),
+  Atmospheric component of the mpi-m earth system model: Echam6, \textit{J.
+  Adv. Model. Earth Syst.}, \textit{5}, 146--172, \doi{10.1002/jame.20015}.
+
+\bibitem[{\textit{Takahashi}(2009)}]{Takahashi_2009}
+Takahashi, K. (2009), The global hydrological cycle and atmospheric shortwave
+  absorption in climate models under co$_2$ forcing, \textit{J.\ Climate},
+  \textit{22}, 5667--5675.
+
+\bibitem[{\textit{Tobin et~al.}(2012)\textit{Tobin, Bony, and
+  Roca}}]{Tobin_etal_2012}
+Tobin, I., S.~Bony, and R.~Roca (2012), Observational evidence for
+  relationships between the degree of aggregation of deep convection, water
+  vapor, surface fluxes, and radiation, \textit{J.\ Climate}, \textit{25},
+  6885--6904.
+
+\bibitem[{\textit{Tompkins and Craig}(1998)}]{Tompkins_Craig_1998}
+Tompkins, A., and G.~Craig (1998), Radiative-convective equilibrium in a
+  three-dimensional cloud ensemble model, \textit{Quart.\ J.\ Roy.\ Meteor.\
+  Soc.}, \textit{124}, 2073--2097.
+
+\bibitem[{\textit{Wan et~al.}(2013)\textit{Wan, Giorgetta, Z\"{a}ngl, Restelli,
+  Majewski, Bonaventura, Fr\"{o}hlich, Reinert, Ripodas, Kornblueh, and
+  F\"{o}rstner}}]{Wan_etal_2013}
+Wan, H., M.~A. Giorgetta, G.~Z\"{a}ngl, M.~Restelli, D.~Majewski,
+  L.~Bonaventura, K.~Fr\"{o}hlich, D.~Reinert, P.~Ripodas, L.~Kornblueh, and
+  J.~F\"{o}rstner (2013), The icon-1.2 hydrostatic atmospheric dynamical core
+  on triangular grids - part 1: Formulation and performance of the baseline
+  version, \textit{Geosci. Model Dev.}, \textit{6}, 735--763,
+  \doi{10.5194/gmd-6-735-2013}.
+
+\bibitem[{\textit{Webb et~al.}(2001)\textit{Webb, Senior, Bony, and
+  Morcrette}}]{Webb_etal_2001}
+Webb, M., C.~Senior, S.~Bony, and J.-L. Morcrette (2001), Combining {ERBE} and
+  {ISCCP} data to assess clouds in the hadley centre, {ECMWF} and {LMD}
+  atmospheric climate models, \textit{Clim.\ Dynam.}, \textit{17}, 905--922.
+
+\bibitem[{\textit{Wing and Emanuel}(2014)}]{Wing_Emanuel_2014}
+Wing, A.~A., and K.~A. Emanuel (2014), Physical mechanisms controlling
+  self-aggregation of convection in idealized numerical modeling simulations,
+  \textit{J. Adv. Model. Earth Syst.}, \textit{6}, 59--74,
+  \doi{10.1002/2013MS000269}.
+
+\bibitem[{\textit{Z\"{a}ngl et~al.}(2015)\textit{Z\"{a}ngl, Reinert, Ripodas,
+  and Baldauf}}]{Zaengl_etal_2015}
+Z\"{a}ngl, G., D.~Reinert, P.~Ripodas, and M.~Baldauf (2015), The
+  {ICON}({ICO}sahedral {N}on-hydrostatic modelling framework of {DWD} and
+  {MPI-M}: Description of the non-hydrostatic dynamical core), \textit{Quart.
+  J. Roy. Meteor. Soc.}, \textit{141}, 563--579, \doi{10.1002/qj.2378}.
+
+\bibitem[{\textit{Zelinka and Hartmann}(2011)}]{Zelinka_Hartmann_2011}
+Zelinka, M.~D., and D.~L. Hartmann (2011), The observed sensitivity of high
+  clouds to mean surface temperature anomalies in the tropics, \textit{J.\
+  Geophys.\ Res.}, \textit{116}, \doi{10.1029/2011JD016459}.
+
+\bibitem[{\textit{Zhou}(2015)}]{Zhou_2015}
+Zhou, W. (2015), Non-{R}otating and rotating raditive-{C}onvective equilibrium,
+  Ph.D. thesis, Princeton University.
+
+\end{thebibliography}

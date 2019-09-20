@@ -1,0 +1,1358 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AGUtmpl.tex: this template file is for articles formatted with LaTeX2e,
+% Modified July 2014
+%
+% This template includes commands and instructions
+% given in the order necessary to produce a final output that will
+% satisfy AGU requirements.
+%
+% PLEASE DO NOT USE YOUR OWN MACROS
+% DO NOT USE \newcommand, \renewcommand, or \def.
+%
+% FOR FIGURES, DO NOT USE \psfrag or \subfigure.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% All questions should be e-mailed to latex@agu.org.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Step 1: Set the \documentclass
+%
+% There are two options for article format: two column (default)
+% and draft.
+%
+% PLEASE USE THE DRAFT OPTION TO SUBMIT YOUR PAPERS.
+% The draft option produces double spaced output.
+%
+% Choose the journal abbreviation for the journal you are
+% submitting to:
+
+% jgrga JOURNAL OF GEOPHYSICAL RESEARCH
+% gbc   GLOBAL BIOCHEMICAL CYCLES
+% grl   GEOPHYSICAL RESEARCH LETTERS
+% pal   PALEOCEANOGRAPHY
+% ras   RADIO SCIENCE
+% rog   REVIEWS OF GEOPHYSICS
+% tec   TECTONICS
+% wrr   WATER RESOURCES RESEARCH
+% gc    GEOCHEMISTRY, GEOPHYSICS, GEOSYSTEMS
+% sw    SPACE WEATHER
+% ms    JAMES
+% ef    EARTH'S FUTURE
+% ea    EARTH AND SPACE SCIENCE
+%
+%
+%
+% (If you are submitting to a journal other than jgrga,
+% substitute the initials of the journal for "jgrga" below.)
+
+\documentclass[draft,ms]{agutex2015}
+%\documentclass[ms]{agutex2015}
+% To create numbered lines:
+
+% If you don't already have lineno.sty, you can download it from
+% http://www.ctan.org/tex-archive/macros/latex/contrib/ednotes/
+% (or search the internet for lineno.sty ctan), available at TeX Archive Network (CTAN).
+% Take care that you always use the latest version.
+
+% To activate the commands, uncomment \usepackage{lineno}
+% and \linenumbers*[1]command, below:
+
+ \usepackage{lineno}
+ \linenumbers*[1]
+%  To add line numbers to lines with equations:
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures and Tables
+%
+%
+% DO NOT USE \psfrag or \subfigure commands.
+%
+%
+%  Uncomment the following command to include .eps files
+%  (comment out this line for draft format):
+%  \usepackage[dvips]{graphicx}
+   \usepackage{graphicx}
+%
+%  Uncomment the following command to allow illustrations to print
+%   when using Draft:
+  \setkeys{Gin}{draft=false}
+%
+% Substitute one of the following for [dvips] above
+% if you are using a different driver program and want to
+% proof your illustrations on your machine:
+%
+% [xdvi], [dvipdf], [dvipsone], [dviwindo], [emtex], [dviwin],
+% [pctexps],  [pctexwin],  [pctexhp],  [pctex32], [truetex], [tcidvi],
+% [oztex], [textures]
+%
+% See how to enter figures and tables at the end of the article, after
+% references.
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  ENTER PREAMBLE
+%
+%% ------------------------------------------------------------------------ %%
+
+% Author names in capital letters:
+\authorrunninghead{SILVERS ET AL.}
+
+% Shorter version of title entered in capital letters:
+\titlerunninghead{RCE and convective interaction with environment}
+
+%Corresponding author mailing address and e-mail address:
+\authoraddr{Corresponding author: L. G. Silvers,
+Program in Atmospheric and Oceanic Sciences,
+Princeton University,
+Forrestal Campus, 201 Forrestal Road, Princeton, NJ 08540, USA.
+(silvers@princeton.edu)}
+
+\begin{document}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TITLE
+%
+%% ------------------------------------------------------------------------ %%
+
+
+\title{Radiative Convective Equilibrium as A Framework for Studying the Interaction Between Convection and its Large-scale Environment}
+%
+% e.g., \title{Terrestrial ring current:
+% Origin, formation, and decay $\alpha\beta\Gamma\Delta$}
+%
+
+%% ------------------------------------------------------------------------ %%
+%
+%  AUTHORS AND AFFILIATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+%Levi G. Silvers, Bjorn Stevens, Thorsten Mauritsen, and Marco Giorgetta
+
+%Use \author{\altaffilmark{}} and \altaffiltext{}
+
+% \altaffilmark will produce footnote;
+% matching \altaffiltext will appear at bottom of page.
+
+% \authors{L. G. Silvers,\altaffilmark{1}
+% Eric Brown,\altaffilmark{1,2} Rick Williams,\altaffilmark{3}
+% John B. McDougall\altaffilmark{4}, and S. Visconti\altaffilmark{5}}
+
+ \authors{L. G. Silvers,\altaffilmark{1,2}
+ Bjorn Stevens,\altaffilmark{1,} Thorsten Mauritsen,\altaffilmark{1}
+ Marco Giorgetta\altaffilmark{1}}
+
+\altaffiltext{1}{The Max Planck Institute for Meteorology,
+Hamburg, Germany.}
+
+\altaffiltext{2}{Current Affiliation: Princeton University/GFDL,
+Princeton, New Jersey, USA.}
+
+%\altaffiltext{3}{Department of Space Sciences, University of
+%Michigan, Ann Arbor, Michigan, USA.}
+
+%\altaffiltext{4}{Division of Hydrologic Sciences, Desert Research
+%Institute, Reno, Nevada, USA.}
+
+%\altaffiltext{5}{Dipartimento di Idraulica, Trasporti ed
+%Infrastrutture Civili, Politecnico di Torino, Turin, Italy.}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  KEYPOINTS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Key points are 1 to 3 points that the author provides,
+% that are 100 characters or less, that are ultimately published
+% with the article.
+%% for example:
+% \keypoints{\item Here is the first keypoint. what happens if it is a
+% long keypoint, like this one. We want to see this wrap please.
+% \item This is the second.
+% \item And here is the third keypoint
+% }
+
+\keypoints{
+\item Radiative Convective Equilibrium (RCE) is a useful framework to compare, contrast, and harmonize the two extremes of explicit and parameterized convection.
+\item Consistent climates across a range of domain sizes encourage the use of RCE to enhance our ability to model clouds (or cloud systems).  
+\item The response of low clouds to warming, and hence estimation of the climate feedback parameter, is not robust across configurations.
+}
+
+%% Keypoints will print underneath the abstract.
+
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  ABSTRACT
+%
+%% ------------------------------------------------------------------------ %%
+
+% >> Do NOT include any \begin...\end commands within
+% >> the body of the abstract.
+
+\begin{abstract}
+Simulations of parameterized Radiative Convective Equilibrium (RCE) have been analyzed across a range of domains with areas spanning more than two orders of magnitude ($\mathrm{0.80 - 204 \times 10^6 km^2}$).  It is shown that the simulated atmosphere of a General Circulation Model (GCM) in RCE is sufficiently similar across a range of domain sizes to justify the use of RCE to study both a GCM and a high resolution model on the same domain with the goal of improved constraints on the parameterized clouds.  The simulated climates on different domains are qualitatively similar in their degree of convective organization, the precipitation rates, and the vertical structure of the clouds, relative humidity, and water vapor.  Sea surface temperature perturbation experiments are used to estimate the climate feedback parameter for the differently configured experiments, and the cloud radiative effect is computed to examine the role which clouds play in the response.   Despite the similar climate states between the domains the feedback parameter varies by more than a factor of two; the hydrological sensitivity parameter is better behaved, varying by a factor of 1.4.  The sensitivity to domain size is related foremost to a non-systematic response of low-level clouds as well as an increasingly negative longwave feedbacks on larger domains.  
+\end{abstract}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  BEGIN ARTICLE
+%
+%% ------------------------------------------------------------------------ %%
+
+% The body of the article must start with a \begin{article} command
+%
+% \end{article} must follow the references section, before the figures
+%  and tables.
+
+\begin{article}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TEXT
+%
+%% ------------------------------------------------------------------------ %%
+
+\section{Introduction}
+
+Research over at least the past two decades has shown that an uncertain representation 
+of clouds, specifically tropical low-level clouds, is currently the largest source of spread among state-of-the-art climate models [\textit{Cess et al.}, 1989\nocite{Cess_etal_1989}, \nocite{Bony_Dufresne_2005} \textit{Bony and Dufresne}, 2005, \nocite{Stevens_Bony_2013}\textit{Stevens and Bony}, 2013\nocite{Popke_etal_2013}].  Specific limitations of modeled clouds include both features which differ from what one observes (e.g., `too few, too bright', \textit{Webb et al.} [2001]\nocite{Webb_etal_2001}, \textit{Nam et al.} [2012]\nocite{Nam_etal_2012}) as well as features which are inadequately understood
+(e.g., controls on cloud vertical structure, \textit{Nuijens et al.} [2015]\nocite{Nuijens_etal_2015}, and organization, \textit{Bretherton et al.} [2005], \textit{Muller and Held} [2012], \textit{Wing and Emanuel} [2014]).
+An important reason why clouds remain inadequately represented in models, and poorly understood is the  
+%These types of features in General Circulation Model (GCM) simulations hint at the interplay between convective and stratiform clouds, as well as the 
+delicacy of the interactions between clouds and circulations (\textit{Bony et al.} [2015]\nocite{Bony_etal_2015}, \textit{Sherwood et al.} [2014]\nocite{Sherwood_etal_2014}). 
+%which makes it difficult to separate cause and effect.
+The characteristics of clouds in GCMs should be represented
+in a manner which is consistent with fundamental theory, observations, and more fundamental models of cloud processes, for instance Cloud Resolving Models (CRMs).
+Efforts to better understand the role of moist convection in the climate system would be advanced by an ability to simulate the interaction between convection and the large-scale circulation using both models with parameterized convection and models with explicitly simulated convection.     
+However, for these types of problems, making a logical and clear connection between CRMs, and large-scale models that parameterize convection is difficult in large part because of the immensely differing range of parameters and large differences in the range of scales simulated, particularly for climate applications. 
+
+Global, or large-scale models using Radiative Convective Equilibrium (RCE) with parameterized convection have led to insights concerning tropical energetics of GCMs and the climate sensitivity (\textit{Popke et al.} [2013], \textit{Becker and Stevens} [2014]\nocite{Becker_Stevens_2014}, \textit{Reed et al.} [2015]\nocite{Reed_etal_2015}), and are increasingly being used to study the interplay between convection and large-scale circulations [\textit{Arnold and Randall}, 2015]\nocite{Arnold_Randall_2015}.  
+It has also become clear that even with the relative simplicity of RCE, differences in convective parameterization schemes   
+%and other processes dependent determined by subgrid-scale parameterizations, 
+play a decisive role on the overall statistics of the simulation [\textit{Popke et al.}, 2013, \textit{Becker et al.}, 2016, \textit{Coppin and Bony}, 2015\nocite{Coppin_Bony_2015}].  
+Due to the multiplicity of solutions that previous CRM-RCE simulations [\textit{Held et al.}, 2007, \textit{Jeevanjee and Romps}, 2013\nocite{Jeevanjee_Romps_2013}, \textit{Emanuel et al.}, 2014\nocite{Emanuel_etal_2014}, and \textit{Zhou}, 2015\nocite{Zhou_2015}] have produced which depend on parameterizations, domain size, grid-spacing, and surface temperature, we cannot per se assume that solutions of GCM-RCE simulations will be independent of domain size.  Examining these domain size effects using simulations with parameterized convection, extending to near global scales, is the aim of this paper.
+
+Shown in Figure \ref{fig:precvsdom} are images of the total precipitation rate from simulations using the ICON (ICOsahedral Nonhydrostatic) model with parameterized convection on five different domains ranging in size from slightly larger than Texas ($\mathrm{0.80\times 10^6 \, km^2}$; 3/4M), to almost half of the surface area of the Earth ($\mathrm{204\times 10^6 \, km^2} $; 200M).  The precipitating structures organize on the scale of the domain, and show a slight tendency towards stronger precipitation and more organization as the domain size increases.  However, it will be shown that the solutions are
+quite similar when measured more statistically, for instance in terms of the mean subsidence fraction, the mean atmospheric vertical characteristics, and 
+the mean vertical structure of the simulated atmosphere.
+To the extent that the simulated climates of these domains are similar there is reason to think that improved constraints of the parameterized convective response on a small domain, for instance through the application of cloud resolving models, would also improve the parameterized convection of a global simulation.  
+
+Although not specifically focused on details of the convection or cloud feedbacks, early studies of RCE [\textit{Manabe and Strickler}, 1964\nocite{Manabe_Strickler_1964}, \textit{Manabe and Wetherald}, 1967\nocite{Manabe_Wetherald_1967}] led to a fundamental advancement in our understanding of the atmosphere.  The overall surface warming from high clouds and cooling from low clouds was first shown by Manabe and Strickler using this ansatz.   Manabe and Wetherald showed the equilibrium surface temperature warming in RCE, 
+for a specified change in atmospheric CO$_2$,
+is strongly dependent on whether atmospheric relative humidity or absolute humidity is assumed fixed as the surface is warmed.  
+In the ensuing decades cloud resolving models were applied to the context of RCE, albeit less in the context of climate change.  So doing allowed assumptions about the structure of the atmosphere, convection, and clouds to be relaxed as more atmospheric processes could be resolved by the simulations.  These pioneering studies have come back into focus with the realization that convective aggregation arises spontaneously from simulations with an explicit representation of convection (e.g. \textit{Held et al.}, [1993]\nocite{Held_etal_1993}, \textit{Tompkins and Craig}, [1998]\nocite{Tompkins_Craig_1998}, \nocite{Bretherton_etal_2005}\textit{Bretherton et al.}, [2005], \nocite{Muller_Held_2012}\textit{Muller and Held}, [2012]), in ways that depend on temperature [\textit{Wing and Emanuel}, 2014]\nocite{Wing_Emanuel_2014}), thereby raising the question  as to its importance for the climate system [\textit{Bony et al.}, 2015, \textit{Mauritsen and Stevens}, 2015\nocite{Mauritsen_Stevens_2015}, \textit{Coppin and Bony}, 2015]. 
+The previously mentioned many studies of RCE cover an immense range of domains and resolutions, from domain sizes that marginally resolve convection and its large-scale environment to global scales.
+
+Previous work has shown how fruitful the strategy of linking convective resolving to parameterized convective models can be.  For example 
+the observational analysis by \textit{Redelsperger et al.}, [2002]\nocite{Redelsperger_etal_2002} highlighted a strong dependence of tropical convection on tropospheric humidity.  Convective parameterizations were then shown by \nocite{Derbyshire_etal_2004} \textit{Derbyshire et al.}, [2004] not to reproduce this behavior as modeled by CRMs.  Subsequent to this work the convection scheme in the European Center for Medium-Range Weather Forecasting (ECMWF) model was modified to include a dependence on relative humidity of the entrainment rate by \nocite{Bechtold_etal_2008} \textit{Bechtold et al.}, [2008].  These changes led to significant improvements in the representation of the atmospheric variability in the ECMWF model.  Simulations of the diurnal timing of precipitation have also benefited from comparisons between high-resolution idealized models and global, highly parameterized models [\textit{Rio et al.}, 2009\nocite{Rio_etal_2009}, \textit{Bechtold et al.}, 2014\nocite{Bechtold_etal_2014}].   Similarly, past studies have shown how important such features are to the structure and variability of tropical precipitation features, ranging from the Madden-Julien Oscillation to the inter-tropical convergence zone [\textit{M\"{o}bis and Stevens}, 2012\nocite{Moebis_Stevens_2012}, \textit{Oueslati and Bellon}, 2013]\nocite{Oueslati_Bellon_2013}.
+
+
+Despite these cases of cooperation between studies with high resolution models and highly parameterized models a cleaner experimental configuration in which CRM and GCMs could be compared would be useful.  This paper explores the possibility of using RCE in this context. 
+%proposes that RCE can be used in such a context.  
+%Comparisons between simulations with and without explicit convection are not presented here; rather, 
+Given computational limitations, a pre-requisite is for important features evident on a small domain, over which convection can be resolved, also to be evident on much larger scales.  We analyze the features of an atmosphere with parameterized convection as a function of domain size to explore the applicability of such a configuration.   In the past, such studies have been hindered by the fact that large-scale models used in climate research were structurally restricted to simulations on global scales. 
+
+Simulations with ICON using parameterized physics and a coarse grid, commensurate to what one might use for a high-resolution GCM study, and with an explicit representation of convection on a necessarily fine grid are now feasible for domains on the order of $10^6 \, \rm{km}^2$.  This possibility naturally raises the question as to whether such a comparison is likely to be influenced by the choice of the domain size, or whether there are robust features within the simulations that can be expected to emerge irrespective of a given domain size.  Determining what, if any, is the minimum sized domain should also be helpful in this regard.  
+%
+The recently developed model ICON 
+has the flexibility to allow simulations across a range of scales, thereby providing a unifying framework for studying convection at different scales and with different degrees of parameterization.
+In addition to simulations with a fixed SST on domains of different sizes (e.g., Fig. 1) simulations are also performed with a warmer SST to test whether the sensitivity of the simulations to warming is sensitive to domain size.   As if not, this raises the possibility of using CRMs directly, on smaller domains, to constrain estimates of climate sensitivity. 
+
+The design of the simulations and details of the model used are presented in the next section.  In section 3 results are presented both in terms of the mean atmospheric state, and the response to a perturbation of 4 K to the SST.  Section 3 also 
+explores robust differences in the response to warming, and suggests that 
+%the framework constrains many aspects of the changes,
+many changes in the simulated atmosphere do not depend on domains size, while the climate sensitivity is sensitive to small differences that are not robust across domain sizes. 
+Despite having the same core model and identical physics, the total radiative feedback from warming still varies by about a factor of two.   
+Discussion and final conclusions are given in section 4. 
+
+\section{Experimental Design \& Model Setup}
+
+\subsection{Methodology}
+
+The framework of RCE is used here as a tool which allows us to focus on the interactions between radiation, large-scale circulation, and clouds without the complicating influence of
+heterogeneities imposed on the large scale.   Despite the homogeneity of the forcing, the spontaneous emergence of large-scale overturning circulations, as also emphasized by \textit{Popke et al.}, [2013] makes it possible to capture the interplay of clouds with these circulations, in contrast to (for instance) single column model studies. 
+%circulation, land surface, or a changing sea surface.  
+% driven by heterogeneities imposed exogenously (?implies B.C.'s are outside system).
+Two simulations with constant SST values of 297 K and 301 K are made on five doubly periodic domains of different physical extent but all having identical grid spacing.  To eliminate the heterogeneities 
+the Coriolis force is set to zero and the insolation and profiles of trace-gases (e.g., ozone) are likewise made independent of the horizontal grid.
+The cosine of the zenith angle is $\pi/4$ and the insolation used is $340.3 \, \rm{W/m}^2$, approximately equal to Earth's global annual mean value.  
+There is no diurnal cycle and a surface of water at a fixed temperature defines the lower boundary. 
+%Complications due to a dynamic ocean and the required long adjustment time are eliminated by prescribing a fixed value of SST.   
+One result of this is that neither the surface nor the top of the atmosphere is expected to have a balanced energy budget.  However, the flux of energy into and out of the atmosphere will be balanced once the energy content of the atmosphere equilibrates with its forcing, which, after the initial adjustment period, remains steady in time except for weather related fluctuations.  
+This provides a simple framework for analyzing the behavior of the convection and the sensitivity of the feedback processes %which is simpler than AMIP or CMIP experiments.  
+yet retains the full complexity of the physics and dynamical equations.   %Within this framework it is possible to study simulations of RCE on doubly periodic domains which span three orders of magnitude in size.  
+
+%We chose to vary the size of the domains to test the flexibility of the modeling framework and the behavior of RCE experiments across a range of domain sizes
+%with some of the above questions in mind.   By identifying features of the simulations which were not sensitive to the domain size our goal was to identify the potential of performing very high resolution simulations (and hence computationally very expensive) on the same domain sizes to better understand processes influencing convection and its interaction with the circulation.
+  The domain size was chosen to range from near global scale to sizes which have begun to be feasible for use with high resolution models (to motivate comparative studies).  
+In all, five different domains were considered, the smallest being
+$\mathrm{0.80\times 10^6 km^2}$ (or $8 \times 8$ deg in the tropics) and the largest being about the size of the global tropics ($\mathrm{204\times 10^6 km^2}$).  In addition to varying the size of the domain, simulations with different SST values allow us to examine the climatic response to warming perturbations, and compute the total feedback that results from the warming. 
+%
+
+
+Because there are fewer grid points on the smaller domains, the degree of variability in the domain mean per time step increases as the domain size decreases.  
+This is because a given perturbation will have a larger influence on the statistics of a domain with fewer grid points, relative to a domain with more grid points.  
+%This can be seen, for example, in the domain mean values of the total precipitation (Figure \ref{fig:precipvtime}).  
+To obtain comparable statistics between the various domains, and take advantage of the computational economy of the smaller domains, the length of simulation 
+increases as the domain size decreases.  Details of the simulations examined in this paper are given in Table \ref{exptable}.   The periods used for computing feedback and sensitivity parameters and cloud radiative effects (P1) and domain mean profiles (P2) are given in Table \ref{exptable}.   The increased length of P1 was necessary to obtain robust statistics for the feedback parameters of the different domains.  
+
+
+\subsection{Model Details}
+
+%We use the ICON general circulation model with parameterizations that represent radiative transfer, convection, cloud-cover, %cloud processes, and boundary-layer turbulence. The label RCE refers only to a simplification of the boundary conditions.  
+%ICON solves the fully three-dimensional nonhydrostatic and compressible Navier-Stokes equations and is described in detail in Z\"{a}ngl et al. (2014)\nocite{Zaengl_etal_2014}.     
+
+The horizontal grid used in this study consists of equilateral triangles on a plane with periodic boundary conditions in both dimensions.  The ICON model solves the fully three-dimensional nonhydrostatic and compressible Navier-Stokes equations and is described in detail in \textit{Z\"{a}ngl et al.}, [2015]\nocite{Zaengl_etal_2015}.
+All of the simulations described here use triangles with an edge length of 20 km, implying an effective grid spacing of about 13 km (defined as $\sqrt{\rm{cell \, area}}$ in \textit{Z\"{a}ngle et al.}, [2015].  The vertical coordinate is a height-based hybrid coordinate with 60 vertical levels between the surface and the model top at 40 km.  The top of the model uses a Rayleigh damping of the vertical wind following \nocite{Klemp_etal_2008}\textit{Klemp et al.}, [2008] to prevent the reflection of gravity waves from the model top. %starting at 25km.  
+  The variables are positioned on a regular-triangular C-grid with a combination of first- and second-order finite difference spatial discretizations.  Time integration is computed with a two time-level predictor-corrector scheme with the physics parameterizations split into slow and fast modes.  Further information on discretization aspects of triangular grids are discussed in \textit{Gassmann} [2011]\nocite{Gassmann_2011} and \textit{Wan et al.}, [2013]\nocite{Wan_etal_2013}. The ongoing development of ICON is a joint project between the Max Planck Institute for Meteorology (MPI-M) and the German Weather Service (Deutsche Wetter Dienst: DWD).  Thus ICON has been developed as a unified modeling framework that functions both as an operational weather forecast model and a global climate model.  
+%The German Weather Service implemented ICON as their operational weather forecast model in January of 2015.  
+ICON can also be used as a Large Eddy Simulation model capable of explicitly representing canonical cloudy boundary layer flows on grid meshes as fine as 50 m or less [\textit{Dipanker et al.}, 2015]. \nocite{Dipanker_etal_2015}
+
+
+%here (NWP physics, used operationally at DWD) are derived from a combination of the regional COSMO model (Doms and Sch\"{a}ttler 2004) and the Integrated Forecast System (IFS) model at ECMWF.  
+The physics parameterizations used 
+in the present study are the NWP physics, so named because they are used operationally by DWD in their global implementation of ICON.
+The convective parameterization scheme is based on the Tiedtke mass-flux approach with modifications as discussed by \textit{Bechtold et al.}, [2008].  The radiative transfer scheme is an RRTM scheme similar to that used in the IFS model and identical to that of the ECHAM6.1 model [\textit{Mlawer et al.}, 1997\nocite{Mlawer_etal_1997}, \nocite{Stevens_etal_2013}\textit{Stevens et al.}, 2013].  The microphysics scheme is from the COSMO-EU five-category prognostic scheme [\textit{Seifert}, 2008] predicting rain, snow, cloud ice, cloud liquid water, and water vapor. 
+Relative humidity is computed over a liquid surface only.  
+The cloud cover scheme is based on a box-function probability density function with an added diagnostic anvil term that uses the detrainment of the convective parameterization.  The boundary layer and turbulence scheme relies on a prognostic equation for turbulent kinetic energy [\textit{Raschendorfer}, 2001].  For these experiments gravity waves are not parameterized.   The development of these schemes is ongoing, those used for this study correspond to revision number 16400.  As an additional option to the NWP physics parameterizations used here, a successor to the ECHAM 6 physics is also being implemented into ICON at MPI-M which will be used for climate studies.   
+
+ The profile used for the ozone is representative of the tropics and is the same profile used by \textit{Popke et al.}, [2013].  To trigger the adjustment process perturbations of 0.2 K, white in spatial distribution, were applied to the initial potential temperature field in the lowest four model levels.  The initial values of the vertical, $w,$ and one component, $v$, of the horizontal velocity fields are zero.  In the lowest 2.5 km the horizontal velocity $u$ begins with an exponentially decaying profile ($5 \,\rm{m \, s^{-1}}$ at the surface).  
+%which is dissipated to near zero within the first few hours of the experiment.  
+For the simulations to behave reasonably it was necessary to specify a minimum surface wind velocity scale used only in the computation of the surface fluxes.   This required adding $0.8 \, \rm{m \, s^{-1}}$  to the default value used in the physics ($0.01 \, \rm{m \, s^{-1}}$).  
+%to $0.81 \, \rm{m \, s^{-1}}$ where the second significant digit was retained for convenience. 
+The initial profiles for potential temperature,  and water vapor are idealized based upon the best fit to profiles from a large-eddy simulation.  The potential temperature was initialized as $\theta=\theta_{\rm{sfc}}+4.8 z$ below the tropopause and as $\theta=\theta_{\rm{sfc}}+4.8 z_{\rm{tp}}+22.0(z-z_{\rm{tp}})$ at and above the tropopause, where $\theta$ is potential temperature ($\rm{K}$), $z$ is height ($\rm{km}$) and the subscripts `tp' and `sfc' represent the values at the tropopause level and surface, respectively.   The water vapor was initialized as an exponentially decaying concentration with a scale height of 2.8 km.
+%To facilitate the proper coupling between the surface and the atmosphere under low-wind conditions the minimum value of the %wind vector which is used in the computation of the bulk surface flux formulae was changed from 0.01 $\rm{m \, s^{-1}}$ to 0.81 %$\rm{m \, s^{-1}}$.  
+All experiments use the same grid spacing and time step as discussed previously. 
+Our choice of grid cell size with an effective grid spacing of 13 km matches that currently used by DWD operationally.  
+
+\section{Results}
+
+The progression from homogeneous initial conditions through a period of dominant wave activity and
+eventually a stationary state, or equilibrated state 
+is illustrated in Figure \ref{fig:precevol}.  This figure shows the time evolution of the precipitation rate on the 50M domain.  After approximately 25 days of near homogeneous conditions fast, large-amplitude gravity waves as seen in the center panel develop and propagate through the domain.  Approximately 30 days later these waves are no longer the dominant feature and have been replaced by multiple convective systems which move slowly through the domain.  In this later stage the mean values of precipitation, relative humidity, and cloud cover fluctuate about a well defined mean value.  It is this mean environmental state represented in the right panel of Figure \ref{fig:precevol} which we refer to as the mean equilibrium state, or stationary state, and which is analyzed in this study.  The other domains show a similar progression from the initial state to equilibrium.  
+
+
+To give an impression of the relative scale of features present on the
+$3/4 \rm{M}$, $12 \rm{M}$, and $200 \rm{M}$ domains Figure \ref{fig:convorg} shows the same data from Figure \ref{fig:precvsdom}, tiled according to scale, periodically repeated to fill a region the size of the $200 \rm{M}$ domain.  The $3/4 \rm{M}$, $3 \rm{M}$, $12 \rm{M}$, and $50 \rm{M}$ domains all show the precipitation and moisture structures to organize on the largest scale available (Figures \ref{fig:precvsdom}, \ref{fig:convorg}, \ref{fig:tqv5dom}).  The 200M domain shows signs that the maximum scale of convective organization may be between the 50M and 200M domains, but this deserves further investigation. 
+
+
+\subsection{Mean Climate}
+
+One method of diagnosing whether the atmosphere has reached a statistically stationary state is to examine the time evolution of various quantities.  After an initial adjustment period with large fluctuations in the energetics of the simulations  stationarity is approached.  
+%Once this state has been reached the prognostic variables oscillate about a constant mean value.  
+In stationarity short temporal fluctuations of domain means, which diminish with domain size and time-scale, are still apparent, reflecting the dynamic state of the underlying system.
+The evolution of the domain mean total precipitation during the first two years of simulation for each of the five domains is shown in Figure \ref{fig:precipvtime}.  Based on the precipitation we judge that all simulations have
+reached a stationary state after about 200 days, with the $50\rm{M}$ and $200\rm{M}$ domains adjusting to equilibrium much sooner.  Because the $3/4\rm{M}$, $3\rm{M}$, and $12\rm{M}$ domains all proceed for longer than 2 years, the average value of the precipitation during the last six months of each simulation is shown by the dots at the right of Figure \ref{fig:precipvtime}, confirming that the mean value has indeed been reached during the period shown.  
+%There is a systematic variation  of the evolution of the precipitation field as a function of domain size but the differences are relatively small (10\%) as compared to the mean.
+%have differences between the models, overall the similarity is more striking than the difference with a range of only about $10\%$ amongst the models.  The domain mean precipitation increases monotonically with domain size.  This is likely related to the near monotonic 
+Variations in the precipitation field are progressively smaller as the model domain size increases with an apparent convergence in the mean value for the largest domains.  The mean (of all domains, with SST$=301 \, \rm{K}$) precipitation is $5 \, \rm{mm \,day^{-1}}$ with no simulation deviating by more than 7 \%.
+The systematic increase in precipitation with domain size is consistent with the systematic
+decrease of upper level clouds (Figure 5).  A decrease in upper level clouds will increase the atmospheric radiative cooling and thus require more convective heating 
+%to maintain balance.    
+in stationarity. 
+
+Basic physical characteristics of the simulated atmospheres can be determined by looking at the domain mean 
+thermodynamic profiles.
+These are shown for the simulations with $\mathrm{SST}=297 \; \mathrm{K}$ in Figure \ref{fig:prof297}.     Cloud liquid water, cloud cover, and RH, all maximize 
+in the lowest kilometer.  The RH drops to 
+its tropospheric minimum value ($\approx 15\%$) at about 7km.  Between roughly 12km and 16km there is a maximum 
+of relative humidity, cloud cover, and cloud ice, due to radiatively driven mass convergence in the upper troposphere in 
+clear skies that is satisfied by the detrainment from convective clouds (e.g., \textit{Hartmann and Larson}[2002]\nocite{Hartmann_Larson_2002}, \textit{Zelinka and 
+Hartmann} [2011]\nocite{Zelinka_Hartmann_2011}).   All domains have three peaks in the cloud cover (0.6 km, 5 km, 13 km), with the upper two cloud maxima corresponding to anvil detrainment and melting level clouds, respectively.  The simulations also uniformly produce two peaks of cloud liquid water below 4km (0.8 km, 1.2 km).  Overall, the profiles plausibly represent the mean state of the tropical atmosphere (over ocean)
+and show agreement among all domain sizes on the vertical structure of the atmosphere. 
+
+%An instructive comparison can be made between the our profiles (Figure \ref{fig:prof297}) and those from Figure 4 in P13.   
+Our simulations are not only quite coherent across configurations, the vertical structure of the atmospheres is also 
+broadly similar to results found in \textit{Popke et al.} [2013].  
+%those found in P13.  
+%Profiles shown in our Figure \ref{fig:prof297} can be compared with Figure 4 in P13.  
+Their Figure 4 compares two Global RCE versions of ECHAM which differ only by their convection schemes, and one profile from the tropical region of a standard pre-industrial control run from the MPI-ESM-LR model.  
+%Several points should be noted by this comparison.  
+%First, the qualitative match between the profiles found in this study and those of P13 is quite good.  
+Comparing the profiles from our Figure \ref{fig:prof297} with Figure 4 from \textit{Popke et al.} [2013] shows that all simulations have a double peak of RH (1 km, 15 km) and a dry mid-troposphere with RH dropping to between 15\% and 20\% at about $7 \, \rm{km}$.  All simulations have two peaks of cloud cover and cloud liquid water in the lowest $4 \, \rm{km}$.  
+%In agreement with our Figure \ref{fig:prof297}, the profiles shown by P13 have a minimum value of tropospheric RH of %close to 20\% between about $6-8 \, \rm{km}$, two peaks of cloud liquid water below 4 km, and maxima of cloud ice of %$3-7 \rm{mg \, kg^{-1}}$.     
+More importantly, the differences among our domains in Figure \ref{fig:prof297} are equal to or smaller than the differences between the ECHAM simulations resulting from different physics parameterizations in \textit{Popke et al.} [2013].  
+%This is particularly apparent in the RH and temperature profiles.  
+%In P13, differences in the physics parameterizations lead to temperature 
+%differences of several degrees and a vertical shift in the upper maximum of RH humidity by several km's.  
+Among the profiles from \textit{Popke et al.} [2013] for example, there is a difference of $2-3 \rm{km}$ in the vertical placement of the RH,  cloud fraction, and cloud ice around $15 \, \rm{km}$.  The RH humidity at $15 \, \rm{km}$ differs by up to $20 \, \%$ and one of the temperature profiles is several degrees warmer throughout the troposphere.  
+%These comparisons indicate that RCE does a reasonable job of simulating the broad characteristics of the tropical environment and that there is some similarity between the global RCE ECHAM model and the planar RCE ICON model.  This similarity is not self-evident 
+Considering that ICON and ECHAM differ in dynamical core, physics, resolution, domain and geometry, the similarity of the RCE climates they simulate, both to each other and to the tropical environment of MPI-ESM-LR, points to the broad applicability of the RCE framework.  
+
+The organization of convection into large coherent structures has received much attention over the previous two decades. 
+Several different metrics (subsidence fraction, distance between clusters, bi-modality of water vapor, tropospheric RH, etc. [e.g., \textit{Bretherton et al.}, 2005; \textit{Tobin et al.}, 2012;  \textit{Coppin and Bony}, 2015]) have been used to determine whether aggregation is occurring in observations or simulations.   To provide a quantification of the convective organization the subsidence fraction is computed.  This measures the fraction of the model domain with subsiding motion ($w < 0 \rm{\, m \, s^{-1}}$), typically associated with non-convective regions.  The subsidence fractions for domains 3/4M, 3M, 12M, 50M, and 200M at an SST=297 K (301 K) are 0.72, 0.79, 0.78, 0.76, and 0.77 (0.70, 0.71, 0.75,  0.72, 0.71), respectively.  These were computed using the vertical velocity on the model level at approximately 5.5 km (comparable to 500 mb).  These subsidence fractions are relatively high compared to estimates from reanalysis 
+% (Bony $\approx 0.6$; personal communication) 
+and consistent with an aggregated state, although the structure (Fig. 1) is somewhat different than one typically sees in global (e.g., \textit{Coppin and Bony} [2015]) or cloud resolving [\textit{Bretherton et al.}, 2005] simulations. 
+%confirm that these models are aggregating even though the resulting atmospheric state continues to fluctuate and is clearly not locked into one configuration.            
+% the averaging periods for the subsidence fractions are: 3/4M(last year),3M(4months in year 9),12M(4months in year 4),
+%50M(2 months in second year),200M(2 months)
+
+%Snapshots of the precipitation rate as shown in Figure \ref{fig:precvsdom} give a basic sense of the spatial structures that precipitating clouds are forming; this can be complemented by the column integrated water vapor.  
+  
+The column integrated water vapor for each of the domains is shown in Figure \ref{fig:tqv5dom}, at the same periods of time as seen in Figure \ref{fig:precvsdom}.  This reveals the distribution of the moisture content, even in regions which are not precipitating, and in particular gives a quantitative measure of dry regions.  
+%The $3/4 \rm{M}$ domain has a smaller range of values compared to the other four models.  
+The driest regions for the $3/4 \rm{M}$ domain is relatively moist with $32$mm of vapor in contrast to the largest four domains which have dry regions that drop to about half as much ($17$ mm) water.    Overall the largest four domains show a similar spatial structure of moisture.  There is a slight tendency for the difference between the maximum and minimum values of column water vapor to 
+%increase as the domains increase.  
+become more pronounced with increasing domain size.
+
+ One clear sign of convective aggregation is an excessively dry mean atmospheric state ($\approx 20 \% \,  \rm{RH}$ between $2-10 \, \rm{km}$ in \textit{Bretherton et al.} [2005] Figure 4a, \textit{Tobin et al.} [2012]\nocite{Tobin_etal_2012}).  This behavior is not 
+%seen in our models,
+pronounced in the present simulations (Fig. 5),
+ rather the relative humidity profiles are comparable to the tropical mean profiles of comprehensive GCM simulations.  However, the time evolution of the cloud fields and water vapor,  
+ %clear organization
+ the emergent patterns
+ of convection on the largest scales of the domains (Figure \ref{fig:precvsdom}), the persistence of a few large patches of water vapor (Figure \ref{fig:tqv5dom}), and the consistently high values of the subsidence fraction 
+ %imply that some degree of organization is occurring on the largest scales. 
+ are consistent with an aggregated state.  
+
+Despite the overall similarity of the mean state among the five domains, there are quantitative differences in the mean cloud and ice fields, and the spatial structure of the clouds and water vapor.   These differences are most pronounced for the smallest ($3/4 \rm{M}$) domain.  The $3/4 \rm{M}$ domain does not aggregate to the same degree as the larger domains, its low level peaks of cloud cover and cloud liquid water are larger by about 30\% and the cloud ice in the anvil region is larger by 50\%.  Both the vertical thermodynamic structure and the time evolution of precipitation appear to show the atmospheres rapidly converging toward a common structure as the domain size increases with the $50 \rm{M}$ and $200 \rm{M}$ appearing practically indistinguishable.      
+%The feedback response to a 4K warming of the surface is surprisingly sensitive to these differences.  
+
+\subsection{Sensitivity to Sea-Surface Temperature}
+
+Here we examine the response of the RCE simulations to a uniform SST perturbation of $4 \,\rm{K}$.  The difference between the domain mean profiles for the two sets of simulations is shown in Figure \ref{fig:profdiff}.  The basic behavior and mean vertical structure of the simulations with an SST of $297 \, \rm{K}$ is qualitatively similar to those with an SST of $301 \, \rm{K}$.   Similar to the mean state discussed in the previous section, as the domain size increases the spread of the response among the simulations converge %in Figure \ref{fig:profdiff} 
+with the cloud cover, cloud liquid water, and cloud ice appearing practically indistinguishable between 50M and 200M.  At higher SSTs the specific humidity rises and temperature warms throughout the atmosphere for all domains with the maximum warming occurring at $13$-$14 \,\rm{km}$.  While the magnitudes differ, the maximum and minimum of cloud cover, cloud ice, cloud liquid water, and temperature occur at similar levels among the domains.
+
+Cloud cover, cloud ice, and RH all exhibit a spatial dipole of positive and negative values between $10$-$20 \, \rm{km}$ that can be explained by a vertical shift of the profiles as the surface warms (Figure \ref{fig:profdiff}).  
+%Oscillations between negative and positive values of the change of RH, cloud cover and cloud ice between $10$-$20 \,\rm{km}$ in Figure 7 can be explained by a vertical shift of the profiles as a result of the warmer surface.
+For example, the height of the maximum cloud cover from convective anvil detrainment shifts from $12$-$14 \, \rm{km}$ to $14$-$16 \, \rm{km}$. There is variation between individual simulations in the response of the RH, but for all simulations the RH shifts vertically with warming resulting in a consistent increases of RH above $15 \, \rm{km}$ and between $5$-$8 \, \rm{km}$, and drying between $8-15 \, \rm{km}$.  
+The RH difference profiles of all domains have fluctuations on the order of $15 \%$ with roughly the same vertical levels of tropospheric maxima and minima and non-systematic fluctuations in the lowest $4 \, \rm{km}$.
+%The simulations presented here and the results from P13 show a clear secondary maxima in the cloud cover which seems related to the freezing level.  
+The cloud layer at the melting level %In our simulations this maximum 
+shifts uniformly for all domains from a height of $5 \, \rm{km}$ when the SST is $297 \, \rm{K}$ to between $6-7 \, \rm{km}$ in the case with a warmer SST.  
+%This shift is apparent (Figure \ref{fig:profdiff}) in the spatial dipole of cloud cover between   $4-7 \, \rm{km}$.
+
+Between the surface and about $5 \, \rm{km}$ the response seen in Figure \ref{fig:profdiff} indicates a non-trivial interaction of changing surface fluxes, cloud cover, and turbulent mixing.  
+A number of studies have argued that the response of tropical low clouds to warming is decisive for the determination of the cloud feedbacks on warming.  It has been hypothesized that as SSTs rise, enhanced convective mixing dries out the cloud layer and results in less clouds (e.g., \textit{Rieck et al.} [2012]).    \textit{Brient et al.} [2015]\nocite{Brient_etal_2015} showed that models with a pronounced maximum in low cloud amount at cloud base are most susceptible to convective drying, but not through a reduction of clouds throughout the cloud layer, as shown by \textit{Rieck et al.} [2012],\nocite{Rieck_etal_2012} rather by a reduction of cloud amount at cloud base.  This effect is pronounced in our simulations, and
+is robust as it appears irrespective of the domain size.
+
+All domains show a pronounced cloud base peak in liquid water, which is systematically reduced as the surface temperature increases.  
+To highlight the response of the moisture content in the boundary layer Figure \ref{fig:profdiffzoom} shows the RH, cloud cover, and cloud liquid water from Figure \ref{fig:profdiff}, along with specific humidity (qv), focused only on the lowest $4 \, \rm{km}$.
+%To focus on the moisture content in the boundary layer  Figures \ref{fig:profdiff} and  \ref{fig:profdiffzoom} show the same data/field with the latter zoomed in/changed to emphasize on the lowest $4 \, \rm{km}$.  
+Although the domains with an SST of $301 \, \rm{K}$ have higher specific and RH in the lowest $600 \, \rm{m}$ the cloud liquid water and cloud cover (except for 3M) decrease there.   Between the surface and $600 \, \rm{m}$ the change of RH, cloud liquid water, and specific humidity decrease with height for all domains.  %Above $600 \, \rm{m}$ the relationship between these four quantities is less clear.  
+%Above this level there is a slight increase (between $1-3 \, \rm{rm}$) of cloud liquid water, cloud cover and RH (see Figure \ref{fig:profdiffzoom}).  
+A decrease of cloud cover and cloud liquid water in the BL could indicate a deepening BL with dry tropospheric air being entrained from above.  %These changes seem to indicate a deepening BL in response to a warmer surface.  
+%In spite of warmer environments having increased surface fluxes and specific humidity, the studies of Rieck et al 2012 and 
+%Sherwood et al. 2014 imply that mixing of BL air with the dry tropospheric air above can result in a decrease of BL clouds and RH.  
+%These low-level clouds are known to be important components of the total cloud feedback.  
+However, the total response of low clouds to warming in GCMs results from a balance between drying from the convective parameterization and moistening by the turbulence parameterization.  
+%The complex dependencies of BL depth and low-level cloud feedback (to what?) have recently been studied by Rieck et al 2012, %Sherwood et al. 2014 and Brient et al. 2015.    
+%Low-level clouds represent a sensitive balance between surface fluxes of latent and sensible heat, turbulent and convective fluxes of moisture, and low-level atmospheric stability.  
+Different balances between these processes were argued [\textit{Brient et al.}, 2015, \textit{Sherwood et al.}, 2014] to be one of the primary factors leading to the spread of total feedback in CMIP models. 
+%Their studies also suggested that a boundary layer which dries with warming is often due to strong mixing by the parameterized convection.  
+All of our simulations show a uniform decrease of low-level water vapor and cloud liquid water in response to warming but the response of cloud cover and RH is not systematic across domains.  
+The implications of this on the feedback parameter will be discussed in the next section.
+
+The partition between convective and large-scale precipitation is likely to influence a model's climate response to warming [\textit{Held et al.} 2007\nocite{Held_etal_2007}].
+%The importance of the partition between convective precipitation and large-scale precipitation was noted as a key characteristic of climate models by Held et al. (2007)\nocite{Held_etal_2007}.   
+In the present simulations the parameterized convection scheme accounts for almost all (about 90\%) of the precipitation.  Domains with warmer SSTs have less convective precipitation.  A clear connection between the partitioning of precipitation types and the feedbacks was not found.  
+
+\subsection{Climate Change Feedbacks and Hydrologic Cycle Sensitivity}
+
+To estimate the climate feedback parameter, $\lambda$, the difference between the top-of-atmosphere radiance in the warm simulation and the cooler 
+simulation is normalized by the SST difference, e.g., following \textit{Cess et al.} [1989].   Given the climate feedback parameter the equilibrium climate sensitivity can be computed as $-F_\mathrm{2\times CO_2}/\lambda$, 
+for which purpose we adopt a value of $F_\mathrm{2\times CO_2} = 3.7  \, \rm{Wm^{-2}}$ following \textit{Myhre et al.} [1998]\nocite{Myhre_etal_1998}.  The reader is referred to \textit{Sherwood et al.} [2015]\nocite{Sherwood_etal_2015}, for a broader discussion of forcing and feedback concepts.
+ This method is arguably the most direct method for estimating the climate feedback parameter. 
+%Specifically, the feedback of the system is computed using the change in the top of the atmosphere radiative imbalance divided by the surface warming.  
+%In general, an equilibrated climate system, when perturbed by an external forcing ($F$), will have an unbalanced net radiative flux ($ R$) at the top of the atmosphere.  The adjustment process will eventually change the mean surface temperature ($\Delta T_s$).  This change in mean surface temperature will depend on any feedbacks present in the climate system %.  When this process is linear it 
+%and can be written as $\Delta R=F+\lambda\Delta T_s$ with $\lambda$ equal to the total feedbacks parameter ($\rm{Wm}^{-2} \rm{K}^{-1}$).  Once the system is equilibrated and $\Delta R =0$  the total feedback parameter  is $\lambda=-F/\Delta T_s$.  
+%To estimate the ECS given the feedback, requires an estimate of the forcing from a doubling of $\rm{CO}_2$.  Here we adopt the value $3.7 \, \rm{Wm^{-2}}$ following Myhre et al. 1998, well knowing that the adjusted forcing is model-dependent.
+%%The analysis here assumes a value of external forcing due only to a doubling of $\rm{CO}_2$ with a constant value of $3.7 \rm{W/m^2}$.  
+%Traditionally the Equilibrium Climate Sensitivity (ECS) has been defined as the resulting change of surface temperature once the model has reached equilibrium after the concentration of $\rm{CO}_2$ has been doubled.  Because our surface temperature change is fixed, the feedback parameter is computed as the ratio of the TOA radiative imbalance to the prescribed change in surface temperature: $\lambda=\Delta R/\Delta T_s$.
+%The climate sensitivity is then computed as $\rm{ECS} = -\rm{F}/\lambda$.
+The hydrological sensitivity parameter can similarly be defined (e.g., \textit{Fl\"{a}schner et al} [2016]) as the slope of temperature-dependent precipitation change ($\Delta P/\Delta T$).  This provides an alternate measure of a models response to warming.    
+
+% Not sure where you want to take this.  I think the HSP is interesting to compare to the GCMs.  Here this seems to be increasingly robust for the 12M or larger domains.   It is larger than what one usually computes for GCMs but consistent with Fläschner et al (Dagmar's new last name) in that it is systematically higher than what one computes from coupled simulations. 
+
+The thus calculated feedback parameters, climate sensitivities, and hydrologic sensitivities of our simulations vary with domain size (Table \ref{tab:lambda}) in a non-systematic fashion.  
+Variations in the climate feedback parameter are large, 
+($1.8 \pm 0.5$),
+and differ by a factor of about 2.1 between the largest and smallest value.  In contrast, variations in the hydrological sensitivity parameter are much smaller, ($2.4 \pm 0.3$), and vary by a factor of 1.4. 
+Relative contributions from the long- and shortwave components of the total feedback parameter are also tabulated.  Although the magnitude of the longwave feedback parameters are larger, the range of the shortwave feedback parameters ($2.6  \, \rm{Wm}^{-2} \rm{K}^{-1}$) is greater than those of the longwave feedback parameters ($1.35 \, \rm{Wm}^{-2} \rm{K}^{-1}$).  
+The shortwave feedback contributes the most to the variability of the total feedback response, but it is clear that the contribution of the longwave component cannot be neglected for either the climate feedback parameter or the hydrologic sensitivity parameter.  This likely indicates an interplay of multiple mechanisms in the response.  As is to be expected, the hydrological sensitivity scales closely with the change in atmospheric cooling (not shown) which is dominated by longwave feedbacks, (i.e., not variability in shortwave absorption as is evident when looking across climate models (e.g., \textit{Takahashi et al.} [2009])\nocite{Takahashi_2009}) and thus the weakest sensitivity is found in the 3M domain. 
+
+The Cloud Radiative Effect (CRE = clear-sky radiance - all-sky radiance) can be used to investigate the role of clouds in the response to a perturbation.  We find that variation in shortwave feedbacks is  dominated by cloud radiative effects (Table 2)   
+%Focusing next on the difference between all-sky and clear-sky feedback parameters 
+%we find that the variation in shortwave feedbacks is  dominated by cloud radiative effects 
+as the clear-sky shortwave feedback is practically domain-size independent, whereas in the longwave both cloud- and non-cloud, here consisting of water vapor and temperature, feedbacks are important.
+%For simulations with an SST of 301K the range of CRE is $ 5.2 \, \rm{Wm}^{-2} \rm{K}^{-1}$ while for the simulations with an SST of 297K the range is $ 4.0 \, \rm{Wm}^{-2} \rm{K}^{-1}$.  
+Computing the change of CRE ($\Delta \rm{CRE}$) between the simulations with different SSTs and decomposing this into the shortwave and longwave components reveals that the shortwave $\Delta \rm{CRE}$ varies in sync with the total $\Delta \rm{CRE}$ while the longwave $\Delta \rm{CRE}$ is approximately independent of domain size.  
+  
+The variation in shortwave cloud feedback and $\Delta \rm{CRE}$ across the domain sizes is difficult to ascribe to specific features of the mean state or response.  While the non-systematic response of the low clouds strongly contributes to this variation, other factors also contribute.  
+%Although all domains have qualitatively similar climates there is a non-systematic response of the low clouds which contributes to this large spread of the feedback parameter.  
+All domains have an increase of upper level clouds between $14-18 \rm{km}$ with the differences in magnitude (up to $5 \%$) contributing to differences in the longwave feedback parameters shown in Table \ref{tab:lambda}.   We also see (Figure \ref{fig:profdiff}) that the response of the low-level specific and relative humidity differs slightly from the cloud cover response indicating the importance of surface fluxes and turbulent mixing.  
+
+Considering the only difference among the simulations is the size of the domain, and the similarity of the thermodynamic response (Figure \ref{fig:profdiff}), the spread in the feedback parameters is surprising.  Despite having identical physics parameterizations, the range of feedback parameters that we calculate ($1.3  \, \rm{Wm}^{-2} \rm{K}^{-1}$) is larger than the range from the models which participated in CMIP5 ($1.1 \, \rm{Wm}^{-2} \rm{K}^{-1}$).  To illustrate this the feedback parameters for each domain size are shown in Figure \ref{fig:lambdaecs}.  The values for individual models from CMIP5 are also displayed with the tan colored markers.  
+ These results highlight the ability of different simulations to have  similar climates but differing climate sensitivities (\textit{Mauritsen et al.} [2013]\nocite{Mauritsen_etal_2013}, \textit{Zhao et al.} [2015]).  
+
+%\section{Discussion}
+% 
+%Hydrologic Sensitivity Parameter: Seems to have converged for 12M and larger.  Larger than what one usually computes for GCM.
+%Consistent with Fl\"{a}schner et al. 2015 in that it is systematically higher than that seen with coupled simulations. 
+
+\section{Conclusions}
+%
+It has been shown that the simulated atmosphere of the ICON GCM with parameterized RCE is sufficiently similar across a range of domain sizes to justify and encourage the use of RCE to study both a GCM and a CRM on the same domain with the goal of improved constraints on the parameterized clouds.  This was demonstrated with SST perturbation simulations on multiple domains in a state of RCE.  
+The equilibrated stationary states of the largest four domains have nearly indistinguishable thermodynamic profiles while the smallest domain, $3/4 \, \rm{M}$, differs with less precipitation, more cloud ice, and larger values of cloud cover.  
+In addition to these differences, the $3/4 \, \rm{M}$ domain has the lowest subsidence fraction.  As a result the $3/4 \, \rm{M}$ domain appears to be too small for the RCE studies recommended by this study.  
+However, for all simulations the low-level RH, cloud cover, and cloud liquid water all maximize below 1km.  All simulations have a peak in cloud cover at the melting level of the same magnitude and the upper level cloud ice, cloud cover, and RH indicate that the vertical extent of convection is similar for all domains.  
+There is a small but systematic variation  of the evolution of the precipitation field as a function of domain size but the differences are relatively small ($< 10\%$) as compared to the mean.
+Overall, the resulting model state resembles that of the tropical atmosphere on Earth.  
+
+Notwithstanding the qualitative similarities of the simulations, quantitative differences lead to a surprisingly large sensitivity of the feedback parameter, and thus the climate sensitivity.  The range of the feedback parameter ($1.3  \, \rm{Wm}^{-2} \rm{K}^{-1}$) is more than a factor of two and is comparable to the range of feedbacks which were obtained by the CMIP5 models (($1.1 \, \rm{Wm}^{-2} \rm{K}^{-1}$), Figure \ref{fig:lambdaecs}).  Due to our experimental setup the different values of the feedback parameter in these simulations cannot be due to differences in the 
+subgrid scale parameterization schemes, grid, discretization, or formulations of the dynamical core.  Among the remaining possible factors it seems likely that some combination of nonlinear interactions between the wind field, surface fluxes, low-level clouds, and radiation are responsible for the variations in the feedback.  
+We interpret these changes as a manifestation of structural instability  [\textit{McWilliams}, 2007\nocite{McWilliams_2007}] that has been hypothesized to exist in some models, and may also be a characteristic of the natural system.
+% inherent in the GCM framework.  In that case there would be a fundamental limit to how accurately a GCM can determine the climate sensitivity.  To what extent is the feedback parameter of CRMs limited by structural instability?  
+
+Despite its apparent imprecision in some respects, the paradigm of RCE is a compelling simplification of the atmosphere that is interesting to study, not only for its well appreciated insight into quantities like climate sensitivity, but more fundamentally because of its ability to elucidate the ways in which convection and large-scale circulations interact.  
+
+%%% End of body of article:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional Appendix goes here
+%
+% \appendix resets counters and redefines section heads
+% but doesn't print anything.
+% After typing \appendix
+%
+%\section{Here Is Appendix Title}
+% will show
+% Appendix A: Here Is Appendix Title
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Optional Glossary or Notation section, goes here
+%
+%%%%%%%%%%%%%%
+% Glossary is only allowed in Reviews of Geophysics
+% \section*{Glossary}
+% \paragraph{Term}
+% Term Definition here
+%
+%%%%%%%%%%%%%%
+% Notation -- End each entry with a period.
+% \begin{notation}
+% Term & definition.\\
+% Second term & second definition.\\
+% \end{notation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  ACKNOWLEDGMENTS
+
+\begin{acknowledgments}
+The computing resources were provided by Deutsches Klimarechenzentrum (DKRZ).  The research presented here was conducted when LGS was employed by the Max Planck Institute for Meteorology.   Anurag Dipanker and Leonidas Linardakis  assisted with debugging and stimulating discussions.  Cathy Hohenegger read an early version of the manuscript and helped to improve the presentation of our ideas.  The ICON development team at both MPI-M and DWD provided helpful support and motivation throughout the work.  The data used for this study is available upon request.  Princeton University generously supported LGS during the final stage of the writing.  
+\end{acknowledgments}
+
+%% ------------------------------------------------------------------------ %%
+%%  REFERENCE LIST AND TEXT CITATIONS
+%
+% Either type in your references using
+%\begin{thebibliography}{}
+%\bibliography{/Users/silvers/latex/master_refs}
+%\bibliographystyle{agufull08}
+%\bibitem[Cess et al.(1989)]{Cess_etal_1989}
+%ENTRY
+%{
+%	AUTHOR = {R. D. Cess and G. L. Potter and J.P. Blanchet},
+%	YEAR = {1989},
+%	TITLE = {Interpretation of Cloud-Climate Feedback as Produced by 14 Atmospheric General Circulation Models},
+%	JOURNAL = {Science},
+%	VOLUME = {245},
+%	PAGES ={513-516},
+%	KEY={Cess_etal_1989}
+%}
+% Text
+%@ARTICLE{Cess_etal_1989,
+%	AUTHOR = {R. D. Cess and G. L. Potter and J.P. Blanchet},
+%	YEAR = {1989},
+%	TITLE = {Interpretation of Cloud-Climate Feedback as Produced by 14 Atmospheric General Circulation Models},
+%	JOURNAL = {Science},
+%	VOLUME = {245},
+%	PAGES ={513-516}
+%}
+
+%\end{thebibliography}
+%
+% Or,
+%
+% If you use BiBTeX for your references, please use the agufull08.bst file (available at % ftp://ftp.agu.org/journals/latex/journals/Manuscript-Preparation/) to produce your .bbl
+% file and copy the contents into your paper here.
+%
+% Follow these steps:
+% 1. Run LaTeX on your LaTeX file.
+%
+% 2. Make sure the bibliography style appears as \bibliographystyle{agufull08}. Run BiBTeX on your LaTeX
+% file.
+%
+% 3. Open the new .bbl file containing the reference list and
+%   copy all the contents into your LaTeX file here.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%STOPSTOPSTOP%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{49}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{\textit{Arnold and Randall}(2015)}]{Arnold_Randall_2015}
+Arnold, N.~P., and D.~A. Randall (2015), Global-scale convective aggregation:
+  Implications for the madden-{J}ulian oscillation, \textit{J.\ Adv. \ Model. \
+  Earth \ Syst.}, \textit{7}, \doi{10.1002/2015MS000498}.
+
+\bibitem[{\textit{Bechtold et~al.}(2008)\textit{Bechtold, K\"{o}hler, Jung,
+  Doblas-Reyes, Leutbecher, Rodwell, Vitart, and Balsamo}}]{Bechtold_etal_2008}
+Bechtold, P., M.~K\"{o}hler, T.~Jung, F.~Doblas-Reyes, M.~Leutbecher, M.~J.
+  Rodwell, F.~Vitart, and G.~Balsamo (2008), Advances in simulating atmospheric
+  variability with the ecmwf model: From synoptic to decadal time-scales,
+  \textit{Quart. J. Roy. Meteor. Soc.}, \textit{134}, 1337--1351,
+  \doi{10.1002/qj.289}.
+
+\bibitem[{\textit{Bechtold et~al.}(2014)\textit{Bechtold, Semane, Lopez,
+  Chaboureau, Beljaars, and Bormann}}]{Bechtold_etal_2014}
+Bechtold, P., N.~Semane, P.~Lopez, J.-P. Chaboureau, A.~Beljaars, and
+  N.~Bormann (2014), Representing equilibrium and nonequilibrium convection in
+  large-scale models, \textit{J. Atmos. Sci.}, \textit{71}, 734--753,
+  \doi{10.1175/JAS-D-13-0163.1}.
+
+\bibitem[{\textit{Becker and Stevens}(2014)}]{Becker_Stevens_2014}
+Becker, T., and B.~Stevens (2014), Climate and climate sensitivity to changing
+  co$_2$ on an idealized land planet, \textit{J.\ Adv. \ Model. \ Earth \
+  Syst.}, \textit{6}, \doi{10.1002/2014MS000369}.
+
+\bibitem[{\textit{Bony and Dufresne}(2005)}]{Bony_Dufresne_2005}
+Bony, S., and J.~L. Dufresne (2005), Marine boundary layer clouds at the heart
+  of tropical cloud feedback uncertainties in climate models, \textit{Geophys.\
+  Res.\ Lett.}, \textit{32}, \doi{10.1029/2005GL023851}.
+
+\bibitem[{\textit{Bony et~al.}(2015)\textit{Bony, Stevens, Frierson, Jakob,
+  Kageyama, Pincus, Shepherd, Sherwood, Siebesma, Sobel, Watanabe, and
+  Webb}}]{Bony_etal_2015}
+Bony, S., B.~Stevens, D.~M. Frierson, C.~Jakob, M.~Kageyama, R.~Pincus, T.~G.
+  Shepherd, S.~C. Sherwood, A.~P. Siebesma, A.~H. Sobel, M.~Watanabe, and M.~J.
+  Webb (2015), Clouds, circulation, and climate sensitivity, \textit{Nat.\
+  Geosci.}, \textit{8}, \doi{10.1038/NGEO2398}.
+
+\bibitem[{\textit{Bretherton et~al.}(2005)\textit{Bretherton, Blossey, and
+  Khairoutdinov}}]{Bretherton_etal_2005}
+Bretherton, C.~S., P.~N. Blossey, and M.~Khairoutdinov (2005), An
+  energy-balance analysis of deep convective self-aggregation above uniform
+  sst, \textit{J. Atmos. Sci.}, \textit{62}, 4273--4292.
+
+\bibitem[{\textit{Brient et~al.}(2015)\textit{Brient, Schneider, Tan, Bony, Qu,
+  and Hall}}]{Brient_etal_2015}
+Brient, F., T.~Schneider, Z.~Tan, S.~Bony, X.~Qu, and A.~Hall (2015),
+  Shallowness of tropical low clouds as a predictor of climate models' response
+  to warming, \textit{Clim.\ Dynam.}, \textit{45},
+  \doi{10.1007/s00382-015-2846-0}.
+
+\bibitem[{\textit{Cess et~al.}(1989)\textit{Cess, Potter, and
+  Blanchet}}]{Cess_etal_1989}
+Cess, R.~D., G.~L. Potter, and J.~Blanchet (1989), Interpretation of
+  cloud-climate feedback as produced by 14 atmospheric general circulation
+  models, \textit{Science}, \textit{245}, 513--516.
+
+\bibitem[{\textit{Coppin and Bony}(2015)}]{Coppin_Bony_2015}
+Coppin, D., and S.~Bony (2015), Physical mechanisms controlling the initiation
+  of convective self-aggregation in a General Circulation Model, \textit{J.\
+  Adv. \ Model. \ Earth \ Syst.}, \textit{7}, \doi{10.1002/2015MS000571}.
+
+\bibitem[{\textit{Derbyshire et~al.}(2004)\textit{Derbyshire, Beau, Bechtold,
+  Grandpeix, Piriou, Redelsperger, and Soares}}]{Derbyshire_etal_2004}
+Derbyshire, S.~H., I.~Beau, P.~Bechtold, J.-Y. Grandpeix, J.-M. Piriou, J.-L.
+  Redelsperger, and P.~Soares (2004), Sensitivity of moist convection to
+  environmental humidity, \textit{Quart. J. Roy. Meteor. Soc.}, \textit{130},
+  3055--3079.
+
+\bibitem[{\textit{Dipankar et~al.}(2015)\textit{Dipankar, Stevens, Heinze,
+  Moseley, Z\"{a}ngl, Giorgetta, and Brdar}}]{Dipanker_etal_2015}
+Dipankar, A., B.~Stevens, R.~Heinze, C.~Moseley, G.~Z\"{a}ngl, M.~Giorgetta,
+  and S.~Brdar (2015), Large eddy simulation using the general circulation
+  model icon, \textit{J. Adv. Model. Earth Syst.}, \textit{7},
+  \doi{10.1002/2015MS000431}.
+
+\bibitem[{\textit{Emanuel et~al.}(2014)\textit{Emanuel, Wing, and
+  Vincent}}]{Emanuel_etal_2014}
+Emanuel, K., A.~A. Wing, and E.~M. Vincent (2014), Radiative-convective
+  instability, \textit{J. Adv. Model. Earth Syst.}, \textit{6},
+  \doi{10.1002/2013MS000270}.
+
+%\bibitem[{\textit{Emanuel et~al.}(2014)\textit{Emanuel, Wing, and
+ % Vincent}}]{Emanuel_etal_2014}
+\bibitem[{\textit{Fl\"{a}schner et~al.}(2016)\textit{Fl\"{a}schner, Mauritsen, and Stevens}}]
+%{Fl\"{a}schner_etal_2016}
+{Flaeschner_etal_2016}
+Fl\"{a}schner, D., T.~Mauritsen, B.~Stevens (2016), Understanding the inter-model spread in global-mean hydrological sensitivity,
+  \textit{J.\ Climate},
+  \textit{ in press}.
+
+\bibitem[{\textit{Gassmann}(2011)}]{Gassmann_2011}
+Gassmann, A. (2011), Inspection of hexagonal and triangular c-grid
+  discretizations on the shallow water equations, \textit{J.\ Comput.\ Phys.},
+  \textit{230}, 2706--2721, \doi{10.1002/2013MS000270}.
+
+\bibitem[{\textit{Hartmann and Larson}(2002)}]{Hartmann_Larson_2002}
+Hartmann, D.~L., and K.~Larson (2002), An important constraint on tropical
+  cloud-climate feedback, \textit{Geophys.\ Res.\ Lett.}, \textit{29},
+  \doi{10.1029/2002GL015835}.
+
+\bibitem[{\textit{Held et~al.}(1993)\textit{Held, Hemler, and
+  Ramaswamy}}]{Held_etal_1993}
+Held, I.~M., R.~S. Hemler, and V.~Ramaswamy (1993), Radiative-convective
+  equilibrium with explicit two-dimensional moist convection, \textit{J. Atmos.
+  Sci.}, \textit{50}, 3909--3927,
+  \doi{http://dx.doi.org/10.1175/1520-0469(1993)050<3909:RCEWET>2.0.CO;2}.
+
+\bibitem[{\textit{Held et~al.}(2007)\textit{Held, Zhao, and
+  Wyman}}]{Held_etal_2007}
+Held, I.~M., M.~Zhao, and B.~Wyman (2007), Dynamic radiative-convective
+  equilibria using gcm column physics, \textit{J. Atmos. Sci.}, \textit{64},
+  228--238, \doi{10.1175/JAS3825.11}.
+
+\bibitem[{\textit{Jeevanjee and Romps}(2013)}]{Jeevanjee_Romps_2013}
+Jeevanjee, N., and D.~M. Romps (2013), Convective self-aggregation, cold pools,
+  and domain size, \textit{Geophys.\ Res.\ Lett.}, \textit{40}, 994--99,
+  \doi{10.1002/grl.50204}.
+
+\bibitem[{\textit{Klemp et~al.}(2008)\textit{Klemp, Dudhia, and
+  Hassiotis}}]{Klemp_etal_2008}
+Klemp, J.~B., J.~Dudhia, and A.~D. Hassiotis (2008), An upper gravity-wave
+  absorbing layer for nwp applications, \textit{Mon. Wea. Rev.}, \textit{136},
+  3987--4004, \doi{10.1175/2008MWR2596.1}.
+
+\bibitem[{\textit{Manabe and Strickler}(1964)}]{Manabe_Strickler_1964}
+Manabe, S., and R.~F. Strickler (1964), Thermal equilibrium of the atmosphere
+  with a convective adjustment, \textit{J. Atmos. Sci.}, \textit{21}, 361--385.
+
+\bibitem[{\textit{Manabe and Wetherald}(1967)}]{Manabe_Wetherald_1967}
+Manabe, S., and R.~T. Wetherald (1967), Thermal equilibrium of the atmosphere
+  with a given distribution of relative humidity, \textit{J. Atmos. Sci.},
+  \textit{24}, 241--259.
+
+\bibitem[{\textit{Mauritsen and Stevens}(2015)}]{Mauritsen_Stevens_2015}
+Mauritsen, T., and B.~Stevens (2015), Missing iris effect as a possible cause
+  of muted hydrological change and high climate sensitivity in models,
+  \textit{Nat.\ Geosci.}, \textit{8}, 346--351.
+
+\bibitem[{\textit{Mauritsen et~al.}(2013)\textit{Mauritsen, Graversen, Klocke,
+  Langen, Stevens, and Tomassini}}]{Mauritsen_etal_2013}
+Mauritsen, T., R.~G. Graversen, D.~Klocke, P.~L. Langen, B.~Stevens, and
+  L.~Tomassini (2013), Climate feedback efficiency and synergy, \textit{Clim.\
+  Dynam.}, \textit{41}, 2539--2554.
+
+\bibitem[{\textit{McWilliams}(2007)}]{McWilliams_2007}
+McWilliams, J.~C. (2007), Irreducible imprecision in atmospheric and oceanic
+  simulations, \textit{Proc.\ Natl.\ Acad.\ Sci.\ (USA)}, \textit{104},
+  8709--8713, \doi{10.1073/pnas.0702971104}.
+
+\bibitem[{\textit{Mlawer et~al.}(1997)\textit{Mlawer, Taubman, Brown, Iacono,
+  and Clough}}]{Mlawer_etal_1997}
+Mlawer, E.~J., S.~J. Taubman, P.~D. Brown, M.~J. Iacono, and S.~A. Clough
+  (1997), Radiative transfer for inhomogeneous atmospheres: {RRTM}, a validated
+  correlated-k model for the longwave, \textit{J.\ Geophys.\ Res.},
+  \textit{102}, 16,663--16,682.
+
+\bibitem[{\textit{M\"{o}bis and Stevens}(2012)}]{Moebis_Stevens_2012}
+M\"{o}bis, B., and B.~Stevens (2012), Factors controlling the position of the
+  intertropical convergence zone on an aquaplanet, \textit{J.\ Adv. \ Model. \
+  Earth \ Syst.}, \textit{4}, \doi{10.1029/2012MS000199}.
+
+\bibitem[{\textit{Muller and Held}(2012)}]{Muller_Held_2012}
+Muller, C.~J., and I.~Held (2012), Detailed investigation of the
+  self-aggregation of convection in cloud-resolving simulations, \textit{J.
+  Atmos. Sci.}, \textit{69}, 2551--2565, \doi{10.1175/JAS-D-11-0257.1}.
+
+\bibitem[{\textit{Myhre et~al.}(1998)\textit{Myhre, Highwood, Shine, and
+  Stordal}}]{Myhre_etal_1998}
+Myhre, G., E.~J. Highwood, K.~P. Shine, and F.~Stordal (1998), New estimates of
+  radiative forcing due to well mixed greenhouse gases, \textit{Geophys.\ Res.\
+  Lett.}, \textit{25}, 2715--2718.
+
+\bibitem[{\textit{Nam et~al.}(2012)\textit{Nam, Bony, Dufresne, and
+  Chepfer}}]{Nam_etal_2012}
+Nam, C., S.~Bony, J.-L. Dufresne, and H.~Chepfer (2012), The `too few, too
+  bright' tropical low-cloud problem in cmip5 models, \textit{Geophys.\ Res.\
+  Lett}, \textit{39}, \doi{10.1029/2012GL053421}.
+
+\bibitem[{\textit{Nuijens et~al.}(2015)\textit{Nuijens, Medeiros, Sandu, and
+  Ahlgrimm}}]{Nuijens_etal_2015}
+Nuijens, L., B.~Medeiros, I.~Sandu, and M.~Ahlgrimm (2015), The behavior of
+  trade-wind cloudiness in observations and models: The major cloud components
+  and their variability, \textit{J. Adv. Model. Earth Syst.}, \textit{7},
+  600--616, \doi{10.1002/2014MS000390}.
+
+\bibitem[{\textit{Oueslati and Bellon}(2013)}]{Oueslati_Bellon_2013}
+Oueslati, B., and G.~Bellon (2013), Convective entrainment and large-scale
+  organization of tropical precipitation: Sensitivity of the {CNRM-CM5}
+  hierarchy of models, \textit{J.\ Climate}, \textit{26}, 2931--2946.
+
+\bibitem[{\textit{Popke et~al.}(2013)\textit{Popke, Stevens, and
+  Voigt}}]{Popke_etal_2013}
+Popke, D., B.~Stevens, and A.~Voigt (2013), Climate and climate change in a
+  radiative-convective equilibrium version of echam6, \textit{J. Adv. Model.
+  Earth Syst.}, \textit{5}, 1--14, \doi{10.1029/2012MS000191}.
+
+\bibitem[{\textit{Raschendorfer}(2001)\textit{Raschendorfer}}]{Raschendorfer_2001}
+Raschendorfer, M. (2001), The new turbulence parameterization of LM,
+ \textit{COSMO Newsl.}, \textit{1}, 89-97. http://www.cosmo-model.org.
+
+\bibitem[{\textit{Redelsperger et~al.}(2002)\textit{Redelsperger, Parsons, and
+  Guichard}}]{Redelsperger_etal_2002}
+Redelsperger, J., D.~Parsons, and F.~Guichard (2002), Recovery process and
+  factors limiting cloud-top height following the arrival of a dry intrusion
+  observed during {TOGA-COARE}, \textit{J.\ Atmos.\ Sci.}, \textit{59}.
+
+\bibitem[{\textit{Reed et~al.}(2015)\textit{Reed, Medeiros, Bacmeister, and
+  Lauritzen}}]{Reed_etal_2015}
+Reed, K.~A., B.~Medeiros, J.~T. Bacmeister, and P.~H. Lauritzen (2015), Global
+  radiative-convective equilibrium in the community atmosphere model, version
+  5, \textit{J.\ Atmos.\ Sci.}, \textit{72}, 2183--2197,
+  \doi{10.1175/JAS-D-14-0268.1}.
+
+\bibitem[{\textit{Rieck et~al.}(2012)\textit{Rieck, Nuijens, and
+  Stevens}}]{Rieck_etal_2012}
+Rieck, M., L.~Nuijens, and B.~Stevens (2012), Marine boundary layer cloud
+  feedbacks in a constant relative humidity atmosphere, \textit{J.\ Atmos.\
+  Sci.}, \textit{69}, 2538--2550, \doi{10.1175/JAS-D-11-0203.1}.
+
+\bibitem[{\textit{Rio et~al.}(2009)\textit{Rio, Hourdin, Grandpeix, and
+  Lafore}}]{Rio_etal_2009}
+Rio, C., F.~Hourdin, J.-Y. Grandpeix, and J.-P. Lafore (2009), Shifting the
+  diurnal cycle of parameterized deep convection over land, \textit{Geophys.\
+  Res.\ Lett}, \textit{36}, \doi{10.1029/2008GL036799}.
+
+\bibitem[{\textit{Seifert}(2008)\textit{Seifert}}]{Seifert_2008}
+Seifert, A. (2008), A revised cloud microphysical parameterization for COSMO-LME,
+ \textit{COSMO Newsl.}, \textit{8}, 25-28. http://www.cosmo-model.org.
+ 
+\bibitem[{\textit{Sherwood et~al.}(2014)\textit{Sherwood, Bony, and
+  Dufresne}}]{Sherwood_etal_2014}
+Sherwood, S.~C., S.~Bony, and J.~L. Dufresne (2014), Spread in model climate
+  sensitivity traced to atmospheric convective mixing, \textit{Nature},
+  \textit{505}, 37--42, \doi{10.1038/nature12829}.
+
+\bibitem[{\textit{Sherwood et~al.}(2015)\textit{Sherwood, Bony, Boucher,
+  Bretherton, Forster, Gregory, and Stevens}}]{Sherwood_etal_2015}
+Sherwood, S.~C., S.~Bony, O.~Boucher, C.~Bretherton, P.~M. Forster, J.~M.
+  Gregory, and B.~Stevens (2015), Adjustments in the forcing-feedback framework
+  for understanding climate change, \textit{Bull.\ Amer.\ Meteor.\ Soc.},
+  \textit{96}, 217--228, \doi{10.1175/BAMS-D-13-00167.1}.
+
+\bibitem[{\textit{Stevens and Bony}(2013)}]{Stevens_Bony_2013}
+Stevens, B., and S.~Bony (2013), What are climate models missing?,
+  \textit{Science}, \textit{340}, 1053--1054, \doi{10.1126/science.1237554}.
+
+\bibitem[{\textit{Stevens et~al.}(2013)\textit{Stevens, Giorgetta, Esch,
+  Mauritsen, Crueger, Rast, Salzmann, Schmidt, Bader, Block, Brokopf, Fast,
+  Kinne, Kornblueh, Lohmann, Pincus, Reichler, and
+  Roeckner}}]{Stevens_etal_2013}
+Stevens, B., M.~Giorgetta, M.~Esch, T.~Mauritsen, T.~Crueger, S.~Rast,
+  M.~Salzmann, H.~Schmidt, J.~Bader, K.~Block, R.~Brokopf, I.~Fast, S.~Kinne,
+  L.~Kornblueh, U.~Lohmann, R.~Pincus, T.~Reichler, and E.~Roeckner (2013),
+  Atmospheric component of the mpi-m earth system model: Echam6, \textit{J.
+  Adv. Model. Earth Syst.}, \textit{5}, 146--172, \doi{10.1002/jame.20015}.
+
+\bibitem[{\textit{Takahashi}(2009)}]{Takahashi_2009}
+Takahashi, K. (2009), The global hydrological cycle and atmospheric shortwave
+  absorption in climate models under co$_2$ forcing, \textit{J.\ Climate},
+  \textit{22}, 5667--5675.
+
+\bibitem[{\textit{Tobin et~al.}(2012)\textit{Tobin, Bony, and
+  Roca}}]{Tobin_etal_2012}
+Tobin, I., S.~Bony, and R.~Roca (2012), Observational evidence for
+  relationships between the degree of aggregation of deep convection, water
+  vapor, surface fluxes, and radiation, \textit{J.\ Climate}, \textit{25},
+  6885--6904.
+
+\bibitem[{\textit{Tompkins and Craig}(1998)}]{Tompkins_Craig_1998}
+Tompkins, A., and G.~Craig (1998), Radiative-convective equilibrium in a
+  three-dimensional cloud ensemble model, \textit{Quart.\ J.\ Roy.\ Meteor.\
+  Soc.}, \textit{124}, 2073--2097.
+
+\bibitem[{\textit{Wan et~al.}(2013)\textit{Wan, Giorgetta, Z\"{a}ngl, Restelli,
+  Majewski, Bonaventura, Fr\"{o}hlich, Reinert, Ripodas, Kornblueh, and
+  F\"{o}rstner}}]{Wan_etal_2013}
+Wan, H., M.~A. Giorgetta, G.~Z\"{a}ngl, M.~Restelli, D.~Majewski,
+  L.~Bonaventura, K.~Fr\"{o}hlich, D.~Reinert, P.~Ripodas, L.~Kornblueh, and
+  J.~F\"{o}rstner (2013), The icon-1.2 hydrostatic atmospheric dynamical core
+  on triangular grids - part 1: Formulation and performance of the baseline
+  version, \textit{Geosci. Model Dev.}, \textit{6}, 735--763,
+  \doi{10.5194/gmd-6-735-2013}.
+
+\bibitem[{\textit{Webb et~al.}(2001)\textit{Webb, Senior, Bony, and
+  Morcrette}}]{Webb_etal_2001}
+Webb, M., C.~Senior, S.~Bony, and J.-L. Morcrette (2001), Combining {ERBE} and
+  {ISCCP} data to assess clouds in the hadley centre, {ECMWF} and {LMD}
+  atmospheric climate models, \textit{Clim.\ Dynam.}, \textit{17}, 905--922.
+
+\bibitem[{\textit{Wing and Emanuel}(2014)}]{Wing_Emanuel_2014}
+Wing, A.~A., and K.~A. Emanuel (2014), Physical mechanisms controlling
+  self-aggregation of convection in idealized numerical modeling simulations,
+  \textit{J. Adv. Model. Earth Syst.}, \textit{6}, 59--74,
+  \doi{10.1002/2013MS000269}.
+
+\bibitem[{\textit{Z\"{a}ngl et~al.}(2015)\textit{Z\"{a}ngl, Reinert, Ripodas,
+  and Baldauf}}]{Zaengl_etal_2015}
+Z\"{a}ngl, G., D.~Reinert, P.~Ripodas, and M.~Baldauf (2015), The
+  {ICON}({ICO}sahedral {N}on-hydrostatic modelling framework of {DWD} and
+  {MPI-M}: Description of the non-hydrostatic dynamical core), \textit{Quart.
+  J. Roy. Meteor. Soc.}, \textit{141}, 563--579, \doi{10.1002/qj.2378}.
+
+\bibitem[{\textit{Zelinka and Hartmann}(2011)}]{Zelinka_Hartmann_2011}
+Zelinka, M.~D., and D.~L. Hartmann (2011), The observed sensitivity of high
+  clouds to mean surface temperature anomalies in the tropics, \textit{J.\
+  Geophys.\ Res.}, \textit{116}, \doi{10.1029/2011JD016459}.
+
+\bibitem[{\textit{Zhou}(2015)}]{Zhou_2015}
+Zhou, W. (2015), Non-{R}otating and rotating raditive-{C}onvective equilibrium,
+  Ph.D. thesis, Princeton University.
+
+\end{thebibliography}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%STOPSTOPSTOP%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 4. Comment out the old \bibliographystyle and \bibliography commands.
+%
+% 5. Run LaTeX on your new file before submitting.
+%
+% AGU does not want a .bib or a .bbl file. Please copy in the contents of your .bbl file here.
+
+%\begin{thebibliography}{}
+
+%\providecommand{\natexlab}[1]{#1}
+%\expandafter\ifx\csname urlstyle\endcsname\relax
+%  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+%  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+%  \urlstyle{rm}\Url}\fi
+%
+%\bibitem[{\textit{Atkinson and Sloan}(1991)}]{AtkinsonSloan}
+%Atkinson, K., and I.~Sloan (1991), The numerical solution of first-kind
+%  logarithmic-kernel integral equations on smooth open arcs, \textit{Math.
+%  Comp.}, \textit{56}(193), 119--139.
+%
+%\bibitem[{\textit{Colton and Kress}(1983)}]{ColtonKress1}
+%Colton, D., and R.~Kress (1983), \textit{Integral Equation Methods in
+%  Scattering Theory}, John Wiley, New York.
+%
+%\bibitem[{\textit{Hsiao et~al.}(1991)\textit{Hsiao, Stephan, and
+%  Wendland}}]{StephanHsiao}
+%Hsiao, G.~C., E.~P. Stephan, and W.~L. Wendland (1991), On the {D}irichlet
+%  problem in elasticity for a domain exterior to an arc, \textit{J. Comput.
+%  Appl. Math.}, \textit{34}(1), 1--19.
+%
+%\bibitem[{\textit{Lu and Ando}(2012)}]{LuAndo}
+%Lu, P., and M.~Ando (2012), Difference of scattering geometrical optics
+%  components and line integrals of currents in modified edge representation,
+%  \textit{Radio Sci.}, \textit{47},  RS3007, \doi{10.1029/2011RS004899}.
+
+%\end{thebibliography}
+
+%Reference citation examples:
+
+%...as shown by \textit{Kilby} [2008].
+%...as shown by {\textit  {Lewin}} [1976], {\textit  {Carson}} [1986], {\textit  {Bartholdy and Billi}} [2002], and {\textit  {Rinaldi}} [2003].
+%...has been shown [\textit{Kilby et al.}, 2008].
+%...has been shown [{\textit  {Lewin}}, 1976; {\textit  {Carson}}, 1986; {\textit  {Bartholdy and Billi}}, 2002; {\textit  {Rinaldi}}, 2003].
+%...has been shown [e.g., {\textit  {Lewin}}, 1976; {\textit  {Carson}}, 1986; {\textit  {Bartholdy and Billi}}, 2002; {\textit  {Rinaldi}}, 2003].
+
+%...as shown by \citet{jskilby}.
+%...as shown by \citet{lewin76}, \citet{carson86}, \citet{bartoldy02}, and \citet{rinaldi03}.
+%...has been shown \citep{jskilbye}.
+%...has been shown \citep{lewin76,carson86,bartoldy02,rinaldi03}.
+%...has been shown \citep [e.g.,][]{lewin76,carson86,bartoldy02,rinaldi03}.
+%
+% Please use ONLY \citet and \citep for reference citations.
+% DO NOT use other cite commands (e.g., \cite, \citeyear, \nocite, \citealp, etc.).
+
+%% ------------------------------------------------------------------------ %%
+%
+%  END ARTICLE
+%
+%% ------------------------------------------------------------------------ %%
+\end{article}
+%
+%
+%% Enter Figures and Tables here:
+%
+% DO NOT USE \psfrag or \subfigure commands.
+%
+% Figure captions go below the figure.
+% Table titles go above tables; all other caption information
+%  should be placed in footnotes below the table.
+%
+%----------------
+
+\begin{table}
+    \caption{Length of simulations, SST used, size and names of domains for each simulation.  The M in the domain names stands for million (or Mega) $\rm{km}^2$.  Also shown are two different periods (P1 and P2) of time used for computing mean values from the end of the simulations.  See text and captions for details.}
+    \begin{center}
+    %\begin{tabular}{| l | l | l | l | p{5cm} |}
+    %\begin{tabular}{l*{3}{c}r}
+    \begin{tabular}{*{8}{c}}
+    \hline
+    %\multicolumn{5}{|c|}{Experimental Specifications} \\
+    \hline
+    Domain    &          Area  ($\rm{km}^2$)         & Edge Length (km)            &   Grid Points    &   SST (K)          & Length (year)    & P1 (year) & P2 (month)     \\ \hline
+    3/4M        &   $\mathrm{0.80\times 10^6}$   &  960 $\times$ 831            &    4,608            &  297/301           & 10                     & 9             & 12                    \\
+    \\
+    3M           & $\mathrm{3.2\times 10^6}$       & 1,920 $\times$ 1,663        &  18,432           &   297/301          & 10                     & 9              & 4                                   \\ 
+    \\
+    12M         & $\mathrm{12.8\times 10^6}$     & 3,840 $\times$ 3,326        &   73,728          & 297/301            &   4                     & 3              & 8                                               \\ 
+    \\
+    50M         & $\mathrm{51.1\times 10^6}$     & 7,680 $\times$ 6,651        &  294,912         & 297/301            &    2                    &  1              & 4                                                \\ 
+    \\
+    200M       & $\mathrm{204\times 10^6} $     & 15,360 $\times$ 13,302     & 1,179,648      & 297/301            &    1                    &  0.6          &  0.76                                     \\ \hline
+     \end{tabular}\par
+     \label{exptable}
+\end{center}
+\end{table}
+
+\begin{table}
+\begin{center}
+\caption{Mean Energetics: Long- and short-wave feedback parameters, total feedback parameter, equilibrium climate sensitivity and hydrologic sensitivity parameter (HSP) (defined as $\Delta P/\Delta T_s$, where $P$ is the total precipitation) as a function of domain size.   Values were averaged over the P1 period.}
+    %\begin{tabular}{|c|c|c|c|c|c|}
+    \begin{tabular}{*{6}{c}}
+    \hline
+    \hline
+ Domain & $\lambda_{sw}/\lambda_{sw,clr} (\mathrm{W/m^2 K}) $& $\lambda_{lw}/\lambda_{lw,clr}  (\mathrm{W/m^2 K}) $ &   $\lambda  (\mathrm{W/m^2 K}) $ & ECS (K) & HSP ($\mathrm{\%/K}$)   \\ \hline
+    0.75 M          &   0.08/0.25    & -1.93/-2.13              & -1.85  $\pm (0.4/0.4)$           &  2.00           &        2.3     \\ 
+    \\
+    3M                & -0.89/0.25     & -1.49/-1.55            & -2.39 $\pm (0.3/0.3)$         & 1.55                &   1.9  \\  
+    \\
+    12M             & 0.13/0.23      & -2.28/-2.48             & -2.15 $\pm (0.3/0.2)$          & 1.72                &  2.6   \\  
+    \\
+    50M             & 1.71/0.25      & -2.84/-2.05             & -1.13 $\pm (0.2/0.2)$           & 3.29               &  2.7  \\  
+    \\
+    200M          & 0.92/0.25      & -2.51/-2.25             & -1.59  $\pm (0.2/0.1)$          & 2.33                &   2.7    \\  \hline
+    \end{tabular}\par
+    %\bigskip 
+    \label{tab:lambda}
+\end{center}
+\end{table}
+
+\begin{table}
+    \caption{Total cloud cover and column integrated diagnostics.  Water Vapor ($q_v$), Liquid Water ($q_c$), and Ice ($q_i$).  Values were computed over the P2 period.}
+    \begin{center}
+    %\begin{tabular}{| l | l | l | l | p{5cm} |}
+    %\begin{tabular}{l*{3}{c}r}
+    \begin{tabular}{*{6}{c}}
+    \hline
+    %\multicolumn{5}{|c|}{Experimental Specifications} \\
+    \hline
+    Domain      & Tot Cloud Cover (\%)        & $q_v (\mathrm{kg/m^2}) $  &   $q_c (\mathrm{g/m^2}) $   & $q_i (\mathrm{g/m^2})$    & SST (K)   \\ \hline
+    3/4M           &   $\mathrm{82}$  &    39.7            &  15.3    & 6.16              & 297                            \\
+                       &       81                &   55.5             &   17.7   & 6.17              & 301  \\
+                       \\
+ %                         &                                                       &                         &  301 K    &  10 years                                         \\ \hline
+    3M                & $\mathrm{73}$   &  36.4            &   22.2   &      5.03          & 297                                 \\ 
+                         &           75             &   52.5             &   25.8  & 5.64               & 301  \\
+    \\
+ %                         &                                                              &                          &  301 K    &   10 years                                               \\ \hline
+    12M              & $\mathrm{67}$ &  36.4          & 20.4    &        5.26              & 297                                      \\ 
+                         &       63              &   49.7          & 39.3    &        6.35             & 301  \\
+    \\
+  %                        &                                                 &                       & 301K       &       4 years                                                \\ \hline
+    50M               & $\mathrm{63}$ &  37.0     & 24.2      &    5.54                & 297                                    \\ 
+                          &       58               &  51.1     &  21.1     &    6.64               & 301  \\
+    \\
+   %                       &                                                 &                                     & 301 K     &         2 years                                              \\ \hline
+    200M            & $\mathrm{64} $ &  36.9      & 22.5  &        5.60                  & 297                       \\
+                         &       57                &  51.9      & 26.4  &        6.74                 & 301     \\ \hline
+    %                      &                                                 &                                     &  301 K               &     1 year                        \\ \hline
+     \end{tabular}\par
+     \label{colintvars}
+\end{center}
+\end{table}
+
+% EXAMPLE FIGURE
+%
+ %\begin{figure}
+ %\noindent\includegraphics[width=20pc]{samplefigure.eps}
+ %\caption{Caption text here}
+ %\label{figure_label}
+ %\end{figure}
+%
+\begin{figure} %  figure placement: here, top, bottom, or page
+   \centering
+        \includegraphics[width=6.7in]{rce_ecs_20km_5dom_tprec_raster.eps}
+   \caption{Precipitation rate ($\rm{mm \, day^{-1}}$) of the equilibrated state for the five domains with a constant SST of $301 \, \rm{K}$.  Domains sizes are labelled as 3/4M, 3M, 12M, 50M, 200M, with increasing numbers indicating a four-fold increase in area (see Table 1).  All have similar subsidence fractions and the convective clusters continuously evolve while moving through the domains.}
+   \label{fig:precvsdom}
+\end{figure}
+
+\begin{figure}[htbp] %  figure placement: here, top, bottom, or page
+   \centering
+       \includegraphics[width=6in]{rce_ecs_20km_384gp_301_totprec_tevol.eps}
+   \caption{Evolution in time of the precipitation rate on the 50M domain with an SST of $301 \, \rm{K}$.  Snapshots are from day 10 (left), day 25 (middle), and day 760 (right). }
+   \label{fig:precevol}
+\end{figure}
+
+\begin{figure}[!htb]
+   \centering
+   \begin{minipage}{0.31\linewidth}
+     \includegraphics[width=2.0in]{rce_ecs_20km_3by4Mx256_301.eps}
+   \end{minipage}
+   \begin{minipage}{0.31\textwidth} %  figure placement: here, top, bottom, or page
+     \includegraphics[width=2.0in]{rce_ecs_20km_12Mx16_301_totp_3008.eps}
+   \end{minipage}
+   \begin{minipage}{0.31\textwidth} %  figure placement: here, top, bottom, or page
+     \includegraphics[width=2.0in]{rce_ecs_301_200M_totp_nolabs.eps}
+   \end{minipage}
+  \caption{Snapshots in time of total precipitation ($\rm{mm \,day^{-1}}$) for the $\rm{3/4 M (left), 12 M (middle),}$ and $\rm{200M (right)}$ domains tiled according to scale.  Times and colors are same as for Fig. \ref{fig:precvsdom}, $\rm{SST}=301 \, \rm{K}$.}
+  \label{fig:convorg}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=2.5in]{rce_ecs_20km_totprec_5dom_301_green.eps}
+    \caption{Domain mean evolution in time of the total precipitation over the first two years with a 30 day running mean for the simulations with 
+  an SST=301K.  The 200M simulation was run for a total of one year and thus only extends through half of the figure.  The dots on the right represent the mean total precipitation from the last 6 months of each experiment.}
+   %Right, fraction of convective precipitation to total precipitation over the first 2 years.  Solid lines show the 
+   %simulations with an SST=301K, dashed lines for simulations with an SSST=297K.}
+  \label{fig:precipvtime}
+\end{figure}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=6.7in]{fig5_browns.eps}
+   %\includegraphics[width=6.7in]{rce_ecs_20km_297_vprof_green.eps}
+   \caption{Mean vertical profiles with a constant SST of 297 K.  Values were computed over the P2 period.}
+   \label{fig:prof297}
+\end{figure}
+
+
+\begin{figure}[htb] %  figure placement: here, top, bottom, or page
+   \centering
+        \includegraphics[width=6.0in]{rce_20km_tqv_20mmto80mm_raster.eps}
+   \caption{Column integrated water vapor ($\rm{mm}$).  The SST$=301$ K and the time of the snapshots is the same as for Fig. \ref{fig:precvsdom} but the color scale differs.}
+   \label{fig:tqv5dom}
+\end{figure}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=6.5in]{fig7_lthick2_green.eps}
+   %\includegraphics[width=6.5in]{rce_ecs_20km_reldiff_24km_green.eps}
+   \caption{Difference ($301 \rm{K} - 297 \rm{K}$) of mean vertical profiles between the two sets of fixed SST cases.  Values were computed over the P2 period.}
+   \label{fig:profdiff}
+\end{figure}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=6.5in]{rce_ecs_20km_reldiff_4km.eps}
+   \caption{Same data as Figure \ref{fig:profdiff}, zoomed in to reveal boundary layer features.  Values were computed over the P2 period.}
+   \label{fig:profdiffzoom}
+\end{figure}
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=6.5in]{vprofile_diffrel200M.eps}
+   \caption{Same data as Figure \ref{fig:profdiff}, plotted relative to the 200M domain.  Values were computed over the P2 period.}
+   \label{fig:profdiffrel200M}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering 
+    \includegraphics[width=2.5in]{feedbk_vs_5dom_green_cmip5.eps}
+   \caption{Feedback parameter as a function of domain size.  
+  Bars correspond to a 5-95 \% confidence interval with a two-sided t-test.  A de-correlation time of three weeks was assumed for all domains.  The feedback parameters from CMIP5 models are shown as tan colored markers.}
+   \label{fig:lambdaecs}
+\end{figure}
+
+
+
+% ---------------
+% EXAMPLE TABLE
+%
+%\begin{table}
+%\caption{Time of the Transition Between Phase 1 and Phase 2\tablenotemark{a}}
+%\centering
+%\begin{tabular}{l c}
+%\hline
+% Run  & Time (min)  \\
+%\hline
+%  $l1$  & 260   \\
+%  $l2$  & 300   \\
+%  $l3$  & 340   \\
+%  $h1$  & 270   \\
+%  $h2$  & 250   \\
+%  $h3$  & 380   \\
+%  $r1$  & 370   \\
+%  $r2$  & 390   \\
+%\hline
+%\end{tabular}
+%\tablenotetext{a}{Footnote text here.}
+%\end{table}
+
+% See below for how to make sideways figures or tables.
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+More Information and Advice:
+
+%% ------------------------------------------------------------------------ %%
+%
+%  SECTION HEADS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Capitalize the first letter of each word (except for
+% prepositions, conjunctions, and articles that are
+% three or fewer letters).
+
+% AGU follows standard outline style; therefore, there cannot be a section 1 without
+% a section 2, or a section 2.3.1 without a section 2.3.2.
+% Please make sure your section numbers are balanced.
+% ---------------
+% Level 1 head
+%
+% Use the \section{} command to identify level 1 heads;
+% type the appropriate head wording between the curly
+% brackets, as shown below.
+%
+%An example:
+%\section{Level 1 Head: Introduction}
+%
+% ---------------
+% Level 2 head
+%
+% Use the \subsection{} command to identify level 2 heads.
+%An example:
+%\subsection{Level 2 Head}
+%
+% ---------------
+% Level 3 head
+%
+% Use the \subsubsection{} command to identify level 3 heads
+%An example:
+%\subsubsection{Level 3 Head}
+%
+%---------------
+% Level 4 head
+%
+% Use the \subsubsubsection{} command to identify level 3 heads
+% An example:
+%\subsubsubsection{Level 4 Head} An example.
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  IN-TEXT LISTS
+%
+%% ------------------------------------------------------------------------ %%
+%
+% Do not use bulleted lists; enumerated lists are okay.
+% \begin{enumerate}
+% \item
+% \item
+% \item
+% \end{enumerate}
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Single-line equations are centered.
+% Equation arrays will appear left-aligned.
+
+Math coded inside display math mode \[ ...\]
+ will not be numbered, e.g.,:
+ \[ x^2=y^2 + z^2\]
+
+ Math coded inside \begin{equation} and \end{equation} will
+ be automatically numbered, e.g.,:
+ \begin{equation}
+ x^2=y^2 + z^2
+ \end{equation}
+
+% IF YOU HAVE MULTI-LINE EQUATIONS, PLEASE
+% BREAK THE EQUATIONS INTO TWO OR MORE LINES
+% OF SINGLE COLUMN WIDTH (20 pc, 8.3 cm)
+% using double backslashes (\\).
+
+% To create multiline equations, use the
+% \begin{eqnarray} and \end{eqnarray} environment
+% as demonstrated below.
+\begin{eqnarray}
+  x_{1} & = & (x - x_{0}) \cos \Theta \nonumber \\
+        && + (y - y_{0}) \sin \Theta  \nonumber \\
+  y_{1} & = & -(x - x_{0}) \sin \Theta \nonumber \\
+        && + (y - y_{0}) \cos \Theta.
+\end{eqnarray}
+
+%If you don't want an equation number, use the star form:
+%\begin{eqnarray*}...\end{eqnarray*}
+
+% Break each line at a sign of operation
+% (+, -, etc.) if possible, with the sign of operation
+% on the new line.
+
+% Indent second and subsequent lines to align with
+% the first character following the equal sign on the
+% first line.
+
+% Use an \hspace{} command to insert horizontal space
+% into your equation if necessary. Place an appropriate
+% unit of measure between the curly braces, e.g.
+% \hspace{1in}; you may have to experiment to achieve
+% the correct amount of space.
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATION NUMBERING: COUNTER
+%
+%% ------------------------------------------------------------------------ %%
+
+% You may change equation numbering by resetting
+% the equation counter or by explicitly numbering
+% an equation.
+
+% To explicitly number an equation, type \eqnum{}
+% (with the desired number between the brackets)
+% after the \begin{equation} or \begin{eqnarray}
+% command.  The \eqnum{} command will affect only
+% the equation it appears with; LaTeX will number
+% any equations appearing later in the manuscript
+% according to the equation counter.
+%
+
+% If you have a multiline equation that needs only
+% one equation number, use a \nonumber command in
+% front of the double backslashes (\\) as shown in
+% the multiline equation above.
+
+%% ------------------------------------------------------------------------ %%
+%
+%  SIDEWAYS FIGURE AND TABLE EXAMPLES
+%
+%% ------------------------------------------------------------------------ %%
+%
+% For tables and figures, add \usepackage{rotating} to the paper and add the rotating.sty file to the folder.
+% AGU prefers the use of {sidewaystable} over {landscapetable} as it causes fewer problems.
+%
+% \begin{sidewaysfigure}
+% \includegraphics[width=20pc]{samplefigure.eps}
+% \caption{caption here}
+% \label{label_here}
+% \end{sidewaysfigure}
+%
+%
+%
+% \begin{sidewaystable}
+% \caption{}
+% \begin{tabular}
+% Table layout here.
+% \end{tabular}
+% \end{sidewaystable}
+%
+%
+
