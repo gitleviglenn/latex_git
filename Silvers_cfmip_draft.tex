@@ -29,18 +29,13 @@ We will present a systematic picture of the modeled clouds across a hierarchy of
 
 \textbf{Key Points}
 \begin{itemize}
-  \item{At 25 km, simulations with parameterized shallow- and deep-convection exhibit asymmetries in the circulation, 
-  precipitation, and humidity fields resulting in a steady-state overturning circulation that is not centered on the SST
-  maximum.}
-  \item{The longwave cloud-radiative effect is a fundamental factor in establishing these asymmetries and leads to dramatic
-  changes in the low-level clouds and boundary layer structure.}
-  \item{Cloud resolving simulations result in stronger overturning, more condensate aloft, and a RH in the deep convective 
-  region that is 30\% higher than for the coarser cases with parameterized convection.}
-  \item{The mock-Walker Circulation is RCE plus an imposed gradient in surface temperature.  This is a simple design that 
-  incorporates additional complexity which is critical for the connection to observed atmospheric phenomena.}
+  \item{The AM4.0 TOA cloud radiative effect shows small biases compared with CERES-EBAF observations, both versions 
+  2.8 and 4.1.}
+  \item{Too few clouds are simulated by AM4.0 at high, middle, and low-levels, as compared to observations from CALIPSO.}
+  \item{Various configurations of a single global climate model lead to climate sensitivities that range from blah to about 5K.}
 \end{itemize}
 
-\section{introduction}
+\section{Introduction}
 
 This paper has a double motivation.  One of the motivations is to illustrate the wide range of sensitivities to perturbations 
 that can be achieved with a single base model.  For this purpose we utilize several models from the latest suite of GFDL 
@@ -55,7 +50,25 @@ have participated in CMIP6.  This will largely be done in the context of the ami
 that overlap with that time period (1979-2014).  The experiments and diagnostics used are taken from the latest 
 round of CFMIP which has provided a useful framework to guide experimental design and diagnostic outputs.       
 
+Can we shed lite on which particular component of the cloud feedbacks lead to large changes in the sensitivity?  
+
 \section{Clouds in AM4.0: Comparison between amip and observations}
+
+During the developmental of the AM4.0 GFDL model particular care was given to ensuring that the energy budget at 
+the top of the atmosphere compared well with observations.  The data set that was most heavily leaned on to ensure 
+this was the CERES-EBAF TOA radiative fluxes, version 2.8.  Based on AM4.0 data that was used for the CMIP6 AMIP
+experiment, the total TOA flux bias is 989898, the bias in CRE 
+due to longwave radiative fluxes is $-2.4 \rm{W m^{-2}} $ and the bias due to CRE of the shortwave radiative fluxes   
+is $-1.1 \rm{W m^{-2}} $.  About the same time the AM4.0 development was frozen and the process of documentation 
+underway, the CERES-EBAF was updated to version 4.1.  When comparing the same AM4.0 AMIP experiment to the 
+newer version of CERES-EBAF data we find biases of $-2.2 \rm{W m^{-2}} $ for the longwave CRE and 
+$-2.9 \rm{W m^{-2}} $ for the shortwave CRE.   Should these biases be computed using only the AMIP years that 
+correspond to the CERES years?   As previously discussed (e.g. Kay et al., 2012) these longwave and shortwave CRE 
+biases are difficult to interpret because model developers often tune models to match particular CERES-EBAF data 
+sets despite the well known fact that different versions of the CERES-EBAF data lead to changes in the observed CRE of
+several $\rm{W m^{-2}}$.   Our aim in discussing this for AM4.0 is transparency in the model development process, as 
+well as to point out that both versions of the CERES-EBAF data show similar shortcomings of the spatial patters of the 
+simulated clouds  from AM4.0 in the AMIP experiment.   
 
 \begin{figure}
 % figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 1
@@ -81,8 +94,9 @@ round of CFMIP which has provided a useful framework to guide experimental desig
 
 \begin{figure}
 % figure generated with cloud_table_AM4fig.ncl
-  \includegraphics[width=0.86\columnwidth]{cfmipfigs/calip_9pan_amip_obs.eps}
-  \caption{Calipso scumstash}
+  \includegraphics[angle=90,width=0.86\columnwidth]{cfmipfigs/calip_9pan_amip_obs_vs_AM4.eps}
+  \caption{Calipso scumstash.  Black line shows meridional profiles of AM4.0 cloud fraction and blue line shows
+  the meridional profile from CALIPSO.}
   \label{fig:calipso_9pan}
 \end{figure}
 
@@ -126,6 +140,15 @@ The cloud radiative effect (CRE) is computed as the difference between the all-s
     \label{tab:lambda}
 \end{center}
 \end{table}
+
+The Cess sensitivity for AM4.0 ($0.57 \, \rm{K\, W^{-1} m^2}$, Z18b, pg 26) is closer to the Cess sensitivity 
+% see page 39 of Zhao et al. 2018 part 1 for discussion of Cess sensitivity.  
+of AM2.1 ($0.54 \, \rm{K\, W^{-1} m^2}$) than AM3.  This is partly due to the method of converting convective cloud condensate to precipitation 
+in the convection scheme.   Z18b on the same page describes a Cess sensitivity with AM4.0 when the drop number
+is fixed of ($0.52 \, \rm{K\, W^{-1} m^2}$).  As discussed in Z18b and Winton et al. 2019, despite a Cess sensitivity similar to AM2.1, 
+the TCR and ECS of CM4.0 are larger than those of CM2.1, and close to those of CM3.   This clearly 
+shows that using the Cess sensitivity to infer the TCR or ECS is not reliable (does not work).   Is the ratio of TCR to
+Cess sensitivity useful?  
 
 \begin{figure}
 % figure generated with cloud_table_AM4fig.ncl
