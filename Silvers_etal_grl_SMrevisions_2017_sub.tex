@@ -1,0 +1,752 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AGUtmpl.tex: this template file is for articles formatted with LaTeX2e,
+% Modified November 2013
+%
+% This template includes commands and instructions
+% given in the order necessary to produce a final output that will
+% satisfy AGU requirements.
+%
+% PLEASE DO NOT USE YOUR OWN MACROS
+% DO NOT USE \newcommand, \renewcommand, or \def.
+%
+% FOR FIGURES, DO NOT USE \psfrag
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% All questions should be e-mailed to latex@agu.org.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Step 1: Set the \documentclass
+%
+% There are two options for article format: two column (default)
+% and draft.
+%
+% PLEASE USE THE DRAFT OPTION TO SUBMIT YOUR PAPERS.
+% The draft option produces double spaced output.
+%
+% Choose the journal abbreviation for the journal you are
+% submitting to:
+
+% jgrga JOURNAL OF GEOPHYSICAL RESEARCH
+% gbc   GLOBAL BIOCHEMICAL CYCLES
+% grl   GEOPHYSICAL RESEARCH LETTERS
+% pal   PALEOCEANOGRAPHY
+% ras   RADIO SCIENCE
+% rog   REVIEWS OF GEOPHYSICS
+% tec   TECTONICS
+% wrr   WATER RESOURCES RESEARCH
+% gc    GEOCHEMISTRY, GEOPHYSICS, GEOSYSTEMS
+% sw    SPACE WEATHER
+% ms    JAMES
+% ef    EARTH'S FUTURE
+%
+%
+%
+% (If you are submitting to a journal other than jgrga,
+% substitute the initials of the journal for "jgrga" below.)
+
+\documentclass[draft,grl]{agutexSI}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  SUPPORTING INFORMATION TEMPLATE
+%
+%% ------------------------------------------------------------------------ %%
+%
+%
+%Please use this template when formatting and submitting your Supporting Information.
+
+%This template serves as both a “table of contents” for the supporting information for your article and as a summary of files.
+%
+%
+%OVERVIEW
+%
+%Please note that all supporting information will be peer reviewed with your manuscript.
+%In general, the purpose of the supporting information is to enable authors to provide and archive auxiliary information such as data %tables, method information, figures, video, or computer software, in digital formats so that other scientists can use it.
+%The key criteria are that the data:
+% 1. supplement the main scientific conclusions of the paper but are not essential to the conclusions (with the exception of
+%    including %data so the experiment can be reproducible);
+% 2. are likely to be usable or used by other scientists working in the field;
+% 3. are described with sufficient precision that other scientists can understand them, and
+% 4. are not exe files.
+%
+%USING THIS TEMPLATE
+%
+%***All references should be included in the reference list of the main paper so that they can be indexed, linked, and counted as citations.  The reference section does not count toward length limits.
+%
+%All Supporting text and figures should be included in this document. Insert supporting information content into each appropriate section of the template. %Figures and tables should appear above each caption.  To add additional captions, simply copy and paste each sample caption as needed.
+
+%Tables may be included, but can also be uploaded separately, especially if they are larger than 1 page, or if necessary for retaining table formatting. Data sets, large tables, movie files, and audio files should be uploaded separately, following AGU naming conventions. Include their captions in this document and list the file name with the caption. You will be prompted to upload these files on the Upload Files tab during the submission process, using file type “Supporting Information (SI)”
+
+%IMPORTANT NOTE ON FIGURES AND TABLES
+% Placeholders for figures and tables appear after the \end{article} command, after references.
+% DO NOT USE \psfrag or \subfigure commands.
+%
+%  Uncomment the following command to include .eps files
+% \usepackage[dvips]{graphicx}
+ % \usepackage[dvipdf]{graphicx}
+  \usepackage{graphicx}
+%
+%  Uncomment the following command to allow illustrations to print
+%   when using Draft:
+\setkeys{Gin}{draft=false}
+%\setkeys{Gin}{draft=true}
+%
+% Substitute one of the following for [dvips] above
+% if you are using a different driver program and want to
+% proof your illustrations on your machine:
+%
+% [xdvi], [dvipdf], [dvipsone], [dviwindo], [emtex], [dviwin],
+% [pctexps],  [pctexwin],  [pctexhp],  [pctex32], [truetex], [tcidvi],
+% [oztex], [textures]
+%
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  ENTER PREAMBLE
+%
+%% ------------------------------------------------------------------------ %%
+
+% Author names in capital letters:
+\authorrunninghead{SILVERS ET AL.}
+
+% Shorter version of title entered in capital letters:
+%\titlerunninghead{SHORT TITLE}
+\titlerunninghead{Cloud Feedbacks in long-AMIP}
+
+%Corresponding author mailing address and e-mail address:
+\authoraddr{Corresponding author: L. G. Silvers,
+Princeton University/GFDL, Princeton, New Jersey, USA.
+(silvers@princeton.edu)}
+%Department of Hydrology and Water Resources, University of
+%Arizona, Harshbarger Building 11, Tucson, AZ 85721, USA.
+%(a.b.smith@hwr.arizona.edu)}
+
+\begin{document}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TITLE
+%
+%% ------------------------------------------------------------------------ %%
+
+%\includegraphics{agu_pubart-white_reduced.eps}
+
+
+\title{Supporting Information for ``The diversity of cloud responses to twentieth-century sea surface temperatures"}
+%
+% e.g., \title{Supporting Information for "Terrestrial ring current:
+% Origin, formation, and decay $\alpha\beta\Gamma\Delta$"}
+%
+%DOI: 10.1002/%insert paper number here%
+
+%% ------------------------------------------------------------------------ %%
+%
+%  AUTHORS AND AFFILIATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+
+%Use \author{\altaffilmark{}} and \altaffiltext{}
+
+% \altaffilmark will produce footnote;
+% matching \altaffiltext will appear at bottom of page.
+
+\authors{Levi G. Silvers\altaffilmark{1}, David Paynter\altaffilmark{2}, and Ming Zhao\altaffilmark{2}}
+
+\altaffiltext{1}{Princeton University/GFDL, Princeton, New Jersey, USA}
+\altaffiltext{2}{GFDL/NOAA, Princeton, New Jersey, USA}
+
+
+% \authors{A. B. Smith,\altaffilmark{1}
+% Eric Brown,\altaffilmark{1,2} Rick Williams,\altaffilmark{3}
+% John B. McDougall\altaffilmark{4}, and S. Visconti\altaffilmark{5}}
+
+%\altaffiltext{1}{Department of Hydrology and Water Resources,
+%University of Arizona, Tucson, Arizona, USA.}
+
+%\altaffiltext{2}{Department of Geography, Ohio State University,
+%Columbus, Ohio, USA.}
+
+%\altaffiltext{3}{Department of Space Sciences, University of
+%Michigan, Ann Arbor, Michigan, USA.}
+
+%\altaffiltext{4}{Division of Hydrologic Sciences, Desert Research
+%Institute, Reno, Nevada, USA.}
+
+%\altaffiltext{5}{Dipartimento di Idraulica, Trasporti ed
+%Infrastrutture Civili, Politecnico di Torino, Turin, Italy.}
+
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  BEGIN ARTICLE
+%
+%% ------------------------------------------------------------------------ %%
+
+% The body of the article must start with a \begin{article} command
+%
+% \end{article} must follow the references section, before the figures
+%  and tables.
+
+\begin{article}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TEXT
+%
+%% ------------------------------------------------------------------------ %%
+
+
+
+\noindent\textbf{Contents of this file}
+%%%Remove or add items as needed%%%
+\begin{enumerate}
+\item Additional Information for Boundary Condition and Parameterization details
+\item Additional Results
+\item Computational details of the Estimated Inversion Strength
+\item Figures S1 to S4
+\item Tables S1 to S2
+%if Tables are larger than 1 page, upload as separate excel file
+\end{enumerate}
+%\noindent\textbf{Additional Supporting Information (Files uploaded separately)}
+%\begin{enumerate}
+%\item Captions for Datasets S1 to Sx
+%\item Captions for large Tables S1 to Sx (if larger than 1 page, upload as separate excel file)
+%\item Captions for Movies S1 to Sx
+%\item Captions for Audio S1 to Sx
+%\end{enumerate}
+
+\noindent\textbf{Additional Information for Boundary Condition and Parameterization Details}
+%Type or paste your text here. The introduction gives a brief overview of the supporting information. You should include information %about as many of the following as possible (when appropriate):
+% 1. a general overview of the kind of data files;
+% 2. information about when and how the data were collected or created;
+% 3. a general description of processing steps used;
+% 4. any known imperfections or anomalies in the data.
+This experiment drives AGCMs with observationally based SST and sea-ice concentrations while the forcing due to greenhouse gases, aerosol, and solar forcing, is held constant at assumed pre-industrial levels.  However, due to the different time at which these models were actively used there are small differences in the boundary conditions. 
+For the SST and sea ice concentration boundary conditions the AM2.1 model uses a combination of HADISST and NOAA data [Hurrel et al., 2008], AM3 uses version 1 of HADISST, and AM4.0 uses PCMDI-AMIP SST and sea ice boundary conditions which have been derived from observations, the method of derivation is described in Taylor et al. 2000 and Hurrel et al., 2008 with current details available at https://pcmdi.llnl.gov/mips/amip/.  The preindustrial forcing is based on assumed values from 1860 for AM2.1 and AM3, but from 1850 for AM4.0.  It is not expected that these differences in the initial conditions and boundary conditions would lead to alternate climate responses.  The land surface evolves freely.  
+
+The AM4.0 and AM3 models include an aerosol indirect effect with a prognostic cloud drop number.  The AM2.1 model specified the cloud drop number to be 100 (300) over ocean (land).
+
+
+\noindent\textbf{Additional Results}
+
+The paper by Qu et al., 2014 documented an inter-model analysis of the statistics from 5 geographic windows which were identified as important for low cloud cover.  Their windows encompass large swaths of the oceans which include many cloud types.  We have computed the regional decomposition of the climate feedback parameter over their 5 windows using the same methodology described in our primary manuscript (SPZ herafter; Silvers, Paynter, and Zhao).  Results are shown in Figure \ref{fig:quwindows}.  
+This figure is identical to SPZ Figure 1.b, but with the climate feedback parameter computed with Qu et al.'s windows shown as the thin small-dashed lines.   
+The rest of the tropics (between $\pm 30^{\circ}$ minus the 5 windows) are shown with thin long-dashed lines.  The conclusion that most of the decadal variability of the climate feedback parameter is due to the greater tropics and not due to the regions defined by these specific geographic windows holds true.  There is very little difference between the results of the windows used in the primary analysis and those from Qu et al., 2014.  This indicates that even if our region of interest is expanded, and the northern tropical Atlantic region included as in Qu et al., 2014, the temporal variability of $\alpha$ is still not captured.  
+
+The change of the total cloud field (computed as the linear 30 year trend)  as observed by ISCCP between 1983-2009 is shown in Figure \ref{fig:isccp}.  Although the pattern of cloud cover changes is complex many of the regions of increasing cloud occur over regions with a weak or even decreasing trend of surface temperature (compare with the late period of Figure 2 of SPZ).  This agrees well with the results of Z16 and implies that low-level stability is likely an important factor in the change of global cloud fields.  
+
+%To quantify the influence of regional changes in LCC on the TOA radiative budget the long-wave CRE (LWCRE) and short-wave CRE (SWCRE) trends are computed over the two periods of interest.
+Global fields for AM4.0 are shown in Figs. 2 and 3 of SPZ and mean values over the windows described in SPZ are given in SM Table 1.  
+%The windows used to compute mean values for SM Table 1 were chosen to represent regions of importance highlighted by our results and previous literature.  
+%The eastern Pacific window mimics the area of importance discussed in Z16.  We used the definition of the Peruvian and Californian windows from Klein and Hartmann, 1993, expanded them and added them together to measure the LCC and SWCRE trends in the eastern Pacific.  The Indian, south Atlantic, and southern ocean windows were chosen because of the large trends in both the LCC and SWCRE there (see figs. 2 and 3 of SPZ).    
+SM Table 1 shows a large increase of LCC trend in the late period in all windows, which coincides to a significant strengthening of the negative SWCRE.  
+This should be contrasted with the fact that in the early period all regions have either a decrease in LCC, or only a small increase.  The decreasing LCC of the early period correspond to positive SWCRE.  This confirms the importance of the east Pacific region but shows that the LCC trend in the other regions have an equally large (if not larger) impact on the SWCRE.  
+%The changing SWCRE of these 4 regions is consistent with a more sensitive climate during the early period and a less sensitive climate in the  late period.  
+
+The linear decomposition of the low-level cloud field given by equation 3 and illustrated with Figure 3.b in SPZ is further examined here.  The results of the decomposition for the latitude ranges $\pm 30^{\circ}$ and $\pm 60^{\circ}$ are tabulated in in SM Table 2.  Shown are the coefficients $\gamma$ and $\beta$ for each model as well as the correlation coefficients between the LCC anomaly from model output compared with the linear approximation of the LCC anomaly using $\gamma$ and $\beta$.  For completeness we also show the time series for the region between $\pm 30^{\circ}$ in Figure 3.  
+
+\noindent\textbf{Computational details of the Estimated Inversion Strength}
+
+
+To compute the EIS following Wood and Bretherton we use 
+\begin{equation}
+  \rm{EIS}=\rm{LTS}-\Gamma_m^{850}(z_{700}-\rm{LCL})
+\end{equation}
+with the lifting condensation level (LCL) calculated as $\rm{LCL}=(20+(T_{sfc}-273.15)/5)(1-RH_{sfc})$.  
+
+
+            The potential temperature gradient for moist-adiabatic processes is calculated as
+\begin{equation}
+    \Gamma_m(T,p)=\frac{g}{c_p} \left[ 1-\frac{1+L_v q_s(T,p)/R_a T}{1+L^2_v q_s(T,p)/c_p R_v T^2} \right].
+\end{equation}
+            To compute $\Gamma^{850}_m$ we used the temperature on the $850 \rm{hPa}$ pressure level and computed the saturation vapor pressure on the 
+            $850 \rm{hPa}$ level using $q_s=610.8 \, \rm{exp}[17.27(T_{850}-273.15)/(T_{850}-35.85)] (\rm{hPa})$.  When the pressure surfaces of interest for these calculations intersect topography 
+            the variables we are interested in are not defined.  To account for this, missing vallues of $\rm{T}_{850}$ are set to 50 $K$, $\rm{T}_{sfc}$ is not allowed to be lower than $200$ K, and $\rm{RH}_{sfc}$
+            is not allowed to be lower than $5 \%$.            
+
+
+%\clearpage
+
+%Delete all unused file types below. Copy/paste for multiples of each file type as needed.
+%\noindent\textbf{Text S1.}
+%Type or paste text here. This should be additional explanatory text, such as: extended descriptions of results, full details of models, extended lists of acknowledgements etc.  It should not be additional discussion, analysis, interpretation or critique. It should not be an additional scientific experiment or paper.
+%
+%Repeat for any additional Supporting Text
+
+%%Enter Data Set, Movie, and Audio captions here
+%%EXAMPLE CAPTIONS
+
+%\noindent\textbf{Data Set S1.} %Type or paste caption here.
+%upload your dataset(s) to AGU's journal submission site and select "Supporting Information (SI)" as the file type. Following naming %convention: ds01.
+
+%Repeat for any additional Supporting data sets
+
+%\noindent\textbf{Movie S1.} %Type or paste caption here.
+%upload your movie(s) to AGU's journal submission site and select, "Supporting Information %(SI)" as the file type. Following naming convention: ms01.
+
+%Repeat any additional Supporting movies
+
+%\noindent\textbf{Audio S1.} %Type or paste caption here.
+%upload your audio file(s) to AGU's journal submission site and select "Supporting Information %(SI)" as the file type. Following naming convention: auds01.
+
+%Repeat for any additional Supporting audio files
+
+%%% End of body of article:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Optional Notation section goes here
+%
+% Notation -- End each entry with a period.
+% \begin{notation}
+% Term & definition.\\
+% Second term & second definition.\\
+% \end{notation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% ------------------------------------------------------------------------ %%
+%%  REFERENCE LIST AND TEXT CITATIONS
+%
+% Either type in your references using
+% \begin{thebibliography}{}
+% \bibitem{}
+% Text
+% \end{thebibliography}
+%
+% Or,
+%
+% If you use BiBTeX for your references, please use the agufull08.bst file (available at % ftp://ftp.agu.org/journals/latex/journals/Manuscript-Preparation/) to produce your .bbl
+% file and copy the contents into your paper here.
+%
+% Follow these steps:
+% 1. Run LaTeX on your LaTeX file.
+%
+% 2. Make sure the bibliography style appears as \bibliographystyle{agufull08}. Run BiBTeX on your LaTeX
+% file.
+%
+% 3. Open the new .bbl file containing the reference list and
+%   copy all the contents into your LaTeX file here.
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+%\bibitem[{\textit{Bretherton et~al.}(2004)\textit{Bretherton, Peters, and
+%  Back}}]{Bretherton_etal_2004}
+%Bretherton, C.~S., M.~E. Peters, and L.~E. Back (2004), A new parameterization
+%  for shallow cumulus convection and its application to marine subtropical
+%  cloud-topped boundary layers. part i: Description and 1-d results,
+%  \textit{Mon.\ Wea.\ Rev.}, \textit{132}, 864--882.
+%
+%\bibitem[{\textit{Donner and Coauthors}(2011)}]{Donner_etal_2011}
+%Donner, L.~J., and Coauthors (2011), The dynamical core, physical
+%  parameterizations, and basic simulation characteristics of the atmospheric
+%  component {AM3} of the {GFDL} global coupled model {CM3}, \textit{JCLI},
+%  \textit{24}, 3484--3519, \doi{10.1175/2011JCLI3955.1}.
+%
+%\bibitem[{\textit{GFDL-GAMDT}(2004)}]{GFDL_GAMDT_2004}
+%GFDL-GAMDT (2004), The new {GFDL} global atmosphere and land model {AM2}/{LM2}:
+%  Evaluation with prescribed {SST} simulations, \textit{JCLI}, \textit{17},
+%  4641--4673, \doi{10.1175/JCLI-3223.1}.
+
+\bibitem[{\textit{Hurrell et~al.}(2008)\textit{Hurrell, Hack, Shea, Caron, and
+  Rosinski}}]{Hurrell_etal_2008}
+Hurrell, J.~W., J.~J. Hack, D.~Shea, J.~Caron, and J.~Rosinski (2008), A new
+  sea surface temperature and sea ice boundary dataset for the community
+  atmosphere model, \textit{JCLI}, \textit{21}, 5145--5153,
+  \doi{10.1175/2008jcli2292.1}.
+
+%\bibitem[{\textit{Moorthi and Suarez}(1992)}]{Moorthi_Suarez_1992}
+%Moorthi, S., and M.~Suarez (1992), Relaxed arakawa schubert: A parameterization
+%  of moist convection for general circulation models, \textit{Mon.\ Wea.\
+%  Rev.}, \textit{120}, 978--1002.
+  
+\bibitem[{\textit{Norris and Evan}(2015)}]{Norris_Evan_2015}
+Norris, J, R., and A.T..~Evan (2015), Cloud Properties from ISCCP and PATMOS-x Corrected for Spurious Variability Related to Changes in Satellite Orbits, Instrument Calibrations, and Other Factors. \textit{Research Data Archive at the National Center for Atmospheric Research, Computational and Information Systems Laboratory}.,
+Accessed June 1 2017,
+\doi{10.5065/D62J68XR}.
+
+\bibitem[{\textit{Qu et~al.}(2014)\textit{Qu, Hall, Klein, and
+  Caldwell}}]{Qu_etal_2014}
+Qu, X., A.~Hall, S.~A. Klein, and P.~M. Caldwell (2014), On the spread of
+  changes in marine low cloud cover in climate model simulations of the 21st
+  century, \textit{Clim.\ Dynam.}, \textit{42},
+  \doi{10.1007/s00382-013-1945-z}.
+
+\bibitem[{\textit{Taylor et~al.}(2000)}]{Taylor_etal_2000}
+Taylor, K. ~E., and D. Williamson, and F. Zwiers (2000), The sea
+  surface temperature and sea-ice concentration boundary conditions
+  of {AMIP} {II} simulations, {PCMDI}, Rep. 60, 20 pp., \doi{10.1175/JCLI-D-17-0062.1}.  
+
+\bibitem[{\textit{Wood and Bretherton}(2006)}]{Wood_Bretherton_2006}
+Wood, R., and C.~S. Bretherton (2006), On the relationship between stratiform
+  low cloud cover and lower-tropospheric stability, \textit{JCLI}, \textit{19},
+  6425--6432, \doi{10.1175/JCLI3988.1}.
+
+
+\end{thebibliography}
+%
+% 4. Comment out the old \bibliographystyle and \bibliography commands.
+%
+% 5. Run LaTeX on your new file before submitting.
+%
+% AGU does not want a .bib or a .bbl file. Please copy in the contents of your .bbl file here.
+
+%\begin{thebibliography}{}
+
+%\providecommand{\natexlab}[1]{#1}
+%\expandafter\ifx\csname urlstyle\endcsname\relax
+%  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+%  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+%  \urlstyle{rm}\Url}\fi
+%
+%\bibitem[{\textit{Atkinson and Sloan}(1991)}]{AtkinsonSloan}
+%Atkinson, K., and I.~Sloan (1991), The numerical solution of first-kind
+%  logarithmic-kernel integral equations on smooth open arcs, \textit{Math.
+%  Comp.}, \textit{56}(193), 119--139.
+%
+%\bibitem[{\textit{Colton and Kress}(1983)}]{ColtonKress1}
+%Colton, D., and R.~Kress (1983), \textit{Integral Equation Methods in
+%  Scattering Theory}, John Wiley, New York.
+%
+%\bibitem[{\textit{Hsiao et~al.}(1991)\textit{Hsiao, Stephan, and
+%  Wendland}}]{StephanHsiao}
+%Hsiao, G.~C., E.~P. Stephan, and W.~L. Wendland (1991), On the {D}irichlet
+%  problem in elasticity for a domain exterior to an arc, \textit{J. Comput.
+%  Appl. Math.}, \textit{34}(1), 1--19.
+%
+%\bibitem[{\textit{Lu and Ando}(2012)}]{LuAndo}
+%Lu, P., and M.~Ando (2012), Difference of scattering geometrical optics
+%  components and line integrals of currents in modified edge representation,
+%  \textit{Radio Sci.}, \textit{47},  RS3007, \doi{10.1029/2011RS004899}.
+
+%\end{thebibliography}
+
+%Reference citation examples:
+
+%...as shown by \textit{Kilby} [2008].
+%...as shown by {\textit  {Lewin}} [1976], {\textit  {Carson}} [1986], {\textit  {Bartholdy and Billi}} [2002], and {\textit  {Rinaldi}} [2003].
+%...has been shown [\textit{Kilby et al.}, 2008].
+%...has been shown [{\textit  {Lewin}}, 1976; {\textit  {Carson}}, 1986; {\textit  {Bartholdy and Billi}}, 2002; {\textit  {Rinaldi}}, 2003].
+%...has been shown [e.g., {\textit  {Lewin}}, 1976; {\textit  {Carson}}, 1986; {\textit  {Bartholdy and Billi}}, 2002; {\textit  {Rinaldi}}, 2003].
+
+%...as shown by \citet{jskilby}.
+%...as shown by \citet{lewin76}, \citet{carson86}, \citet{bartoldy02}, and \citet{rinaldi03}.
+%...has been shown \citep{jskilbye}.
+%...has been shown \citep{lewin76,carson86,bartoldy02,rinaldi03}.
+%...has been shown \citep [e.g.,][]{lewin76,carson86,bartoldy02,rinaldi03}.
+%
+% Please use ONLY \citet and \citep for reference citations.
+% DO NOT use other cite commands (e.g., \cite, \citeyear, \nocite, \citealp, etc.).
+
+%% ------------------------------------------------------------------------ %%
+%
+%  END ARTICLE
+%
+%% ------------------------------------------------------------------------ %%
+\end{article}
+\clearpage
+
+% Delete all unused file types below. Copy/paste for multiples of each file type as needed.
+
+% enter figures and tables here:
+%
+% EXAMPLE FIGURE
+% ---------------
+% \begin{figure}
+%\setfigurenum{S1} %%Change number for each figure
+% \noindent\includegraphics[width=20pc]{samplefigure.eps}
+%\caption{Caption text here}
+ %\label{figure_label}
+ %\end{figure}
+ 
+ \begin{figure}
+ \includegraphics[width=4.0in]{alpha_tseries_1pan_quwindows.eps}
+ \caption{Time series analysis of AM4.0(black), AM3(green), and AM2.1(blue). Global climate feedback parameter $\alpha$ ($\rm{W/m^2 K}$),  
+  decomposed into contributions from tropical windows (small-dashed), the rest of tropics (long-dashed), and the global value (solid).  Figure is identical to Figure 1.B in SPZ
+  but with the addition of values (thin lines) computed using the 5 'low cloud region' windows from Qu et al. 2014 (thin, small-dashed) and the rest of the tropics (thin, long-dashed).}
+   \label{fig:quwindows}
+ \end{figure}
+ 
+ \begin{figure}
+  \includegraphics[width=4.0in]{isccp_tc_trend_19832005_norm.eps}
+  \caption{Trend of total cloud fraction (\% per 30 yr) using ISCCP data between 1983 and 2005.  The magnitude has been normalized to result in a trend per 30 years, comparable to figures in main article showing trends of cloud fraction.  The ISCCP data has been corrected to remove spurious artifacts.  See \textit{Norris and Evan}, [2015]}
+  \label{fig:isccp}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=4.0in]{LCC_appbyeis_ensmn_ts_pm30.eps}
+  \caption{Time evolution of the tropical mean ($\pm 30^{\circ}$) change in low-cloud cover ($\Delta \rm{LCC}$) for AM2.1(blue), AM3(red), AM4.0(black).  Thick lines show the       simulated $\Delta \rm{LCC}$ while thin lines show $\Delta \rm{LCC}$ approximated using Eq. 2 with coefficients determined by multiple linear regression (see Table \ref{LCCtable}).  A nine-year running mean has been used to smooth the data series.}
+  \label{fig:lccts_pm30}
+\end{figure}
+
+% ---------------
+% EXAMPLE TABLE
+%
+%\begin{table}
+%\settablenum{S1} %%Change number for each table
+%\caption{Time of the Transition Between Phase 1 and Phase 2\tablenotemark{a}}
+%\centering
+%\begin{tabular}{l c}
+%\hline
+% Run  & Time (min)  \\
+%\hline
+%  $l1$  & 260   \\
+%  $l2$  & 300   \\
+%  $l3$  & 340   \\
+%  $h1$  & 270   \\
+%  $h2$  & 250   \\
+%  $h3$  & 380   \\
+%  $r1$  & 370   \\
+%  $r2$  & 390   \\
+%\hline
+%\end{tabular}
+%\tablenotetext{a}{Footnote text here.}
+%\end{table}
+
+\begin{table}
+    \caption{Mean values of LCC, SWCRE, and EIS trends over select geographic windows of interest.  All values computed for ensemble mean of AM4.0 experiments.  Locations of windows are: East Pacific: (210-240 E; 10-30 N)+(250-280 E; 10-30 S); Indian: (60-90 E; 10-30 S); S. Atlantic: (330-360 E; 10-30 S); S. Ocean: (circumglobal; 50-60S)}
+    \begin{center}
+    %\begin{tabular}{| l | l | l | l | p{5cm} |}
+    %\begin{tabular}{l*{3}{c}r}
+    \begin{tabular}{*{5}{c}}
+    \hline
+    %\multicolumn{5}{|c|}{Experimental Specifications} \\
+    \hline
+    Region   &    Period   &  LCC ($\% / 30 \rm{yr}$)                   & SWCRE ($\rm{W/m^2 per 30 \rm{yr}}$)     &   EIS  ($\rm{K} / 30 \rm{yr}$) \\ \hline
+    East Pacific           &   1925-1955  &   0.12                                               &        0.26      &    0.01                              \\
+                                         &    1975-2005 &   2.91                                               &       -3.05     &     0.23    \\
+    \\
+ %                         &                                                       &                         &  301 K    &  10 years                                         \\ \hline
+    Indian                     &   1925-1955    &   -0.78                                           &         3.41     &   0.09                    \\ 
+                                         &    1975-2005    &   3.06                                            &        -3.28     &   0.62       \\
+    \\
+ %                         &                                                              &                          &  301 K    &   10 years                                               \\ \hline
+    S. Atlantic            &   1925-1955    & -0.41                                             &        1.06      &   0.03                          \\ 
+                                        &    1975-2005    &  2.42                                             &       -3.19      &   0.24  \\
+    \\
+  %                        &                                                 &                       & 301K       &       4 years                                                \\ \hline
+    S. Ocean         &   1925-1955       & -1.30                                                &       0.86       &  -0.24       \\ 
+                                    &    1975-2005      &  0.62                                                &      -1.28       &   0.19    \\
+    \\
+   %                       &                                                 &                                     & 301 K     &         2 years                                              \\ \hline
+    %                      &                                                 &                                     &  301 K               &     1 year                        \\ \hline
+     \end{tabular}\par
+     \label{LCCtable}
+\end{center}
+\end{table}
+
+\begin{table}
+    \caption{Coefficient terms in the decomposition of $\Delta \rm{LCC}$ (Eq. 3).  % for AM2.1, AM3, AM4.0, and CAM5.3.  
+    Columns 4 and 5 show correlation coefficients between the linear approximation (Eq. 3) for  each model and the $\Delta \rm{LCC}$ simulated for that model.  
+ Values are computed from time series of monthly means between years 1870 and 2005.  For reference comparable values from
+ Zhou et al. 2016 are also shown for the CAM5.3 model.}
+    \begin{center}
+    %\begin{tabular}{| l | l | l | l | p{5cm} |}
+    %\begin{tabular}{l*{3}{c}r}
+    \begin{tabular}{*{5}{c}}
+    \hline
+    %\multicolumn{5}{|c|}{Experimental Specifications} \\
+    \hline
+    Model      & $\gamma \pm 30^{\circ} (60^{\circ})$               & $\beta \pm 30^{\circ} (60^{\circ})$          & $\Delta \rm{LCC} \pm 30^{\circ}$      &   $\Delta \rm{LCC} \pm 60^{\circ}$  \\ \hline
+    AM2.1           &   4.7 (3.8)                  &    -0.13 (-0.02)                       &         0.89                       &    0.92                              \\
+    \\
+ %                         &                                                       &                         &  301 K    &  10 years                                         \\ \hline
+    AM3             & 5.6   (3.6)                   &  -0.53 (-0.13)                       &         0.78                       &   0.82                      \\ 
+    \\
+ %                         &                                                              &                          &  301 K    &   10 years                                               \\ \hline
+    AM4.0        & 4.8   (3.8)                    &  -0.39  (0.02)                   &          0.83                          &   0.87                           \\ 
+    \\
+  %                        &                                                 &                       & 301K       &       4 years                                                \\ \hline
+    CAM5.3     & 3.7                      &  -0.9                         &           0.76                                          &   -        \\ 
+    \\
+   %                       &                                                 &                                     & 301 K     &         2 years                                              \\ \hline
+    %                      &                                                 &                                     &  301 K               &     1 year                        \\ \hline
+     \end{tabular}\par
+     \label{LCCtable}
+\end{center}
+\end{table}
+
+
+
+% ---------------
+%
+% EXAMPLE LARGE TABLE (UPLOADED SEPARATELY)
+%\begin{table}
+%\settablenum{S1} %%Change number for each table
+%\caption{Time of the Transition Between Phase 1 and Phase 2\tablenotemark{a}}
+%\end{table}
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+More Information and Advice:
+
+%% ------------------------------------------------------------------------ %%
+%
+%  SECTION HEADS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Capitalize the first letter of each word (except for
+% prepositions, conjunctions, and articles that are
+% three or fewer letters).
+
+% AGU follows standard outline style; therefore, there cannot be a section 1 without
+% a section 2, or a section 2.3.1 without a section 2.3.2.
+% Please make sure your section numbers are balanced.
+% ---------------
+% Level 1 head
+%
+% Use the \section{} command to identify level 1 heads;
+% type the appropriate head wording between the curly
+% brackets, as shown below.
+%
+%An example:
+%\section{Level 1 Head: Introduction}
+%
+% ---------------
+% Level 2 head
+%
+% Use the \subsection{} command to identify level 2 heads.
+%An example:
+%\subsection{Level 2 Head}
+%
+% ---------------
+% Level 3 head
+%
+% Use the \subsubsection{} command to identify level 3 heads
+%An example:
+%\subsubsection{Level 3 Head}
+%
+%---------------
+% Level 4 head
+%
+% Use the \subsubsubsection{} command to identify level 3 heads
+% An example:
+%\subsubsubsection{Level 4 Head} An example.
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  IN-TEXT LISTS
+%
+%% ------------------------------------------------------------------------ %%
+%
+% Do not use bulleted lists; enumerated lists are okay.
+% \begin{enumerate}
+% \item
+% \item
+% \item
+% \end{enumerate}
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Single-line equations are centered.
+% Equation arrays will appear left-aligned.
+
+Math coded inside display math mode \[ ...\]
+ will not be numbered, e.g.,:
+ \[ x^2=y^2 + z^2\]
+
+ Math coded inside \begin{equation} and \end{equation} will
+ be automatically numbered, e.g.,:
+ \begin{equation}
+ x^2=y^2 + z^2
+ \end{equation}
+
+% IF YOU HAVE MULTI-LINE EQUATIONS, PLEASE
+% BREAK THE EQUATIONS INTO TWO OR MORE LINES
+% OF SINGLE COLUMN WIDTH (20 pc, 8.3 cm)
+% using double backslashes (\\).
+
+% To create multiline equations, use the
+% \begin{eqnarray} and \end{eqnarray} environment
+% as demonstrated below.
+\begin{eqnarray}
+  x_{1} & = & (x - x_{0}) \cos \Theta \nonumber \\
+        && + (y - y_{0}) \sin \Theta  \nonumber \\
+  y_{1} & = & -(x - x_{0}) \sin \Theta \nonumber \\
+        && + (y - y_{0}) \cos \Theta.
+\end{eqnarray}
+
+%If you don't want an equation number, use the star form:
+%\begin{eqnarray*}...\end{eqnarray*}
+
+% Break each line at a sign of operation
+% (+, -, etc.) if possible, with the sign of operation
+% on the new line.
+
+% Indent second and subsequent lines to align with
+% the first character following the equal sign on the
+% first line.
+
+% Use an \hspace{} command to insert horizontal space
+% into your equation if necessary. Place an appropriate
+% unit of measure between the curly braces, e.g.
+% \hspace{1in}; you may have to experiment to achieve
+% the correct amount of space.
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATION NUMBERING: COUNTER
+%
+%% ------------------------------------------------------------------------ %%
+
+% You may change equation numbering by resetting
+% the equation counter or by explicitly numbering
+% an equation.
+
+% To explicitly number an equation, type \eqnum{}
+% (with the desired number between the brackets)
+% after the \begin{equation} or \begin{eqnarray}
+% command.  The \eqnum{} command will affect only
+% the equation it appears with; LaTeX will number
+% any equations appearing later in the manuscript
+% according to the equation counter.
+%
+
+% If you have a multiline equation that needs only
+% one equation number, use a \nonumber command in
+% front of the double backslashes (\\) as shown in
+% the multiline equation above.
+
+%% ------------------------------------------------------------------------ %%
+%
+%  SIDEWAYS FIGURE AND TABLE EXAMPLES
+%
+%% ------------------------------------------------------------------------ %%
+%
+% For tables and figures, add \usepackage{rotating} to the paper and add the rotating.sty file to the folder.
+% AGU prefers the use of {sidewaystable} over {landscapetable} as it causes fewer problems.
+%
+% \begin{sidewaysfigure}
+% \includegraphics[width=20pc]{samplefigure.eps}
+% \caption{caption here}
+% \label{label_here}
+% \end{sidewaysfigure}
+%
+%
+%
+% \begin{sidewaystable}
+% \caption{}
+% \begin{tabular}
+% Table layout here.
+% \end{tabular}
+% \end{sidewaystable}
+%
+%
+

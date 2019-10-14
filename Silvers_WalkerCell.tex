@@ -3,7 +3,7 @@
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 %\geometry{landscape}                		% Activate for for rotated page geometry
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage{graphicx}				% Use pdf, png, jpg, or epsÂ§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{gensymb}
@@ -234,7 +234,6 @@ The values in parenthesis are for the experiments in which LWCRE is off.}
 \end{center}
 \end{table}
 
-
 All simulations use a nonhydrostatic dynamical core, with prescribed SSTs and a doubly periodic domain which is elongated in the zonal 
 direction allowing for three dimensional simulations but with a reduced computational cost relative to the default global domain.  The SST is prescribed as a Gaussian function which is 4K warmer in the center (301K/27.85C) of the domain then 
 at the edges (297K/23.85C).  The GCM runs with 25km and 100km grid-spacing have been run for 5 years while the 
@@ -328,7 +327,14 @@ distribution have been noted many times in previous literature
 (Bretherton et al. 2006, Kuang and Wofsy, Ming Zhao (personal communication, see Jeevanjee et al. 2018)) but the irregularities have 
 tended to be symmetric about the SST maximum.  This is broadly consistent with our simulations when the convection is 
 entirely explicit (discussed further in section 4).      
-  
+
+The abnormality, or asymmetry, of the P25 simulation was the first surprising feature noticed by the authors.
+This asymmetry is also present on larger domains and at a resolution of $100 \, \rm{km}$.  For some of the other cases observed, such
+as P100 (on the small domain), the asymmetry can be described as an aversion of the precipitation maxima to reside over the 
+SST maximum while in other cases, such as the P25 case shown in \ref{fig:rh_psi_P25vsE25}, a strong ($1 \, \rm{m s^-1}$) domain
+mean shear develops which shifts the precipitation and circulation off center for years at a time.  This appears to be not entirely a 
+result of the convective parameterization, but due to an interaction between the convective parameterization and the LW CRE. 
+
 
 %%%%%
 % section 3.1 results
@@ -405,6 +411,25 @@ The large oscillations in domain mean precipitation are similar to those noted i
 (Silvers et al., 2016; Patrizio and Randall, 2019).   The experiments with a higher resolution have a lower value of domain
 mean precipitation, with the E2 simulation having the lowest (3.1 mm/day).  This can be understood as a consequence
 of the differences in upper level cloud fraction and will be discussed further in a later section.   
+
+%One of the most prominent features of our 25km grid-spacing simulations is an asymmetry in both the time-dependent and 
+%steady-state solutions.  This results in the steady-state precipitation maximum locating off the maximum in SST and is apparent in 
+%the vertical velocity, mass circulation, relative humidity, specific humidity, and radiative heating.   A tendency of the precipitation to 
+%occur off of the SST maximum is also apparent in the simulations with a grid-spacing of 100km, although the 25km simulations display 
+%an irregularity that is greater than the 100km simulations.  Complex patterns of precipitation over a fixed sinusoidal or Gaussian SST 
+%distribution has been noted many times 
+%(Bretherton et al. 2006, Kuang and Wofsy, Ming Zhao (personal communication, see Jeevanjee et al. 2018)) but the irregularities have 
+%tended to be symmetric, unlike our results.   
+%
+%For the simulations that are closest to the set up of a GCM, with fully parameterized convection, the steady-state circulation and 
+%precipitation maximum are located not over the warmest SST but shifted to regions about one degree cooler.  For the case
+%with a grid-spacing of 25km and a domain width of 4000km, the precipitation maximum can remain shifted off of the maximum in
+%SST for multiple years.   While focused within the central quarter of the domain, simulations on larger domains and with a 
+%grid-spacing of 100km also show an aversion to settling over the SST maximum.   When the convective parameterization
+%is turned off, the overturning circulation becomes weaker and broader (w, and psi), but the precipitation, cloud fields, and 
+%circulation all consistently reside over the SST maximum.  When the convective parameterization is turned on, a domain mean 
+%wind shear develops throughout the lowest 10km that acts to shift the convective activity and circulation off of the SST maximum.  
+%Note: check the wind shear for P25large, P100small, and P100large. 
 
 
 %% low level structure
@@ -578,6 +603,18 @@ they are able to maintain a smoother distribution of  precipitation values over 
   \label{fig:hov_4mods_6mn}
 \end{figure}
 
+Because of the close connection between the domain mean value of precipitation, atmospheric condensational heating, and 
+the total radiative cooling the time evolution of the precipitation serves as a useful measure of wether a model has 
+reached statistical equilibrium.  Figure \ref{fig:precip_dom_mn} demonstrates that after about 30 days, the P25, E2, and E1
+simulations begin to oscillate about a mean state that is roughly constant over periods greater than about 30 days. 
+The large oscillations in domain mean precipitation are similar to those noted in previous studies 
+(Silvers et al., 2016; Patrizio and Randall, 2019).   The experiments with a higher resolution have a lower value of domain
+mean precipitation, with the E2 simulation having the lowest (3.1 mm/day).  This can be understood as a consequence
+of the differences in upper level cloud fraction and will be further discussed.   
+
+Superposing the circulation and relative humidity illustrates the subsidence driven 
+drying and the strong moistening that results from ascent over the region of maximum latent heat flux.  
+
 The steady state relative humidity and overturning circulation show an interesting combination of similarities and differences
 among the experiments with varying resolutions.  All experiments have a multicell vertical structure (consistent with 
 Bretherton et al. 2006), in contrast to the single cell that results from simple theoretical models such as the SQTCM.   All 
@@ -606,15 +643,6 @@ model level.
 % Hovmoller diagram of precipitation for the first 6 months of the 25km, 2km, and 1km experiments
 % LW CRE on
 
-%\begin{figure}
-%  \centering
-%      \includegraphics[width=0.6\columnwidth]{walkerfigs/Precip_DMN_4models_1yr.eps}
-%  \caption{Domain mean precipitation as a function of time.  All data has been smoothed with a running mean filter.  
-%  Thick lines are the control experiments, thin lines have no LW CRE.  All data is shown for the E1 and E2 cases
-%  while the P25 and P100 cases show only the first out of five years of the time series.}
-%    \label{fig:precip_dom_mn}
-%\end{figure}
-
 \begin{figure}
   \centering
       \includegraphics[width=0.3\columnwidth]{walkerfigs/MnTotCondProf.eps}
@@ -623,7 +651,6 @@ model level.
           convection except the thin yellow lines which have the convective parameterization turned on.}
   \label{fig:TotCond}
 \end{figure}
-
 
 Figure \ref{fig:cf_tdtlw} shows E2 to have the largest (about 17\%) upper level mean cloud
 fraction in the subsidence region, with the E1 experiment having the next largest cloud fraction (10\%), followed by 
@@ -674,7 +701,6 @@ and generally weaker circulations below about 500 hPa.
 When the clouds and radiation are allowed to directly interact with each other the E2 and E1 simulations 
 appear much more similar (Figure \ref{fig:rh_psi_P25E2E1}).  The simulations with LW CRE also have a better
 organized and stronger circulation below 500 hPa.     
-   
 
 The E25 and P25 experiments have much less condensate aloft and a lower relative humidity in the mid-troposphere
 where the differences in strength of the overturning circulation are most pronounced. 
@@ -683,7 +709,7 @@ where the differences in strength of the overturning circulation are most pronou
 \begin{figure}
   \centering
        %\includegraphics[width=0.96\columnwidth]{walkerfigs/hist_6pan_25vs2vs1_lwoff_lwon.eps}
-       \includegraphics[width=0.96\columnwidth]{walkerfigs/hist_3pan_25vs2vs1_lwoff_lwon_draft2.eps}
+       \includegraphics[width=0.96\columnwidth]{walkerfigs/hist_3pan_25vs2vs1_lwoff_lwon_draft.eps}
   \caption{Normalized probability distributions of the location of the maximum value of precipitation for experiments with the 
   longwave CRE on.  All panels show cases with parameterized convection, the top panels are computed for the experiments 
   having a domain width of 4000 km while the bottom panels are for experiments having a domain width of 16000 km.  The 
@@ -759,6 +785,11 @@ those of Popp and Silvers, 2017.
     \label{fig:enthalpy}
 \end{figure}
   
+%  \caption{Variables important to boundary layer energy fluxes.  Top left panel shows the surface enthalpy flux ($\rm{W m^{-2}}$) and top right panel shows the equivalent potential temperature on the model level closest to the surface.  The panel on bottom left shows the $u$ wind ($\rm{m s^{-1)}}$)
+%  on the model level closest to the surface and the panel on bottom right shows the domain mean
+%  $\rm{u}$ wind.}
+  
+  
 %% surface enthalpy flux
 %\begin{figure}
 %  \centering
@@ -790,7 +821,7 @@ is also clearly seen that the LW CRE decreases the upper-level ice-condensate fo
 increasing the low-level liquid condensate.  
 
 When the LW CRE is off, the simulations with resolutions of 1km, 2km, and 25km all show a similar distribution and magnitude of surface 
-enthalpy flux (Figure \ref{fig:enthalpy}).  However, when the LW CRE is on, there are differences between the resolutions that can be as 
+enthalpy flux (Figure \ref{fig:LowLevelVars}).  However, when the LW CRE is on, there are differences between the resolutions that can be as 
 large as $80 \, \rm{W/m^2}$.   These differences in surface enthalpy flux are due largely to the latent heat flux and are confined to the 
 regions with ascending circulations over the warmer SST.  This manifestation of the strong interactions between clouds and the circulation 
 would be entirely absent from high resolution simulations with gray radiation or fixed radiative cooling profiles.  
@@ -895,7 +926,6 @@ asymmetric results.
 There is a rich literature on tropical overturning circulations.  Much of it is focused on the Hadley circulation and while some
 work has looked at the Walker circulation, it has received less attention.  Part of our motivation in using the framework of the 
 Walker circulation comes from the fact that all of the major types of tropical cloud types occur regularly within this circulation
-and it thus serves as an ideal testbed/laboratory for studying the interactions and interdependencies of different types of 
 clouds and the circulation.  While this study has interpreted the experiments in the context of the Walker Circulation, our results 
 are also relevant to the deep overturning circulations and meridional SST gradients that define the ITCZ and the Hadley 
 Circulation.  In that context, our results are consistent with those of several recent studies (e.g. Harrop and Hartmann, 2016, 

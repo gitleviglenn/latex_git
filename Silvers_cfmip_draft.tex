@@ -3,7 +3,7 @@
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 %\geometry{landscape}                		% Activate for for rotated page geometry
 %\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage{graphicx}				% Use pdf, png, jpg, or epsÂ§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{gensymb}
@@ -56,7 +56,8 @@ Can we shed lite on which particular component of the cloud feedbacks lead to la
 
 During the developmental of the AM4.0 GFDL model particular care was given to ensuring that the energy budget at 
 the top of the atmosphere compared well with observations.  The data set that was most heavily leaned on to ensure 
-this was the CERES-EBAF TOA radiative fluxes, version 2.8.  Based on AM4.0 data that was used for the CMIP6 AMIP
+this was the CERES-EBAF TOA radiative fluxes, version 2.8 (Loeb et al., 2009).  Based on AM4.0 data that was used for 
+the CMIP6 AMIP
 experiment, the total TOA flux bias is 989898, the bias in CRE 
 due to longwave radiative fluxes is $-2.4 \rm{W m^{-2}} $ and the bias due to CRE of the shortwave radiative fluxes   
 is $-1.1 \rm{W m^{-2}} $.  About the same time the AM4.0 development was frozen and the process of documentation 
@@ -69,6 +70,9 @@ sets despite the well known fact that different versions of the CERES-EBAF data 
 several $\rm{W m^{-2}}$.   Our aim in discussing this for AM4.0 is transparency in the model development process, as 
 well as to point out that both versions of the CERES-EBAF data show similar shortcomings of the spatial patters of the 
 simulated clouds  from AM4.0 in the AMIP experiment.   
+
+Paragraph summarizing the basic characteristics of clouds in AM4.0 as stated by Ming's papers.  We could also summarize 
+what David finds about clouds in AM4.0 in his paper.
 
 \begin{figure}
 % figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 1
@@ -103,9 +107,10 @@ simulated clouds  from AM4.0 in the AMIP experiment.
 
 \section{The Role of Clouds in AM4.0/CM4.0/Aquaplanets in Determining and Influencing Climate Sensitivity}
 
-In an attempt to compare to the values of feedback that were reported in Ringer et al., 2014, we use the same method 
+In order to compare to the values of feedback that were reported in Ringer et al., 2014, we use the same method 
 to compute the radiative feedbacks for the GFDL models.  That is, for the abrupt $4xCO_{2}$ experiment, feedbacks are 
-inferred to be the slopes of a linear regression calculation using annual, global-mean top-of-atmosphere flux anomalies (Gregory et al., 2004).  From the atmosphere only experiments (amip-p4K, amipFuture, and aqua-p4K), the feedbacks are calculated as 
+inferred to be the slopes of a linear regression calculation using annual, global-mean top-of-atmosphere flux anomalies 
+(Gregory et al., 2004).  From the atmosphere only experiments (amip-p4K, amipFuture, and aqua-p4K), the feedbacks are calculated as 
 differences in top-of-atmosphere flux anomalies between the perturbation and control experiments.   
 
 Brient and Bony (2012) proposed what they call the $\beta$ feedback as a way to quantify whether or not ' models have 
@@ -118,22 +123,23 @@ The cloud radiative effect (CRE) is computed as the difference between the all-s
 
 \begin{table}
 \begin{center}
-\caption{Global mean radiative feedbacks.  Compare to Ringer et al. 2014.}
+\caption{Global mean radiative feedbacks.  The values for the Abrupt 4xCO2 experiment
+have been estimated from a linear fit of the years 51-300.  Compare to Ringer et al. 2014.}
     \begin{tabular}{*{5}{c}}
     \hline
     \hline
  Feedback & Aqua p4K & Amip p4K & Amip Future & Abrupt 4xCO2    \\ \hline
-    Net          &   -2.2    &  -1.6              & -1.8           &    -0.84 (from Tim)         \\ 
+    Net          &   -2.2    &  -1.6              & -1.8           &    -0.46 (-0.84; Tim)         \\ 
     \\
-    Net CRE      & 0.3      & -0.1            & 0.1           &?            \\  
+    Net CRE      & 0.3      & -0.1            & 0.1           & 0.65   \\  
     \\
-    LW CRE       & 0.4       & 0.1            & 0.1           & ?              \\  
+    LW CRE       & 0.4       & 0.1            & 0.1           & 0.14    \\  
     \\
-    SW CRE      & -0.7       & -0.1          & -0.2          & ?              \\  
+    SW CRE      & -0.7       & -0.1          & -0.2          & -0.5              \\  
     \\
-    LW CLR       & 2.0       & 2.0             & 2.0           & ?             \\  
+    LW CLR       & 2.0       & 2.0             & 2.0           & 1.7             \\  
     \\
-    SW CLR      & -0.1      & -0.3            & -0.3          & ?                   \\  \hline
+    SW CLR      & -0.1      & -0.3            & -0.3          & -0.6                   \\  \hline
 
     \end{tabular}\par
     %\bigskip 
@@ -156,5 +162,23 @@ Cess sensitivity useful?
   \caption{Calipso scumstash}
   \label{fig:calipso_amip_comparison}
 \end{figure}
+
+\section{What are we learning?}
+
+Experiments using Cess-like uniform SST warming as a proxy for climate change have successfully predicted that much of the differences 
+among models is due to the cloud radiative affect.  However, we also know that the sensitivity derived from Cess-like experiments is not
+a good predictor of the climate sensitivity for a parent, coupled model.  Comparison of Cess-sensitivities and coupled model sensitivities 
+combined with patterned prescribed SST experiments using AGCM have demonstrated the significant role of a pattern-effect in determining 
+the sensitivity of a model.  
+
+We also know that a method which uses linear regression of a constant forcing experiment to estimate the climate sensitivity only 
+provides an accurate measure of the climate sensitivity when the initial 20-50 years of simulation are excluded from the analysis.  
+The climate sensitivities of models that have been run to equilibrium with millenial-scale simulations show a large discrepency in the
+different time periods used to estimate this sensitivity.  
+
+Clouds in a climate model are highly maleable while also being a dominant factor controlling what the climate sensitivity is for that model.  
+Yet we do not have satisfactory clouds constraints to impose on the clouds of a climate model.  If improving the representation of low-level
+clouds in the GFDL model was the first priority, it could be done.  However it is not the first priority and doing so degrades other elements of 
+the climate.  
 
 \end{document}

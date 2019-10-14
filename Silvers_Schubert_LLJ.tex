@@ -1,0 +1,1318 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% this is the version Modified on 1-27-2012 and then sent to Wayne 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% The following two commands will generate a PDF that follows all the requirements for submission
+% and peer review.  Uncomment these commands to generate this output (and comment out the two lines below.)
+%
+% DOUBLE SPACE VERSION FOR SUBMISSION TO THE AMS
+\documentclass[12pt]{article}
+\usepackage{ametsoc}
+\usepackage{lineno}
+\linenumbers
+%
+% The following two commands will generate a single space, double column paper that closely
+% matches an AMS journal page.  Uncomment these commands to generate this output (and comment
+% out the two lines above. FOR AUTHOR USE ONLY. PAPERS SUBMITTED IN THIS FORMAT WILL BE RETURNED
+% TO THE AUTHOR for submission with the correct formatting.
+%
+% TWO COLUMN JOURNAL PAGE LAYOUT FOR AUTHOR USE ONLY
+%%%%\documentclass[10pt]{article}
+%%%%\usepackage{ametsoc2col}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABSTRACT
+%
+% Enter your Abstract here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\myabstract}{The subject of this study is topographically bound low level jets, such 
+as the South American summertime low level jet on the east side of the Andes 
+and its companion, the Chilean low level jet on the west side of the Andes. 
+These jets are interpreted as balanced flows that obey the potential vorticity 
+invertibility principle. This invertibility principle is expressed in 
+isentropic coordinates, and the mathematical issue of isentropes that intersect 
+the topography is treated by the method of a massless layer. In this way, the 
+low level jets on the west and east sides of the Andes can both be attributed to 
+the infinite potential vorticity that lies in the infinitesimally thin massless 
+layer on the topographic feature. To obtain a cyclonic flow centered on the 
+topographic feature, the mountain crest must have been heated enough to draw 
+down the overlying isentropic surfaces; otherwise, isentropic surfaces bend
+upward at the mountain crest and an anticyclonic flow is produced. Both 
+anticyclonic and cyclonic solutions are obtained here using analytical and 
+numerical methods to solve the invertibility principle. The summertime, 
+topographically bound flows discussed here are quite distinct from the 
+wintertime Rossby wavetrain patterns that occur when strong westerlies impinge 
+on the topography. 
+}
+%
+\begin{document}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE
+%
+% Enter your TITLE here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{\large{A Theory of Topographically Bound Balanced Motions 
+                      and Application to Atmospheric Low-Level Jets}}}
+%
+% Author names, with corresponding author information. 
+% [Update and move the \thanks{...} block as appropriate.]
+%
+\author{\textsc{Levi G. Silvers}
+				\thanks{\textit{Corresponding author address:} 
+				Levi Silvers, Colorado State University, 
+				Fort Collins, CO 80523. 
+				\newline{E-mail: levi@atmos.colostate.edu}}\quad\textsc{and Wayne H. Schubert}\\
+\textit{\footnotesize{Colorado State University, Fort Collins, Colorado}}
+\and 
+%\centerline{\textsc{Extra Author}}\\% Add additional authors, different insitution
+%\centerline{\textit{\footnotesize{Affiliation, City, State/Province, Country}}}
+}
+%
+% Formatting done here...Authors should skip over this.  See above for abstract.
+\ifthenelse{\boolean{dc}}
+{
+\twocolumn[
+\begin{@twocolumnfalse}
+\amstitle
+
+% Start Abstract (Enter your Abstract above.  Do not enter any text here)
+\begin{center}
+\begin{minipage}{13.0cm}
+\begin{abstract}
+	\myabstract
+	\newline
+	\begin{center}
+		\rule{38mm}{0.2mm}
+	\end{center}
+\end{abstract}
+\end{minipage}
+\end{center}
+\end{@twocolumnfalse}
+]
+}
+{
+\amstitle
+\begin{abstract}
+\myabstract
+\end{abstract}
+\newpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN BODY OF PAPER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+     South American mean January 2003 winds at 925 mb are shown in Fig.~1. 
+A striking feature is the strong cyclonic flow centered on the Andes.  
+The South American low-level jet (SALLJ) is evident in the northerly flow 
+east of the Andes, while the Chilean coastal low-level jet is evident in the
+southerly flow over the eastern Pacific Ocean.  These Southern Hemisphere 
+low level jets are analogous to the summertime 
+low level jets around the mountainous regions of North America, i.e., the 
+Great Plains low level jet (GPLLJ) and the California coastal low level jet.   
+
+     Figures 2 and 3 show east-west cross sections of the mean meridional 
+wind fields and the mean isentropes observed during the Year of Tropical 
+Convection (YOTC).  These are two-month mean warm season wind fields averaged using the 
+times 00, 6, 12, and 18 UTC.  The 
+resolution of these ECMWF analysis fields is $0.5^{\circ}\times 0.5^{\circ}$ 
+with 11 irregularly spaced vertical levels.  The YOTC analysis is available for the two 
+year period between May 2008 and April 2010.  Although originally proposed to be 
+a one year research program YOTC was extended for an additional year in order to 
+capture a cycle of both La Nina and El Nino.  Wind fields around 
+the Andes are shown at 21S and 30S.  The SALLJ often maximizes near 20S, 
+while, as seen in Fig.~2, the coastal LLJ is stronger farther south. Cross 
+sections of the wind fields around the Rocky Mountains are shown at 30N and 35N.  
+The GPLLJ maximizes at about 25N, but as seen in Fig.~3, it is still quite
+strong at 30N and 35N.  Due to 
+the relatively cold eastern Pacific, the coastal LLJs tend to have a wind 
+maximum that is closer to the surface than the jets to the east of 
+the mountain ranges. The coastal jets are also broader than the 
+plains jets because of the influence of the Pacific anticyclonic 
+circulations to the west. Isentropes are generally drawn down over the 
+mountain ranges, thereby intersecting the Earth's surface along
+the sides and crests of the mountains.   
+It should be noted that, on individual days, these low level jets can be 
+considerably stronger than shown on two-month mean cross sections. 
+For example, Vera et al.~(2006, their Fig.~8b) show a specific SALLJ 
+event in February 2003 with a maximum wind of 25 m s$^{-1}$ at a height 
+of 800-700 hPa.  
+The cyclonic motion centered on the mountain 
+ranges is the most obvious feature of the wind fields in these figures.  The 
+North American Regional Reanalysis also clearly shows a dominant 
+cyclonic circulation (see Jiang et al. 2007, their Fig.~1) over the Rocky Mountains.  
+   
+One of the first climatologies of LLJs was given by Bonner (1968), along with an often 
+used set of wind shear criteria to define LLJs.   Stensrud (1996) provided a
+review of LLJs and in particular, their significant influence on the global climate.  
+An excellent review 
+of the literature relevant to LLJs and analysis of the dynamical mechanisms that have been 
+historically proposed to explain the existence and variability of LLJs was given by Jiang et al. 2007.
+Much of the previous research on LLJs can be loosely grouped into two categories.  
+The first includes boundary layer processes and forcing on relatively short (diurnal-a few 
+days) times scales.  Relevant studies include Blackadar (1957), Holton (1967), Jiang 
+et al. (2007), and Rife et al. (2010).  These studies were particularly interested in 
+determining the physical mechanisms behind the diurnal oscillation and the phase that 
+is observed in many LLJs.  The second category deals mostly with the synoptic-scale, 
+monthly or seasonal mean structure of LLJs and includes studies such as Wexler (1961), 
+Byerle and Paegle (2002, 2003), and Ting and Wang (2006).  These two groups certainly 
+have some overlap.  The research presented here examines the influence of 
+topographically bound balanced motions on the synoptic-scale, warm season mean structure of LLJs.
+
+    The theoretical study most relevant to the present work is that of 
+Eliassen (1980), who investigated the steady, topographically bound, balanced 
+response of a rotating, stratified fluid to orography. Although Eliassen did 
+not specifically apply his theory to LLJs, his results provide 
+physical insight into the dynamical characteristics of these phenomena.  
+Eliassen defined isentropic obstacles as those for which  
+the lowermost isentrope continuously follows the geopotential surface.  
+A non-isentropic obstacle is one whose geopotential surface punctures 
+the lowermost isentropes. Eliassen showed that solutions of the potential 
+vorticity invertibility principle for an isentropic ridge were only possible 
+if the height of that ridge did not exceed a critical value. This `subcritical 
+ridge' case is illustrated by the left panel of Fig.~4, which shows that   
+the isentropes are compressed as they bend up over the 
+mountain crest, thereby producing a balanced anticyclonic flow above the crest. 
+If the `critical crest height' is exceeded, the ridge must 
+puncture the lowermost isentropes. Two other cases not investigated by 
+Eliassen are shown in the middle and right panels of Fig.~4.           
+The middle panel shows a surface of constant geopotential that has 
+been locally heated. In this case the isentropes bend downward and a 
+balanced, cyclonic flow is produced.  
+The surface potential temperature anomaly shown in the center panel of Fig. 4 represents 
+a similar balanced flow structure as those studied by Thorpe (1986).  His work examined 
+synoptic disturbances in gradient wind balance, this study looks at synoptic disturbances in 
+geostrophic balance.  A combination of the two cases 
+shown in the left and middle panels results in the heated obstacle shown 
+in the right panel. Obviously, the right panel is the case most relevant 
+to the observations shown in Figs.~2 and 3.
+  
+    The purpose of the present paper is to extend the analysis of Eliassen to 
+include all three cases shown in Fig.~4, and to thereby demonstrate that many LLJs 
+can be interpreted as balanced flows attributed, through the potential 
+vorticity invertibility principle, to the infinite potential vorticity 
+that resides in the massless layer over locally heated topography 
+such as illustrated in the right panel of Fig.~4. 
+A complete potential vorticity based analysis of LLJs would have to include both the 
+potential vorticity at the surface that results from a gradient of potential temperature 
+and the potential vorticity of the interior flow.  The surface component is related to 
+radiative heating and the atmospheric stratification while the interior component 
+is due to convective activity, absolute vorticity, or the stratification.  The interaction 
+between the interior quasigeostrophic potential vorticity and the surface gradient of 
+potential temperature was reviewed by Hoskins et al. (1985).  A nongeostrophic 
+generalization was applied to a wake circulation on the lee side of a mountain by 
+Schneider et al. (2003).  We here focus on the surface potential vorticity.  We do not 
+assume that the affect of the surface potential vorticity is greater than that of the 
+interior potential vorticity, we are simply demonstrating that LLJs are impacted 
+by this surface potential vorticity.
+The outline of the paper 
+is as follows. Section 2 presents the $f$-plane invertibility principle in 
+isentropic coordinates.  Section 3 derives analytical solutions for the  
+subcritical isentropic ridge case. An analytical formula for the critical 
+crest height is then derived.  The analytical methods used in section 3 
+yield closed form solutions only in cases where there is no massless 
+layer (i.e., the lower boundary is an isentropic surface). In order to compute 
+the wind and mass fields that result from locally heated lower boundaries,  
+section 4 solves the invertibility principle using a finite-difference 
+approximation.  An analysis is then made of the results and how they 
+compare to observations of LLJs.  Concluding remarks, including a discussion 
+of a generalization from $f$-plane theory to the sphere, are given in section 5.  
+
+\section{Invertibility principle}          %%%%%%%%%   Section 2   %%%%%%%%%%%%%%
+
+     Consider hydrostatic, geostrophic, $y$-independent motions of a compressible 
+stratified fluid on an $f$-plane. Using the potential temperature $\theta$ 
+as the vertical coordinate, the potential vorticity is given by 
+\begin{linenomath*}
+\begin{equation}                        % Equation (1)
+        P = \left(f + \frac{\partial v}{\partial x}\right)
+	    \left(-\frac{1}{g}\frac{\partial p}{\partial\theta}\right)^{-1},  
+\end{equation} 
+\end{linenomath*}
+with $f$ denoting the constant Coriolis parameter, $g$ the acceleration of 
+gravity, $v(x,\theta)$ the meridional component of the geostrophic flow, 
+and $p(x,\theta)$ the pressure. Expressing the density by 
+$\rho=p/(RT)=c_p p/(R\theta\Pi)$, it is easily shown that 
+$\theta\rho(d\Pi/dp)=1$, where $\Pi=c_p(p/p_0)^{R/c_p}$, 
+with $p_0$ denoting the constant reference pressure, 
+$R$ the gas constant, and $c_p$ the specific heat at constant pressure. 
+This allows (1) to be written in the form 
+\begin{linenomath*}
+\begin{equation}                       % Equation (2)
+    \frac{g}{\theta\rho P}\frac{\partial(v+fx)}{\partial x}
+                        + \frac{\partial\Pi}{\partial\theta} = 0.   
+\end{equation} 
+\end{linenomath*}
+Using the geostrophic relation $fv=(\partial M/\partial x)$ and 
+the hydrostatic relation $\Pi=(\partial M/\partial\theta)$, where 
+$M=\theta\Pi+\phi$ is the Montgomery potential and $\phi$ is the 
+geopotential, we can write the thermal wind relation in the form 
+\begin{linenomath*}
+\begin{equation}                       % Equation (3)
+       f\frac{\partial v}{\partial\theta} 
+      - \frac{\partial\Pi}{\partial x} = 0.   
+\end{equation} 
+\end{linenomath*}
+
+With proper boundary conditions and with $P(x,\theta)$ specified, 
+(2) and (3) constitute an invertibility problem for the unknown 
+functions $v(x,\theta)$ and $\Pi(x,\theta)$.  
+Because of the dependence of $\rho$ on $\Pi$, (2) is nonlinear. However, 
+the nonlinearity is weak, and for the analytical solutions 
+presented in section 3, it will be removed by replacing $\rho(x,\theta)$ 
+with the specified far-field profile $\tilde{\rho}(\theta)$. For the 
+numerical solutions presented in section 4, this nonlinearity will 
+be retained.  
+
+\section{Analytical solution for the case of an isentropic mountain}   
+ %%%%  Section 3  %%%%
+
+     For the analytical results presented in this section it is preferable 
+to work with deviations from the far-field values. In the far-field the flow 
+vanishes, and the pressure and potential vorticity take on the horizontally 
+homogeneous values $\tilde{p}(\theta)$ and $\tilde{P}(\theta)$, which are 
+related by 
+ \begin{linenomath*}
+\begin{equation}                       % Equation (4)
+     \tilde{P} = f\left(-\frac{1}{g}\frac{\partial\tilde{p}}{\partial\theta}\right)^{-1}. 
+\end{equation}
+ \end{linenomath*}
+Denoting the far-field density by $\tilde{\rho}(\theta)$, it is easily shown 
+that $\theta\tilde{\rho}(d\tilde{\Pi}/d\tilde{p})=1$, where 
+$\tilde{\Pi}=c_p(\tilde{p}/p_0)^{R/c_p}$. This allows (4) to be written in the form 
+\begin{linenomath*}
+\begin{equation}                      % Equation (5)
+        \frac{gf}{\theta\tilde{\rho}\tilde{P}}
+      + \frac{\partial\tilde{\Pi}}{\partial\theta} = 0.   
+\end{equation} 
+\end{linenomath*}
+Taking the difference of (2) and (5), we obtain 
+\begin{linenomath*}
+\begin{equation}                      % Equation (6)
+        \frac{\tilde{\rho}\tilde{P}}{\rho P}\frac{\partial v}{\partial x} 
+      + \left(\frac{f\theta^2N^2}{g^2}\right)
+        \frac{\partial\Pi'}{\partial\theta} = f\left(1 - \frac{\tilde{\rho}\tilde{P}}{\rho P}\right),  
+\end{equation} 
+\end{linenomath*}
+where $\Pi'(x,\theta)=\Pi(x,\theta)-\tilde{\Pi}(\theta)$ is the Exner function anomaly, 
+and where the buoyancy frequency $N(\theta)$ is defined by 
+\begin{linenomath*}
+\begin{equation}                      % Equation (7)
+    N^2(\theta) = \frac{g^2}{\theta^2}\left(-\frac{d\tilde{\Pi}}{d\theta}\right)^{-1}.  
+\end{equation} 
+\end{linenomath*}
+
+    In the analysis of this section, four simplifying assumptions are made: (i) the lower 
+boundary is assumed to be an isentropic surface;  (ii) the factors $(\tilde{\rho}/\rho)$ 
+in (6) are approximated by unity; (iii) on each isentropic surface the potential 
+vorticity $P$ is assumed to be equal to its far-field value $\tilde{P}$, so that the 
+right hand side of (6) vanishes and the coefficient of $(\partial v/\partial x)$ 
+becomes unity; (iv) the reference state buoyancy frequency 
+$N(\theta)$ is assumed to be inversely proportional to $\theta$, i.e., 
+$N(\theta)=N_B \theta_B/\theta$, where $N_B$ and $\theta_B$ are constants, 
+which results in a constant coefficient for the second term in (6).    
+Assumptions (i), (ii), and (iv) will be relaxed in section 4. The relaxation 
+of assumption (i) will prove crucial for the simulation of topographically bound 
+cyclonic flows such as those illustrated in Figs.~1--3. 
+
+    For the particular reference state $N(\theta)=N_B \theta_B/\theta$, 
+the definition (7) can be integrated to obtain 
+\begin{linenomath*}
+\begin{equation}                    % Equation (8)
+   \tilde{\Pi}(\theta) = c_p - \frac{g^2}{\theta_B^2 N_B^2}\left(\theta - \theta_B\right), 
+\end{equation}
+\end{linenomath*}
+where $\tilde{p}(\theta_B)=p_0$.  The reference state hydrostatic equation $d\tilde{M}/d\theta=\tilde{\Pi}$ 
+can then be integrated to obtain 
+\begin{linenomath*}
+\begin{equation}                    % Equation (9)
+   \tilde{M}(\theta) = c_p \theta - \frac{g^2}{2\theta_B^2 N_B^2}
+                             \left(\theta - \theta_B\right)^2,
+\end{equation}
+\end{linenomath*}
+where we have assumed $\tilde{\phi}(\theta_B)=0$.
+Since $\tilde{\phi}(\theta)=\tilde{M}(\theta)-\theta\tilde{\Pi}(\theta)$, we can 
+use (8) and (9) to obtain 
+\begin{linenomath*}
+\begin{equation}                    % Equation (10)
+   \tilde{\phi}(\theta) = \frac{g^2}{2\theta_B^2 N_B^2}\left(\theta^2 - \theta_B^2\right). 
+\end{equation}
+\end{linenomath*}
+
+The relationship of pressure and potential temperature for the reference 
+state, as determined from (8), is plotted in Fig.~5, where we have chosen 
+$c_p=1004.5$ J kg$^{-1}$ K$^{-1}$, $g=9.8$ m s$^{-2}$, $\theta_B=295$K, 
+and $(\theta_B/g)N_B^2=5.1373$ K km$^{-1}$.  This choice of $\theta_B$ 
+and $N_B$ results in a profile with $\tilde{p}(\theta)=150$ hPa at $\theta=360$ K. 
+The associated value of $N_B$ is $1.3064 \times 10^{-2}$ s$^{-1}$ and $\theta_T=360$K
+is used throughout this study. 
+Although idealized, this profile can be considered typical of the 
+subtropics in the warm season.
+
+     With the four simplifying assumptions listed above, the Cauchy-Riemann conditions 
+(6) and (3) simplify to (11) and (12) below. We shall require that (11) and 
+(12) hold in a region that includes an underlying 
+topographic feature whose geopotential is specified by $\phi_S(x)$.  
+As for boundary conditions, we require that 
+$v$ and $\Pi'$ approach zero in the far-field, which is expressed in (13). 
+We also require that the upper boundary is both an isentropic ($\theta=\theta_T$) 
+and isobaric surface, which is expressed as (14). 
+To formulate the lower boundary condition we combine the $x$-derivative of 
+$M-\theta\Pi=\phi$ with the geostrophic and hydrostatic relations to obtain 
+$f[v-\theta(\partial v/\partial\theta)]=(\partial\phi/\partial x)$, which, 
+when applied at $\theta=\theta_B$ yields (15). In summary, the elliptic problem is 
+\begin{linenomath*}
+\begin{equation}                    % Equation (11)
+        \frac{\partial v}{\partial x} 
+      + \left(\frac{f\theta_B^2 N_B^2}{g^2}\right)
+        \frac{\partial \Pi'}{\partial\theta} = 0, 
+\end{equation} 
+\end{linenomath*}
+\begin{linenomath*}
+\begin{equation}                    % Equation (12)
+       f\frac{\partial v}{\partial\theta} 
+      - \frac{\partial\Pi'}{\partial x} = 0,  
+\end{equation} 
+\end{linenomath*}
+with boundary conditions
+\begin{linenomath*} 
+\begin{equation}                     % Equation (13)
+        v \to 0 \,\,\, {\rm and}  \,\,\,   \Pi' \to 0   \,\,\,  {\rm as} \,\,\,   x \to \pm\infty,  	
+\end{equation}           
+\end{linenomath*}
+\begin{linenomath*}
+\begin{equation}	             % Equation (14)
+        \Pi' = 0                \,\, {\rm at} \,\,\, \theta = \theta_T, 
+\end{equation}
+\end{linenomath*}
+\begin{linenomath*}
+\begin{equation}                     % Equation (15)            
+        f\left(v - \theta\frac{\partial v}{\partial\theta}\right) = \frac{d\phi_S(x)}{dx}    
+	                       \,\, {\rm at} \,\,\, \theta = \theta_B.          
+\end{equation} 
+\end{linenomath*}
+This elliptic problem can be solved using Fourier integral transforms.  The details can be 
+found in the appendix.
+For all the calculations presented in this paper  
+we have chosen the geopotential on the lower boundary as 
+\begin{linenomath*}
+\begin{equation}                           % Equation (16)
+   \phi_S(x) = gH e^{-x^2/a^2},  
+\end{equation} 
+\end{linenomath*}
+where the constants $H$ and $a$ respectively specify the mountain height and width. Using (A9), (A10), and (A11) in (A2) and (A4), we obtain 
+\begin{linenomath*}
+\begin{equation}                    % Equation (17)
+    v(x,\theta) = -\frac{gHa}{f\sqrt{\pi}}\int_0^\infty  k e^{-a^2 k^2/4}
+                \left(\frac{e^{-\kappa(\theta-\theta_B)} + e^{-\kappa(2\theta_T-\theta_B-\theta)}}
+		 {1 + \kappa\theta_B + (1 - \kappa\theta_B)e^{-2\kappa(\theta_T-\theta_B)}}\right)\sin(kx) \, dk,   
+\end{equation}  
+\end{linenomath*}
+
+
+\begin{linenomath*}
+\begin{equation}                    % Equation (18)
+    \Pi'(x,\theta) = -\frac{g^2Ha}{f\theta_B N_B\sqrt{\pi}} \int_0^\infty k e^{-a^2 k^2/4}
+                \left(\frac{e^{-\kappa(\theta-\theta_B)} - e^{-\kappa(2\theta_T-\theta_B-\theta)}}
+	         {1 + \kappa\theta_B + (1 - \kappa\theta_B)e^{-2\kappa(\theta_T-\theta_B)}}\right)\cos(kx) \, dk.    
+\end{equation}  
+\end{linenomath*}
+
+Equations (17) and (18) are the Fourier integral representations of the 
+solutions to the invertibility problem (11)--(15). Plots of the solutions 
+$v(x,\theta)$ and $\Pi'(x,\theta)$ are easily constructed through numerical 
+evaluation of the Fourier integrals at each point of an array of points in 
+$(x,\theta)$-space. In the construction of several of the figures shown here, 
+we have chosen to display isolines of $v$ and $\theta$ in $(x,p)$-space  
+in addition to isolines of $v$ and $p$ in $(x,\theta)$-space. Conversion between 
+these two representations is simply a matter of interpolation. 
+
+     Figure 6 shows a plot of the solutions $v(x,p)$ and $\theta(x,p)$ for 
+$f=7.3\times 10^{-5}$ s$^{-1}$, $a=500$ km, and $H=1500$ m. Figure 7 shows a similar 
+plot with $H=2500$ m. As can be seen from Fig.~7, when $H=2500$ m the layer 
+$295 \le \theta \le 296$ K is almost massless near the mountain crest. In fact, 
+for $H$ greater than 2560 m, this layer does become massless at the mountain crest. 
+In other words, for this particular mountain shape and far-field reference state, 
+the critical crest height is approximately $H_{\rm crit}=2560$ m.  Following an 
+argument similar to that of Eliassen (1980), a formula for the critical height 
+can be obtained as follows. When $H=H_{\rm crit}$, 
+$(\partial\Pi/\partial\theta)=(\partial\tilde{\Pi}/\partial\theta)+(\partial\Pi'/\partial\theta)=0$ 
+at the crest, or equivalently, using (8),  
+\begin{linenomath*}
+\begin{equation}                           % Equation (30)
+      \frac{\partial\Pi'}{\partial\theta} = \frac{g^2}{\theta_B^2 N_B^2}
+          \,\,\, {\rm at} \,\,\, x=0 \,\,\, {\rm and} \,\,\, \theta=\theta_B.   
+\end{equation} 
+\end{linenomath*}
+Using (29) for $\Pi'$, with $H$ replaced by $H_{\rm crit}$, we can rewrite (30) as 
+\begin{linenomath*}
+\begin{equation}                          % Equation (31)
+    H_{\rm crit} = \frac{fa}{N_B I(a)},  	
+\end{equation} 
+\end{linenomath*}
+where  
+\begin{linenomath*}
+\begin{equation}                          % Equation (32)
+    I(a) = \frac{1}{\sqrt{\pi}} \int_0^\infty  
+                    \left(\frac{\hat{a}^2 \hat{\kappa}^2
+		   \left\{1 + \exp[-2\hat{\kappa}(\theta_T-\theta_B)/\theta_B]\right\}} 
+		           {1 + \hat{\kappa} + (1 - \hat{\kappa}) 
+	                      \exp[-2\hat{\kappa}(\theta_T-\theta_B)/\theta_B]}\right) 
+			    \exp\left(-\hat{a}^2\hat{\kappa}^2/4\right) \, d\hat{\kappa}, 	
+\end{equation} 
+\end{linenomath*}
+with $\hat{a}=(fN_B/g)a$ denoting the dimensionless mountain width and with 
+$\hat{\kappa}=\kappa\theta_B$. Figure 8 shows $H_{\rm crit}$ as a function 
+of $a$ for five different values of $f$. These results indicate that broad mountains 
+can be relatively high but still below the critical crest height.  They also indicate that the crest 
+height of the central Andes is supercritical. 
+
+     In concluding this section we note that the wind and mass fields 
+displayed in Figs.~6 and 7 can also be interpreted as solutions of 
+the following geostrophic adjustment problem (Eliassen 1980).   
+Initially, a stably stratified fluid is in a state of rest over 
+a level bottom surface on an $f$-plane. Over some arbitrary time 
+interval, the bottom topography is raised to its final shape and 
+any transient inertia-gravity waves are allowed to disperse away. 
+The final adjusted wind and mass fields are then determined via the 
+potential vorticity invertibility principle (11)--(15), with the 
+bottom topography appearing in the lower boundary condition of this 
+invertibility principle. If the crest height of the topography is 
+not raised above the critical value, the lowest isentropic surface 
+remains attached to the topography. However, if the crest of the 
+topography is raised above the critical value, the topography punctures 
+the lowest isentropic surfaces, so that potential temperature now varies 
+along the lower boundary. In either case, the flow around the obstacle 
+is anticyclonic, a result of Coriolis turning of fluid that flows 
+away from the rising mountain crest. This anticyclonic, topographically 
+bound, balanced flow is not useful for describing cyclonic 
+flows such as those shown in Figs.~1--3. Thus, in the  
+next section we consider the related problem of the balanced wind 
+and mass fields near a topographic feature that has been heated 
+by radiative processes, resulting in a cyclonic flow around the obstacle. 
+This will allow us to interpret the South American low level jet 
+and the Chilean low level jet as parts of the topographically bound 
+motion associated with the PV anomaly produced by solar heating of the Andes.      
+
+\section{Numerical solution for the case of a nonisentropic lower boundary}   %%%  Section 4  %%%
+
+     The analytical solutions discussed in section 3 are for the special 
+case in which the topographic surface is also an isentropic surface. 
+When isentropic surfaces intersect the topographic surface, they can 
+be considered to run just under the topographic surface with a pressure 
+equal to the surface pressure, thereby forming a massless layer with 
+infinite potential vorticity 
+(i.e., $\partial p/\partial\theta \to 0$ and $P \to \infty$). 
+Lorenz (1955) was the first to define such a massless layer just under the surface 
+of the ground.  The inhomogenous potential temperature at a boundary was also 
+treated by Bretherton (1966).  His approach was different from that of Lorenz in that 
+Bretherton showed that a potential temperature gradient along a boundary could 
+be replaced by a boundary with constant potential temperature provided a 
+concentration of potential vorticity very close to the surface is included.  Bretherton’s 
+conception of the massless layer was used by Hoskins et al. (1985), Thorpe (1985, 1986), and 
+Schneider et al. (2003).  The approach of Lorenz was used by Andrews (1983), 
+Fulton and Schubert (1991), and Schneider (2005).  Both approaches are equally 
+valid and here we choose to follow the convention defined by Lorenz.
+The isentropic surface that is just below the earth's surface 
+over the topographic feature and is at the earth's surface in the 
+far-field is labeled $\theta=\theta_B$. Then, defining $\theta_S(x)$ as 
+the value of potential temperature on the topographic surface,  
+the region $\theta_B < \theta < \theta_S(x)$ is the massless layer. 
+When there is a massless layer, the $1/P$ factor 
+in the first term of (2) takes on the value of zero (i.e., $P \to \infty$) 
+in the massless layer. This introduces a variable coefficient effect that 
+removes the advantages of using Fourier transforms. Thus, in this section, 
+we solve a discretized (finite difference) version of the invertibility 
+problem using an iterative method. In particular, we shall obtain solutions 
+for the second and third cases shown schematically in Fig.~4.
+
+     When the invertibility principle is solved using finite difference methods  
+rather than Fourier transform methods, it is unnecessary to separate the fields 
+into a far-field part and a deviation part, as was done in section 3.  
+Thus, returning to (2) and making use of the geostrophic  
+relation $fv=(\partial M/\partial x)$ and the hydrostatic relation  
+$\Pi=(\partial M/\partial\theta)$, we obtain (33) below, where the 
+density $\rho$ is given in terms of $M$ by (34). Note that the appearance 
+of $\rho$ (as opposed to $\tilde{\rho}$) in the top line of (33) retains 
+the previously discussed weak nonlinearity, which is easily incorporated 
+into the iterative method. The top line of (33) holds above the 
+massless layer, while in the massless layer $P \to \infty$ and the top 
+line reduces to the bottom line of (33). To obtain the lateral 
+boundary conditions (35) we have assumed that the far-field (i.e., $x=\pm L$)  
+value of $M$ is equal to the specified function $\tilde{M}(\theta)$.  
+To obtain the upper boundary condition (36) we have assumed that the 
+upper isentropic surface ($\theta = \theta_T$) is also an isobaric surface
+with a constant Exner function $\Pi_T$.  To formulate the lower boundary 
+condition (37) we have applied the general relation 
+$M-\theta(\partial M/\partial\theta)=\phi$ at $\theta=\theta_B$.   
+In summary, the elliptic problem is 
+\begin{linenomath*}
+\begin{equation}                          % Equation (33)
+   \begin{split}
+        \frac{g}{f\theta\rho P}
+        \left(f^2 + \frac{\partial^2 M}{\partial x^2}\right) 
+     &+ \frac{\partial^2 M}{\partial\theta^2} = 0  
+              \,\,\,\, {\rm for} \,\,\,\, \theta_S(x) < \theta \le \theta_T,  \\
+     &  \frac{\partial^2 M}{\partial\theta^2} = 0  
+	      \,\,\,\, {\rm for} \,\,\,\,   \theta_B \le \theta < \theta_S(x),
+   \end{split}
+\end{equation} 
+\end{linenomath*}
+%
+\begin{linenomath*}
+\begin{equation}                         % Equation (34)
+   \rho = \frac{p_0}{R\theta}                             
+         \left(\frac{1}{c_p}\frac{\partial M}{\partial\theta}\right)^{c_v/R},     
+\end{equation} 
+\end{linenomath*}
+%
+\begin{linenomath*}
+\begin{equation}                         % Equation (35)
+                M = \tilde{M}(\theta)             \,\,\, {\rm at} \,\,\,   x = \pm L,    
+\end{equation}
+\end{linenomath*}
+%
+\begin{linenomath*}
+\begin{equation}                         % Equation (36)
+        \frac{\partial M}{\partial\theta} = \Pi_T  \,\, {\rm at} \,\,\, \theta = \theta_T, 
+\end{equation}
+\end{linenomath*}
+%
+\begin{linenomath*}
+\begin{equation}                         % Equation (37)
+        M - \theta\frac{\partial M}{\partial\theta} = \phi_S(x)    
+	                                         \,\, {\rm at} \,\,\, \theta = \theta_B,          
+\end{equation}
+\end{linenomath*}
+where $c_v=c_p-R$ is the specific heat at constant volume. 
+
+     To solve (33)--(37) for $M(x,\theta)$, we must specify the constants $\theta_B$, 
+$\theta_T$, $\Pi_T$, $L$, and the functions $P(x,\theta)$, $\theta_S(x)$ $\phi_S(x)$, 
+and $\tilde{M}(\theta)$.  In section 3 we assumed that $\theta_S(x)$ was equal to 
+the constant $\theta_B$, so there was no massless layer. We also assumed that 
+$P(x,\theta)=\tilde{P}(\theta)$, so the potential vorticity did not vary along 
+$\theta$-surfaces. With these assumptions, the interior anticyclonic flow was 
+determined entirely by $\phi_S(x)$ and $\tilde{M}(\theta)$. 
+
+     Now consider the more 
+general case where $\theta_S(x) \ne \theta_B$, $\phi_S(x) \ne 0$, 
+$P(x,\theta)=\tilde{P}(\theta)$ for $\theta_S(x) < \theta \le \theta_T$, 
+but $P(x,\theta) \to \infty$ for $\theta_B \le \theta < \theta_S(x)$. In 
+this case there is a massless layer on the mountain slope.  However, even 
+in this case there is a resting, horizontally homogeneous solution if the 
+functions $\theta_S(x)$, $\phi_S(x)$, and $\tilde{M}(\theta)$ are specified 
+in a particular way. This particular specification can be obtained by simply 
+noting that $M(x,\theta)=\tilde{M}(\theta)$ for 
+$\theta_S(x) \le \theta \le \theta_T$ is a resting solution. The Exner function 
+and the geopotential associated with this solution are 
+$\Pi(x,\theta)=\tilde{\Pi}(\theta)$ and $\phi(x,\theta)=\tilde{\phi}(\theta)$. 
+If this geopotential field is to match the topography, we must have  
+\begin{linenomath*}
+\begin{equation}                             % Equation (38)
+       \phi_S(x) = \tilde{\phi}(\theta_S(x)).  
+\end{equation}
+\end{linenomath*}
+In other words, if $\phi_S(x)$, $\theta_S(x)$, and $\tilde{\phi}(\theta)$ 
+are specified in such a way that (38) is satisfied, the solutions of the 
+elliptic problem (33)--(37) are $v(x,\theta)=0$ and 
+$\Pi(x,\theta)=\tilde{\Pi}(\theta)$ for $\theta_S(x) \le \theta \le \theta_T$. 
+For the far-field profile specified by (10) and the Gaussian mountain 
+specified by (26), the constraint (38) can be rearranged to 
+\begin{linenomath*}
+\begin{equation}                            % Equation (39)
+   \theta_S(x) = \theta_B \left(1 + \frac{2N^2 H}{g} e^{-x^2/a^2}\right)^{1/2}. 
+\end{equation}
+\end{linenomath*}
+This can serve as a useful check on any numerical procedure for solving 
+(33)--(37).  This case is shown in Fig.~9.  It is interesting to note that the wind field in the massless 
+layer does not vanish.  The wind field in the massless layer will not, in general 
+vanish.   
+
+     To discretize the problem (33)--(37) we introduce the grid points 
+$(x_j,\, \theta_k)=(-L+j\Delta x,\, \theta_B+k\Delta\theta)$ with 
+$j=0,1,\ldots,J$ and $k=0,1,\ldots,K$, where $\Delta x=2L/J$ and 
+$\Delta\theta=(\theta_T-\theta_B)/K$. We then seek an approximate 
+solution with gridpoint values $M_{j,k}$ satisfying the discrete equation 
+\begin{linenomath*}
+\begin{equation}                          % Equation (40)
+   \begin{split}
+     & A_{j,k}\left[(f\Delta x)^2 + M_{j-1,k} -2M_{j,k} + M_{j+1,k}\right]    \\ 
+     &                  \qquad    + M_{j,k-1} -2M_{j,k} + M_{j,k+1} = 0, 
+   \end{split}
+\end{equation}
+\end{linenomath*}
+where the dimensionless coefficient $A_{j,k}$ is defined by 
+\begin{linenomath*}
+\begin{equation}                          % Equation (41)
+   A_{j,k} = \frac{g(\Delta\theta)^2}{f\theta_k \rho_{j,k} P_{j,k}(\Delta x)^2}.   
+\end{equation}
+\end{linenomath*}
+The discretized versions of (36) and (37) are
+\begin{linenomath*} 
+\begin{equation}                          % Equation (42)
+     M_{j,K} - M_{j,K-1} = \Pi_T \Delta\theta, 
+\end{equation}
+\end{linenomath*}
+%
+\begin{linenomath*}
+\begin{equation}                          % Equation (43)
+     M_{j,0} - \frac{\theta_B}{\Delta\theta} 
+	       \left(M_{j,1} - M_{j,0}\right) = \phi_S(x_j).
+\end{equation}
+\end{linenomath*}
+%
+Note that (40) applies both outside and inside the massless layer, with 
+$A_{j,k} \ne 0$ outside the massless layer and $A_{j,k}=0$ inside the massless 
+layer. Also note that the problem is nearly 
+isotropic on the grid outside the massless layer if $A_{j,k}\approx 1$, which 
+can serve as a rough guide for the choice of the ratio $\Delta\theta/\Delta x$. 
+Using typical values of the quantities on the right hand side of (41), 
+we obtain the rough guide 
+$(\Delta\theta/\Delta x) \approx (1 \, {\rm K})/(57 \, {\rm km})$. For 
+the numerical solutions presented here, we have chosen $\Delta x = 8$ km 
+and $\Delta\theta = 0.14$ K, resulting in a grid with $J=750$ and $K=450$ 
+for the domain $-4000 \le x \le 4000$ km and $295 \le \theta \le 360$ K. 
+   
+
+     We solve the discrete equations (40)--(43) using 
+the following successive over-relaxation (SOR) procedure. 
+Denoting the current estimate of $M_{j,k}$ by $\hat{M}_{j,k}$  
+(not to be confused with the `hat' notation in 
+section 3 to denote the Fourier component of a variable), 
+and sweeping through the grid in lexicographic order, we first 
+compute the current estimate of density from 
+\begin{linenomath*}
+\begin{equation}                          % Equation (44)
+   \hat{\rho}_{j,k} = \frac{p_0}{R\theta_k} 
+       \left(\frac{\hat{M}_{j,k+1} - \hat{M}_{j,k-1}}
+                  {c_p 2\Delta\theta}\right)^{c_v/R},       
+\end{equation}
+\end{linenomath*}
+%
+the current estimate of the dimensionless coefficient from 
+\begin{linenomath*}
+\begin{equation}                          % Equation (45)
+   \hat{A}_{j,k} = 
+  \begin{cases}
+   \displaystyle{\frac{g(\Delta\theta)^2}{f\theta_k \hat{\rho}_{j,k} P_{j,k}(\Delta x)^2}}
+                          & {\rm if} \,\,\, \theta_S(x_j) < \theta_k < \theta_T     \\[1.5ex]
+              0           & {\rm if} \,\,\, \theta_B      < \theta_k < \theta_S(x_j) 
+  \end{cases}   
+\end{equation}
+\end{linenomath*}
+%
+and then the current residual from   
+\begin{linenomath*}
+\begin{equation}                           % Equation (46)                      
+   \begin{split}
+   \hat{r}_{j,k} 
+        &= \hat{M}_{j,k-1} + \hat{M}_{j,k+1} 
+	 - 2\left(1 + \hat{A}_{j,k}\right)\hat{M}_{j,k}    \\
+	&+ \hat{A}_{j,k}\left[(f\Delta x)^2 + \hat{M}_{j-1,k} + \hat{M}_{j+1,k}\right].     
+   \end{split}
+\end{equation}
+\end{linenomath*}
+%
+The solution estimate on the interior is then updated by 
+\begin{linenomath*}
+\begin{equation}                           % Equation (47)
+   \hat{M}_{j,k} \leftarrow \hat{M}_{j,k}
+                      + \frac{\omega\hat{r}_{j,k}}{2\left(1+\hat{A}_{j,k}\right)}, 
+\end{equation}
+\end{linenomath*}
+%
+where $\omega$ is the overrelaxation factor and (46) and (47) are computed at 
+the grid points $1 \le j \le J-1, \,\, 1 \le k \le K-1$. Finally, the top 
+and bottom boundary points are updated from the boundary conditions (42) 
+and (43), written in the form 
+\begin{linenomath*}
+\begin{equation}                          % Equation (48)
+     \hat{M}_{j,K} \leftarrow \hat{M}_{j,K-1} + \Pi_T \Delta\theta 
+                        \quad {\rm for} \quad 1 \le j \le J-1,
+\end{equation}
+\end{linenomath*}
+%
+\begin{linenomath*}
+\begin{equation}                          % Equation (49)
+     \hat{M}_{j,0} \leftarrow \frac{(\theta_B/\Delta\theta)\hat{M}_{j,1} + \phi_S(x_j)} 
+	                       {1 + (\theta_B/\Delta\theta)} 
+	                 \quad {\rm for} \quad 1 \le j \le J-1.   
+\end{equation}
+\end{linenomath*}
+Equations (44)--(49) are iterated, starting with the initial estimate 
+$\hat{M}_{j,k}=\tilde{M}(\theta_k)$. This initial estimate does not change 
+on the lateral boundaries $j=0$ and $j=J$.    
+In order to gauge the convergence rate, we have monitored the norm of the residual 
+as iteration proceeds. Experience shows that, when this norm has decreased by 
+approximately two orders of magnitude, the wind field no longer significantly changes 
+with further iterations.  All of the figures shown have 
+been iterated until the residual has decreased by more than two orders of magnitude.     
+Based on numerical tests, over-relaxation factors between $1.7$ and $1.95$ have 
+been used.    
+
+     The above iterative procedure determines the Montgomery potential in 
+the entire domain for a given surface geopotential $\phi_S(x)$, a given 
+surface potential temperature $\theta_S(x)$, and a given $\tilde{M}(\theta)$. 
+From the Montgomery potential, the wind field can be easily recovered 
+using geostrophic balance, and the pressure field can be computed using 
+the hydrostatic approximation. As a ``null" test of this numerical procedure, 
+we have specified $\tilde{M}(\theta)$ according to (9), $\phi_S(x)$ 
+according to (26), and $\theta_S(x)$ according to (39). This combination 
+should result in no flow and a horizontally homogeneous mass field outside 
+the massless layer. 
+The numerical solution is shown in Fig.~9, which agrees well with the 
+expected result. Note that, when the solution is displayed in $(x,\theta)$-space 
+(bottom panel of Fig.~9), there is an anticyclonic flow confined entirely to the massless layer 
+so that this anticyclone does not appear when the solution is displayed in 
+$(x,p)$-space (top panel).   
+
+     Figure 10 shows the solution computed for an isentropic ridge of the 
+same height (2500 m) as the ridge shown in Fig.~7.  A comparison of these 
+two figures shows that the solution derived using Fourier transforms and the 
+solution found with the above iterative procedure are similar, but 
+the maximum winds in Fig.~10 are 1.8 m s$^{-1}$ stronger than those in Fig.~7.   
+These figures are not expected to be identical because Fig.~7 was 
+computed assuming the density was equal to the far-field density (which depends 
+only on $\theta$) while Fig.~10 was computed with density as a function of 
+$x$ and $\theta$.  The difference between Figs.~7 and 10 is primarily due to 
+the difference in the right hand side of (6). Figure 7 results from the 
+assumptions $(\tilde{\rho}/\rho) \to 1$ and $(\tilde{P}/P \to 1)$, so that 
+the right hand side of (6) vanishes. Figure 10 results from the assumption 
+$(\tilde{P}/P \to 1)$, so that the right hand side of (6) becomes 
+$f(\tilde{\rho}/\rho)[(\rho/\tilde{\rho})-1]$, which is negative near 
+the mountain crest since $\rho < \tilde{\rho}$ there.  This negative right 
+hand side of (6) leads to a slightly stronger anticyclone in Fig.~10 
+compared to Fig.~7. Note that the errors caused by the assumption  
+$(\tilde{\rho}/\rho) \to 1$ are expected to be less for cases in which 
+the crest height is much smaller than the critical crest height.     
+
+     Figures 11--14 show the wind fields that result from the three 
+simple cases represented schematically in Fig.~4.  An isentropic ridge with 
+a crest height of 1800 m is shown in Fig.~11 and can be clearly identified 
+by the fact that the isentropes do not intersect the ridge and the flow is 
+anticyclonic.  A flat lower boundary with a potential temperature anomaly 
+of 6 K is shown in Fig.~12, which results in a 12.7 m s$^{-1}$ cyclonic flow.  
+Figure 13 combines these two forcing cases into a warm ridge with a crest 
+height of 1800 m and a surface potential temperature anomaly of 6 K.  
+Note that the isentropic lower surface (Fig.~11) has anticyclonic flow anchored over 
+the ridge, but for the case of the flat lower boundary the flow is cyclonic. 
+The warm ridge with a potential temperature anomaly of $6$ K has anticyclonic flow 
+but when the potential temperature anomaly is increased to $12$ K (Fig.~14), the flow 
+becomes cyclonic. This demonstrates the competing influences of the purely orographic 
+forcing and the surface thermal forcing. Once the surface potential temperature anomaly 
+has grown strong enough to overcome the anticyclonic flow associated with an 
+isentropic obstacle, the wind field produced by a warm ridge 
+becomes cyclonic and grows with the potential temperature anomaly.  
+   
+
+It can also be shown that as the width of the ridge
+increases for a given potential temperature anomaly, the influence of the 
+anomaly is spread out and effectively acts as a weaker anomaly.   
+
+     It is also apparent in ($x,\theta$)-space that the isentropic ridge 
+case does not contain a massless layer, but for the warm flat lower boundary 
+and the warm ridge, a massless layer is present and marked as the area below 
+the thick black line.  Pressure in the massless layer is independent of 
+$\theta$, as is clear from the vertical isobars within the massless layers 
+of Figs.~12--14.   
+Although the pressure is independent of $\theta$ in the massless layer, 
+it does vary with $x$, resulting in a nonzero wind field.  
+The velocity is required to satisfy the lower boundary condition  
+(37), which can be seen as the slope of the velocity increases with 
+the magnitude of the velocity along the lower boundary.  The 
+concept of nonzero velocity underneath the surface is 
+admittedly strange, but is valid based on the governing equations.        
+
+     For the case of an isentropic lower boundary the potential vorticity is uniform
+on each $\theta$ surface.  This leads to an intuitive explanation 
+for the wind field response to the mountain as seen in Figs.~6, 7, and 10.  
+Recall that, in the absence of heating, mass cannot cross the isentropic 
+surfaces.  This constrains how the mass field can adjust when the
+isentropes are moved up or down.  One of the primary benefits to using 
+isentropic coordinates is the simplicity of the
+expression for potential vorticity.  The denominator of the potential 
+vorticity is given by the pseudodensity $-(1/g)(\partial p/\partial\theta)$, 
+which becomes smaller when the isentropes are compressed, as occurs over the crest 
+of an isentropic ridge.  Because the potential vorticity is uniform,
+the decrease in magnitude of the denominator implies the numerator also must 
+decrease.  The only part of the numerator that can decrease in magnitude is 
+$\partial v/\partial x$, so a negative isentropic relative vorticity  
+is required, which is exactly what Figs.~6, 7, and 10 show.  It is apparent that the 
+velocity gradient is greatest where the isentropes are the most compressed.  
+Similar reasoning can be applied to the case of stretched isentropes with the only
+difference being the sign of the isentropic relative vorticity.     
+
+     The structure of the isentropes for the cases with a warm lower boundary is quite 
+different.  The heating forces mass across isentropic surfaces.  As radiation 
+heats the surface, an upslope motion is generated.  When the mass moves upward 
+it is transferred from one isentropic layer to the next potentially warmer layer.  This is what 
+physically causes the isentropes to bend down towards the heated surface.  The 
+stretched isentropic layers generate a wind field that is oriented opposite 
+to that which results from the isentropic case with compressed isentropes.
+
+     Each of Figs.~11--14 show the wind maximum to be in the lowest layers of 
+the fluid and to decay rapidly in the vertical and horizontal directions.  
+This matches well with the basic characteristics of low-level jets.  In agreement
+with the insights offered by the invertibility principle these figures show 
+an increased gradient in the velocity field when the isentropes are either compressed 
+or stretched. These figures clearly indicate that in the absence of other factors 
+a sufficiently heated surface will result in a cyclonic wind field.
+
+It is also clear that the jets of opposite sign on either side of the ridge are 
+two components of the same response to the forcing.  A heated ridge does not lead 
+to a single LLJ, but two LLJs that form a cyclonic or anticyclonic circulation.      
+
+
+\section{Concluding remarks}
+    
+     The results presented here show that the surface potential vorticity 
+singularity that is the result of the potential temperature anomalies 
+along the heated topography plays a key role in the  
+dynamics of atmospheric low-level jets.  This conclusion has been  
+reached by solving the invertibility principle for the balanced 
+response of a stratified fluid to forcing along the lower boundary.  
+As shown in Fig.~4, we have studied three types of lower boundary forcing:  
+an isentropic ridge along the lower boundary, in which case $\phi_S(x) \ne 0$
+and $\theta_S(x)=\theta_B$; a locally heated, flat lower boundary, in which 
+case $\phi_S(x)=0$ and $\theta_S(x) \ne \theta_B$; and a heated ridge, 
+in which case $\phi_S(x) \ne 0$ and $\theta_S(x) \ne \theta_B$.  
+Isentropic ridges produce an anticyclonic wind field. The closer the 
+ridge height comes to the critical crest height, the tighter the isentropes 
+are packed over the ridge and the stronger the corresponding wind field.  
+In contrast, the case of a locally heated flat lower boundary results in a 
+cyclonic wind field.  When these two cases are combined into the case 
+of a heated ridge, the winds are reduced due to the competing effects 
+of the orography ($\phi_S$) and the heating ($\theta_S$). For small 
+potential temperature anomalies on the surface, the influence of $\phi_S$ 
+is dominant and the wind field is anticyclonic.  However, for surface 
+potential temperature anomalies that are larger and closer 
+to those observed in YOTC, the heating along the lower boundary is the 
+dominant effect, and the wind field is cyclonic.  As an example of 
+these competing effects, the heated ridge 
+shown in Fig.13, with a potential temperature anomaly of 6K, has an 
+anticyclonic flow, while the heated ridge shown in Fig.~14, with a 
+potential temperature anomaly of 12K, has a cyclonic flow.  Byerle and Paegle (2003) 
+noted a change from cyclonic to anticyclonic flow during the North American winter. 
+They attributed this to a change in the zonal flow and the interaction 
+with the orography.  The results presented here suggest that this transition 
+is due to the winter potential temperature anomaly dropping below the critical value 
+that is needed for a cyclonic circulation.  
+    
+     Past studies of the South American LLJ and the Chilean Coastal LLJ 
+have treated these as isolated phenomena. The results presented here clearly 
+show that these two LLJs can be attributed to the PV anomaly that is generated 
+by diabatic heating of the elevated terrain of the Andes. Although we have 
+only treated $\phi_S(x)$ and $\theta_S(x)$ functions that are symmetric about 
+$x=0$, the YOTC observations shown in Fig.~2 indicate that surface potential
+temperatures are colder on the west side due to cold upwelling in the eastern 
+Pacific Ocean. Incorporation of this asymmetry in the specified $\theta_S(x)$
+leads to a corresponding asymmetry in the LLJs (i.e., a stronger Chilean LLJ). 
+
+     Two limiting aspects of the present work are the $f$-plane and 
+$y$-independent assumptions. This raises the obvious question as to 
+whether it is possible to generalize the present theory to   
+balanced flows on the sphere. Such a generalization has 
+been given by Silvers (2011). The specified topography and the specified 
+potential temperature on the lower boundary are then given by 
+$\phi_S(\lambda,\mu)$ and $\theta_S(\lambda,\mu)$, where $\lambda$ is the 
+longitude and $\mu$ is the sine of the latitude. The relation between the mass 
+field and the wind field is assumed to be the local linear balance 
+(Schubert et al.~2009) condition 
+$M(\lambda,\mu,\theta)=2\Omega\mu \, \psi(\lambda,\mu,\theta)$, where 
+$\psi(\lambda,\mu,\theta)$ is the streamfunction for the nondivergent 
+(i.e., zero isentropic divergence) part of the flow. Then, the spherical 
+generalization of (3) is  
+\begin{linenomath*}
+\begin{equation}                          % Equation (6.1)
+   \begin{split}
+        \frac{g}{\theta\rho P}
+        \left(2\Omega\mu + \nabla^2 \psi\right) 
+     &+ 2\Omega\mu\frac{\partial^2 \psi}{\partial\theta^2} = 0  
+        \,\,\,\, {\rm for} \,\,\,\, \theta_S(\lambda,\mu) < \theta \le \theta_T,  \\
+     &  2\Omega\mu\frac{\partial^2 \psi}{\partial\theta^2} = 0  
+	\,\,\,\, {\rm for} \,\,\,\,   \theta_B \le \theta < \theta_S(\lambda,\mu),
+   \end{split}
+\end{equation} 
+\end{linenomath*}
+where $\nabla^2$ is the two-dimensional (fixed $\theta$) Laplacian operator 
+on the sphere.  With appropriate boundary conditions, (50) constitutes an 
+invertibility principle for topographically bound flows on the sphere. Solution 
+of this three-dimensional elliptic problem allows treatment of much more realistic 
+topography $\phi_S(\lambda,\mu)$ than was treated in sections 3 and 4. 
+
+
+
+\begin{acknowledgment} 
+We would like to thank Brian McNoldy, Scott Fulton, Thomas Birner, David Randall, Paul Ciesielski, 
+Richard Johnson, Matthew Masarik,    
+and Richard Taft for their valuable advice. This research has been supported 
+by the National Science Foundation under Grant ATM-0837932 and 
+under the Science and Technology Center for Multi-Scale Modeling of 
+Atmospheric Processes, managed by Colorado State University 
+through cooperative agreement No.~ATM-0425247.  Workstation computing 
+resources were provided through a gift from the Hewlett-Packard Corporation.  
+\end{acknowledgment}
+
+
+
+
+% Use appendix}[A], {appendix}[B], etc. etc. in place of appendix if you have multiple appendixes.
+%\ifthenelse{\boolean{dc}}
+%{}
+%{\clearpage}
+\begin{appendix}
+\section*{\begin{center}Analytic solution using Fourier integral transforms\end{center}}
+
+      To solve the invertibility problem (11)--(15) we use Fourier integral transforms.  
+For simplicity we assume that the specified function $\phi_S(x)$  
+is symmetric in $x$, so that $\Pi'(x,\theta)$ is symmetric in $x$ and $v(x,\theta)$ is 
+antisymmetric in $x$.  The Fourier sine transform pair for $v(x,\theta)$ is  
+\begin{linenomath*}
+\begin{equation}                    % Equation (A1)
+   \hat{v}(k,\theta) = \frac{2}{\pi} \int_0^\infty  v(x,\theta)\sin(kx) \, dx, 
+\end{equation}
+\end{linenomath*}
+\begin{linenomath*}
+\begin{equation}                    % Equation (A2)
+        v(x,\theta) = \int_0^\infty \hat{v}(k,\theta) \sin(kx) \, dk, 
+\end{equation} 
+\end{linenomath*}
+while the Fourier cosine transform pair for $\Pi'(x,\theta)$ is 
+\begin{linenomath*}
+\begin{equation}                    % Equation (A3)
+   \hat{\Pi}'(k,\theta) = \frac{2}{\pi} \int_0^\infty  \Pi'(x,\theta)\cos(kx) \, dx, 
+\end{equation}
+\end{linenomath*}
+
+\begin{linenomath*}
+\begin{equation}                    % Equation (A4)
+         \Pi'(x,\theta) = \int_0^\infty \hat{\Pi}'(k,\theta) \cos(kx) \, dk.
+\end{equation} 
+\end{linenomath*}
+A similar cosine transform pair exists for the surface geopotential $\phi_S(x)$ and its 
+transform $\hat{\phi}_S(k)$. 
+
+     We now wish to Fourier transform (11), (12), (14), and (15). To Fourier 
+transform (11) and (14) we multiply them by $\cos(kx)$ and integrate over $x$ 
+from $0$ to $\infty$, thereby obtaining (A5) and (A7) below.  To Fourier transform 
+(12) and (15) we multiply them by $\sin(kx)$ and integrate over $x$ from $0$ to $\infty$, 
+thereby obtaining (A6) and (A8) below. In summary, the Fourier transform of the elliptic 
+problem (11)--(15) is
+\begin{linenomath*} 
+\begin{equation}                    % Equation (A5)
+     k\hat{v} + \left(\frac{f\theta_B^2 N_B^2}{g^2}\right) \frac{d\hat{\Pi}'}{d\theta} = 0,    
+\end{equation} 
+\end{linenomath*}
+
+\begin{linenomath*}
+\begin{equation}                    % Equation (A6) 
+         f\frac{d\hat{v} }{d\theta}  + k \hat{\Pi}'  = 0,  
+\end{equation} 
+\end{linenomath*}
+with boundary conditions
+\begin{linenomath*} 
+\begin{equation}                    % Equation (A7)
+        \hat{\Pi}' = 0               \,\,\, {\rm at}  \,\,\, \theta = \theta_T,  
+\end{equation}
+\end{linenomath*}
+
+\begin{linenomath*}
+\begin{equation}                    % Equation (A8)	
+       \theta\frac{d\hat{v}}{d\theta} - \hat{v} = \frac{k}{f}\hat{\phi}_S(k)   
+                                      \,\,\, {\rm at}  \,\,\, \theta = \theta_B.           
+\end{equation}
+\end{linenomath*}
+    As can be confirmed by direct substitution, the solutions 
+of (A5)--(A8) are\footnote{The solutions of (A5)--(A8) can also be expressed 
+in terms of $\cosh(\kappa\theta)$ and $\sinh(\kappa\theta)$, but for large horizontal 
+wavenumbers, numerical evaluation of the hyperbolic representation of the solution 
+presents a practical difficulty since the ratio of very large numbers is involved. 
+This difficulty does not occur in the exponential representation (A9)--(A10), 
+since this representation avoids evaluation of exponential functions with large 
+positive exponents.} 
+\begin{linenomath*}      
+\begin{equation}                    % Equation (A9)
+    \hat{v}(k,\theta) = -\frac{k}{f}\hat{\phi}_S(k)
+        \left(\frac{e^{-\kappa(\theta-\theta_B)} + e^{-\kappa(2\theta_T-\theta_B-\theta)}}
+         {1 + \kappa\theta_B + (1 - \kappa\theta_B)e^{-2\kappa(\theta_T-\theta_B)}}\right),   
+\end{equation}  
+\end{linenomath*}
+
+\begin{linenomath*}
+\begin{equation}                    % Equation (A10)
+    \frac{\theta_B N_B}{g}\hat{\Pi}'(k,\theta)   
+     = -\frac{k}{f}\hat{\phi}_S(k)
+        \left(\frac{e^{-\kappa(\theta-\theta_B)} - e^{-\kappa(2\theta_T-\theta_B-\theta)}}
+         {1 + \kappa\theta_B + (1 - \kappa\theta_B)e^{-2\kappa(\theta_T-\theta_B)}}\right).    
+\end{equation} 
+\end{linenomath*}
+where $\kappa(k) = gk/(f\theta_B N_B)$. 
+The 
+Fourier cosine transform of (16) yields
+\begin{linenomath*} 
+\begin{equation}                           % Equation (A11)
+   \hat{\phi}_S(k) = \frac{gH a}{\sqrt{\pi}} e^{-a^2 k^2/4}.  
+\end{equation} 
+\end{linenomath*}
+
+\end{appendix}
+%\subsection{First appendix secondary heading}
+%
+%\subsection{Second appendix secondary heading}
+%
+%\subsubsection{First appendix tertiary heading}
+%
+%\subsubsection{Second appendix tertiary heading}
+%
+%\paragraph{First appendix quaternary heading}
+%
+%\paragraph{Second appendix quaternary heading}
+%
+%\end{appendix}
+
+% Create a bibliography directory and place your .bib file there.
+% -REMOVE ALL DIRECTORY PATHS TO REFERENCE FILES BEFORE SUBMITTING TO THE AMS FOR PEER REVIEW
+%\ifthenelse{\boolean{dc}}
+%{}
+%{\clearpage}
+%\bibliographystyle{ametsoc}
+%\bibliography{references}
+
+\section{References}
+  
+%Byerle, L.~A., and J. Paegle, 2002: Description of the seasonal cycle of low-level flows flanking the Andes
+%and their interannual variability. {\sl Meteorologica}, {\bf 27}, 71--88.
+
+Bonner, W.~D., 1968: Climatology of the low level jet. 
+{\sl Mon.\ Wea.\ Rev.}, {\bf 96}, 833--850. 
+  
+Byerle, L.~A., and J. Paegle, 2003: Modulation of the Great Plains low-level jet and moisture transports 
+by orography and large-scale circulations. {\sl J.\ Geophys.\ Res.}, {\bf 108}, 8611 %, doi:10.1029/2002JD003005.
+  
+Eliassen, A., 1980: Balanced motion of a stratified, rotating fluid induced by bottom topography.  
+{\sl Tellus}, {\bf 32}, 537--547. 
+    
+Jiang, X., N.-C. Lau, I. M. Held, and J. J. Ploshay, 2007: Mechanisms of the Great Plains 
+low-level jet as simulated in an AGCM. {\sl J.\ Atmos.\ Sci.}, {\bf 64}, 532--547.  
+%doi: 10.1175/JAS3847.1  
+  
+Kanamitsu, M., W. Ebisuzaki, J. Woollen, S.-K. Yang, J. J. Hnilo, M. Fiorino, 
+and G. L. Potter, 2002: NCEP-DOE AMIP-II Reanalysis (R-2). 
+{\sl Bull.\ Amer.\ Meteor.\ Soc.}, {\bf 83}, 1631--1643. 
+ 
+Nogu\'es-Paegle, J., J. Paegle, and Coauthors, 2001: American low level jets---A scientific 
+prospectus and implementation plan. 
+Available online at \\ http://www.clivar.org/organization/vamos/Publications/alls.pdf
+
+Schubert, W.H., R.K. Taft, and L.G. Silvers, 2009: Shallow water quasi-geostrophic theory on the sphere.
+{\sl J. Adv. Model. Earth Syst.},{\bf 1}(2),17 pp. % doi: 10.3894/JAMES.2009.1.2.
+ 	
+Silvers, L.~G., 2011: A theory of topographically bound balanced motions and 
+application to atmospheric low-level jets. Ph.D. Dissertation, Department 
+of Atmospheric Science, Colorado State University. 
+
+Stensrud, D. J., 1996: Importance of low-level jets to climate: A review. 
+{\sl J.\ Climate}, {\bf 9}, 1698--1711. 	
+  	
+Tarasova, T. A., J. P. R. Fernandez, I. A. Pisnichenko, J. A. Marengo, J. C. Ceballos, and M. J. Bottino, 2006: 
+Impact of new solar radiation parameterization in the Eta Model on the simulation of summer climate over South America. {\sl J. Applied Meteorology and Climatology}, {\bf 45}, 318--333. 
+% doi: 10.1175/JAM2342.1
+
+%Ting, M., and Hailan Wang, 2006: The role of the North American topography on the maintenance of the 
+%Great Plains summer Low-Level Jet.  {\sl J. Atmos. \ Sci.}, {\bf 63}, 1056--1068.
+  
+Vera, C., J. Baez, M. Douglas, C.~B. Emmanuel, J. Marengo, J. Meitin, M. Nicolini, 
+J. Nogues-Paegle, J. Paegle, O. Penalba, P. Salio, C. Saulo, M.~A. Silva Dias, 
+P. Silva Dias, and E. Zipser, 2006: The South American low-level jet experiment.  
+{\sl Bull.\ Amer.\ Meteor.\ Soc.}, {\bf 87}, 63--77. 
+  
+Waliser, D., M. Moncrieff, D. Burridge, and Coauthors, 2011: The `Year' of tropical convection 
+(May 2008 to April 2010): Climate variability and weather highlights. {\sl Bull.\ Amer.\ Meteor.\ Soc.}, 
+{\sl submitted}. 
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIGURES-REMOVE ALL DIRECTORY PATHS TO FIGURE FILES BEFORE SUBMITTING TO THE AMS FOR PEER REVIEW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]                             % Figure 1
+  \noindent\includegraphics[width=19pc,angle=0]{meanwind925_combined.eps}
+\caption{January 2003 mean 925 hPa wind (scale of 10 m s$^{-1}$ vector 
+ indicated just below the colorbar) from the NCEP-DOE Reanalysis II data 
+ (Kanamitsu et al. 2002), which has the horizontal/vertical 
+ resolution T62/L28.  Vectors are not drawn in the region of the Andes 
+ above 925 hPa (at T62 horizontal resolution).  The background map shows 
+ topography (see colorbar, scale is 100's m), with the La Plata river 
+ basin outlined in red.  Adapted from Tarasova et al.~(2006) and 
+ Nogu\`es-Paegle et al.~(2001).}
+\end{figure}
+
+
+%
+%
+\begin{figure}[t]                             % Figure 2
+  \noindent\includegraphics[width=19pc,angle=0]{andesxsec.eps}
+\caption{Mean warm season analysis of meridional wind at 21 S (top) and 30 S 
+(bottom) from the ECMWF  Year of Tropical Convection (YOTC) data.  The magnitude of the meridional wind is 
+given by the colorbar; 
+black contours are isentropes.}
+\end{figure}   
+%
+\begin{figure}[t]                              % Figure 3 
+  \noindent\includegraphics[width=19pc,angle=0]{rockiesxsec.eps}
+\caption{Mean warm season reanalysis meridional wind field at 30 N (top) and 35 N 
+(bottom) from the ECMWF Year of Tropical Convection (YOTC) data.  The magnitude of wind is given by 
+the colorbar, black contours are isentropes.}
+\end{figure} 
+
+\begin{figure}[t]                 % Figure 4
+  \noindent\includegraphics[width=39pc,angle=0]{schematicfinal.eps}
+\caption{Schematic vertical cross sections representing the three 
+idealized configurations studied here. Contours represent lines of 
+constant potential temperature (isentropes), with the vertical axes 
+interpreted as height. On the left is an isentropic obstacle, the 
+middle is a heated flat lower surface, and the right is a heated obstacle.}
+\end{figure}
+
+
+\begin{figure}[t]                             % Figure 5 
+\noindent\includegraphics[width=19pc,angle=0]{refstatB.eps}
+\caption{Reference pressure $\tilde{p}$ as a function of $\theta$, computed from (8).}
+\end{figure}
+
+\begin{figure}[t]                      % Figure 6
+\noindent\includegraphics[width=19pc,angle=0]{vim_px_H1500_lat30.eps}
+\caption{Cross-section plot of meridional wind ($v$, colors) and potential temperature 
+($\theta$, solid lines) near a `Gaussian isentropic mountain' with half-width $a=500$ km 
+and crest height $H=1500$ m. The potential temperature on the mountain surface is 295 K, and the flow 
+is anticyclonic. The contour intervals are 1 m s$^{-1}$ for $v$ and 2 K for $\theta$.  
+The extreme values of $v$ are $+11.5$ m s$^{-1}$ on the west side (dark red) of the mountain 
+and $-11.5$ m s$^{-1}$ on the east side (dark blue).}
+\end{figure}
+
+
+\begin{figure}[t]                      % Figure 7
+\noindent\includegraphics[width=19pc,angle=0]{vim_px_H2500_lat30.eps}
+\caption{Same as Fig.~6, but with crest height $H=2500$ m.   
+The peak values of $v$ are $\pm19.2$ m s$^{-1}$.}
+\end{figure}
+
+\begin{figure}[t]                      % Figure 8 
+\noindent\includegraphics[width=19pc,angle=0]{crit_Hvs_width.eps}
+\caption{Critical height $H_{\rm crit}$ of a Gaussian mountain as a function of half-width 
+at five latitudes.}
+\end{figure}
+
+\begin{figure}[t]                               % Figure 9 
+\noindent\includegraphics[width=19pc,angle=0]{zerowind1.eps}
+\caption{A null case (i.e., no flow), in which $\tilde{\phi}(\theta)$, 
+$\phi_S(x)$, and $\theta_S(x)$ are specified such that (38) is satisfied. 
+In this particular null case, $\tilde{\phi}(\theta)$ is given by (10), 
+$\phi_S(x)$ by (26), and $\theta_S(x)$ by (39). Black contours are 
+isentropes (top) and isobars (bottom). The anticyclone in the massless 
+layer of the bottom panel is not apparent in the top panel since
+the massless layer has ``zero thickness" in $(x,p)$-space.}
+\end{figure}  
+
+\begin{figure}[t]                     % Figure 10 
+\noindent\includegraphics[width=19pc,angle=0]{SORtest.eps}
+\caption{Meridional wind field (shading, warm colors are 
+positive, cool colors negative, and the contour interval is 1 m s$^{-1}$) for an 
+isentropic lower boundary computed using SOR.  The maximum 
+height of the Gaussian mountain is $2500$ m and its halfwidth is 500 km. 
+The maximum winds are 21.0 m s$^{-1}$.}
+\end{figure}  
+
+\begin{figure}[t]                               % Figure 11
+\noindent\includegraphics[width=19pc,angle=0]{ist1c_lap.eps}
+\caption{Meridional wind field (shading, 1 m s$^{-1}$ intervals) for an isentropic 
+ridge with $H=1800$ m and a Gaussian half-width of $a=600$ km. The flow is anticyclonic with $v_{\rm max}=15.4$ m s$^{-1}$.  
+Black contours are isentropes (top) and isobars (bottom).}
+\end{figure}  
+
+\begin{figure}[t]                          % Figure 12 
+\noindent\includegraphics[width=19pc,angle=0]{flb4c.eps}
+\caption{Meridional wind field (shading, 1 m s$^{-1}$ intervals) for a  
+flat lower surface having a 6 K  warm temperature anomaly with a Gaussian halfwidth 
+of $a=600$ km. The resulting winds have $v_{\rm max}=12.7$ m s$^{-1}$.  The massless 
+layer in ($x,p$)-space (top) is indicated by black object along the lower boundary while 
+in ($x,\theta$)-space (bottom) it is indicated by the thick black line.  
+Contour spacing for the pressure field in the massless layer is 1 hPa.}
+\end{figure} 
+
+\begin{figure}[t]                         % Figure 13 
+\noindent\includegraphics[width=19pc,angle=0]{hr11.eps}
+\caption{Meridional wind field (shading, 1 m s$^{-1}$ intervals) for 
+a heated ridge with a 6 K potential temperature anomaly, $H=1800$ m, 
+$a=600$ km, $v_{\rm max}=11.13$ m s$^{-1}$.  The massless layer is 
+indicated by the black object (top) and the thick black line (bottom).  
+Halfwidth of ridge is 900 km. Contour spacing of isobars(bottom)  
+is 50 hPa except for lowest contour of 975 hPa.}
+\end{figure}    
+
+%\begin{figure}[t]                        % Figure 14 
+%\noindent\includegraphics[width=29pc,angle=0]{flb5b.eps}
+%\caption{Same as Fig.~11 except with a 12 K surface potential temperature anomaly.  
+%The flow is cyclonic with $v_{\rm max}=27.27$ m s$^{-1}$.  In the lower panel the 
+%contour spacing for pressure is 50 hPa above the massless layer and 4 hPa in the 
+%massless layer.}
+%\end{figure}   
+
+ \begin{figure}[t]                      % Figure 14
+\noindent\includegraphics[width=19pc,angle=0]{hr6b.eps}
+\caption{Same as Fig.~12 except with a 12 K surface potential temperature anomaly.  
+The isentropes now bend down toward higher pressure and the flow is cyclonic 
+with $v_{\rm max}=10.3$ m s$^{-1}$.}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{table}[t]
+%\caption{This is a sample table caption and table layout.  Enter as many tables as
+%  necessary at the end of your manuscript. Table from Lorenz (1963).}\label{t1}
+%\begin{center}
+%\begin{tabular}{ccccrrcrc}
+%\hline\hline
+%$N$ & $X$ & $Y$ & $Z$\\
+%\hline
+% 0000 & 0000 & 0010 & 0000 \\
+% 0005 & 0004 & 0012 & 0000 \\
+% 0010 & 0009 & 0020 & 0000 \\
+% 0015 & 0016 & 0036 & 0002 \\
+% 0020 & 0030 & 0066 & 0007 \\
+% 0025 & 0054 & 0115 & 0024 \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+%
+\end{document}
+
+
+%%%%%%%%%%%%%%   Extra Pieces   *******************
+
+     The basic characteristics of the wind field from the YOTC data shown 
+in Figs.~3--4 agrees well with the results shown in Fig.~14.  The orientation 
+of the wind field (cyclonic)  is the same and the magnitude is similar to that 
+shown by the YOTC data. Because a steady state has been assumed the time 
+evolution of potential vorticity and wind can obviously not be seen.  This 
+model only computes the wind field that results from the potential vorticity 
+at an instant in time. Alternately, this could be interpreted as the potential 
+vorticity averaged over a time interval.  The figures in section 5 can be 
+interpreted as representing means of roughly 1-3 months.  If the temperature 
+distribution along the lower boundary is made larger, say 20K 
+(see Jiang et al.~2010), the wind speeds are closer to what would be expected 
+for daily or weekly mean fields. The parameters used to compute all of the 
+wind fields shown in section 5 were chosen to be comparable to Earth-like 
+mountains with realistic temperature anomalies along the lower boundary.  
+It is probably not appropriate to make direct comparisons between the results 
+of section 5 and observations of specific jet events or even climatologies 
+because the assumptions of a steady, nonviscous fluid will certainly lead to 
+discrepancies between the computed and observed wind fields, especially along 
+the lower boundary, which is precisely where the LLJ maxima in section 5 are 
+located. Performing a comprehensive comparison between these results and 
+observations of LLJs is beyond the scope of this work.  
+  
