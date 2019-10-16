@@ -545,6 +545,17 @@ Below is a list summarizing several of the changes that occur when the LW CRE is
 %General Circulation Model to a Cloud Resolving Model}
 \section{Dependence on Resolution: From a General Circulation Model to a Cloud Resolving Model}
 
+\begin{figure}
+  \includegraphics[width=0.96\columnwidth]{walkerfigs/precip_4mods_6mn.eps}
+  \caption{Evolution of precipitation through the first 6 months of simulation for (left to right) the 25km control case (P25), 
+  25km case with no parameterized convection (E25), 2km control (E2), and 1km control (E1).  
+  Shading indicates mm/day.  The horizontal axis shows the entire 
+  longitudinal domain of 4000 km with the center of the domain having a prescribed SST of 301 K and the edges 297 K.  
+  Shown is the meridional average. }
+  \label{fig:hov_4mods_6mn}
+\end{figure}
+
+
 It is clear that the overturning circulation in the tropical Pacific encompasses dynamical motions at a host of scales and that the 
 different cloud types interact with the circulation on scales ranging from meters to thousands of km's.  
 The tropical Pacific also serves as an ideal location to study interactions between clouds and the 
@@ -570,25 +581,6 @@ cloud-resolving
 models (E2, E1) show little aversion to the precipitation maximum occurring over the maximum in SST and relative to 
 the P100, P25 and E25 simulations 
 they are able to maintain a smoother distribution of  precipitation values over a broader range of SST values.    
-
-\begin{figure}
-  \includegraphics[width=0.96\columnwidth]{walkerfigs/precip_4mods_6mn.eps}
-  \caption{Evolution of precipitation through the first 6 months of simulation for (left to right) the 25km control case (P25), 
-  25km case with no parameterized convection (E25), 2km control (E2), and 1km control (E1).  
-  Shading indicates mm/day.  The horizontal axis shows the entire 
-  longitudinal domain of 4000 km with the center of the domain having a prescribed SST of 301 K and the edges 297 K.  
-  Shown is the meridional average. }
-  \label{fig:hov_4mods_6mn}
-\end{figure}
-
-Because of the close connection between the domain mean value of precipitation, atmospheric condensational heating, and 
-the total radiative cooling the time evolution of the precipitation serves as a useful measure of wether a model has 
-reached statistical equilibrium.  Figure \ref{fig:precip_dom_mn} demonstrates that after about 30 days, the P25, E2, and E1
-simulations begin to oscillate about a mean state that is roughly constant over periods greater than about 30 days. 
-The large oscillations in domain mean precipitation are similar to those noted in previous studies 
-(Silvers et al., 2016; Patrizio and Randall, 2019).   The experiments with a higher resolution have a lower value of domain
-mean precipitation, with the E2 simulation having the lowest (3.1 mm/day).  This can be understood as a consequence
-of the differences in upper level cloud fraction and will be further discussed.   
 
 Superposing the circulation and relative humidity illustrates the subsidence driven 
 drying and the strong moistening that results from ascent over the region of maximum latent heat flux.  
@@ -624,7 +616,8 @@ model level.
 \begin{figure}
   \centering
       \includegraphics[width=0.3\columnwidth]{walkerfigs/MnTotCondProf.eps}
-          \caption{Domain mean total condensate (liquid + ice).  Solid lines show experiments with LWCRE on
+          \caption{Domain mean total condensate (liquid + ice) for P25 (thin yellow), E25 (yellow), 
+          E2 (blue), and E1 (green).  Solid lines show experiments with LWCRE on
           and dashed lines experiments with LWCRE off.  All lines correspond to experiments with explicit 
           convection except the thin yellow lines which have the convective parameterization turned on.}
   \label{fig:TotCond}
@@ -638,9 +631,7 @@ require a correspondingly larger amount of condensational heating and precipitat
 \begin{figure}
   \centering
       \includegraphics[width=0.96\columnwidth]{walkerfigs/rh_psi_cond_E25E2E1.eps}
-      %\includegraphics[width=0.96\columnwidth]{walkerfigs/rh_psi_cond_25v2v1_6pan_lwon.eps}
-      %\includegraphics[width=0.96\columnwidth]{walkerfigs/psi_rh_25vs2vs1_lwon.eps}
-      \caption{Comparison of the steady state relative humidity (shading) and mass streamfunction.  
+      \caption{The steady state relative humidity (shading) and mass streamfunction (black contours).  
       Shown is E25 (left), E2(center), and E1(right).  All panels use the same contour interval for the 
       mass streamfunction (kg/s).}
   \label{fig:rh_psi_P25E2E1}
@@ -649,9 +640,7 @@ require a correspondingly larger amount of condensational heating and precipitat
 \begin{figure}
   \centering
       \includegraphics[width=0.96\columnwidth]{walkerfigs/rh_psi_cond_E25E2E1_lwoff.eps}
-      %\includegraphics[width=0.96\columnwidth]{walkerfigs/rh_psi_cond_25v2v1_6pan_lwoff.eps}
-      %\includegraphics[width=0.96\columnwidth]{walkerfigs/psi_rh_25vs2vs1_lwoff.eps}
-      \caption{Same as previous figure except with the longwave CRE turned off.}
+          \caption{Same as previous figure except with the longwave CRE turned off.}
   \label{fig:rh_psi_P25E2E1_lwoff}
 \end{figure}
 
@@ -684,16 +673,16 @@ The E25 and P25 experiments have much less condensate aloft and a lower relative
 where the differences in strength of the overturning circulation are most pronounced. 
 (can we use this to understand the differences in LWCRE?).  
 
-\begin{figure}
-  \centering
-       %\includegraphics[width=0.96\columnwidth]{walkerfigs/hist_6pan_25vs2vs1_lwoff_lwon.eps}
-       \includegraphics[width=0.96\columnwidth]{walkerfigs/hist_3pan_25vs2vs1_lwoff_lwon_draft.eps}
-  \caption{Normalized probability distributions of the location of the maximum value of precipitation for experiments with the 
-  longwave CRE on.  All panels show cases with parameterized convection, the top panels are computed for the experiments 
-  having a domain width of 4000 km while the bottom panels are for experiments having a domain width of 16000 km.  The 
-  black curves show a Gaussian function with a standard deviation computed for each experiment and an expected location 
-  in the center of the domain where the SST is warmest. }
-\end{figure}
+%\begin{figure}
+%  \centering
+%       %\includegraphics[width=0.96\columnwidth]{walkerfigs/hist_6pan_25vs2vs1_lwoff_lwon.eps}
+%       \includegraphics[width=0.96\columnwidth]{walkerfigs/hist_3pan_25vs2vs1_lwoff_lwon_draft.eps}
+%  \caption{Normalized probability distributions of the location of the maximum value of precipitation for experiments with the 
+%  longwave CRE on.  All panels show cases with parameterized convection, the top panels are computed for the experiments 
+%  having a domain width of 4000 km while the bottom panels are for experiments having a domain width of 16000 km.  The 
+%  black curves show a Gaussian function with a standard deviation computed for each experiment and an expected location 
+%  in the center of the domain where the SST is warmest. }
+%\end{figure}
 
 An interesting fact that emerges from the domain mean values of precipitation (see Table 1) 
 is that the sign of the response to LWCRE is not the same across the different grid-spacings.
@@ -792,25 +781,27 @@ and the domain mean precipitation (Figure \ref{fig:precip_dom_mn}).
 We can see clearly that the interactions between longwave radiation and clouds act to dry the troposphere in the regions of subsidence 
 more than the cases when the longwave CRE is not active.  This is especially true for the simulations with a grid-spacing of 1 km 
 and 2 km.  While the mid-tropospheric profiles of diabatic heating and cooling are similar between the LW CRE on/off simulations, 
-there is a very strong response below about 850 hPa for the 25km model.  At that grid-spacing, with the LW CRE on, significant 
-low-level clouds are formed, leading to a radiative cooling of almost 10K/day, and a radiative cooling of around -7K/day.   However, 
-when the LW CRE is off, there is no appreciable difference in the low-level diabatic profiles among the models with 3 grid-spacings.   It 
-is also clearly seen that the LW CRE decreases the upper-level ice-condensate for models of all grid-spacings while dramatically 
-increasing the low-level liquid condensate.  
+there is a very strong response below about 850 hPa for the 25km model.  At that grid-spacing, with the 
+LW CRE on, significant low-level clouds are formed, leading to a radiative cooling of almost 10K/day, 
+and a radiative cooling of around -7K/day.   However, when the LW CRE is off, there is no appreciable 
+difference in the low-level diabatic profiles among the E25, E2, and E1 experiments.   It 
+is also clearly seen that the LW CRE decreases the upper-level ice-condensate for E25, E2, and E1 
+experiments but dramatically increases the low-level liquid condensate for E25 and P25 (Figure 
+\ref{fig:TotCond}).  
 
-When the LW CRE is off, the simulations with resolutions of 1km, 2km, and 25km all show a similar distribution and magnitude of surface 
-enthalpy flux (Figure \ref{fig:LowLevelVars}).  However, when the LW CRE is on, there are differences between the resolutions that can be as 
-large as $80 \, \rm{W/m^2}$.   These differences in surface enthalpy flux are due largely to the latent heat flux and are confined to the 
-regions with ascending circulations over the warmer SST.  This manifestation of the strong interactions between clouds and the circulation 
+When the LW CRE is off, the simulations with resolutions of 1km, 2km, and 25km all show a similar 
+distribution and magnitude of surface enthalpy flux (Figure \ref{fig:LowLevelVars}).  However, when the 
+LW CRE is on, there are differences between the resolutions that can be as large as $80 \, \rm{W/
+m^2}$.   These differences in surface enthalpy flux are due largely to the latent heat flux and are 
+confined to the regions with ascending circulations over the warmer SST.  This manifestation of the strong interactions between clouds and the circulation 
 would be entirely absent from high resolution simulations with gray radiation or fixed radiative cooling profiles.  
 
-
-Relative to simulations with a grid-spacing of $25 \textit{km}$, the simulations with explicit convection can be characterized as having: 
+Relative to simulations with a grid-spacing of $25 \textit{km}$, the E2 and E1 experiments can be characterized as having: 
 \begin{itemize}
   \item stronger overturning circulations (as measured by vertical velocity) which are more consistently centered over the maximum of SST.  
   \item higher relative humidity in the upwelling regions and aloft.   Between 600-800 hPa the explicit models can have a relative humidity 
   that is 40\% higher than in the parameterized, lower resolution simulations.  
-  \item two to four times more ice condensate above about 600 hPa but only about half as much liquid condensate below about 700 hPa.
+  \item two to four times more ice condensate above 600 hPa but only about half as much liquid condensate below 700 hPa.
   \item less domain mean precipitation.  Values for 1 and 2 km simulations are in the 3.2-3.5 mm/d range, while those for the 25 km 
   simulations are 10-20\% higher (3.5-3.9 mm/d).  
   \item a weaker radiative cooling rate (about 2 K/d) and weaker heating rate (about 2 K/d).
