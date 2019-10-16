@@ -32,7 +32,8 @@ We will present a systematic picture of the modeled clouds across a hierarchy of
   \item{The AM4.0 TOA cloud radiative effect shows small biases compared with CERES-EBAF observations, both versions 
   2.8 and 4.1.}
   \item{Too few clouds are simulated by AM4.0 at high, middle, and low-levels, as compared to observations from CALIPSO.}
-  \item{Various configurations of a single global climate model lead to climate sensitivities that range from blah to about 5K.}
+  \item{Various configurations of a single global climate model lead to climate sensitivities that range from 2.1K (Cess) to 
+  about 5K (Winton's ECS).}
 \end{itemize}
 
 \section{Introduction}
@@ -54,6 +55,23 @@ Can we shed lite on which particular component of the cloud feedbacks lead to la
 
 \section{Clouds in AM4.0: Comparison between amip and observations}
 
+Before discussing the climate sensitivities of AM4/CM4 and how they are influenced by cloud feedbacks we assess
+the clouds which are simulated by AM4.0 over the recent observational period of 1979-2014.  We do this by comparing
+satellite based observations with the clouds in the AMIP experiment that is part of GFDLs contribution to CMIP6.  In 
+order to compare the observed and modeled clouds as consistently as possible across multiple platforms we have 
+used the satellite simulators which are included in COSP as part of the efforts of the CFMIP community 
+(Bodas-Salcedo et al. 2011).  By using multiple complimentary satellite datasets and simulators we can benefit from 
+the different strengths of each satellite while largely circumventing the known problems and discrepancies of the 
+observational data sets.      
+
+As a starting point we look at the total cloud fraction.  The ISCCP and CALIPSO products agree fairly well on the 
+global mean cloud fraction (65 and 67\%, respectively).   By this measure there are too few clouds in AM4.0 
+(biases of -15 and -12 \%).   The ISCCP and CALIPSO data agree well over the oceans, with most of the differences
+occuring over land (particularly north of 30).    
+
+Paragraph summarizing the basic characteristics of clouds in AM4.0 as stated by Ming's papers.  We could also summarize 
+what David finds about clouds in AM4.0 in his paper.
+
 During the developmental of the AM4.0 GFDL model particular care was given to ensuring that the energy budget at 
 the top of the atmosphere compared well with observations.  The data set that was most heavily leaned on to ensure 
 this was the CERES-EBAF TOA radiative fluxes, version 2.8 (Loeb et al., 2009).  Based on AM4.0 data that was used for 
@@ -71,8 +89,7 @@ several $\rm{W m^{-2}}$.   Our aim in discussing this for AM4.0 is transparency 
 well as to point out that both versions of the CERES-EBAF data show similar shortcomings of the spatial patters of the 
 simulated clouds  from AM4.0 in the AMIP experiment.   
 
-Paragraph summarizing the basic characteristics of clouds in AM4.0 as stated by Ming's papers.  We could also summarize 
-what David finds about clouds in AM4.0 in his paper.
+
 
 \begin{figure}
 % figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 1
