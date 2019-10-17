@@ -38,7 +38,7 @@ We will present a systematic picture of the modeled clouds across a hierarchy of
 
 \section{Introduction}
 
-This paper has a double motivation.  One of the motivations is to illustrate the wide range of sensitivities to perturbations 
+This paper has a double motivation.  First, to illustrate the wide range of sensitivities to perturbations 
 that can be achieved with a single base model.  For this purpose we utilize several models from the latest suite of GFDL 
 models.  This constitutes a hierarchy of configurations that ranges from an atmosphere only aquaplanet to a fully coupled 
 climate model.  Previously the range of climate sensitivities and feedbacks among the large ensemble of climate models 
@@ -46,7 +46,7 @@ the world has to offer have been documented largely by examining the multi-model
 the variability of sensitivity within a single modeling framework (IPCC; Andrews et al., 2012; Ringer et al., 2014).  By 
 focusing on the models from a single modeling center we hope to bring out fresh insight that is lost within a large ensemble.
 
-An additional motivation for this paper is to document the simulation of clouds in the newly developed GFDL models that 
+A second motivation for this paper is to document the simulation of clouds in the newly developed GFDL models that 
 have participated in CMIP6.  This will largely be done in the context of the amip experiment and comparisons to observations
 that overlap with that time period (1979-2014).  The experiments and diagnostics used are taken from the latest 
 round of CFMIP which has provided a useful framework to guide experimental design and diagnostic outputs.       
@@ -56,18 +56,45 @@ Can we shed lite on which particular component of the cloud feedbacks lead to la
 \section{Clouds in AM4.0: Comparison between amip and observations}
 
 Before discussing the climate sensitivities of AM4/CM4 and how they are influenced by cloud feedbacks we assess
-the clouds which are simulated by AM4.0 over the recent observational period of 1979-2014.  We do this by comparing
+the clouds which are simulated by AM4.0 over the recent observational period of 1979-2014.  This is done by comparing
 satellite based observations with the clouds in the AMIP experiment that is part of GFDLs contribution to CMIP6.  In 
 order to compare the observed and modeled clouds as consistently as possible across multiple platforms we have 
-used the satellite simulators which are included in COSP as part of the efforts of the CFMIP community 
-(Bodas-Salcedo et al. 2011).  By using multiple complimentary satellite datasets and simulators we can benefit from 
+used a selection of the satellite simulators which are included in COSP as part of the efforts of the CFMIP community 
+(Bodas-Salcedo et al. 2011).  This paper highlights simulators of the algorithms for three satellites based datasets: 
+ISCCP (the International Satellite Cloud Climatology Project), MODIS (the Moderate Resolution Imaging Spectroradiometer), 
+MISR (the Multiangle Imaging Spectro-Radiometer), and CALIPSO (the Cloud-Aerosol Lidar and Infrared Pathfinder 
+Satellite Observation; Chepfer et al., 2010; Cesana and Chepfer, 2013).  By using multiple complimentary satellite 
+datasets and simulators we can benefit from 
 the different strengths of each satellite while largely circumventing the known problems and discrepancies of the 
 observational data sets.      
 
-As a starting point we look at the total cloud fraction.  The ISCCP and CALIPSO products agree fairly well on the 
+Discrepancies among the many observational data sets has been extensively discussed in the literature and are 
+beyond the scope of this paper.  The curious reader can find detailed discussions in Kay et al., 2012; 
+Marchand et al. 2010 and?; Pincus et al., 2012; Cesana et al. ?; Stephens et al., 2018.  However, we note that ISCCP is useful due to 
+the longevity of the record (1983 - 2008 in Z18 figure) and MODIS has a detection algorithm that is an improvement upon ISCCP's and
+thus does a better job of detecting mid-level clouds and excluding partly filled pixels.   Of the three passive satellite products 
+(ISCCP, MODIS, and MISR), MODIS is considered to have the most accurate readings of high-topped clouds.  
+The height of clouds is determined with a stereo height retrieval method in MISR that is distinct from that used by
+both ISCCP and MODIS.  Because of this we have more confidence in the low and mid-level cloud readings 
+from MISR, as well as the cumulus clouds (Marchand et al. 2010; Zhang et al., 2019).   The CALIPSO observations
+are derived from a Lidar that allows for a direct measure of vertical structure of the clouds.  
+
+
+As a starting point we look at the total cloud fraction in Figure \ref{fig:clt_isccp_calipso}.  The ISCCP and 
+CALIPSO products agree fairly well on the 
 global mean cloud fraction (65 and 67\%, respectively).   By this measure there are too few clouds in AM4.0 
 (biases of -15 and -12 \%).   The ISCCP and CALIPSO data agree well over the oceans, with most of the differences
 occuring over land (particularly north of 30).    
+
+The global structure of the cloud fields are shown for the upper level, mid level, and low levels in 
+Figure \ref{fig:calipso_9pan}.  The longitudinally averaged cloud fraction is shown as a function of latitude in the 
+left most panels.  There is a large under-estimation of cloud fraction by (AM4.0: dashed; CALIPSO: solid) between plus/minus 30 
+degrees for both mid and low-level clouds.   AM4.0 does a much better job with the upper level tropical clouds 
+although there is still a negative bias.   The global maps detail where the biases are occurring.  In the upper 
+levels the clouds are underestimated roughly equally among the deep-tropical and stratocumulus regions.  In the
+mid-levels the bias tends to be larger over tropical land and in the region of the inter-tropical convergence zone.  
+In the mid-levels there are large biases over much of the tropical Pacific ocean, as well as in the stratocumulus
+zones and the southern tropical Atlantic ocean.  
 
 Paragraph summarizing the basic characteristics of clouds in AM4.0 as stated by Ming's papers.  We could also summarize 
 what David finds about clouds in AM4.0 in his paper.
