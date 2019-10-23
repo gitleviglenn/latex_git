@@ -55,6 +55,29 @@ Can we shed lite on which particular component of the cloud feedbacks lead to la
 
 \section{Clouds in AM4.0: Comparison between amip and observations}
 
+\begin{figure}
+% figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 1
+  \includegraphics[width=0.75\columnwidth]{cfmipfigs/clt_isccp_calipso_am4_4pan.eps}
+  \caption{Comparison of total cloud fraction from AM4 with two observational data sets: ISCCP (left) and CALIPSO (right).}
+  \label{fig:clt_isccp_calipso}
+\end{figure}
+
+\begin{figure}
+% figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 1
+  \includegraphics[width=0.95\columnwidth]{/Users/silvers/Research/cfmip_paper/testplot_oldconts.pdf}
+  \caption{Comparison thick (optical depth between 3.6 and 60) thin (optical depth between 0.3 and 3.6) clouds the 
+  MISR simulator in  AM4 with observations from MISR (bottom panels).}
+  \label{fig:misr}
+\end{figure}
+
+\begin{figure}
+% figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 3
+  \includegraphics[width=0.86\columnwidth]{cfmipfigs/clt_calipso_obs_sim_am4.eps}
+  \caption{Comparison of total cloud fraction.  Top shows observations from CALIPSO, processed for GCM comparison.  Middle 
+  shows output from the CALIPSO simulator, bottom shows raw model output of clt without a simulator.}
+  \label{fig:calipso_sim_vs_mod}
+\end{figure}
+
 Before discussing the climate sensitivities of AM4/CM4 and how they are influenced by cloud feedbacks we assess
 the clouds which are simulated by AM4.0 over the recent observational period of 1979-2014.  This is done by comparing
 satellite based observations with the clouds in the AMIP experiment that is part of GFDLs contribution to CMIP6.  In 
@@ -79,6 +102,21 @@ both ISCCP and MODIS.  Because of this we have more confidence in the low and mi
 from MISR, as well as the cumulus clouds (Marchand et al. 2010; Zhang et al., 2019).   The CALIPSO observations
 are derived from a Lidar that allows for a direct measure of vertical structure of the clouds.  
 
+\begin{figure}
+% figure generated with cloud_table_AM4fig.ncl
+  \includegraphics[width=0.86\columnwidth]{cfmipfigs/ctp_vs_tau_isccp_modis_am4_obs.eps}
+  \caption{Joint histograms showing the variations of cloud fraction as a function of cloud top pressure and tau.}
+  \label{fig:calipso_sim_vs_mod}
+\end{figure}
+
+\begin{figure}
+% figure generated with cloud_table_AM4fig.ncl
+  \includegraphics[angle=90,width=0.86\columnwidth]{cfmipfigs/calip_9pan_amip_obs_vs_AM4.eps}
+  \caption{Calipso scumstash.  Black line shows meridional profiles of AM4.0 cloud fraction and blue line shows
+  the meridional profile from CALIPSO.}
+  \label{fig:calipso_9pan}
+\end{figure}
+
 
 As a starting point we look at the total cloud fraction in Figure \ref{fig:clt_isccp_calipso}.  The ISCCP and 
 CALIPSO products agree fairly well on the 
@@ -86,9 +124,18 @@ global mean cloud fraction (65 and 67\%, respectively).   By this measure there 
 (biases of -15 and -12 \%).   The ISCCP and CALIPSO data agree well over the oceans, with most of the differences
 occuring over land (particularly north of 30).    
 
+The MISR satellite is thought to provide good estimates of low-level clouds heights and amounts.  For this reason
+and for comparison with both Kay et al., 2012, and Zhang et al., 2019 we compare observations from MISR
+and the AM4.0 simulator output in Figure \ref{fig:misr}.  The optical depth is used to distinguish
+between the thick and thin clouds.  Consistent with comparisons with ISCCP and CALIPSO we see that AM4.0
+has fewer clouds than observed.  The pattern of thick clouds observed by MISR is reproduced fairly well, except in 
+the tropical Indian Ocean.  The pattern of thin clouds is not reproduced as well, particularly in the southern hemisphere 
+tropics.   
+
 The global structure of the cloud fields are shown for the upper level, mid level, and low levels in 
 Figure \ref{fig:calipso_9pan}.  The longitudinally averaged cloud fraction is shown as a function of latitude in the 
-left most panels.  There is a large under-estimation of cloud fraction by (AM4.0: dashed; CALIPSO: solid) between plus/minus 30 
+left most panels.  There is a large under-estimation of cloud fraction by (AM4.0: dashed; CALIPSO: solid) between 
+plus/minus 30 
 degrees for both mid and low-level clouds.   AM4.0 does a much better job with the upper level tropical clouds 
 although there is still a negative bias.   The global maps detail where the biases are occurring.  In the upper 
 levels the clouds are underestimated roughly equally among the deep-tropical and stratocumulus regions.  In the
@@ -118,48 +165,39 @@ simulated clouds  from AM4.0 in the AMIP experiment.
 
 
 
-\begin{figure}
-% figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 1
-  \includegraphics[width=0.86\columnwidth]{cfmipfigs/clt_isccp_calipso_am4_4pan.eps}
-  \caption{Comparison of total cloud fraction from AM4 with two observational data sets: ISCCP (left) and CALIPSO (right).}
-  \label{fig:clt_isccp_calipso}
-\end{figure}
-
-\begin{figure}
-% figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 3
-  \includegraphics[width=0.86\columnwidth]{cfmipfigs/clt_calipso_obs_sim_am4.eps}
-  \caption{Comparison of total cloud fraction.  Top shows observations from CALIPSO, processed for GCM comparison.  Middle 
-  shows output from the CALIPSO simulator, bottom shows raw model output of clt without a simulator.}
-  \label{fig:calipso_sim_vs_mod}
-\end{figure}
-
-\begin{figure}
-% figure generated with cloud_table_AM4fig.ncl
-  \includegraphics[width=0.86\columnwidth]{cfmipfigs/ctp_vs_tau_isccp_modis_am4_obs.eps}
-  \caption{Joint histograms showing the variations of cloud fraction as a function of cloud top pressure and tau.}
-  \label{fig:calipso_sim_vs_mod}
-\end{figure}
-
-\begin{figure}
-% figure generated with cloud_table_AM4fig.ncl
-  \includegraphics[angle=90,width=0.86\columnwidth]{cfmipfigs/calip_9pan_amip_obs_vs_AM4.eps}
-  \caption{Calipso scumstash.  Black line shows meridional profiles of AM4.0 cloud fraction and blue line shows
-  the meridional profile from CALIPSO.}
-  \label{fig:calipso_9pan}
-\end{figure}
-
-
 \section{The Role of Clouds in AM4.0/CM4.0/Aquaplanets in Determining and Influencing Climate Sensitivity}
 
+% A paragraph, either here or earlier that clearly states to what degree and why we think that changes in clouds
+% are a critical element in determining why different models have different sensitivities.  Papers that should probably
+% be cited are Bony and Dufresne, 2005, Webb et al. (the convection off paper), the Bretherton review on cloud 
+% feedbacks, the CFMIP paper?  It would be  nice to cite more of the original papers and less of the review papers.  
+% Probably some of Zelinka's papers.  
+
+The recent model development efforts at GFDL, and participation in CMIP6/CFMIP have provided a 
+unique/valuable opportunity to analyze a group of models that are built on the same code base while 
+spanning a wide range of model configurations.  The model types include (should we include any of the
+efforts from the RCE or Walker Cell configurations?) an Aquaplanet, and AGCM, 
+and a AOGCM.  When combined with a variety of boundary conditions this creates a hierarchy of
+models which are all derived from or dependent on the same atmospheric code base (AM4.0).  It is a 
+bit like a group of siblings sharing the same gene pool but at various stages of intelligence or education.      
+Our hypothesis for this study is that the large range of climate sensitivities that are found within this 
+group of models is in large part due to variations in the clouds (both their climatology and their feedbacks).
+The clouds in these simulations are responding to a variety of different conditions including different
+patterns of prescribed SST, the presence or absence of land/ice, and in the case of the aquaplanet
+experiments, a lack of cloud-aerosol interactions which is present in the amip and coupled experiments.  
+
+% Ringer et al 2014 comparison
 In order to compare to the values of feedback that were reported in Ringer et al., 2014, we use the same method 
 to compute the radiative feedbacks for the GFDL models.  That is, for the abrupt $4xCO_{2}$ experiment, feedbacks are 
 inferred to be the slopes of a linear regression calculation using annual, global-mean top-of-atmosphere flux anomalies 
-(Gregory et al., 2004).  From the atmosphere only experiments (amip-p4K, amipFuture, and aqua-p4K), the feedbacks are calculated as 
+(Gregory et al., 2004).  From the atmosphere only experiments (amip-p4K, amipFuture, and aqua-p4K), the feedbacks 
+are calculated as 
 differences in top-of-atmosphere flux anomalies between the perturbation and control experiments.   
 
+% Beta feedback??  relavent?
 Brient and Bony (2012) proposed what they call the $\beta$ feedback as a way to quantify whether or not ' models have 
 changes in low-cloud cloud radiative effects which are proportional to the strength of the cloud radiative effects of their
-low clouds.'  See $Stevens_etal_Cookie_overview$ for details.   That paper asks the question of whether single 
+low clouds.'  See $\it{Stevens etal, Cookie Overview}$ for details.   That paper asks the question of whether single 
 model relationships between low-cloud amounts and the sensitivity of low clouds to warming can be 
 masked by changes in multi-model ensembles.  This should be checked for the GFDL model in this paper.  
 
@@ -169,21 +207,21 @@ The cloud radiative effect (CRE) is computed as the difference between the all-s
 \begin{center}
 \caption{Global mean radiative feedbacks.  The values for the Abrupt 4xCO2 experiment
 have been estimated from a linear fit of the years 51-300.  Compare to Ringer et al. 2014.}
-    \begin{tabular}{*{5}{c}}
+    \begin{tabular}{*{6}{c}}
     \hline
     \hline
- Feedback & Aqua p4K & Amip p4K & Amip Future & Abrupt 4xCO2    \\ \hline
-    Net          &   -2.2    &  -1.6              & -1.8           &    -0.46 (-0.84; Tim)         \\ 
+ Feedback & Aqua p4K & Amip m4K & Amip p4K & Amip Future & Abrupt 4xCO2    \\ \hline
+    Net          &   -2.2  & ??  &  -1.6              & -1.8           &    -0.46 (-0.84; Tim)         \\ 
     \\
-    Net CRE      & 0.3      & -0.1            & 0.1           & 0.65   \\  
+    Net CRE      & 0.3   & ??  & -0.1            & 0.1           & 0.65   \\  
     \\
-    LW CRE       & 0.4       & 0.1            & 0.1           & 0.14    \\  
+    LW CRE       & 0.4   & ??  & 0.1            & 0.1           & 0.14    \\  
     \\
-    SW CRE      & -0.7       & -0.1          & -0.2          & -0.5              \\  
+    SW CRE      & -0.7  & ?? & -0.1          & -0.2          & -0.5              \\  
     \\
-    LW CLR       & 2.0       & 2.0             & 2.0           & 1.7             \\  
+    LW CLR       & 2.0   & ?? & 2.0             & 2.0           & 1.7             \\  
     \\
-    SW CLR      & -0.1      & -0.3            & -0.3          & -0.6                   \\  \hline
+    SW CLR      & -0.1  & ?? & -0.3            & -0.3          & -0.6                   \\  \hline
 
     \end{tabular}\par
     %\bigskip 
@@ -191,6 +229,8 @@ have been estimated from a linear fit of the years 51-300.  Compare to Ringer et
 \end{center}
 \end{table}
 
+% SST patterns, the pattern effect.  Should my discussion paragraph of the pattern effect be 
+% the same paragraph/discussion as when I discuss Cess experiments?  
 The Cess sensitivity for AM4.0 ($0.57 \, \rm{K\, W^{-1} m^2}$, Z18b, pg 26) is closer to the Cess sensitivity 
 % see page 39 of Zhao et al. 2018 part 1 for discussion of Cess sensitivity.  
 of AM2.1 ($0.54 \, \rm{K\, W^{-1} m^2}$) than AM3.  This is partly due to the method of converting convective cloud condensate to precipitation 
@@ -224,5 +264,9 @@ Clouds in a climate model are highly maleable while also being a dominant factor
 Yet we do not have satisfactory clouds constraints to impose on the clouds of a climate model.  If improving the representation of low-level
 clouds in the GFDL model was the first priority, it could be done.  However it is not the first priority and doing so degrades other elements of 
 the climate.  
+
+One of our goals was to highlight and learn from the influence of clouds feedbacks across a range of GFDL based models.  Our hope 
+is that by looking at models from a single institution rather than a larger ensemble of CMIP models we will avoid inadvertantly 
+masking important relationships by a multi-model ensemble mean.  
 
 \end{document}
