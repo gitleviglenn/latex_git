@@ -1,4 +1,5 @@
 \documentclass[11pt]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+%\documentclass[draft]{agujournal2019}
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
 %\geometry{landscape}                		% Activate for for rotated page geometry
@@ -45,11 +46,13 @@ approximations of clouds, and thus more explicitly simulate some of their impact
 
 %\section{Key Questions}
 
-\textbf{Key Points}
+\textbf{Key Points: choose three}
 \begin{itemize}
   \item{At 25 km, simulations with parameterized shallow- and deep-convection exhibit asymmetries in the circulation, 
   precipitation, and humidity fields resulting in a steady-state overturning circulation that is not centered on the SST
   maximum.}
+  \item{Interactions between clouds and radiation combined with parameterized convection act to shift the precipitation 
+  maximum away from the SST maximum.}
   \item{The longwave cloud-radiative effect is a fundamental factor in establishing these asymmetries and leads to dramatic
   changes in the low-level clouds and boundary layer structure.}
   \item{Cloud resolving simulations result in stronger overturning, more condensate aloft, and a RH in the deep convective 
@@ -181,28 +184,26 @@ schemes.
 
 \begin{table}
 \begin{center}
-\caption{A few specifications of the simulations used most heavily in this study.  In the Convection
-column, `prm'  indicates that convection is parameterized and `expl' indicates convection is explicity.  
-The precipitation values in parenthesis are for the experiments in which LWCRE is off.}
-    \begin{tabular}{*{6}{c}}
+\caption{Specifications of the simulations used most heavily in this study.  In the Convection
+column, `prm'  indicates that convection is parameterized and `expl' indicates explicit convection.}
+    \begin{tabular}{*{5}{c}}
     \hline
     \hline
     \\
- Name & Grid Spacing $(\mathrm{km})$ & Domain $ (\mathrm{km^2}) $& Length $(\mathrm{months}) $ & Convection & 
- $\overline{\rm{P}} (\mathrm{mm/day})$    \\ \hline
-  P100L &  100          &   800 $\times$ 16000    &  60              & prm           &  4.1 (3.5)          \\ 
+ Name & Grid Spacing $(\mathrm{km})$ & Domain $ (\mathrm{km^2}) $& Length $(\mathrm{months}) $ & Convection     \\ \hline
+  P100L &  100          &   800 $\times$ 16000    &  60              & prm                   \\ 
     \\
-  P100 &  100                & 800 $\times$ 4000     & 60            & prm         & 3.9 (3.7)               \\  
+  P100 &  100                & 800 $\times$ 4000     & 60            & prm                     \\  
     \\
-  P25L &  25             & 200 $\times$ 16000      & 60             & prm          & 4.0 (3.8)                \\  
+  P25L &  25             & 200 $\times$ 16000      & 60             & prm                     \\  
     \\
-  P25  &  25             & 200 $\times$ 4000      & 60             & prm           & 3.8 (3.7)               \\  
+  P25  &  25             & 200 $\times$ 4000      & 60             & prm                   \\  
     \\
- E25  &   25          & 200 $\times$ 4000      & 60             & expl          & 3.7 (3.5)               \\  
+ E25  &   25          & 200 $\times$ 4000      & 60             & expl                \\  
     \\
- E2   &   2          & 100 $\times$ 4000      & 6             & expl          & 3.1 (3.4)                \\ 
+ E2   &   2          & 100 $\times$ 4000      & 6             & expl                   \\ 
     \\
- E1   &   1          & 10 $\times$ 4000      & 6             & expl          & 3.3 (3.7)                \\  \hline
+ E1   &   1          & 10 $\times$ 4000      & 6             & expl                 \\  \hline
 
     \end{tabular}\par
     %\bigskip 
@@ -210,38 +211,10 @@ The precipitation values in parenthesis are for the experiments in which LWCRE i
 \end{center}
 \end{table}
 
-\begin{table}
-\begin{center}
-\caption{Domain mean precipitation ($\overline{\rm{P}}$) and outgoing longwave radiation 
-($\overline{\rm{OLR}}$).
-The values in parenthesis are for the experiments in which LWCRE is off.}
-    \begin{tabular}{*{3}{c}}
-    \hline
-    \hline
-    \\
- Name &   $\overline{\rm{P}} (\mathrm{mm/day})$ & $\overline{\rm{OLR}} (\rm{W \, m^-2})$   \\ \hline
-  P100L   &  4.1 (3.5)   &  283.1 (286.9)          \\ 
-    \\
-  P100 &   3.9 (3.7)   &  283.2 (296.4)             \\  
-    \\
-  P25L &   4.0 (3.8)  &  281.2 (290.7)             \\  
-    \\
-  P25  &   3.8 (3.7)    & 282.9 (293.6)             \\  
-    \\
- E25  & 3.7 (3.5)    &   271.9 (286.8)               \\  
-    \\
- E2   &  3.1 (3.4)   &  266.2 (285.5)               \\ 
-    \\
- E1   &  3.3 (3.7)   &  269.3 (289.2)               \\  \hline
-
-    \end{tabular}\par
-    %\bigskip 
-    \label{tab:lambda}
-\end{center}
-\end{table}
 
 All simulations use a nonhydrostatic dynamical core, with prescribed SSTs and a doubly periodic domain which is elongated in the zonal 
-direction allowing for three dimensional simulations but with a reduced computational cost relative to the default global domain.  The SST is prescribed as a Gaussian function which is 4K warmer in the center (301K/27.85C) of the domain then 
+direction allowing for three dimensional simulations but with a reduced computational cost relative to the default global domain.  
+The SST is prescribed as a Gaussian function which is 4K warmer in the center (301K/27.85C) of the domain then 
 at the edges (297K/23.85C).  The GCM runs with 25km and 100km grid-spacing have been run for 5 years while the 
 1km and 2km experiments were run for 6 months.  Experiments with parameterized convection will be labelled with a P prefix, followed
 by a number indicating the grid-spacing in kms while the experiments with explicit convection and no parameterized convection will be 
@@ -267,6 +240,37 @@ clouds was designed to be used with GCMs having a coarse grid-spacing.  However,
 aware of in using the Tiedtke scheme for large-scale clouds in a model with 1km grid-spacing.   The advantage is retaining the 
 identical cloud scheme as is used in the parent GCM; the disadvantage is the greatly increased complexity of the cloud computations 
 relative to many other cloud resolving models.    
+
+\begin{table}
+\begin{center}
+\caption{Domain mean precipitation ($\overline{\rm{P}}$), outgoing longwave radiation 
+($\overline{\rm{OLR}}$), and fraction of domain that is subsiding at the 532 hPa level.
+Values in parenthesis correspond to experiments whith LWCRE is off.}
+    \begin{tabular}{*{4}{c}}
+    \hline
+    \hline
+    \\
+ Name &   $\overline{\rm{P}} (\mathrm{mm/day})$ & $\overline{\rm{OLR}} (\rm{W \, m^-2})$ & SF   \\ \hline
+  P100L   &  4.1 (3.5)   &  283.1 (286.9)    & 0.89 (0.61)      \\ 
+    \\
+  P100 &   3.9 (3.7)   &  283.2 (296.4)  & 0.73 (0.71)           \\  
+    \\
+  P25L &   4.0 (3.8)  &  281.2 (290.7)   & 0.78 (0.69)          \\  
+    \\
+  P25  &   3.8 (3.7)    & 282.9 (293.6)   & 0.80 (0.72)          \\  
+    \\
+ E25  & 3.7 (3.5)    &   271.9 (286.8)   & -            \\  
+    \\
+ E2   &  3.1 (3.4)   &  266.2 (285.5)    & 0.83 (0.77)           \\ 
+    \\
+ E1   &  3.3 (3.7)   &  269.3 (289.2)    & 0.78 (0.78)         \\  \hline
+
+    \end{tabular}\par
+    %\bigskip 
+    \label{tab:lambda}
+\end{center}
+\end{table}
+
 
 One tool that has been commonly used to infer the influence of clouds on a model simulation is to make the clouds invisible to the 
 radiation.  This can tell us the extent to which the specific location of the clouds matters to the radiative interaction with the 
@@ -308,10 +312,10 @@ drying and the strong moistening that results from ascent over the region of max
 Figure \ref{fig:rh_psi_P25vsE25} shows two distinct circulation cells with one below, and one above $500 \rm{hPa}$.  
 Deep-convective activity dominates the 
 region over the warm pool, shallow convection is common over a wider range of SSTs, and for the most part stratocumulus 
-clouds are absent.  When the coupling between the circulation and clouds is broken, by turning off the longwave CRE, the atmospheric 
-state is much more symmetric about the maximum SST.  We also find large differences among the experiments in the domain mean 
-precipitation, condensate/clouds, and circulation (see table 1).  In particular the experiments with parameterized convection are 
-much more erratic.   
+clouds are absent.  When the coupling between the circulation and clouds is broken, by turning off the longwave CRE, 
+the atmospheric state is much more symmetric about the maximum SST.  We also find large differences among the 
+experiments in the domain mean precipitation, condensate/clouds, and circulation (see Table 2).  In particular the 
+experiments with parameterized convection are much more erratic.   
 
 One of the most prominent features of our GCM-like (in particular, P25) simulations is an asymmetry relative to the 
 symmetric SST distribution in both the time-dependent and 
@@ -337,11 +341,6 @@ but the irregularities have
 tended to be symmetric about the SST maximum.  This is broadly consistent with our simulations when the convection is 
 entirely explicit (discussed further in section 4).      
 
-%The abnormality, or asymmetry, of the P25 simulation was the first surprising feature noticed by the authors.
-%This asymmetry is also present on larger domains and at a resolution of $100 \, \rm{km}$.  For some of the other cases observed, such
-%as P100 (on the small domain), the asymmetry can be described as an aversion of the precipitation maxima to reside over the 
-%SST maximum while in other cases, such as the P25 case shown in \ref{fig:rh_psi_P25vsE25}, a strong ($1 \, \rm{m s^-1}$) domain
-%mean shear develops which shifts the precipitation and circulation off center for years at a time.  
 
 %%%%%
 % section 3.1 results
@@ -372,6 +371,10 @@ results in a stronger circulation with more condensate in the deep convective re
 relative to the case with the LW CRE off.   A stronger and spatially concentrated circulation for cases when the 
 clouds interact with the longwave radiation can also be seen in Figures 4, 5, 9 and 10 and is particular apparent in 
 the cases with a large domain (16000 km long dimension).  This will be discussed further in the next section.  
+
+Previous studies have shown that cloud radiative effect act to strengthen and contract an overturning 
+(e.g. Popp and Silvers, 2017, and others (Muller and Held?)).  This was shown to be due to an increased low-level flux
+of moist static energy into the convective regions.  
 
 %\subsection{The Asymmetric Influence of Convective Parameterization and the organizing tendency of LWCRE}
 
@@ -582,8 +585,6 @@ models (E2, E1) show little aversion to the precipitation maximum occurring over
 the P100, P25 and E25 simulations 
 they are able to maintain a smoother distribution of  precipitation values over a broader range of SST values.    
 
-Superposing the circulation and relative humidity illustrates the subsidence driven 
-drying and the strong moistening that results from ascent over the region of maximum latent heat flux.  
 
 The steady state relative humidity and overturning circulation show an interesting combination of similarities and differences
 among the experiments with varying resolutions.  All experiments have a multicell vertical structure (consistent with 
@@ -705,14 +706,14 @@ the upwelling longwave flux of radiation plays a larger role in warming the atmo
 than compensates for the increased OLR.  Thus, with an increase in atmospheric warming on 
 the order of $20 \, \rm{W \,m^{-2}}$ when then LWCRE is off, there is less need for condensational heating and the 
 mean precipitation rate actually decreases.  The large decrease of low-level clouds also 
-leads to a large increase of downward shortwave radiation.  The only slightly increases the
-fluxes of reflected shortwave radiation (about $2 \, \rm{W \,m^{-2}}$) but also contributes to 
+leads to a large increase of downward shortwave radiation.  This only slightly increases the
+fluxes of reflected shortwave radiation (about $2 \, \rm{W \,m^{-2}}$) but does contribute to 
 heating the atmosphere.
+
 Turning the LW CRE off for the E1 and E2 experiments results in more precipitation while, 
-for the E25, P25, and P100 
-experiments, less precipitation results from turning the LW CRE off.  
-The primary method by which the longwave cloud 
-radiative effect influences the atmosphere is by heating the atmosphere in the region between the clouds and the surface.  
+for the E25, P25, and P100 experiments, less precipitation results from turning the LW CRE off.  
+The primary method by which the longwave cloud radiative effect influences the atmosphere is by 
+heating the atmosphere in the region between the clouds and the surface.  
 Larger values of ice condensate and upper-level cloud fraction such as we see for the E2 and E1 experiment 
 therefore imply a larger LW CRE relative to the E25, P25, and P100 experiments in which there are fewer clouds 
 aloft that can emit downwelling longwave radiation.  When the warming effect of the upper level clouds 
@@ -720,20 +721,25 @@ in the E1 and E2 experiments is removed in the LWCRE off experiments the energy 
 must be maintained through an increase of latent heating and subsequent increase of precipitation.  This is 
 reflected in Table 1.  The decrease of precipitation for LWCRE off experiments for the P25 and P100 experiments
 is harder to explain because there is much less upper level cloud to influence the mid-tropospheric heating.  
-However, the low-level clouds of the P25 and P100 experiments are dramatically reduced when the LWCRE is off.  For 
-GCM-like experiments with parameterized convection, the total precipitation is composed of one part from the 
+However, the low-level clouds of the P25 and P100 experiments are dramatically reduced when the LWCRE is off.  
+
+For GCM-like experiments with parameterized convection, the total precipitation is composed of one part from the 
 convective parameterization, and one part from the large-scale cloud scheme.  Figure \ref{fig:conv_vs_ls} shows 
 that when the LWCRE is turned off for the P25 and P100 experiments, the decrease in precipitation comes from 
 a reduction in the large-scale cloud scheme precipitation and not from a decrease in the convective precipitation.       
-This implies there will be less atmospheric heating from 
-longwave radiation and a corresponding larger heating due to condensational heating which is consistent with higher values 
+This implies (is this connected to previous sentence?) there will be less atmospheric heating from 
+longwave radiation (but doesn't LW just cool the atmosphere?) and a corresponding 
+larger heating due to condensational heating which is consistent with higher values 
 of domain mean precipitation for E25, P25, and P100 compared to E2 and E1.  Similarly, the E2 experiment has lower values 
 of upper level condensate and higher values of mid-troposphere relative humidity compared to the E1 simulation, which ....??  
-Water vapor is an efficient emitor of long-wave radiation and thus greatly facilitates the cooling of the troposphere.  
+Water vapor is an efficient emitter of long-wave radiation and thus greatly facilitates the cooling of the troposphere.  
 Popp and Silvers, 2017 showed that that there is dramatically less water vapor in the atmosphere and much less precipitation 
-for LW CRE off experiments (see their figure 1).  Our results here for the E25, P25, and P100 are consistent with 
-those of Popp and Silvers, 2017.  
-
+for LW CRE off experiments (see their figure 1b).  Our results here for the E25, P25, and P100 are consistent with 
+those of Popp and Silvers, 2017 because the low-level condensate strongly decreases when the LWCRE is off.  This is not 
+the case for E2 and E1.  Those experiments have very little low-level condensate to begin with and thus do not experience 
+large changes in low-level condensate when the LWCRE is off.  They do however have a large increase of upper
+level condensate for the LWCRE off experiments.   This is a large difference in the way that models with explicit convection 
+respond to the LWCRE compared to more traditional large-scale models with parameterized convection.   
 
 \begin{figure}
   \centering
@@ -1021,5 +1027,24 @@ Transport of $l$ or $a$ through the boundaries of a grid is given by $A(l)$ or $
 
 Often, cloud resolving models, or cloud system resolving models, do not predict partially cloudy grid cells, but rather consider a cell to be either cloudy or clear.  If the goal is to more directly compare to cloud resolving models then cloud fraction should not be prognostically predicted but simply tied to a certain value of total condensate in a grid-cell.  However, in the Tiedtke system, the prognostic equation for cloud water depends on the cloud fraction.  As given by equations 16, 24, 26,28, 30, and 33 in Tiedtke's paper, this dependence is present in the $S_{BL}$, $C$, $E$, and $G_{p}$ terms. 
 
+%\begin{thebibliography}{}
+%
+%\bibitem[{\textit{Bretherton et~al.}(2005)\textit{Bretherton, Blossey, and
+%  Khairoutdinov}}]{Bretherton_etal_2005}
+%Bretherton, C.~S., P.~N. Blossey, and M.~Khairoutdinov (2005), An
+%  energy-balance analysis of deep convective self-aggregation above uniform
+%  sst, \textit{J. Atmos. Sci.}, \textit{62}, 4273--4292.
+%
+%%\bibitem[{\textit{Jeevanjee and Romps}(2013)}]{Jeevanjee_Romps_2013}
+%%Jeevanjee, N., and D.~M. Romps (2013), Convective self-aggregation, cold pools,
+%%  and domain size, \textit{Geophys.\ Res.\ Lett.}, \textit{40}, 994--99,
+%%  \doi{10.1002/grl.50204}.
+%  
+%\end{thebibliography} 
+  
+%%% Acknowledgements
+%\begin{acknowledgments}
+%(Levi's acknowledgements)
+%\end{acknowledgments}
 
 \end{document}  
