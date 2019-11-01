@@ -136,8 +136,18 @@ approximations of clouds, and thus more explicitly simulate some of their impact
 %capability to better quantify and understand the connection between tropical convective heating and changes in low clouds.    
 \textbf{Paragraphs of Introduction}
 \begin{itemize}
-  \item{Citation of Walker, Bjerness, and Johnson et al. papers to set the stage for why we are writing this paper.  The reality is that we 
-  were also inspired by Schneider et al. 2017.  Is it possible to tie all that together in a sensible way?  Johnson et al. discusses the trade inversion and the high statitic stability in the subtropics.  He contrasts the thermodynamic arguments of Kloesel and Albrecht (1989) 
+  \item{Within the tropical Pacific are strong overturning circulations, deep convective towers, abundant shallow cumulus/congestus, and congestus clouds.  The Hadley circulation connects the tropical pacific with subtropics and has been extensively studies (review paper?).  The circulation first 
+  noted by Sir Gilbert Walker, and described by \citeA{Bjerknes1969} connects the Indonesian region that is dominated by deep convection to the 
+  eastern Pacific region which tends to be populated more by shallow cumulus and, in the subtropics, stratocumulus clouds.  This circulation
+   has come to be 
+  known as the Walker Circulation and has received much less attention than the Hadley circulation (Geisler, 1981; Bretherton et al., 2006; Wofsy and Kuang, 2012; Schwendike et al., 2014).  Previous studies have focused on observations (Walker, Bjerknes), theory (Geisler, 1981), 
+  or modeling studies (Bretherton et al., 2006; Wofsy and Kuang, 2012).  The modeling studies have compared theoretical models with cloud
+  resolving models.  One of the primary motivations of this paper is to compare cloud resolving model simulations of the Walker Circulation with 
+  simulations from a GCM used on a doubly periodic domain.    What about Johnson et al.?}
+The reality is that we 
+  were also inspired by Schneider et al. 2017.  Is it possible to tie all that together in a sensible way?  
+Johnson et al. discusses the trade inversion and the high statitic stability in the subtropics.  He contrasts 
+the thermodynamic arguments of Kloesel and Albrecht (1989) 
   and Sun and Lindzen (1993) with the dynamic-thermodynamic argument of Schubert et al. 1995.  What say I?}
   \item{The Walker Circulation as way of imposing realistic large-scale circulations, as opposed to spontaneously generated large-scale
   circulations.  Previous studies of RCE have proven to be a 
@@ -147,9 +157,7 @@ approximations of clouds, and thus more explicitly simulate some of their impact
   some of the ambiguity.  The mock-Walker circulation also allows for a simple way of studying in physical space, the connection
   between column relative humidity and circulation in a way that is directly tied to the physical state of the system rather than with
   a forced compositing of the data  
-  \cite{Bretherton2005, Muller2012}.
-  %Bretherton et al. 2005, Muller and Held, 2012)
-  }
+  \cite{Bretherton2005, Muller2012}.}
   \item{On the importance of reducing component, or sub-grid scale uncertainty through the use of both parameterized and explicit 
   convection.  This paragraph could also cite papers which have helped to validate RCE in general, and the channel RCE configuration
   in particular.  To what extent do RCE simulations of CSA agree between GCMs and CRMs?  Perhaps here I can hint at the utility of 
@@ -263,26 +271,27 @@ relative to many other cloud resolving models.
 \begin{table}
 \begin{center}
 \caption{Domain mean precipitation ($\overline{\rm{P}}$), outgoing longwave radiation 
-($\overline{\rm{OLR}}$), and subsidence fraction (SF)  or fraction of domain that is subsiding at the 532 hPa level.
+($\overline{\rm{OLR}}$), precipitable water ($\overline{\rm{PW}}$), and subsidence fraction (SF)  
+or fraction of domain that is subsiding at the 532 hPa level.
 Values in parenthesis correspond to experiments whith LWCRE is off.}
-    \begin{tabular}{*{4}{c}}
+    \begin{tabular}{*{5}{c}}
     \hline
     \hline
     \\
- Name &   $\overline{\rm{P}} (\mathrm{mm/day})$ & $\overline{\rm{OLR}} (\rm{W \, m^-2})$ & SF   \\ \hline
-  P100L   &  4.1 (3.5)   &  283.1 (286.9)    & 0.89 (0.61)      \\ 
+ Name &   $\overline{\rm{P}} (\mathrm{mm/day})$ & $\overline{\rm{OLR}} (\rm{W \, m^-2})$ & $\overline{\rm{PW}} (\rm{mm})$ & SF   \\ \hline
+  P100L   &  4.1 (3.5)   &  283.1 (286.9)  & 36.6 (31.3)  & 0.89 (0.61)      \\ 
     \\
-  P100 &   3.9 (3.7)   &  283.2 (296.4)  & 0.73 (0.71)           \\  
+  P100 &   3.9 (3.7)   &  283.2 (296.4)  & 28.0 (26.8) & 0.73 (0.71)           \\  
     \\
-  P25L &   4.0 (3.8)  &  281.2 (290.7)   & 0.78 (0.69)          \\  
+  P25L &   4.0 (3.8)  &  281.2 (290.7)   & 35.0 (32.9) & 0.78 (0.69)          \\  
     \\
-  P25  &   3.8 (3.7)    & 282.9 (293.6)   & 0.80 (0.72)          \\  
+  P25  &   3.8 (3.7)    & 282.9 (293.6)   & 27.4 (26.4) & 0.80 (0.72)          \\  
     \\
- E25  & 3.7 (3.5)    &   271.9 (286.8)   & -            \\  
+ E25  & 3.7 (3.5)    &   271.9 (286.8)   & 28.7 (27.3) & -            \\  
     \\
- E2   &  3.1 (3.4)   &  266.2 (285.5)    & 0.83 (0.77)           \\ 
+ E2   &  3.1 (3.4)   &  266.2 (285.5)    & 27.0 (25.2) & 0.83 (0.77)           \\ 
     \\
- E1   &  3.3 (3.7)   &  269.3 (289.2)    & 0.78 (0.78)         \\  \hline
+ E1   &  3.3 (3.7)   &  269.3 (289.2)    & 27.3 (26.5) & 0.78 (0.78)         \\  \hline
 
     \end{tabular}\par
     %\bigskip 
@@ -529,6 +538,16 @@ precipitation does not significantly change in these cases, only the spatial str
   \label{fig:domdep_lwoff}
 \end{figure}
 
+\begin{figure}
+  \centering
+       \includegraphics[width=0.45\columnwidth]{walkerfigs/Cond_Walker_P100vsP25_lgvsm_lwoff.eps}
+          \caption{Domain mean total condensate (liquid + ice) for P100 (red) and P25 (yellow) on the domain 
+          with a long dimension of 16,000km (thick) and 4,000 (thin).  Solid lines show experiments with LWCRE on
+          and dashed lines experiments with LWCRE off.}
+  \label{fig:TotCond}
+\end{figure}
+
+
 Smaller domains were found to have a more focused ascent region and larger precipitation rates in Bretherton et al., 2006.
 They also found less low-level clouds over the colder SSTs in the small domains, relative to a control domain size that was 4x
 larger.   In contrast, here larger domains have larger precipitation rates (Table 2).  For the LWCRE off cases, in agreement 
@@ -692,11 +711,12 @@ require a correspondingly larger amount of condensational heating and precipitat
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.3\columnwidth]{walkerfigs/MnTotCondProf.eps}
+      %\includegraphics[width=0.3\columnwidth]{walkerfigs/MnTotCondProf.eps}
+       \includegraphics[width=0.45\columnwidth]{walkerfigs/Cond_Walker_E25E2E1_lwoff.eps}
           \caption{Domain mean total condensate (liquid + ice) for P25 (thin yellow), E25 (yellow), 
           E2 (blue), and E1 (green).  Solid lines show experiments with LWCRE on
           and dashed lines experiments with LWCRE off.  All lines correspond to experiments with explicit 
-          convection except the thin yellow lines which have the convective parameterization turned on.}
+          convection.}
   \label{fig:TotCond}
 \end{figure}
 
