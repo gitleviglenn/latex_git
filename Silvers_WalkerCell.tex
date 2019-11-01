@@ -148,7 +148,7 @@ The reality is that we
   were also inspired by Schneider et al. 2017.  Is it possible to tie all that together in a sensible way?  
 Johnson et al. discusses the trade inversion and the high statitic stability in the subtropics.  He contrasts 
 the thermodynamic arguments of Kloesel and Albrecht (1989) 
-  and Sun and Lindzen (1993) with the dynamic-thermodynamic argument of Schubert et al. 1995.  What say I?}
+  and Sun and Lindzen (1993) with the dynamic-thermodynamic argument of Schubert et al. 1995.  What say I?
   \item{The Walker Circulation as way of imposing realistic large-scale circulations, as opposed to spontaneously generated large-scale
   circulations.  Previous studies of RCE have proven to be a 
   useful tool with which to explore the basic physics of climate and climate sensitivity, but they lack a large-scale circulation.  Many 
@@ -527,14 +527,20 @@ precipitation does not significantly change in these cases, only the spatial str
 % new Hovmoller diagram
 \begin{figure}
   \includegraphics[angle=90, width=0.95\columnwidth]{walkerfigs/hov_precip_4pan_vert_lwcreon.eps}
-  \caption{Evolution of precipitation through 3 years of simulation for a grid spacing of 25km (2 panels on right) and
-  100km (two panels on left).  For each resolution, domains with a width of 4,000 km and 16,000 km are shown.}
+  \caption{Evolution of precipitation through 3 years of simulation.  From left, large domain 100km, (P100L); 
+  small domain 100km, (P100); large domain 25km, (P25L); small domain 25km (P25).  
+  For each resolution, the only difference between the two experiments shown is a domain length of 
+  16,000 km or 4,000 km.}
   \label{fig:domdep}
 \end{figure}
 
 \begin{figure}
   \includegraphics[angle=90, width=0.95\columnwidth]{walkerfigs/hov_precip_4pan_vert_lwcreoff.eps}
-  \caption{Identical to previous figure, except that LW CRE is now off.}
+  \caption{Identical to previous figure, except that LW CRE is now off.  Evolution of precipitation through 
+  3 years of simulation.  From left, large domain 100km, (P100L); 
+  small domain 100km, (P100); large domain 25km, (P25L); small domain 25km (P25).  
+  For each resolution, the only difference between the two experiments shown is a domain length of 
+  16,000 km or 4,000 km.}
   \label{fig:domdep_lwoff}
 \end{figure}
 
@@ -544,7 +550,7 @@ precipitation does not significantly change in these cases, only the spatial str
           \caption{Domain mean total condensate (liquid + ice) for P100 (red) and P25 (yellow) on the domain 
           with a long dimension of 16,000km (thick) and 4,000 (thin).  Solid lines show experiments with LWCRE on
           and dashed lines experiments with LWCRE off.}
-  \label{fig:TotCond}
+  \label{fig:TotCond_P25P100}
 \end{figure}
 
 
@@ -681,32 +687,7 @@ of the P25 experiment is more than $40\%$ dryer in the region with deep-convecti
 The high resolution experiments also have higher amounts of condensate throughout the troposphere, and much higher
 relative humidity above about 300 hPa. 
 
-Despite a fairly regular distribution of precipitation around the SST maximum for experiments with increasing resolution, the 
-surface enthalpy flux reveals large differences in the symmetry.   Figure \ref{fig:enthalpy} shows the surface enthalpy flux, 
-the equivalent potential temperature, and the u-component wind field for E1,E2, and E25 both with (thick lines) and 
-without (thin lines) the LW CRE.  
-Over the SST maximum, E25 has a surface enthalpy flux that is 
-60 W/m2 larger than that of the E1 experiment, and the E1 experiment has a very irregular pattern of enthalpy flux in the middle
-half of the domain.  It appears that these differences in magnitude and regularity are due to the differing wind speeds among 
-the three experiments.  The asymmetry in the enthalpy flux is also apparent in the lowest model level of the atmosphere
-and the E1 experiment also has the largest domain mean wind shear of the three models.  This is consistent with the 
-strong asymmetries of the P25 experiment being connected to a large domain mean wind shear in that experiment.  
-It is also worth noting that the E1 experiment has a stronger domain mean u wind shear compared 
-with the E2 and E25 experiments.  Figure \ref{fig:enthalpy} also shows that over the warm patch of SST, the surface 
-enthalpy flux is decreased by the LWCRE for E25, E2, and E1 despite these experiments having stronger low-level winds.  
-This decreased enthalpy flux also corresponds to an increased amount of specific humidity in the lowest atmospheric 
-model level.        
-%%%%%
-% section 3 of results
 
-% Hovmoller diagram of precipitation for the first 6 months of the 25km, 2km, and 1km experiments
-% LW CRE on
-
-
-Figure \ref{fig:cf_tdtlw} shows E2 to have the largest (about 17\%) upper level mean cloud
-fraction in the subsidence region, with the E1 experiment having the next largest cloud fraction (10\%), followed by 
-P100, E25, and P25 (3-5\%).   Less upper level clouds will allow more radiative cooling of the atmosphere and 
-require a correspondingly larger amount of condensational heating and precipitation.    
 
 
 \begin{figure}
@@ -720,35 +701,71 @@ require a correspondingly larger amount of condensational heating and precipitat
   \label{fig:TotCond}
 \end{figure}
 
-
-The influence of resolution on the atmospheric state is clearly illustrated with the LW CRE off experiments shown 
-in Figure \ref{fig:rh_psi_P25E2E1_lwoff}.
-The two-dimensional structure of circulation and humidity shows that the amount of condensate aloft in the 
-deep-convective region and the range of relative
-humidity values between the ascent and descent regions increase with resolution.  It is also apparent in Figure
+The influence of resolution on the atmospheric state can be clearly seen in the two-dimensional structure 
+of circulation and humidity.   Figures \ref{fig:rh_psi_P25E2E1} and \ref{fig:rh_psi_P25E2E1_lwoff} show 
+the humidity, condensate, and circulation with and without the LWCRE.  Both figures illustrate that the E1
+and E2 experiments have a stronger deep overturning circulation above the warm patch and they have 
+significantly more condensate aloft in this region.      
+It is also apparent in Figure \ref{fig:rh_psi_P25E2E1} and 
 \ref{fig:rh_psi_P25E2E1_lwoff} that the condensate below 800 hPa decreases with increasing resolution.  
 This is consistent with an overturning circulation that 
-strengthens as the resolution increases.  Figure \ref{fig:rh_psi_P25E2E1_lwoff} also shows greater asymmetries 
+strengthens as the resolution increases and transports more moisture to the mid-troposphere.
+It is also consistent with weaker mixing from shallow clouds as resolution decreases as
+discussed in \citeA{Pauluis2006}.   
+Figure \ref{fig:rh_psi_P25E2E1_lwoff} also shows greater asymmetries 
 and generally weaker circulations below about 500 hPa.  
-When the clouds and radiation are allowed to directly interact with each other the E2 and E1 simulations 
-appear much more similar (Figure \ref{fig:rh_psi_P25E2E1}).  The simulations with LW CRE also have a better
-organized and stronger circulation below 500 hPa.     
+When the clouds and radiation directly interact with each other the experiments have a better
+organized and stronger circulation below 500 hPa and the E2 and E1 simulations 
+appear much more similar (Figure \ref{fig:rh_psi_P25E2E1}) than they do with LWCRE off. 
 
 The domain mean condensate is an important measure of the steady state reached by these experiments.  The vertical 
 distribution of condensate is closely related to the distribution of clouds.  This in turn influences the distribution of 
 energy throughout the atmosphere and the longwave radiation that is emitted to space.  It can also indicate the 
 strength of convection 
-and vertical mass transport.     Figure \ref{fig:TotCond} shows the domain mean condensate for P25, E25, E2, and E1
-(solid lines) and the corresponding experiments with the LWCRE off (dashed lines).  There is a significant difference 
-between the GCM-like P25/E25 experiments and the CRM-like E2/E1 experiments with the former having much 
+and vertical mass transport.     Figure \ref{fig:TotCond} shows the domain mean condensate for E25, E2, and E1
+(solid lines) and the corresponding experiments with the LWCRE off (dashed lines), profiles for the experiments
+with parameterized convection were discussed in the previous section (Figure \ref{fig:TotCond_P25P100}).  
+There is a significant difference 
+between the GCM-like P100, P25 and E25 experiments and the CRM-like E2 and E1 experiments with the former having much 
 higher values of low-level liquid condensate/cloud and the later having much higher values of upper level ice 
-condensate.  The LWCRE off experiments influence the low-levels of the GCM-like experiments, and the upper-level
-regions of the CRM-like experiments.     It is also interesting to note that the LWCRE results in less condensate 
-above 700 hPa for all experiments, and more condensate below 700 hPa for the P25/E25 experiments.  
+condensate.  \citeA{Pauluis2006} showed that for decreasing resolution an RCE model had a moist bias in the 
+subcloud layer and a dry bias in the troposphere above.  This is what our results show as well.   
 
-The E25 and P25 experiments have much less condensate aloft and a lower relative humidity in the mid-troposphere
-where the differences in strength of the overturning circulation are most pronounced. 
-(can we use this to understand the differences in LWCRE?).  
+Examining the LWCRE reveals an interesting difference between the coarse experiments with parameterized convection
+and the CRM-like experiments.  Interactive LWCRE lead to less upper level ice-condensate for our CRM experiments
+with the effect increasing as the resolution increases (Figure \ref{fig:TotCond}).  The opposite occurs for our 
+GCM-like experiments.  The interactive LWCRE increase the amount of upper level ice-condensate 
+(Figure \ref{fig:TotCond_P25P100}.     
+The LWCRE off experiments influence the low-levels of the GCM-like experiments, and the upper-level
+regions of the CRM-like experiments.     
+%the LWCRE results in less condensate 
+%above 700 hPa for all experiments, and more condensate below 700 hPa for the P25/E25 experiments.  
+
+%The E25 and P25 experiments have much less condensate aloft and a lower relative humidity in the mid-troposphere
+%where the differences in strength of the overturning circulation are most pronounced. 
+%(can we use this to understand the differences in LWCRE?).  
+
+Despite a fairly regular distribution of precipitation around the SST maximum for experiments with increasing resolution, the 
+surface enthalpy flux reveals large differences in the symmetry.   Figure \ref{fig:enthalpy} shows the surface enthalpy flux, 
+the equivalent potential temperature, and the u-component wind field for E1,E2, and E25 both with (thick lines) and 
+without (thin lines) the LW CRE.  
+Over the SST maximum, E25 has a surface enthalpy flux that is 
+60 W/m2 larger than that of the E1 experiment, and the E1 experiment has a very irregular pattern of enthalpy flux in the middle
+half of the domain.  It appears that these differences in magnitude and regularity are due to the differing low-level 
+wind speeds among 
+the three experiments.  The asymmetry in the enthalpy flux is also apparent in the lowest model level of the atmosphere.  
+This is consistent with the 
+strong asymmetries of the P25 experiment being connected to a large domain mean wind shear in that experiment.  
+It is also worth noting that the E1 experiment has a stronger domain mean u wind shear compared 
+with the E2 and E25 experiments.  Figure \ref{fig:enthalpy} also shows that over the warm patch of SST, the surface 
+enthalpy flux is decreased by the LWCRE for E25, E2, and E1 despite these experiments having stronger low-level winds.  
+This decreased enthalpy flux also corresponds to an increased amount of specific humidity in the lowest atmospheric 
+model level.     
+
+Figure \ref{fig:cf_tdtlw} shows E2 to have the largest (about 17\%) upper level mean cloud
+fraction in the subsidence region, with the E1 experiment having the next largest cloud fraction (10\%), followed by 
+P100, E25, and P25 (3-5\%).   Less upper level clouds will allow more radiative cooling of the atmosphere and 
+require a correspondingly larger amount of condensational heating and precipitation.    
 
 %\begin{figure}
 %  \centering
@@ -770,63 +787,92 @@ where the differences in strength of the overturning circulation are most pronou
 \end{figure}
 
 
-An interesting fact that emerges from the domain mean values of precipitation (see Table 2) 
-is that the sign of the response to LWCRE is not the same across the different grid-spacings.
-When clouds are not allowed to interact with the longwave radiation the atmosphere can cool 
-much more efficiently, as evidenced by larger values of OLR for all experiments when the LWCRE is
-off.  Typically, the atmospheric cooling can be thought of as a proxy for the mean precipitation 
-because the cooling is primarily offset by condensational heating.  This is clearly not the case 
-for the E25, P25, and P100 cases for which the domain mean precipitation rates decrease despite
-an increased amount of atmospheric cooling.  The implication is that the requisite atmospheric 
-heating is coming from a process other than condensation.  The solution lies in the energy 
-budget of the surface.  A fixed SST means that in all cases the upward flux of longwave energy
-is constant, the upward flux of sensible heat flux will be mostly fixed (barring variations in surface
-wind), and changes in downward shortwave flux will not be able to warm the surface.  However, 
-the dramatic decrease of low-level clouds for the E25, P25, and P100 experiments when LWCRE is
-off strongly influences the net flux of longwave energy at the surface (does the downwelling longwave
-flux change becuase there are less clouds or because they are invisible to radiation?).  Under 
-natural conditions with an interactive surface, the surface is warmed by a downward flux of longwave 
-radiation due to the clouds
-above.  When this source of atmospheric energy loss is removed in the LWCRE off experiments 
-the upwelling longwave flux of radiation plays a larger role in warming the atmosphere that more 
-than compensates for the increased OLR at the top of the atmosphere.  Thus, with an increase in 
-atmospheric warming on 
-the order of $20 \, \rm{W \,m^{-2}}$ when then LWCRE is off, there is less need for condensational 
-heating.  The mean precipitation rate actually decreases.  The large decrease of low-level clouds also 
-leads to a large increase of downward shortwave radiation.  This only slightly increases the
-fluxes of reflected shortwave radiation (about $2 \, \rm{W \,m^{-2}}$) but does contribute to 
-heating the atmosphere.
+An interesting point that emerges from the domain mean values of precipitation (see Table 2) 
+is that the sign of the response to LWCRE is not the same across the different resolutions.
+When clouds are not allowed to interact with the longwave radiation the atmosphere 
+emits more radiation to space, as evidenced by larger values of $\overline{\rm{OLR}}$ 
+for all experiments when the LWCRE is
+off.  Atmospheric radiative cooling can be thought of as a proxy for the mean precipitation 
+because the cooling is balanced primarily by condensational heating.  Larger values of 
+$\overline{\rm{OLR}}$ would correspond to larger values of $\overline{\rm{P}}$.  
+This is clearly not the case 
+for the E25, P25, and P100 cases.   \textit{The domain mean precipitation rates decrease despite
+an increased amount of atmospheric cooling.}  The implication is that the requisite atmospheric 
+heating must come from a process other than condensation.  
 
-Turning the LW CRE off for the E1 and E2 experiments results in more precipitation while, 
-for the E25, P25, and P100 experiments, less precipitation results from turning the LW CRE off.  
+The solution lies in the energy budget of the surface.  
+A fixed SST means that the upward flux of longwave energy
+is constant.  The upward flux of sensible heat flux will be mostly fixed (barring variations in surface
+wind) because changes in the downward flux of solar radiation will not warm the surface.  
+However, the dramatic decrease of low-level clouds for the E25, P25, and P100 LWCRE off 
+experiments strongly influences the net flux of longwave energy at the surface. 
+Low-level clouds normally serve as a significant source of longwave radiative cooling 
+for the atmosphere.  Making these clouds invisible to radiation creates a source of 
+effective atmospheric warming.  
+%(does the downwelling longwave
+%flux change because there are less clouds or because they are invisible to radiation?).  
+With an interactive surface, the surface temperature is influenced
+by a downward flux of longwave radiation from the clouds above.  
+When this source of atmospheric energy loss is removed in the LWCRE off experiments 
+the upwelling longwave flux of radiation plays a larger role in warming the atmosphere that more 
+than compensates for the increased OLR at the top of the atmosphere.  There is an increase in 
+atmospheric warming on 
+the order of $20 \, \rm{W \,m^{-2}}$ when then LWCRE is off and thus there is less need for 
+condensational heating.  The mean precipitation rate actually decreases.  
+The large decrease of low-level clouds also leads to an increase of downward shortwave 
+radiation.  Because of the low albedo of water
+this only slightly increases the fluxes of reflected shortwave radiation (about $2 \, \rm{W \,m^{-2}}$) 
+but does contribute slightly to heating the atmosphere.
+
+In contrast to the P100, P25, and E25 experiments just discussed, turning the LW CRE off for 
+the E1 and E2 experiments results in more precipitation.  This can be understood as follows.  
 The primary method by which the longwave cloud radiative effect influences the atmosphere is by 
 heating the atmosphere in the region between the clouds and the surface.  
-Larger values of ice condensate and upper-level cloud fraction such as we see for the E2 and E1 experiment 
-therefore imply a larger LW CRE relative to the E25, P25, and P100 experiments in which there are fewer clouds 
-aloft that can emit downwelling longwave radiation.  When the warming effect of the upper level clouds 
+Larger values of ice condensate and upper-level cloud fraction as seen in the E2 and E1 experiment 
+(Figure \ref{fig:TotCond}) 
+therefore imply a larger atmospheric heating due to the CRE relative to the E25, P25, and P100 
+experiments in which have fewer clouds aloft (Figures \ref{fig:TotCond} and \ref{fig:TotCond_P25P100}).  
+When the warming effect of the upper level clouds 
 in the E1 and E2 experiments is removed in the LWCRE off experiments the energy balance of the atmosphere 
 must be maintained through an increase of latent heating and subsequent increase of precipitation.  This is 
-reflected in Table 1.  The decrease of precipitation for LWCRE off experiments for the P25 and P100 experiments
-is harder to explain because there is much less upper level cloud to influence the mid-tropospheric heating.  
-However, the low-level clouds of the P25 and P100 experiments are dramatically reduced when the LWCRE is off.  
+reflected in Table 2.  
 
-For GCM-like experiments with parameterized convection, the total precipitation is composed of one part from the 
-convective parameterization, and one part from the large-scale cloud scheme.  Figure \ref{fig:conv_vs_ls} shows 
-that when the LWCRE is turned off for the P25 and P100 experiments, the decrease in precipitation comes from 
-a reduction in the large-scale cloud scheme precipitation and not from a decrease in the convective precipitation.       
-This implies (is this connected to previous sentence?) there will be less atmospheric heating from 
-longwave radiation (but doesn't LW just cool the atmosphere?) and a corresponding 
-larger heating due to condensational heating which is consistent with higher values 
-of domain mean precipitation for E25, P25, and P100 compared to E2 and E1.  Similarly, the E2 experiment has lower values 
-of upper level condensate and higher values of mid-troposphere relative humidity compared to the E1 simulation, which ....??  
+These experiments provide insight into the different mechanisms by which the clouds in GCMs and CRMs
+interact with longwave radiation in the atmosphere.  Because there are so many more low-level clouds in 
+the GCM-like experiments we see a strong response to upwelling radiation from the surface.  In contrast, 
+the abundance of upper-level ice condensate, and lack of low-level condensate in the CRM-like 
+experiments results in the primary interaction
+between clouds and radiation being in the atmosphere below the upper level clouds.       
+
+%The decrease of precipitation for LWCRE off experiments for the P25 and P100 experiments
+%is harder to explain because there is much less upper level cloud to influence the mid-tropospheric heating.  
+%However, the low-level clouds of the P25 and P100 experiments are dramatically reduced when the LWCRE is off.  
+%
+%For GCM-like experiments with parameterized convection, the total precipitation is composed of one part from the 
+%convective parameterization, and one part from the large-scale cloud scheme.  Figure \ref{fig:conv_vs_ls} shows 
+%that when the LWCRE is turned off for the P25 and P100 experiments, the decrease in precipitation comes from 
+%a reduction in the large-scale cloud scheme precipitation and not from a decrease in the convective precipitation.       
+
+%This implies (is this connected to previous sentence?) there will be less atmospheric heating from 
+%longwave radiation (but doesn't LW just cool the atmosphere?) and a corresponding 
+%larger heating due to condensational heating which is consistent with higher values 
+%of domain mean precipitation for E25, P25, and P100 compared to E2 and E1.  
+
+%Similarly, the E2 experiment has lower values 
+%of upper level condensate and higher values of mid-troposphere relative humidity compared to the E1 simulation, which ....??  
+
 Water vapor is an efficient emitter of long-wave radiation and thus greatly facilitates the cooling of the troposphere.  
-Popp and Silvers, 2017 showed that that there is dramatically less water vapor in the atmosphere and much less precipitation 
-for LW CRE off experiments (see their figure 1b).  Our results here for the E25, P25, and P100 are consistent with 
-those of Popp and Silvers, 2017 because the low-level condensate strongly decreases when the LWCRE is off.  This is not 
-the case for E2 and E1.  Those experiments have very little low-level condensate to begin with and thus do not experience 
-large changes in low-level condensate when the LWCRE is off.  They do however have a large increase of upper
-level condensate for the LWCRE off experiments.   This is a large difference in the way that models with explicit convection 
-respond to the LWCRE compared to more traditional large-scale models with parameterized convection.   
+Popp and Silvers, 2017 showed that there is dramatically less condensate in the atmosphere and much less precipitation 
+(at the equator) 
+for LW CRE off experiments (see their figure 1a,b).  Our results here for the E25, P25, and P100 are consistent with 
+those of Popp and Silvers, 2017 because the low-level condensate are strongly decreased when the LWCRE is off.  
+%This is not the case for E2 and E1.  Those experiments have little low-level condensate to begin with 
+%%and thus do not experience 
+%%large changes in low-level condensate when the LWCRE is off.  
+%but they do have a large increase of upper
+%level condensate for the LWCRE off experiments.   
+%This is a large difference in the way that models with explicit convection 
+%respond to the LWCRE compared to more traditional large-scale models with parameterized convection.   
 
 
 \begin{figure}
@@ -837,32 +883,7 @@ respond to the LWCRE compared to more traditional large-scale models with parame
     with the LW CRE off.}
     \label{fig:enthalpy}
 \end{figure}
-  
-%  \caption{Variables important to boundary layer energy fluxes.  Top left panel shows the surface enthalpy flux ($\rm{W m^{-2}}$) and top right panel shows the equivalent potential temperature on the model level closest to the surface.  The panel on bottom left shows the $u$ wind ($\rm{m s^{-1)}}$)
-%  on the model level closest to the surface and the panel on bottom right shows the domain mean
-%  $\rm{u}$ wind.}
-  
-  
-%% surface enthalpy flux
-%\begin{figure}
-%  \centering
-%  \begin{minipage}{0.4\textwidth}
-%    \centering
-%      \includegraphics[width=0.96\columnwidth]{walkerfigs/sfcenthalpyflx_3mods_lwcreOn.eps} 
-%    \end{minipage}
-%    \begin{minipage}{0.4\textwidth}
-%    \centering
-%      \includegraphics[width=0.96\columnwidth]{walkerfigs/sfcenthalpyflx_3mods_lwcreOff.eps}
-%    \end{minipage}
-%    \caption{Surface enthalpy flux (solid lines) for the three grid-spacings.  Dashed lines show the individual components 
-%    (latent and sensible heat flux) of the enthalpy.
-%    On the left are experiments with LWCRE on and on the right, the same experiments but with LWCRE off.}
-%    \label{fig:enthalpy}
-%\end{figure}
 
-
-There are also differences in the lapse-rate below $700 \rm{hPa}$, in the upper-level clouds,
-and the domain mean precipitation (Figure \ref{fig:precip_dom_mn}).
   
 We can see clearly that the interactions between longwave radiation and clouds act to dry the troposphere in the regions of subsidence 
 more than the cases when the longwave CRE is not active.  This is especially true for the simulations with a grid-spacing of 1 km 
@@ -882,63 +903,6 @@ m^2}$.   These differences in surface enthalpy flux are due largely to the laten
 confined to the regions with ascending circulations over the warmer SST.  This manifestation of the strong interactions between clouds and the circulation 
 would be entirely absent from high resolution simulations with gray radiation or fixed radiative cooling profiles.  
 
-%% Domain mean vertical structure for 25km, 2km, and 1km resolutions
-%% LW CRE on
-%\begin{figure}
-%  \includegraphics[width=0.8\columnwidth]{walkerfigs/Walker_VertStr_LWCRE_b.eps}
-%  \caption{Domain mean vertical structure for simulations with a grid spacing of 25km (yellow, parameterized convection), 2km (blue), and 1km (green).  
-%  All experiments have active LWCRE.  The dotted lines of RH show the mean over the cold pool regions.  Thin lines on the lapse rate panel show the moist adiabat for reference.}
-%  \label{fig:vertst_lwcre}
-%\end{figure}
-%
-%% Domain mean vertical structure for 25km, 2km, and 1km resolutions
-%% LW CRE off
-%\begin{figure}
-%  \includegraphics[width=0.86\columnwidth]{walkerfigs/Walker_VertStr_LWCREoff.eps}
-%  \caption{Domain mean vertical structure for simulations with a grid spacing of 25km (yellow, parameterized convection), 2km (blue), and 1km (green).  
-%  All experiments have LWCRE off.  The dotted lines of RH show the mean over the cold pool regions.  Thin lines on the lapse rate panel show the moist adiabat for reference.}
-%  \label{fig:vertst_lwcre_off}
-%\end{figure}
-%
-%% RH and Psi for 1km, 2km, and 25km simulations			
-%\begin{figure}
-%  \centering
-%  \begin{minipage}{0.49\textwidth}
-%    \centering
-%      %\includegraphics[width=0.5\columnwidth]{randomfigs/psi_rh_1km_lwoff.eps} 
-%      \includegraphics[width=0.96\columnwidth]{walkerfigs/psi_rh_1km_ctl.eps} 
-%    %\caption{{\bf default}}
-%    \end{minipage}
-%    \begin{minipage}{0.49\textwidth}
-%    \centering
-%      \includegraphics[width=0.96\columnwidth]{walkerfigs/psi_rh_1km_lwoff.eps}
-%      %\caption{{\bf default}}
-%    \end{minipage}
-%    \begin{minipage}{0.49\textwidth}
-%    \centering
-%      \includegraphics[width=0.96\columnwidth]{walkerfigs/psi_rh_2km_ctl.eps}
-%      %\caption{{\bf default}}
-%    \end{minipage}
-%    \begin{minipage}{0.49\textwidth}
-%    \centering
-%      \includegraphics[width=0.96\columnwidth]{walkerfigs/psi_rh_2km_lwoff.eps}
-%      %\caption{{\bf default}}
-%    \end{minipage}
-%    \begin{minipage}{0.49\textwidth}
-%    \centering
-%      \includegraphics[width=0.96\columnwidth]{walkerfigs/psirh_noconv_ensind0_contint5.eps}
-%      %\caption{{\bf default}}
-%    \end{minipage}
-%    \begin{minipage}{0.49\textwidth}
-%    \centering
-%      \includegraphics[width=0.96\columnwidth]{walkerfigs/psirh_noconv_lwoff_ensind3_contint5.eps}
-%      %\caption{{\bf default}}
-%    \end{minipage}
-%    \caption{Relative humidity is shown by the shading while the mass streamfunction is given my the black contour lines.  The top row shows the 1km experiments, the middle row the 2km
-%    experiments, and the bottom row the 25 km experiments.  Experiments with LWCRE are on the left and 
-%    experiments without are on the right.}
-%\end{figure}
-%
 
 
 \section{Conclusions}
