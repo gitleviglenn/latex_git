@@ -266,26 +266,27 @@ relative to many other cloud resolving models.
 \begin{table}
 \begin{center}
 \caption{Domain mean precipitation ($\overline{\rm{P}}$), outgoing longwave radiation 
-($\overline{\rm{OLR}}$), and subsidence fraction (SF)  or fraction of domain that is subsiding at the 532 hPa level.
+($\overline{\rm{OLR}}$), precipitable water ($\overline{\rm{PW}}$), and subsidence fraction (SF)  
+or fraction of domain that is subsiding at the 532 hPa level.
 Values in parenthesis correspond to experiments whith LWCRE is off.}
-    \begin{tabular}{*{4}{c}}
+    \begin{tabular}{*{5}{c}}
     \hline
     \hline
     \\
- Name &   $\overline{\rm{P}} (\mathrm{mm/day})$ & $\overline{\rm{OLR}} (\rm{W \, m^-2})$ & SF   \\ \hline
-  P100L   &  4.1 (3.5)   &  283.1 (286.9)    & 0.89 (0.61)      \\ 
+ Name &   $\overline{\rm{P}} (\mathrm{mm/day})$ & $\overline{\rm{OLR}} (\rm{W \, m^-2})$ & $\overline{\rm{PW}} (\rm{mm})$ & SF   \\ \hline
+  P100L   &  4.1 (3.5)   &  283.1 (286.9)  & 36.6 (31.3)  & 0.89 (0.61)      \\ 
     \\
-  P100 &   3.9 (3.7)   &  283.2 (296.4)  & 0.73 (0.71)           \\  
+  P100 &   3.9 (3.7)   &  283.2 (296.4)  & 28.0 (26.8) & 0.73 (0.71)           \\  
     \\
-  P25L &   4.0 (3.8)  &  281.2 (290.7)   & 0.78 (0.69)          \\  
+  P25L &   4.0 (3.8)  &  281.2 (290.7)   & 35.0 (32.9) & 0.78 (0.69)          \\  
     \\
-  P25  &   3.8 (3.7)    & 282.9 (293.6)   & 0.80 (0.72)          \\  
+  P25  &   3.8 (3.7)    & 282.9 (293.6)   & 27.4 (26.4) & 0.80 (0.72)          \\  
     \\
- E25  & 3.7 (3.5)    &   271.9 (286.8)   & -            \\  
+ E25  & 3.7 (3.5)    &   271.9 (286.8)   & 28.7 (27.3) & -            \\  
     \\
- E2   &  3.1 (3.4)   &  266.2 (285.5)    & 0.83 (0.77)           \\ 
+ E2   &  3.1 (3.4)   &  266.2 (285.5)    & 27.0 (25.2) & 0.83 (0.77)           \\ 
     \\
- E1   &  3.3 (3.7)   &  269.3 (289.2)    & 0.78 (0.78)         \\  \hline
+ E1   &  3.3 (3.7)   &  269.3 (289.2)    & 27.3 (26.5) & 0.78 (0.78)         \\  \hline
 
     \end{tabular}\par
     %\bigskip 
@@ -532,6 +533,16 @@ precipitation does not significantly change in these cases, only the spatial str
   \label{fig:domdep_lwoff}
 \end{figure}
 
+\begin{figure}
+  \centering
+       \includegraphics[width=0.45\columnwidth]{walkerfigs/Cond_Walker_P100vsP25_lgvsm_lwoff.eps}
+          \caption{Domain mean total condensate (liquid + ice) for P100 (red) and P25 (yellow) on the domain 
+          with a long dimension of 16,000km (thick) and 4,000 (thin).  Solid lines show experiments with LWCRE on
+          and dashed lines experiments with LWCRE off.}
+  \label{fig:TotCond}
+\end{figure}
+
+
 Smaller domains were found to have a more focused ascent region and larger precipitation rates in Bretherton et al., 2006.
 They also found less low-level clouds over the colder SSTs in the small domains, relative to a control domain size that was 4x
 larger.   In contrast, here larger domains have larger precipitation rates (Table 2).  For the LWCRE off cases, in agreement 
@@ -695,11 +706,12 @@ require a correspondingly larger amount of condensational heating and precipitat
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.3\columnwidth]{walkerfigs/MnTotCondProf.eps}
+      %\includegraphics[width=0.3\columnwidth]{walkerfigs/MnTotCondProf.eps}
+       \includegraphics[width=0.45\columnwidth]{walkerfigs/Cond_Walker_E25E2E1_lwoff.eps}
           \caption{Domain mean total condensate (liquid + ice) for P25 (thin yellow), E25 (yellow), 
           E2 (blue), and E1 (green).  Solid lines show experiments with LWCRE on
           and dashed lines experiments with LWCRE off.  All lines correspond to experiments with explicit 
-          convection except the thin yellow lines which have the convective parameterization turned on.}
+          convection.}
   \label{fig:TotCond}
 \end{figure}
 
