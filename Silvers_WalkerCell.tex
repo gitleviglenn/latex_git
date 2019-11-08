@@ -40,7 +40,7 @@
   \item{The longwave cloud-radiative effect is a fundamental factor in establishing these asymmetries and leads to dramatic
   changes in the low-level clouds and boundary layer structure.}
   \item{Cloud resolving simulations result in stronger overturning, more condensate aloft, and a RH in the deep convective 
-  region that is 30\% higher than for the coarser cases with parameterized convection.}
+  region that is 40\% higher than for the coarser cases with parameterized convection.}
   \item{The mock-Walker Circulation can be thought of as RCE plus an imposed gradient in surface temperature.}
 \end{keypoints}
 
@@ -59,21 +59,22 @@ In the western Pacific warm sea surface temperatures prevail beneath rising atmo
 storms.   In contrast, the eastern tropical Pacific is characterized by cooler sea surface temperatures and low-level, 
 non-precipitating clouds with a dry subsiding atmosphere above the stratus clouds.  These regions are 
 connected by a large-scale circulation.  
-We analyze this circulation with high-resolution 
-and coarse resolution simulations and infer how deep convective heating in the west Pacific can influence the atmospheric cooling 
-thousands of kilometers away in the east Pacific.  This cooling is a key ingredient in the determination of the Earth's sensitivity to 
-changes in greenhouse gas concentrations.
-
-A high resolution (1km) cloud resolving model is used here as a benchmark to compare with the same model at lower 
-resolution (25km, 100km) configured 
-as a fully parameterized general circulation model.  Both models use approximately the same spatial domain.  The climate model used is 
-derived from the most recent version of the atmospheric GCM (AM4.0) developed at the Geophysical Fluid Dynamics Laboratory.  By 
-dramatically decreasing the grid-spacing from its default configuration we resolve much more of the dynamical motion and eliminate 
-some of the statistical approximations of clouds, and thus more explicitly simulate some of their impacts.  
+We analyze an idealization of this circulation with high-resolution 
+and coarse resolution simulations. 
+%% and infer how deep convective heating in the west Pacific can influence the atmospheric cooling 
+%%thousands of kilometers away in the east Pacific.  This cooling is a key ingredient in the determination of the 
+%%Earth's sensitivity to 
+%%changes in greenhouse gas concentrations.
+%
+%A high resolution (1km) cloud resolving model is used here as a benchmark to compare with the same model at lower 
+%resolution (25km, 100km) configured 
+%as a fully parameterized general circulation model.  Both models use approximately the same spatial domain.  The climate model used is 
+%derived from the most recent version of the atmospheric GCM (AM4.0) developed at the Geophysical Fluid Dynamics Laboratory.  By 
+%dramatically decreasing the grid-spacing from its default configuration we resolve much more of the dynamical motion and eliminate 
+%some of the statistical approximations of clouds, and thus more explicitly simulate some of their impacts.  
 
 \end{abstract}
 
-%\section{Key Questions}
 
 
 \section{Introduction}
@@ -138,39 +139,43 @@ some of the statistical approximations of clouds, and thus more explicitly simul
 %parameterized general circulation model.   The modeling approach presented here, made unique by its clean connection between a global climate 
 %model and a regional cloud resolving model is  made possible by the flexible modeling system at GFDL.   The goal of this paper is to use this 
 %capability to better quantify and understand the connection between tropical convective heating and changes in low clouds.    
-\textbf{Paragraphs of Introduction}
-\begin{itemize}
-  \item{Within the tropical Pacific are strong overturning circulations, deep convective towers, abundant shallow cumulus, 
-  and cumulus congestus clouds.  The Hadley circulation connects the tropical pacific with subtropics and has been 
-  extensively studies (review paper?).  The circulation first 
-  noted by Sir Gilbert Walker, and described by \citeA{Bjerknes1969} connects the Indonesian region that is dominated 
-  by deep convection to the eastern Pacific region which tends to be populated more by shallow cumulus and, in the 
-  subtropics, stratocumulus clouds.  This circulation has come to be 
-  known as the Walker Circulation and has received much less attention than the Hadley circulation (Geisler, 1981; 
-  Bretherton et al., 2006; Wofsy and Kuang, 2012; Schwendike et al., 2014).  Previous studies have focused on 
-  observations (Walker, Bjerknes), theory (Geisler, 1981), 
-  or modeling studies (Grabowski et al.,2000, Bretherton et al., 2006; Wofsy and Kuang, 2012, Kuang, 2012)).  Some of these 
-  modeling studies have compared theoretical models with cloud
-  resolving models.  One of the primary motivations of this paper is to compare cloud resolving model simulations of the Walker    
-  Circulation with simulations from a GCM used on a doubly periodic domain.    What about Johnson et al.?}
-  The reality is that we were also inspired by Schneider et al. 2017.  Is it possible to tie all that together in a sensible way?  
- Johnson et al. discusses the trade inversion and the high statitic stability in the subtropics.  He contrasts 
- the thermodynamic arguments of Kloesel and Albrecht (1989) 
-  and Sun and Lindzen (1993) with the dynamic-thermodynamic argument of Schubert et al. 1995.  What say I?
-  \item{The Walker Circulation as way of imposing realistic large-scale circulations, as opposed to spontaneously generated large-scale
-  circulations.  Previous studies of RCE have proven to be a 
-  useful tool with which to explore the basic physics of climate and climate sensitivity, but they lack a large-scale circulation.  Many 
-  studies have also shown the importance and prevalence of convective self aggregation (CSA).  A mock-walker circulation with an
-  imposed SST gradient can be thought of as studying a partially constrained aggregating or organized system in a way that removes
-  some of the ambiguity.  The mock-Walker circulation also allows for a simple way of studying in physical space, the connection
-  between column relative humidity and circulation in a way that is directly tied to the physical state of the system rather than with
-  a forced compositing of the data  
-  \cite{Bretherton2005, Muller2012}.}
-  \item{On the importance of reducing component, or sub-grid scale uncertainty through the use of both parameterized and explicit 
-  convection.  This paragraph could also cite papers which have helped to validate RCE in general, and the channel RCE configuration
-  in particular.  To what extent do RCE simulations of CSA agree between GCMs and CRMs?  Perhaps here I can hint at the utility of 
-  this methodology for unifying our understanding.}
-\end{itemize}
+
+
+
+
+%\textbf{Paragraphs of Introduction}
+%\begin{itemize}
+%  \item{Within the tropical Pacific are strong overturning circulations, deep convective towers, abundant shallow cumulus, 
+%  and cumulus congestus clouds.  The Hadley circulation connects the tropical pacific with subtropics and has been 
+%  extensively studies (review paper?).  The circulation first 
+%  noted by Sir Gilbert Walker, and described by \citeA{Bjerknes1969} connects the Indonesian region that is dominated 
+%  by deep convection to the eastern Pacific region which tends to be populated more by shallow cumulus and, in the 
+%  subtropics, stratocumulus clouds.  This circulation has come to be 
+%  known as the Walker Circulation and has received much less attention than the Hadley circulation (Geisler, 1981; 
+%  Bretherton et al., 2006; Wofsy and Kuang, 2012; Schwendike et al., 2014).  Previous studies have focused on 
+%  observations (Walker, Bjerknes), theory (Geisler, 1981), 
+%  or modeling studies (Grabowski et al.,2000, Bretherton et al., 2006; Wofsy and Kuang, 2012, Kuang, 2012)).  Some of these 
+%  modeling studies have compared theoretical models with cloud
+%  resolving models.  One of the primary motivations of this paper is to compare cloud resolving model simulations of the Walker    
+%  Circulation with simulations from a GCM used on a doubly periodic domain.    What about Johnson et al.?}
+%  The reality is that we were also inspired by Schneider et al. 2017.  Is it possible to tie all that together in a sensible way?  
+% Johnson et al. discusses the trade inversion and the high statitic stability in the subtropics.  He contrasts 
+% the thermodynamic arguments of Kloesel and Albrecht (1989) 
+%  and Sun and Lindzen (1993) with the dynamic-thermodynamic argument of Schubert et al. 1995.  What say I?
+%  \item{The Walker Circulation as way of imposing realistic large-scale circulations, as opposed to spontaneously generated large-scale
+%  circulations.  Previous studies of RCE have proven to be a 
+%  useful tool with which to explore the basic physics of climate and climate sensitivity, but they lack a large-scale circulation.  Many 
+%  studies have also shown the importance and prevalence of convective self aggregation (CSA).  A mock-walker circulation with an
+%  imposed SST gradient can be thought of as studying a partially constrained aggregating or organized system in a way that removes
+%  some of the ambiguity.  The mock-Walker circulation also allows for a simple way of studying in physical space, the connection
+%  between column relative humidity and circulation in a way that is directly tied to the physical state of the system rather than with
+%  a forced compositing of the data  
+%  \cite{Bretherton2005, Muller2012}.}
+%  \item{On the importance of reducing component, or sub-grid scale uncertainty through the use of both parameterized and explicit 
+%  convection.  This paragraph could also cite papers which have helped to validate RCE in general, and the channel RCE configuration
+%  in particular.  To what extent do RCE simulations of CSA agree between GCMs and CRMs?  Perhaps here I can hint at the utility of 
+%  this methodology for unifying our understanding.}
+%\end{itemize}
 
 \textbf{Key Questions}
 \begin{itemize}
@@ -1110,56 +1115,56 @@ this impact.
 %Stevens et al. 2012
 
 
-\appendix
+%\appendix
+%
+%%A couple of appendices with extra details which may not be included in the final paper.  
+%
+%\section{Streamfunction}
+%
+%For a two-dimensional flow in the $\lambda,p$ plane we can write the mass conservation equation in terms of a 
+%mass streamfunction $\psi$ as: 
+%\begin{equation}
+%u =  -\frac{\partial \psi}{\partial p}   \,\, {\rm and} \,\, \omega =\frac{\partial \psi}{a \rm{cos} \phi \partial \lambda}
+%\end{equation}
+%with $a$ as the radius of Earth.
+%This satisfies the continuity equation: 
+%\begin{equation}
+%\frac{\partial}{a \rm{cos} \phi\partial\lambda}\left(-\frac{\partial \psi}{\partial p}\right)+\frac{\partial}{\partial p}\left(\frac{\partial \psi}{a \rm{cos}\phi \partial \lambda}\right)=0.
+%\end{equation}
+%The streamfunction is therefore defined by two equations and can be solved with either.  The choice is often made based on the 
+%boundary conditions.  Dimensionally, $\psi$ must have units of velocity multiplied by pressure, or $\rm{kg/s^3}$.  Often, the streamfunction
+%is computed as a mass streamfunction with units of $\rm{kg/s}$.  Density does not appear above
+%because pressure is being used as the vertical coordinate.   With height as the vertical coordinate, mass is given by $\rho dxdydz$, 
+%assuming a hydrostatic atmosphere and rewriting in terms of pressure mass is given by $-(1/g) dxdydp$.
+%Scaling the equations above by $a/g$ results in $\psi$ having units of $\rm{kg/s}$.  
+%
+%Solving for $\psi$ by integrating the vertical velocity is possible, but requires a boundary condition along one edge of the domain between the surface and the 
+%top of the atmosphere.  Solving for $\psi$ by integrating the horizontal velocity allows us to set $\psi=0$ along the upper edge of the domain.  
+%This is both simple, and physically motivated.  
 
-%A couple of appendices with extra details which may not be included in the final paper.  
-
-\section{Streamfunction}
-
-For a two-dimensional flow in the $\lambda,p$ plane we can write the mass conservation equation in terms of a 
-mass streamfunction $\psi$ as: 
-\begin{equation}
-u =  -\frac{\partial \psi}{\partial p}   \,\, {\rm and} \,\, \omega =\frac{\partial \psi}{a \rm{cos} \phi \partial \lambda}
-\end{equation}
-with $a$ as the radius of Earth.
-This satisfies the continuity equation: 
-\begin{equation}
-\frac{\partial}{a \rm{cos} \phi\partial\lambda}\left(-\frac{\partial \psi}{\partial p}\right)+\frac{\partial}{\partial p}\left(\frac{\partial \psi}{a \rm{cos}\phi \partial \lambda}\right)=0.
-\end{equation}
-The streamfunction is therefore defined by two equations and can be solved with either.  The choice is often made based on the 
-boundary conditions.  Dimensionally, $\psi$ must have units of velocity multiplied by pressure, or $\rm{kg/s^3}$.  Often, the streamfunction
-is computed as a mass streamfunction with units of $\rm{kg/s}$.  Density does not appear above
-because pressure is being used as the vertical coordinate.   With height as the vertical coordinate, mass is given by $\rho dxdydz$, 
-assuming a hydrostatic atmosphere and rewriting in terms of pressure mass is given by $-(1/g) dxdydp$.
-Scaling the equations above by $a/g$ results in $\psi$ having units of $\rm{kg/s}$.  
-
-Solving for $\psi$ by integrating the vertical velocity is possible, but requires a boundary condition along one edge of the domain between the surface and the 
-top of the atmosphere.  Solving for $\psi$ by integrating the horizontal velocity allows us to set $\psi=0$ along the upper edge of the domain.  
-This is both simple, and physically motivated.  
-
-% computed with matlab, see StreamFunNew.m script
-\begin{equation}
-\psi_{i,j+1}= \psi_{i,j}-\frac{a}{g}\sum_{j=32}^1 \left(u_{i,j+1}(p_{j+1}-p_{j})\right).
-\end{equation}
-
-In the previous equation, $w, u,$ and $\rho$ have all been averaged in space and time and $p$ is the pressure on full model levels.  The 
-radius of Earth is $a$ and the acceleration due to gravity by $g$.  The density, $\rho$ is computed as $ \rho_{i,j}=\frac{p_j}{R T_{v;i,j}}  $  where $R$ and $T_v$ are the gas constant for dry air ($287 \rm{J/kg K}$) and the virtual temperature ($T_v=T(1+q/\epsilon)/(1+q)$), respectively.  The specific humidity is given by $q$ and $\epsilon = 0.622$.
-
-
-\section{Cloud Water and Cloud Fraction}
-
-The last several generations of the GFDL atmospheric models have used the parameterization developed by Tiedtke (1993) to prognostically compute the grid-cell averaged cloud water ($l$) and cloud fraction ($a$).  The formulation for the local time rate of change from Tiedtke is 
-\begin{equation}
-  \frac{\partial l}{\partial t} = A(l)+S_{cv}+S_{BL}+C-E-G_{p}-\frac{1}{\rho}\frac{\partial}{\partial z}(\rho\overline{w'l'})_{entr}
-\end{equation}
-and 
-\begin{equation}
-  \frac{\partial a}{\partial t} = A(a)+S(a)_{cv}+S(a)_{BL}+S(a)_C-D(a).
-\end{equation}
-Transport of $l$ or $a$ through the boundaries of a grid is given by $A(l)$ or $A(a)$, the terms ($S_{cv}, S(a)_{cv}, S_{BL}, S(a)_{BL}$, and $S(a)_C$) are the sources of cloud water or cloud fraction from convection, boundary layer turbulence, and condensation, respectively.  The condensation/sublimation rate is given by $C$, $E$ is the evaporation of cloud water, $G_{p}$ is the rate of generation of precipitation by microphysical processes and the $\overline{w'l'}$ term is the flux divergence from entrainment at the top of the cloud layer, and lastly, $D(a)$ is the sink of cloud fraction due to evaporation.
-
-Often, cloud resolving models, or cloud system resolving models, do not predict partially cloudy grid cells, but rather consider a cell to be either cloudy or clear.  If the goal is to more directly compare to cloud resolving models then cloud fraction should not be prognostically predicted but simply tied to a certain value of total condensate in a grid-cell.  However, in the Tiedtke system, the prognostic equation for cloud water depends on the cloud fraction.  As given by equations 16, 24, 26,28, 30, and 33 in Tiedtke's paper, this dependence is present in the $S_{BL}$, $C$, $E$, and $G_{p}$ terms. 
-
+%% computed with matlab, see StreamFunNew.m script
+%\begin{equation}
+%\psi_{i,j+1}= \psi_{i,j}-\frac{a}{g}\sum_{j=32}^1 \left(u_{i,j+1}(p_{j+1}-p_{j})\right).
+%\end{equation}
+%
+%In the previous equation, $w, u,$ and $\rho$ have all been averaged in space and time and $p$ is the pressure on full model levels.  The 
+%radius of Earth is $a$ and the acceleration due to gravity by $g$.  The density, $\rho$ is computed as $ \rho_{i,j}=\frac{p_j}{R T_{v;i,j}}  $  where $R$ and $T_v$ are the gas constant for dry air ($287 \rm{J/kg K}$) and the virtual temperature ($T_v=T(1+q/\epsilon)/(1+q)$), respectively.  The specific humidity is given by $q$ and $\epsilon = 0.622$.
+%
+%
+%\section{Cloud Water and Cloud Fraction}
+%
+%The last several generations of the GFDL atmospheric models have used the parameterization developed by Tiedtke (1993) to prognostically compute the grid-cell averaged cloud water ($l$) and cloud fraction ($a$).  The formulation for the local time rate of change from Tiedtke is 
+%\begin{equation}
+%  \frac{\partial l}{\partial t} = A(l)+S_{cv}+S_{BL}+C-E-G_{p}-\frac{1}{\rho}\frac{\partial}{\partial z}(\rho\overline{w'l'})_{entr}
+%\end{equation}
+%and 
+%\begin{equation}
+%  \frac{\partial a}{\partial t} = A(a)+S(a)_{cv}+S(a)_{BL}+S(a)_C-D(a).
+%\end{equation}
+%Transport of $l$ or $a$ through the boundaries of a grid is given by $A(l)$ or $A(a)$, the terms ($S_{cv}, S(a)_{cv}, S_{BL}, S(a)_{BL}$, and $S(a)_C$) are the sources of cloud water or cloud fraction from convection, boundary layer turbulence, and condensation, respectively.  The condensation/sublimation rate is given by $C$, $E$ is the evaporation of cloud water, $G_{p}$ is the rate of generation of precipitation by microphysical processes and the $\overline{w'l'}$ term is the flux divergence from entrainment at the top of the cloud layer, and lastly, $D(a)$ is the sink of cloud fraction due to evaporation.
+%
+%Often, cloud resolving models, or cloud system resolving models, do not predict partially cloudy grid cells, but rather consider a cell to be either cloudy or clear.  If the goal is to more directly compare to cloud resolving models then cloud fraction should not be prognostically predicted but simply tied to a certain value of total condensate in a grid-cell.  However, in the Tiedtke system, the prognostic equation for cloud water depends on the cloud fraction.  As given by equations 16, 24, 26,28, 30, and 33 in Tiedtke's paper, this dependence is present in the $S_{BL}$, $C$, $E$, and $G_{p}$ terms. 
+%
 \acknowledgments
 Funding for this work came from both GFDL and Stony Brook.  Data and scripts are available from author upon request
 
