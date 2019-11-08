@@ -917,11 +917,11 @@ The primary method by which the longwave cloud radiative effect influences the a
 heating the atmosphere in the region between the clouds and the surface.  
 Larger values of ice condensate and upper-level cloud fraction as seen in the E2 and E1 experiment 
 (Figure \ref{fig:TotCond}) therefore imply a larger atmospheric heating due to the CRE relative to the 
-E25, P25, and P100 experiments in which have fewer clouds aloft (Figures \ref{fig:TotCond}, 
+E25, P25, and P100 experiments in which there are fewer clouds aloft (Figures \ref{fig:TotCond}, 
 \ref{fig:TotCond_P25P100}, and \ref{fig:cf_tdtlw}).  When the warming effect of the upper level clouds 
 in the E1 and E2 experiments is removed in the LWCRE off experiments the energy balance of 
 the atmosphere must be maintained through an increase of latent heating and subsequent increase 
-of precipitation.  This is reflected in Table 2.  
+of precipitation as reflected in Table 2.  
 
 These experiments provide insight into the different mechanisms by which the clouds in GCMs and CRMs
 interact with longwave radiation in the atmosphere.  
@@ -943,7 +943,7 @@ results in the primary interaction between clouds and radiation being in the atm
 Water vapor is an efficient emitter of longwave radiation and thus greatly facilitates the cooling of the troposphere.  
 \citeA{Popp2017} showed that there is dramatically less condensate in the atmosphere and much less precipitation 
 (at the equator) for LW CRE off experiments (see their figure 1a,b).  Our results here for the E25, P25, and P100 
-are consistent with those of \citeA{Popp2017} because the low-level condensate are strongly decreased 
+are consistent with those of \citeA{Popp2017} because the low-level condensate is strongly decreased 
 when the LWCRE is off.  
 %This is not the case for E2 and E1.  Those experiments have little low-level condensate to begin with 
 %%and thus do not experience 
@@ -956,52 +956,76 @@ when the LWCRE is off.
   
 The upper panels of Figures \ref{fig:rh_psi_P25E2E1} and \ref{fig:rh_psi_P25E2E1_lwoff} show that the 
 interactions between longwave radiation and clouds enhance
-the drying of the troposphere in regions 
-of subsidence more than the cases when the longwave CRE is not active.  This is especially true for the 
-simulations with a grid-spacing of 1 km and 2 km.  While the mid-tropospheric profiles of diabatic 
-heating and cooling are similar between the LW CRE on/off simulations, 
-there is a very strong response below about 850 hPa for the 25km model.  At that grid-spacing, with the 
-LW CRE on, significant low-level clouds are formed, leading to a radiative cooling of almost 10K/day, 
-and a radiative cooling of around -7K/day.   However, when the LW CRE is off, there is no appreciable 
-difference in the low-level diabatic profiles among the E25, E2, and E1 experiments.   It is also clearly 
-seen that the LW CRE decreases the upper-level ice-condensate for E25, E2, and E1 experiments but 
-dramatically increases the low-level liquid condensate for E25 and P25 (Figure \ref{fig:TotCond}).  
-
+the drying of the troposphere in regions of subsidence more than the cases when the longwave CRE is not active.  
+This is especially true for the simulations with a grid-spacing of 1 km and 2 km.  While the mid-tropospheric 
+profiles of diabatic heating and cooling are similar between the LW CRE on/off simulations, there is a very strong 
+response below about 850 hPa for the 25km and 100km models.  At that grid-spacing, with the LW CRE on, significant low-level 
+clouds are formed, leading to a radiative cooling on the order of -10K/day.   
+However, when the LW CRE is off, there is little appreciable difference in the low-level diabatic profiles among the 
+P100, P25, E25, E2, and E1 experiments.   It is also clearly seen that the LW CRE decreases the upper-level ice-condensate 
+for E25, E2, and E1 experiments but dramatically increases the low-level liquid condensate for E25 and 
+P25 (Figure \ref{fig:TotCond}).  
 
 \section{Conclusions}
 
-The results presented in this paper show us that (scientific point learned).    Interactions between the clouds and radiation
-act to spatially concentrate the circulation, strengthen the overturning circulation, and dry out the mid-troposphere where 
-subsidence dominates (although domain mean condensate is less when LWCRE is on.).  
+%The results presented in this paper show us that (scientific point learned).    Interactions between the clouds and radiation
+%act to spatially concentrate the circulation, strengthen the overturning circulation, and dry out the mid-troposphere where 
+%subsidence dominates (although domain mean condensate is less when LWCRE is on.).  
 
-It is remarkable that the control simulations (LW CRE on) have a precipitation rate  that can vary by as much as 
-20\% despite have have the same prescribed SST and incoming radiation.  The simulations also all have the same radiation,
+We have used the framework of the tropical overturning circulation to compare the multi-scale interactions between 
+circulation patterns, cloud systems, and interactive radiation across experiments with grid-spacing ranging from 
+1km to 100km.  The flexible modeling
+system at GFDL has allowed us to use a single code base in a GCM-like configuration with physics parameterizations 
+that are very close to the AM4.0/CM4.0 models as well as in a CRM-like configuration with explicit convection.  While 
+there are significant differences between the CRM presented in this paper and more conventional CRMs (e.g. vertical 
+grid spacing and threshold based `binary' cloud scheme), the prospect of so easily converting a GCM into something 
+like a CRM provides an enticing testbed for future model development.
+These comparisons have highlighted some of the unexpected behaviors of a GCM-like configuration when used with 
+idealized boundary conditions.  For example, the consistent asymmetry of the circulation and precipitation relative 
+to the fixed SST pattern and the dominance of the large-scale precipitation over the convective precipitation.  
+The comparisons have also illustrated some of the challenges that arise when dramatically increasing the resolution 
+of a GCM.  For example, the lack of shallow 
+clouds (both convective and stratocumulus) and the difficulty of comparing clouds in this CRM to other CRMs due to the 
+prognostic large-scale cloud scheme used at GFDL.
+
+%Several different configurations of a mock-Walker circulation have been used to analyze the response of clouds and the 
+%large-scale circulation to a simple Gaussian shaped prescribed SST pattern.  
+
+To better understand the role that clouds
+and humidity play in driving and responding to the circulation we have performed experiments with and without the radiative
+effect of clouds, with and without the deep convective parameterization, across multiple domain sizes and resolutions.  
+Our results show that the convective 
+parameterization and the longwave cloud radiative effect strongly interact with each other and often lead to 
+asymmetric results. 
+
+It is remarkable that the control simulations (LWCRE on) have a precipitation rate  that can vary by as much as 
+20\% despite have have the same prescribed SST and incoming radiation.  All simulations have the same radiation,
 turbulence, large-scale cloud and microphysics parameterizations and all use the same dynamical core.    
 
-We were struck by three particular changes due strictly do a 4-fold increase in domain width.  A dramatic widening of the precipitation distribution when the LW CRE is off, a shifting of low level clouds upward by more than 100 hPa, and 
-a strong dependence of the quantity of precipitation produced by the large-scale scheme on the LW CRE.  
-
-The longwave cloud radiative effect (LWCRE) has been shown to play a dramatic role in the organization of the precipitation
-field and the low-level clouds.  This is primarily accomplished by decreasing the amount of precipitation that is produced 
-by the large-scale precipitation scheme.  Two major differences between the GCM-like experiments and the CRM-like 
-experiments are 4-5 times more low-level clouds and a much dryer mid-troposphere in the GCM-like experiments compared 
-to the CRM-like experiments.  The LWCRE also highlights the impact of an increased vertical moisture transport 
+We were struck by three particular changes due strictly do a 4-fold increase in domain width.  A dramatic widening of the precipitation distribution when the LWCRE is off, a shifting of low level clouds upward by more than 100 hPa, and 
+a strong dependence of the quantity of precipitation produced by the large-scale scheme on the LWCRE.   
+The LWCRE also highlights the impact of an increased vertical moisture transport 
 in our CRM-like models.  
 
-Several different configurations of a mock-Walker circulation have been used to analyze the response of clouds and the 
-large-scale circulation to a simple Gaussian shaped prescribed SST pattern.  To better understand the role that clouds
-and humidity play in determining and driving the circulation we have performed experiments with and without the radiative
-effect of clouds, with and without the deep convective parameterization, across multiple domain sizes,  
-and using a range of resolutions from 100 km to 1 km grid-spacing.  Our results imply that the convective 
-parameterization and the longwave cloud radiative effect strongly interact with each and often lead to 
-asymmetric results.   
 
-Below is a list summarizing several of the changes that occur when the LW CRE is off.  Turning the LW CRE interactions off tends to: 
+%The longwave cloud radiative effect (LWCRE) has been shown to play a dramatic role in the organization of the precipitation
+%field and the low-level clouds.  
+%%This is primarily accomplished by decreasing the amount of precipitation that is produced 
+%%by the large-scale precipitation scheme.  
+%Two major differences between the GCM-like experiments and the CRM-like 
+%experiments are 4-5 times more low-level clouds and a much dryer mid-troposphere in the GCM-like experiments compared 
+%to the CRM-like experiments.  The LWCRE also highlights the impact of an increased vertical moisture transport 
+%in our CRM-like models.  
+
+  
+
+Below is a list summarizing several of the changes that occur when the LWCRE is turned off.  Turning the LWCRE 
+interactions off tends to: 
 
 \begin{itemize}
   \item decrease the strength of the overturning circulation and the domain mean precipitation (P100,P25,E25)
   \item increase the midtropospheric RH by $5-15 \% $
-  \item eliminate the difference of liquid condensate at 900 hPa between explicit and parameterized simulations.
+ % \item eliminate the difference of liquid condensate at 900 hPa between explicit and parameterized simulations.
   \item weaken the horizontally oriented low-level circulations.   
   \item spread out in geographic space the precipitation maxima
   \item homogenize the surface enthalpy flux over the warm pool, primarily through the latent heat flux
@@ -1015,94 +1039,75 @@ Below is a list summarizing several of the changes that occur when the LW CRE is
 
 Relative to simulations with a grid-spacing of $25 \textit{km}$, the E2 and E1 experiments can be characterized as having: 
 \begin{itemize}
-  \item stronger overturning circulations (as measured by vertical velocity) which are more consistently centered over the maximum of SST.  
-  \item higher relative humidity in the upwelling regions and aloft.   Between 600-800 hPa the explicit models can have a relative humidity 
+  \item stronger overturning circulations (as measured by vertical velocity) which are more consistently centered 
+  over the maximum of SST.  
+  \item higher relative humidity in the upwelling regions and aloft.   Between 600-800 hPa the explicit models 
+  can have a relative humidity 
   that is 40\% higher than in the parameterized, lower resolution simulations.  
   \item two to four times more ice condensate above 600 hPa but only about half as much liquid condensate below 700 hPa.
   \item less domain mean precipitation.  Values for 1 and 2 km simulations are in the 3.2-3.5 mm/d range, while those for the 25 km 
   simulations are 10-20\% higher (3.5-3.9 mm/d).  
-  \item a weaker radiative cooling rate (about 2 K/d) and weaker heating rate (about 2 K/d).
+  %\item a weaker radiative cooling rate (about 2 K/d) and weaker heating rate (about 2 K/d).
   %\item much less vertical shear.  
 \end{itemize}
 
 
 There is a rich literature on tropical overturning circulations.  Much of it is focused on the Hadley circulation and while some
 work has looked at the Walker circulation, it has received less attention.  Part of our motivation in using the framework of the 
-Walker circulation comes from the fact that all of the major types of tropical cloud types occur regularly within this circulation
-clouds and the circulation.  While this study has interpreted the experiments in the context of the Walker Circulation, our results 
-are also relevant to the deep overturning circulations and meridional SST gradients that define the ITCZ and the Hadley 
-Circulation.  In that context, our results are consistent with those of several recent studies (e.g. Harrop and Hartmann, 2016, 
+Walker circulation comes from the fact that all of the major types of tropical clouds occur regularly within the region 
+identified with the Walker circulation.  While this study has interpreted the experiments in the context of the Walker 
+Circulation, our results are also relevant to the deep overturning circulations and meridional SST gradients that define 
+the ITCZ and the Hadley Circulation.  In that context, our results are consistent with those of several recent studies 
+(e.g. Harrop and Hartmann, 2016, 
 Popp and Silvers, 2017, Dixit et al. 2018, Flaschner et al. 2018).  These studies, as well as the present one, all show that the 
 LWCRE acts to constrain the deep convective region.  This results from an increased atmospheric energy uptake and 
 strengthening of the overturning circulation where the deep convective clouds occur (Popp and Silvers, 2017).  Consistent with 
 these papers, the present work also shows that the LWCRE has a strong influence on the low-level circulation.   When 
-the LWCRE is turned off, the low-level circulations shift upward and are not as well organized (reference psi figures).
+the LWCRE is turned off, the low-level circulations shift upward and are not as well organized (see Figures \ref{fig:rh_psi_P25E2E1} and \ref{fig:rh_psi_P25E2E1_lwoff}).
 There is a corresponding change in the low-level cloud fields, longwave radiative cooling, and the domain mean precipitation.
 For the experiments with a GCM-like configuration, the LWCRE strongly influences the precipitation from the large-scale
 cloud scheme while leaving the precipitation from the convective parameterization scheme largely unchanged.  This leads 
 to a much stronger response of the GCM-like experiments to the LWCRE, especially in the low-levels of the troposphere.  
 Because we expect the fraction of precipitation that is due to the convective parameterization to be model dependent 
-this could explain why GCMs have a large spread in their response to turning off the LWCRE (reference some 
-of Aiko's work?). 
-
-We have used the tropical overturning circulation to compare the multi-scale interactions between circulation patterns, cloud 
-systems, and interactive radiation across experiments with grid-spacing ranging from 100km to 1km.  The flexible modeling
-system at GFDL has allowed us to use a single code base in a GCM-like configuration with physics parameterizations 
-that are very close to the AM4.0/CM4.0 models as well as in a CRM-like configuration with explicit convection.  While 
-there are significant differences between the CRM presented in this paper and more conventional CRMs (e.g. vertical 
-grid spacing and threshold based `binary' cloud scheme), the prospect of so easily converting a GCM into something 
-like a CRM allows for an enticing testbed for future model development.
-These comparisons have highlighted some of the unexpected behaviors of a GCM-like configuration when used with 
-highly idealized boundary conditions.  For example, the consistent asymmetry of the circulation and precipitation relative 
-to the fixed SST pattern and the dominance of the large-scale precipitation over the convective precipitation.  
-The comparisons have also illustrated some 
-of the challenges that arise when dramatically increasing the resolution of a GCM.  For example, the lack of shallow 
-clouds (both convective and stratocumulus) and the difficulty of comparing clouds in this CRM to other CRMs due to the 
-prognostic large-scale cloud scheme used at GFDL.
-
-The goal in developing and using idealized models is to capitalize on their simplicity and learn something about the 
-parent system as a result.  Idealized studies focusing on particular parts of the Earth system have shown that the danger of 
-such idealized models is that they will not actually be less complex or easier to understand than the Earth system.  
+this could explain why GCMs have a large spread in their response to turning off the LWCRE (Aiko's work?). 
 
 The only difference between our simulations and radiative convective equilibrium is a gradient of SST at the lower boundary.
-The addition of this small difference creates an undeniable link with the observed tropical atmosphere.  The idealized 
+The addition of this small difference creates a concrete link with the observed tropical atmosphere.  The idealized 
 mock -Walker cell configuration serves as an important step between models of pure radiative convective equilibrium
-and models which are applicable to a wider range of Earth like conditions.  
+and models which are applicable to a wider range of Earth like conditions.   The goal in developing and using idealized models is to capitalize on their simplicity and learn something about the 
+parent system as a result.  Idealized studies focusing on particular aspects of the Earth system have shown that a 
+real danger of idealized models is that they will not actually be easier to understand than the Earth system.  
 
+What are we to conclude from this array of results?  Our CRMs succeed (by construction) at representing a far more 
+realistic range of turbulent motions and thus presumably do a better job of explicit mixing compared to the GCM-like 
+configurations.  However, the increase in resolved scales comes at the cost of most of the low-level clouds (\textit{what is 
+the observed cloud fraction in the tropical Pacific below 700 hPa?}).  The GCM-like simulations match the CRM-like 
+simulations  in the general two celled structure of the overturning circulation and the approximate distribution of condensate.  
+While the GCM-like simulations succeed at producing 20-30\% low-level cloud fraction they produce very little upper-level 
+clouds and the distribution of the precipitation is erratic and dependent on interactions between the convective 
+parameterization and the interactions between longwave radiation and clouds.  The solutions of the GCM-like simulations 
+also have a large dependence on the size of the domain.  Larger domains have more precipitation and domain mean 
+cloud profiles shift upward by more than 100 hPa.  The amount of precipitation, and the structure of the precipitation and clouds 
+is heavily dependent on the interaction between clouds and the longwave radiation.  This dependence strongly mediates
+the large-scale cloud parameterization, rather than the convective parameterization.  The longwave cloud radiative 
+effect acts to concentrate the regions of precipitation and increases the domain mean value.   
 
-Although the radiative cooling and condensational heating
- are in many ways similar...   The 1 and 2 \textit{km} experiments transport much more condensate aloft and maintain a 
- relative humidity over the warm pool region that is about 40\% higher than the experiments with parameterized convection.
+We have learned that for high resolution models with explicit convection the upper-level clouds dominate the impact
+of interactions between clouds and radiation while for GCM-like simulations it is the low-level clouds that dominate
+this impact.  
+
+%The domain mean precipitable water is higher (as is P) when the LWCRE is on.   What does this imply?  Precipitation 
+%efficiency or mixing?  The total water is PW plus condensates right?  So the Precipitation efficiency would only speak
+%to the condensed part I think.   
 
 %References: 
 %
-%Bretherton et al. 2006
-%Jeevanjee et al. 2018
+
 %Kuang and Wofsy
-%Muller and Held, 2012
-%Popp and Silvers, 2017
-%Patrizio and Randall, 2019
+
 %Randall et al., 1989
-%Silvers et al. 2016
 %Slingo and Slingo, 1988
 %Stevens et al. 2012
-%Zhao et al. 2018a
-%Zhao et al. 2018b
-
-
-
-% PDF for location of precip maximum of precipitation for experiments at both 25km and 100km resolutions 
-% LW CRE on
-%\begin{figure}
-%  \centering
-%      %\includegraphics[width=0.96\columnwidth]{walkerfigs/hist_maxP_4mods_lwcreon.eps}
-%       \includegraphics[width=0.96\columnwidth]{walkerfigs/hist_4pan_25vs100_lwcre.eps}
-%  \caption{Normalized probability distributions of the location of the maximum value of precipitation for experiments 
-%  with the longwave CRE on.  All panels show cases with parameterized convection, the top panels are computed 
-%  for the experiments having a domain width of 4000 km while the bottom panels are for experiments having a 
-%  domain width of 16000 km.  The black curves show a Gaussian function with a standard deviation computed for 
-%  each experiment and an expected location in the center of the domain where the SST is warmest. }
-%\end{figure}
 
 
 \appendix
