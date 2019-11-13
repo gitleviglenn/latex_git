@@ -26,7 +26,7 @@
 			% Activate to display a given date or no date
 %\title{Using the Walker Circulation to connect low-level cloud changes to deep convective entrainment}
 \title{Clouds and Radiation in a mock-Walker Circulation}
-\authors{Levi G. Silvers, Nadir Jeevanjee, and Thomas Robinson}
+\authors{Levi G. Silvers, and Thomas Robinson}
 
 \correspondingauthor{Levi Silvers}{levi.silvers@stonybrook.edu}
 
@@ -35,6 +35,7 @@
 %  \item{At 25 km, simulations with parameterized shallow- and deep-convection exhibit asymmetries in the circulation, 
  % precipitation, and humidity fields resulting in a steady-state overturning circulation that is not centered on the SST
 %  maximum.}
+  \item{High and low clouds interact differently with longwave radiation to increase or decrease the mean precipitation, depending on which cloud type is dominant}
   \item{Interactions between clouds and radiation combined with parameterized convection act to shift the precipitation 
   maximum away from the SST maximum.}
   \item{The longwave cloud-radiative effect is a fundamental factor in establishing these asymmetries and leads to dramatic
@@ -145,7 +146,7 @@ and coarse resolution simulations.
 
 %\textbf{Paragraphs of Introduction}
 %\begin{itemize}
-%  \item{Within the tropical Pacific are strong overturning circulations, deep convective towers, abundant shallow cumulus, 
+%\item{Within the tropical Pacific are strong overturning circulations, deep convective towers, abundant shallow cumulus, 
 %  and cumulus congestus clouds.  The Hadley circulation connects the tropical pacific with subtropics and has been 
 %  extensively studies (review paper?).  The circulation first 
 %  noted by Sir Gilbert Walker, and described by \citeA{Bjerknes1969} connects the Indonesian region that is dominated 
@@ -162,7 +163,7 @@ and coarse resolution simulations.
 % Johnson et al. discusses the trade inversion and the high statitic stability in the subtropics.  He contrasts 
 % the thermodynamic arguments of Kloesel and Albrecht (1989) 
 %  and Sun and Lindzen (1993) with the dynamic-thermodynamic argument of Schubert et al. 1995.  What say I?
-%  \item{The Walker Circulation as way of imposing realistic large-scale circulations, as opposed to spontaneously generated large-scale
+%\item{The Walker Circulation as way of imposing realistic large-scale circulations, as opposed to spontaneously generated large-scale
 %  circulations.  Previous studies of RCE have proven to be a 
 %  useful tool with which to explore the basic physics of climate and climate sensitivity, but they lack a large-scale circulation.  Many 
 %  studies have also shown the importance and prevalence of convective self aggregation (CSA).  A mock-walker circulation with an
@@ -171,7 +172,7 @@ and coarse resolution simulations.
 %  between column relative humidity and circulation in a way that is directly tied to the physical state of the system rather than with
 %  a forced compositing of the data  
 %  \cite{Bretherton2005, Muller2012}.}
-%  \item{On the importance of reducing component, or sub-grid scale uncertainty through the use of both parameterized and explicit 
+%\item{On the importance of reducing component, or sub-grid scale uncertainty through the use of both parameterized and explicit 
 %  convection.  This paragraph could also cite papers which have helped to validate RCE in general, and the channel RCE configuration
 %  in particular.  To what extent do RCE simulations of CSA agree between GCMs and CRMs?  Perhaps here I can hint at the utility of 
 %  this methodology for unifying our understanding.}
@@ -187,17 +188,21 @@ and coarse resolution simulations.
 Within the region of the tropical Pacific strong overturning circulations, deep convective towers, abundant shallow 
 cumulus, and cumulus congestus clouds all interact with each other.  The Hadley circulation connects the tropical 
 pacific with subtropics and has been extensively studies (review paper?).  The circulation first 
-  noted by Sir Gilbert Walker, and described by \citeA{Bjerknes1969} connects the Indonesian region that is dominated by deep 
+  noted by Sir Gilbert Walker, and described by \citeA{Bjerknes1969} connects the Indonesian region that is 
+  dominated by deep 
   convection to the eastern Pacific region which tends to be populated more by shallow cumulus and, in the 
   subtropics, stratocumulus clouds.  This circulation has come to be 
-  known as the Walker Circulation and has received much less attention than the Hadley circulation (Geisler, 1981; 
+  known as the Walker Circulation and while receiving less attention than the Hadley circulation, there have been 
+  notable studies (e.g. Geisler, 1981; 
   \citeA{Raymond1994}; Bretherton et al., 
-  2006; Wofsy and Kuang, 2012; Schwendike et al., 2014).  Previous studies have focused on observations (Walker, Bjerknes), theory 
+  2006; Wofsy and Kuang, 2012; Schwendike et al., 2014).  Previous studies have focused on observations 
+  (Walker, Bjerknes), theory 
   (Geisler, 1981), or modeling studies (\citeA{Grabowski2000}, Bretherton et al., 2006; Wofsy and Kuang, 2012, 
   Kuang, 2012)).  Some of these modeling studies have compared theoretical models with cloud
-  resolving models.  One of the primary motivations of this paper is to compare cloud resolving model simulations of the Walker 
-  Circulation with simulations from a GCM used on a doubly periodic domain.
-  
+  resolving models.  One of the primary motivations of this paper is to compare cloud resolving model simulations 
+  of the Walker Circulation with simulations from a GCM within a flexible dynamical framework that draws on the 
+  same code base for both models.  
+    
   Overturning circulations in the tropical Pacific atmosphere encompass dynamical motions at a host of scales 
 and the different cloud types interact with the circulation on scales ranging from meters to thousands of km's.  
 The tropical Pacific is an ideal location to study interactions between clouds and the circulation 
@@ -214,9 +219,10 @@ range of resolutions and can solve either the hydrostatic or nonhydrostatic gove
 
 We perform a series of sensitivity experiments that highlight the different ways in which these experiments can equilibrate.  To 
 show both the robust features of the simulations and the sensitive nature of the distribution of the precipitation maximum 
-we test the impact of convective parameterization, 
-longwave radiation interactions with clouds, domain size, 
-and the resolution, or grid-spacing.    Muller and Held, 2012 found that self-aggregation was sensitive to both domain 
+we test the impact of convective parameterization, longwave radiation interactions with clouds, domain size, 
+and the resolution, or grid-spacing.  Elements of this study that distinguish it from previous research on the Walker 
+circulation are the use of fully interactive radiation, and the comparisons with a state-of-the-art general circulation
+model configuration.   Muller and Held, 2012 found that self-aggregation was sensitive to both domain 
 size and resolution because of the sensitivity of the low-level clouds to these parameters.  % the longwave radiative cooling.  
 
 The results of our experiments are organized as follows.  Details of the model and the particular experiments used are described
@@ -307,7 +313,7 @@ In particular both the deep and shallow convective parameterizations are turned 
 which triggers new clouds is changed from the default value of 0.8 to 1.0.  While a grid spacing of 1 or 2km is clearly not small enough
 to resolve all clouds, it is small enough to resolve cloud-systems and medium to larger sized clouds.  The primary 
 difference between the CRM simulations presented in this paper and those of more established CRMs such as SAM is that our model
-has a much coarser vertical resolution and a prognostic large-scale cloud scheme inherited from the GCM.  The Tiedtke (1993) 
+has a much coarser vertical resolution and a prognostic large-scale cloud scheme inherited from the GCM.  The \citeA{Tiedtke1993} 
 parameterization scheme for large-scale 
 clouds was designed to be used with GCMs having a coarse grid-spacing.  However, there is not a fundamental problem that we are 
 aware of in using the Tiedtke scheme for large-scale clouds in a model with 1km grid-spacing.   The advantage is retaining the 
@@ -1167,7 +1173,7 @@ this impact.
 %Often, cloud resolving models, or cloud system resolving models, do not predict partially cloudy grid cells, but rather consider a cell to be either cloudy or clear.  If the goal is to more directly compare to cloud resolving models then cloud fraction should not be prognostically predicted but simply tied to a certain value of total condensate in a grid-cell.  However, in the Tiedtke system, the prognostic equation for cloud water depends on the cloud fraction.  As given by equations 16, 24, 26,28, 30, and 33 in Tiedtke's paper, this dependence is present in the $S_{BL}$, $C$, $E$, and $G_{p}$ terms. 
 %
 \acknowledgments
-Funding for this work came from both GFDL and Stony Brook.  Data and scripts are available from author upon request
+The authors thank Leo Donner, Nadir Jeevanjee, and Juho Iipponen for helpful discussions  that helped to motivate this work as well as useful comments on drafts of the manuscript.  Funding for this work came from both GFDL and Stony Brook.  Data and scripts are available from author upon request
 
 \bibliography{Silvers_WalkerCell}
 
