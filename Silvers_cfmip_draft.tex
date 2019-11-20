@@ -53,7 +53,7 @@ round of CFMIP which has provided a useful framework to guide experimental desig
 
 Can we shed lite on which particular component of the cloud feedbacks lead to large changes in the sensitivity?  
 
-\section{Clouds in AM4.0: Comparison between amip and observations}
+\section{Clouds in AM4.0: Comparison between AMIP and observations}
 
 \begin{figure}
 % figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 1
@@ -64,17 +64,21 @@ Can we shed lite on which particular component of the cloud feedbacks lead to la
 
 \begin{figure}
 % figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 1
-  \includegraphics[width=0.95\columnwidth]{/Users/silvers/Research/cfmip_paper/testplot_oldconts.pdf}
-  \caption{Comparison thick (optical depth between 3.6 and 60) thin (optical depth between 0.3 and 3.6) clouds the 
-  MISR simulator in  AM4 with observations from MISR (bottom panels).}
+  \includegraphics[width=0.95\columnwidth]{/Users/silvers/Research/cfmip_paper/cf_misr_cldfrac_allheights.eps}
+  \caption{Observed and modeled clouds.  Clouds shown are divided into thick (optical depth between 3.6 and 23) 
+  and thin (optical depth between 0.3 and 3.6) 
+  clouds.  The observations (bottom) are from the MISR satellite (2000-2013) and the modeled clouds (top) were 
+  derived with the MISR simulator.  Data from all vertical levels is used.}
   \label{fig:misr}
 \end{figure}
 
 \begin{figure}
 % figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 3
-  \includegraphics[width=0.86\columnwidth]{cfmipfigs/clt_calipso_obs_sim_am4.eps}
-  \caption{Comparison of total cloud fraction.  Top shows observations from CALIPSO, processed for GCM comparison.  Middle 
-  shows output from the CALIPSO simulator, bottom shows raw model output of clt without a simulator.}
+  \includegraphics[width=0.86\columnwidth]{/Users/silvers/Research/cfmip_paper/cf_misr_cldfrac_below3km.eps}
+  \caption{As in previous figure except that here only clouds below 3km are shown.  Clouds shown are divided into thick 
+  (optical depth between 3.6 and 23) and thin (optical depth between 0.3 and 3.6) 
+  clouds.  The observations (bottom) are from the MISR satellite (2000-2013) and the modeled clouds (top) were derived 
+  with the MISR simulator (amip experiment).}
   \label{fig:calipso_sim_vs_mod}
 \end{figure}
 
@@ -105,18 +109,21 @@ are derived from a Lidar that allows for a direct measure of vertical structure 
 \begin{figure}
 % figure generated with cloud_table_AM4fig.ncl
   \includegraphics[width=0.86\columnwidth]{cfmipfigs/ctp_vs_tau_isccp_modis_am4_obs.eps}
-  \caption{Joint histograms showing the variations of cloud fraction as a function of cloud top pressure and tau.}
+  \caption{Joint histograms showing the variations of cloud fraction as a function of cloud top pressure and tau.
+  Figure taken from Zhao et al., 2018}
   \label{fig:calipso_sim_vs_mod}
 \end{figure}
 
 \begin{figure}
 % figure generated with cloud_table_AM4fig.ncl
   \includegraphics[angle=90,width=0.86\columnwidth]{cfmipfigs/calip_9pan_amip_obs_vs_AM4.eps}
-  \caption{Calipso scumstash.  Black line shows meridional profiles of AM4.0 cloud fraction and blue line shows
-  the meridional profile from CALIPSO.}
+  \caption{Cloud Fraction observed by CALIPSO (2007-2016) and modeled with the CALIPSO satelite simulator 
+  (amip experiment).
+  Dashed line shows meridional profiles of AM4.0 cloud fraction and solid line shows
+  the meridional profile of observed cloud fraction.  With only a few exceptions in the polar regions, AM4 underestimates
+  clouds in all three vertical ranges with the largest underestimate being of low-level clouds between +/-30.}
   \label{fig:calipso_9pan}
 \end{figure}
-
 
 As a starting point we look at the total cloud fraction in Figure \ref{fig:clt_isccp_calipso}.  The ISCCP and 
 CALIPSO products agree fairly well on the 
@@ -186,6 +193,24 @@ The clouds in these simulations are responding to a variety of different conditi
 patterns of prescribed SST, the presence or absence of land/ice, and in the case of the aquaplanet
 experiments, a lack of cloud-aerosol interactions which is present in the amip and coupled experiments.  
 
+The DECK experiments of CMIP6 can be used to provide a measure of the climate sensitivity based on 
+three different fully coupled experiments.  The methods used to determine the sensitivity are distinct, and the resulting 
+differences in the measures of sensitivity reveal important details of the physics that underly the response
+of the climate system to a perturbation such as increasing concentrations of carbon dioxide.  The three 
+experiments are the historical simulation (historical: 1850-2014),  the abrupt quadroupling of CO2 concentration 
+ (abrupt-4xCO2: 150 years), and the experiment in which the concentration of CO2 is increased by 1\% 
+ per year from the pre-industrial until the concentration is doubled (1pctCO2: 150 years, doubling at year 70).  
+The historical simulation is our best attempt at using our coupled GCM to reproduce the historical 
+record found in observations.  This has frequently been used to estimate the climate sensitivity using the 
+energy budget method (Otto et al., 2013, Armour et al., Andrews et al., Winton et al., 2020).  The abrupt-4xCO2
+experiment has been utilized by the IPCC to derive measures ECS among the CMIP5 and CMIP6 models
+using a linear regression of the change in TOA radiative fluxes and surface air temperature over the first 
+150 years of simulation (Gregory et al., 2004; Andrews et al., 2012).  In contrast to the abrupt change of 
+CO2 concentration, the 1pctCO2 experiment allows the Earth system to adjust to slowly increasing concentrations.  
+The sensitivity taken from this experiment is argued to be more relevant for an assessment of the 
+near term impact of the climate change because it is calculated based on a doubling of CO2.    
+
+
 % Ringer et al 2014 comparison
 In order to compare to the values of feedback that were reported in Ringer et al., 2014, we use the same method 
 to compute the radiative feedbacks for the GFDL models.  That is, for the abrupt $4xCO_{2}$ experiment, feedbacks are 
@@ -204,8 +229,17 @@ differences in top-of-atmosphere flux anomalies between the perturbation and con
 \begin{figure}
 % figure generated with cloud_table_AM4fig.ncl
   \includegraphics[width=0.86\columnwidth]{cfmipfigs/HML_CF_cfmip_bias.eps}
-  \caption{Cloud fraction from several of the CMIP6 experiments.}
+  \caption{Cloud fraction bias relative to the AM4.0 amip experiment.}
   \label{fig:cf_hml_bias}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=0.86\columnwidth]{cfmipfigs/cf_clim_amip_hist.eps}
+  \caption{Cloud fraction between 1979-2014 for the amip and historical experiments.  The CALIPSO
+  observations range from January 2007 through December 2016.  Note that the regions poleward of
+  50 degrees are the only regions in which AM4/CM4 produce more clouds than observed.  It is 
+  also interesting that having an interactive surface only leads to a minimally improved CF bias.}
+  \label{fig:calipso_amip_comparison}
 \end{figure}
 
 Plotting the cloud fields as a function of latitude and height highlights some of the similarities and differences 
@@ -229,23 +263,26 @@ The cloud radiative effect (CRE) is computed as the difference between the all-s
 
 \begin{table}
 \begin{center}
-\caption{Global mean radiative feedbacks.  The values for the Abrupt 4xCO2 experiment
-have been estimated from a linear fit of the years 51-300.  Compare to Ringer et al. 2014.}
-    \begin{tabular}{*{6}{c}}
+\caption{Global mean radiative feedbacks.  The cloud radiative effect (CRE) is computed as
+ the clear sky minus all sky flux. The values for the Abrupt 4xCO2 experiment
+have been estimated from a linear fit of the years 51-300.  Compare to Ringer et al. 2014.
+Values in parenthesis are most recent values.  Why are they different than the Amip p4K 
+original values?}
+    \begin{tabular}{*{7}{c}}
     \hline
     \hline
- Feedback & Aqua p4K & Amip m4K & Amip p4K & Amip Future & Abrupt 4xCO2    \\ \hline
-    Net          &   -2.2  & ??  &  -1.6              & -1.8           &    -0.46 (-0.84; Tim)         \\ 
+ Feedback & Aqua p4K & Amip m4K & Amip p4K &  Amip p8K & Amip Future & Abrupt 4xCO2    \\ \hline
+    Net          &   -2.2 (-2.2) & ?? (-1.9)  &  -1.6 (-1.8)      & ?? (-1.9)      & -1.8 (-2.1)    &    -0.46 (-0.84; Tim)         \\ 
     \\
-    Net CRE      & 0.3   & ??  & -0.1            & 0.1           & 0.65   \\  
+    Net CRE      & 0.3 (0.3)  & ?? (0.0)  & -0.1(-0.1)    & ?? (-0.0)         & 0.1 (0.1)          & 0.65   \\  
     \\
-    LW CRE       & 0.4   & ??  & 0.1            & 0.1           & 0.14    \\  
+    LW CRE       & 0.4 (0.4)  & ?? (0.2)  & 0.1 (0.2)  & ?? (0.2)        & 0.1 (0.1)          & 0.14    \\  
     \\
-    SW CRE      & -0.7  & ?? & -0.1          & -0.2          & -0.5              \\  
+    SW CRE      & -0.7 (-0.7) & ?? (-0.2) & -0.1 (-0.1)  & ?? (-0.1)      & -0.2 (-0.2)         & -0.5              \\  
     \\
-    LW CLR       & 2.0   & ?? & 2.0             & 2.0           & 1.7             \\  
+    LW CLR       & 2.0 (2.0)  & ?? (2.3) & 2.0 (2.3)   & ??  (2.3)       & 2.0 (2.4)         & 1.7             \\  
     \\
-    SW CLR      & -0.1  & ?? & -0.3            & -0.3          & -0.6                   \\  \hline
+    SW CLR      & -0.1 (-0.1)  & ?? (-0.4) & -0.3 (-0.4)    & ?? (-0.4)        & -0.3 (-0.4)          & -0.6                   \\  \hline
 
     \end{tabular}\par
     %\bigskip 
@@ -267,11 +304,30 @@ Cess sensitivity useful?
 \begin{figure}
 % figure generated with cloud_table_AM4fig.ncl
   \includegraphics[width=0.86\columnwidth]{cfmipfigs/amip_p4k_future_cldfrac_calip.eps}
-  \caption{Calipso scumstash}
+  \caption{Cloud fraction for amip related experiments.  Observations from CALIPSO are shown for reference.}
+  \label{fig:calipso_amip_comparison}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=0.86\columnwidth]{cfmipfigs/cf_warming.eps}
+  \caption{Cloud fraction for experiments with warming.  For reference cloud fraction from amip is also shown.}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=0.86\columnwidth]{cfmipfigs/cf_warming_amipbias.eps}
+  \caption{Cloud fraction bias for experiments with warming.  The bias is computed relative to the amip experiment. 
+  For the low-level clouds note that the coupled experiments have CF maximum (5-6\%) at -20 annd -75 where the prescribed uniform warming
+  does not.  The coupled model experiments produce much less CF in the latitudes between 30-70.  All warming experiments have more 
+  arctic low-level clouds than the amip experiment.  Keep in mind the amip experiment has too many arctic low-level clouds based
+  on the CALIPSO data.}
   \label{fig:calipso_amip_comparison}
 \end{figure}
 
 \section{What are we learning?}
+
+How much do clouds contribute to our uncertainty in the climate sensitivity?  
+Which clouds (high, mid, low, thick, thin, geographic regions) contribute to this uncertainty?
+Why do we do a poor job with these clouds in models?  
 
 Experiments using Cess-like uniform SST warming as a proxy for climate change have successfully predicted that much of the differences 
 among models is due to the cloud radiative affect.  However, we also know that the sensitivity derived from Cess-like experiments is not
