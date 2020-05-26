@@ -206,12 +206,10 @@ radiative convective equilibrium (RCE).
 %model and a regional cloud resolving model is  made possible by the flexible modeling system at GFDL.   The goal of this paper is to use this 
 %capability to better quantify and understand the connection between tropical convective heating and changes in low clouds.    
 
-
-
-%  The reality is that we were also inspired by Schneider et al. 2017.  Is it possible to tie all that together in a sensible way?  
+ 
 % Johnson et al. discusses the trade inversion and the high statitic stability in the subtropics.  He contrasts 
 % the thermodynamic arguments of Kloesel and Albrecht (1989) 
-%  and Sun and Lindzen (1993) with the dynamic-thermodynamic argument of Schubert et al. 1995.  What say I?
+%  and Sun and Lindzen (1993) with the dynamic-thermodynamic argument of Schubert et al. 1995. 
 %\item{The Walker Circulation as way of imposing realistic large-scale circulations, as opposed to spontaneously generated large-scale
 %  circulations.  Previous studies of RCE have proven to be a 
 %  useful tool with which to explore the basic physics of climate and climate sensitivity, but they lack a large-scale circulation.  Many 
@@ -1349,7 +1347,7 @@ conventional CRMs (e.g. vertical grid spacing and a threshold based `binary' clo
 easily converting a GCM into something like a CRM provides an enticing testbed for seeking process level 
 understanding and future model development.   This can be thought of as a top-down approach to developing 
 a global CRM which should complement efforts that start with a regional large-eddy simulation (LES) model or CRM model and work 
-towards a global model \cite<e.g.,>[]{Schneider_etal_2017,Schneider_etal_2019}.
+towards a global model \cite<e.g.,>[]{Schneider_etal_2017,Schneider_etal_2019,Satoh_etal_2019}.
 The comparisons presented in this paper have highlighted some of the unexpected behaviors of a GCM-like 
 configuration when used with idealized boundary conditions.  
 Two examples include the consistent asymmetry of the circulation and precipitation relative 
@@ -1370,11 +1368,12 @@ These are not fundamental challenges and motivate future work.
 
 Mock -Walker cell configurations are an important step between models of RCE and models which simulate a wider range of Earth like conditions.
 The only difference between our simulations and radiative convective equilibrium (RCE) is the gradient of SST at the lower boundary.  
-The addition of this small difference from pure RCE creates a concrete link with the observed tropical atmosphere.  
-The goal in developing and using idealized models is to capitalize on their simplicity in such a way that key elements of the 
+This simple difference from pure RCE creates a concrete link with the observed tropical atmosphere.  
+The goal in developing idealized models is to capitalize on their simplicity in such a way that key elements of the 
 process in question become clear.  
 In this case the processes of interest are the couplings between clouds, radiation, and the large-scale circulation.  
-Studies using RCE have been fruitful but insufficient to fully illuminate these processes while typical GCM studies are often too complex to untangle.  
+Studies using RCE have been fruitful but insufficient to fully illuminate these processes while typical GCM studies 
+can be prohibitively complex.
 %Idealized studies focusing on particular aspects of the Earth system have shown that a danger of idealized models is 
 %that they will not actually be easier to understand than the Earth system.   
 %Sometimes the difficulty of interpreting results from Aquaplanet and full-physics RCE
@@ -1393,7 +1392,7 @@ and fluxes of energy (radiative and surface enthalpy).
 The initial results from the RCE Model Intercomparison Project \cite<RCEMIP; >[]{Wing_etal_2020} show a wide range of variability
 in the temperature, humidity, and clouds among the models.
 Adding the extra constraint of an overturning circulation forced by a prescribed gradient of SST, similar to the recent work of 
-\citeA{Muller_Hohenegger_2020} would provide a context within which the 
+\citeA{Shamekh_etal_EOR} and \citeA{Muller_Hohenegger_2020} would provide a context within which the 
 wide range of results from RCEMIP could be reexamined and expanded upon.  
 
 % INCLUDE??
@@ -1492,7 +1491,7 @@ circulations in the observable atmosphere should be a high priority in future re
 %Often, cloud resolving models, or cloud system resolving models, do not predict partially cloudy grid cells, but rather consider a cell to be either cloudy or clear.  If the goal is to more directly compare to cloud resolving models then cloud fraction should not be prognostically predicted but simply tied to a certain value of total condensate in a grid-cell.  However, in the Tiedtke system, the prognostic equation for cloud water depends on the cloud fraction.  As given by equations 16, 24, 26,28, 30, and 33 in Tiedtke's paper, this dependence is present in the $S_{BL}$, $C$, $E$, and $G_{p}$ terms. 
 %
 \acknowledgments
-The authors thank Leo Donner, Nadir Jeevanjee, and Juho Iipponen for discussions  that helped to motivate this work as well as useful comments on drafts of the manuscript.  The expertise of Ming Zhao with the physics of AM4.0 also proved helpful in many conversations related to this work.  LGS performed the experiments and wrote the paper under award NA14OAR4320106 from the National Oceanic and Atmospheric Administration, U.S. Department of Commerce.  LGS also acknowledges recent partial support through Stony Brook University from award NSF AGS1830729.  Data and scripts are available from author upon request.  The code for the AM4.0 model is available for download at  https://data1.gfdl.noaa.gov/nomads/forms/am4.0/ 
+The authors thank Leo Donner, Nadir Jeevanjee, Yi Ming, and Juho Iipponen for discussions  that helped to motivate this work as well as useful comments on drafts of the manuscript.  The expertise of Ming Zhao with the physics of AM4.0 also proved helpful in many conversations related to this work.  LGS performed the experiments and wrote the paper under award NA14OAR4320106 from the National Oceanic and Atmospheric Administration, U.S. Department of Commerce.  LGS also acknowledges recent partial support through Stony Brook University from award NSF AGS1830729.  The code for the AM4.0 model is available for download at  https://data1.gfdl.noaa.gov/nomads/forms/am4.0/, scripts used to perform the analysis and create figures are available on the GitHub repository (https://github.com/gitleviglenn/SilversWalkerCell.git).
 
 \bibliography{Silvers_WalkerCell}
 
