@@ -195,7 +195,7 @@ to in the literature as the cloud radiative forcing, CRF).
 \subsection{COSP}
 In order to compare the observed and modeled clouds as consistently as possible across multiple platforms 
 GFDL has implemented a collection of satellite simulators which are part of the 
-CFMIP (Cloud Feedback Model Intercomparison Project; see Webb et al., 2017).  Satellite simulator
+CFMIP (Cloud Feedback Model Intercomparison Project; see \cite{Webb_etal_2017}).  Satellite simulator
 are software tools that are used in coordination with GCMs to allow for model variables 
 to be translated to variables that are more directly comparable with what satellites observe.  
 These simulators are often referred to as the CFMIP Observation Simulator Package (COSP); for
@@ -462,7 +462,7 @@ shows the feedbacks computed from the \textit{amip-p4K} when the \textit{amip-m4
     \hline
     \hline
  Feedback & Aqua p4K & Amip m4K & Amip p4K &  Amip p8K & Amip Future & Abrupt 4xCO2  & 1\% $CO_2$  \\ \hline
-    Net          &   -2.13      &  -1.66          &  -1.62         & -1.64           & -1.84        &    -0.46   & -1.48      \\ 
+    Net  $\alpha$        &   -2.13      &  -1.66          &  -1.62         & -1.64           & -1.84        &    -0.46   & -1.48      \\ 
     \\
     Net CRE   & -0.27       &  0.00              & 0.07         & 0.03         & -0.11          & 0.65   & -0.30  \\  
     \\
@@ -517,12 +517,12 @@ by the change in surface air temperature.  In addition, we include values that h
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{cfmipfigs/Silvers_cfmip_CRE_SinglePanel_negativesign.pdf}
-  \caption{Cloud Radiative Effect (CRE) and CRE feedback of several CMIP6 experiments.  Left panel 
-  shows the measured CRE from CERES-EBAF 
-  observations compared to simulations of CRE using AM4.0 driven by the observed SST (\textit{amip}).  Also 
-  shown at left is the simulated CRE from three fully coupled experiments with CM4.0 (\textit{historical},
-  \textit{abrupt-4xCO$_2$}, and \textit{1pctCO$_2$}).  Right panel, the CRE feedback from four 
-  amip-like experiments.  To aid comparisons the sign of the \textit{amip-m4K} experiment has 
+  \caption{The Cloud Radiative Effect (CRE) and CRE feedback of several CMIP6 experiments.  Left panel 
+  shows (in black) the measured CRE from two versions of the CERES-EBAF observations.   compared to 
+  simulations of CRE using AM4.0 driven by the observed SST (\textit{amip}).  Also 
+  shown at left is the simulated CRE from three fully coupled CM4.0 experiments (\textit{historical} (1950-2014),
+  \textit{abrupt-4xCO$_2$} (101-150), and \textit{1pctCO$_2$} (101-150)) and the AM4.0 amip experiment.  Right panel, the CRE feedback from four 
+  of the amip-like experiments from CFMIP.  To aid comparisons the sign of the \textit{amip-m4K} experiment has 
   been reversed.}
   \label{fig:CRE_feedback}
 \end{figure}    
@@ -674,11 +674,13 @@ context of the biases relative to \textit{amip} in a later paragraph.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{Silvers_cfmip_SinglePanelFig.pdf}
+  \includegraphics[width=\columnwidth]{cfmipfigs/Silvers_cfmip_CF_figure9.pdf}
   \caption{Cloud fraction for experiments with warming.  Cloud fractions are shown for the upper-, mid-, and low-level 
-  clouds in the top, middle, and bottom rows, respectively.  The left column shows control values, the right column
+  clouds in the top, middle, and bottom rows, respectively.  The left column shows control values, the middle column
+  shows values relative to the PI control experiment and the right column
   shows values relative to the \textit{amip} experiment.  For the coupled model experiments
- \textit{1pctCO2} and \textit{abrupt-4xCO2} the average of years 100-150 of the simulation is plotted.  
+ \textit{1pctCO2} and \textit{abrupt-4xCO2} the average of years 100-150 of the simulation is plotted while for the 
+ \textit{historical} experiment the years 1950-2014 are used.  
   For reference cloud fraction from the 
  \textit{historical} (purple) and \textit{amip} are also shown.}
   \label{fig:CF_warming}
@@ -866,8 +868,47 @@ Webb et al., 2013
 Andrews et al., 2015
 Vignesh et al 2020?    Assessment of CMIP6 cloud fraction and comparison with satellite observations
 
-\acknowledgments
-We thank the efforts of the model development team at GFDL who developed AM4.0 and CM4.0 and made it possible to participate in CMIP6.  We thank the World Climate Research Programme which coordinated and promoted CMIP6.  All CMIP data are available from the ESGF at https://esgdata.gfdl.noaa.gov/search/cmip6-gfdl.  
+\appendix
+\section{Experiments and Data}
+
+Tables A1 and A2 describe the details of the observational data sets used and the various model experiments that 
+have been used in this study.  All model experiments were conducted with the GFDL AM4.0 atmospheric general 
+circulation model (Z18a,b), or in the case of the coupled experiments, the GFDL CM4.0 coupled general circulation 
+model \cite{Held_etal_2019}. 
+All experiments are taken from GFDL's contribution to CMIP6, either the DECK experiments, or experiments from CFMIP.
+For additional general details about the experiments see \cite{Eyring_etal_2016} and \cite{Webb_etal_2017}.  All of the 
+data used to analyze these experiments is hosted by the Earth System Grid Federation (ESGF) and is available at 
+https://esgdata.gfdl.noaa.gov/search/cmip6-gfdl.
+
+ \begin{table}
+\begin{center}
+\caption{Experiments used.   Should I list the years the experiment simulate or just the years used in the analysis?}
+    \begin{tabular}{*{4}{c}}
+    \hline
+    \hline
+ Experiment & Class & Configuration & Years   \\ \hline
+    historical        &   DECK      &  atmosphere \& ocean   &  Jan 1950 -Dec 2014               \\ 
+    \\
+    abrupt 4xCO2   & DECK       &  atmosphere \& ocean       & 150 years  \\  
+    \\
+    1pct CO2   & DECK        &  atmosphere \& ocean  & 150 years \\  
+    \\
+    PI Control  & DECK   &  atmosphere \& ocean  &   years 250-350  \\  
+    \\
+    amip  & DECK \& CFMIP   &  atmosphere   & Jan 1979 - Dec 2014  \\  
+    \\
+    amip +4K  & CFMIP       &  atmosphere   & Jan 1979 - Dec 2014  \\ 
+    amip -4K   & CFMIP       &  atmosphere   & Jan 1979 - Dec 2014 \\ 
+    amip Future 4K  & CFMIP  & atmosphere & Jan 1979 - Dec 2014 \\
+    aqua control        & CFMIP  & atmosphere  & 10 years \\
+    aqua +4K.  & CFMIP    & atmosphere  &  10 years \\ \hline
+
+    \end{tabular}\par
+    %\bigskip 
+    \label{tab:lambda}
+\end{center}
+\end{table}
+
 
  \begin{sidewaystable}
  \caption{ Observational Data Sets Used in This Paper}
@@ -899,6 +940,43 @@ We thank the efforts of the model development team at GFDL who developed AM4.0 a
  \multicolumn{2}{l}{$^{a}$Footnote text here.}
  \end{tabular}
  \end{sidewaystable}
+ 
+
+
+
+\acknowledgments
+We thank the efforts of the model development team at GFDL who developed AM4.0 and CM4.0 and made it possible to participate in CMIP6.  We thank the World Climate Research Programme which coordinated and promoted CMIP6.  All CMIP data are available from the ESGF at https://esgdata.gfdl.noaa.gov/search/cmip6-gfdl.  
+
+% \begin{sidewaystable}
+% \caption{ Observational Data Sets Used in This Paper}
+% \centering
+% \begin{tabular}{l l}
+% \hline
+% Data  & Description  \\
+% \hline
+%   TOA radiative fluxes (dates)  & Short name: CERES-EBAF-ed2.8   \\
+%                                     & Long name: Clouds \& Earth's Radiant Energy Systems Energy Balanced \& Filled data, edition 2.8  \\
+%                                     & Reference: Loeb et al. (2009); Smith et al. (2011).  \\
+%                                     & URL: \url{http://ceres.larc.nasa.gov/documents/DQ_summaries/CERES_EBAF_Ed2.8_DQS.pdf}.   \\
+%   TOA radiative fluxes (dates)  & Short name: CERES-EBAF-ed4.1   \\
+%                                     & Long name: Clouds \& Earth's Radiant Energy Systems Energy Balanced \& Filled data, edition 4.1  \\
+%                                     & Reference:   \\
+%                                     & URL: \url{http://ceres.larc.nasa.gov}.   \\
+%   Cloud amount and optical depth (dates) & Short name:  MISR   \\
+%                                                                   &  Long name: Multi-angle Imaging SpectroRadiometer.  \\
+%   Cloud amount and optical depth (dates)  & Short name: MODIS  \\
+%                                                                   & Long name: Moderate Resolution Imaging Spectroradiometer.  \\
+%   Cloud amount and optical depth (dates)  & Short name: ISCCP   \\
+%                                                                   & Long name: International Satellite Cloud Climatology Project   \\
+%                                                                   & Reference: Rossow and Schiffer (1991); Pincus et al. (2012)   \\
+%                                                                   & URL: \url{ftp://ftp.climserv.ipsl.polytechnique.fr/cfmip/ISCCP}     \\
+%   Cloud amount  & Short name: CALIPSO   \\
+%                           & Long name: Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observations   \\
+%                           & Reference: Chepfer et al. (2010); Cesana and Chepfer (2013)      \\
+%    \hline
+% \multicolumn{2}{l}{$^{a}$Footnote text here.}
+% \end{tabular}
+% \end{sidewaystable}
 
 % MISR data was downloaded using wget and is now here: 
 % /Users/silvers/data/SatData/MISR_fromRoj/atmos.uw.edu/~roj/nobackup/MISR_observations/MISR_CTH_OD_histograms/V7/CMOR
@@ -911,7 +989,7 @@ We thank the efforts of the model development team at GFDL who developed AM4.0 a
 % particular paper to cite, just DOI's.  The info from ncdump implies that the data extends along 200003-201809, which is confirmed by
 % 223 time steps that are presumably monthly....  but in the global attributes section of the output from ncdump it states: 
 %:title = "CERES EBAF TOA and Surface Fluxes. Monthly Averages and 07/2005 to 06/2015 Climatology." ;
-%                :institution = "NASA Langley Research Center" ;
+%                :institution = "NASA Langley Research Center" 
 %                :Conventions = "CF-1.4" ;
 %                :comment = "Climatology from 07/2005 to 06/2015" ;
 %                :version = "Edition 4.1; Release Date May 28, 2019" ;
