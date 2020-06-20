@@ -516,13 +516,16 @@ by the change in surface air temperature.  In addition, we include values that h
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{cfmipfigs/Silvers_cfmip_CRE_SinglePanel_negativesign.pdf}
-  \caption{The Cloud Radiative Effect (CRE) and CRE feedback of several CMIP6 experiments.  Left panel 
-  shows (in black) the measured CRE from two versions of the CERES-EBAF observations.   compared to 
+  %\includegraphics[width=\columnwidth]{cfmipfigs/Silvers_cfmip_CRE_SinglePanel_negativesign.pdf}
+  \includegraphics[width=0.75\columnwidth]{cfmipfigs/Silvers_cfmip_CRE_3Pan_vert.pdf}
+  \caption{The Cloud Radiative Effect (CRE) and CRE feedback of several CMIP6 experiments.  The top panel 
+  shows (black) the CRE from two versions of the CERES-EBAF observations compared to 
   simulations of CRE using AM4.0 driven by the observed SST (\textit{amip}).  Also 
-  shown at left is the simulated CRE from three fully coupled CM4.0 experiments (\textit{historical} (1950-2014),
-  \textit{abrupt-4xCO$_2$} (101-150), and \textit{1pctCO$_2$} (101-150)) and the AM4.0 amip experiment.  Right panel, the CRE feedback from four 
-  of the amip-like experiments from CFMIP.  To aid comparisons the sign of the \textit{amip-m4K} experiment has 
+  shown in the top panel is the simulated CRE from three fully coupled CM4.0 experiments (\textit{historical} (yrs. 1950-2014),
+  \textit{abrupt-4$\times$CO2} (yrs. 101-150), and \textit{1pctCO2} (yrs. 101-150)).  The middle panel shows an estimate of the 
+  CRE feedback of the data in the top panels, computed by normalized according to the warming of surface air temperature over 
+  the relevant time period.  The bottom panel shows the CRE feedback from four 
+  CFMIP experiments (\textit{amip-p4K, amip-m4K, amip-future4K, aqua-p4K}).  The sign of the \textit{amip-m4K} experiment has 
   been reversed.}
   \label{fig:CRE_feedback}
 \end{figure}    
@@ -677,7 +680,7 @@ context of the biases relative to \textit{amip} in a later paragraph.
   \includegraphics[width=\columnwidth]{cfmipfigs/Silvers_cfmip_CF_figure9.pdf}
   \caption{Cloud fraction for experiments with warming.  Cloud fractions are shown for the upper-, mid-, and low-level 
   clouds in the top, middle, and bottom rows, respectively.  The left column shows control values, the middle column
-  shows values relative to the PI control experiment and the right column
+  shows values relative to the \textit{piControl} experiment and the right column
   shows values relative to the \textit{amip} experiment.  For the coupled model experiments
  \textit{1pctCO2} and \textit{abrupt-4xCO2} the average of years 100-150 of the simulation is plotted while for the 
  \textit{historical} experiment the years 1950-2014 are used.  
@@ -893,7 +896,7 @@ https://esgdata.gfdl.noaa.gov/search/cmip6-gfdl.
     \\
     1pct CO2   & DECK        &  atmosphere \& ocean  & 150 years \\  
     \\
-    PI Control  & DECK   &  atmosphere \& ocean  &   years 250-350  \\  
+    piControl  & DECK   &  atmosphere \& ocean  &   years 250-350  \\  
     \\
     amip  & DECK \& CFMIP   &  atmosphere   & Jan 1979 - Dec 2014  \\  
     \\
