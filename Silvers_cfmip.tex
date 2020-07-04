@@ -132,7 +132,8 @@ and discusses the potential role played by clouds.   Conclusions are drawn in se
 \section{Data and Experiments}
 
 We compare output from the AM4.0 GCM to observations from ISCCP, MISR, MODIS, CALIPSO, and CERES-EBAF.
-For details of the data used see Table 2.
+More details are provided in the appendix.  The CMIP6 and CFMIP experiments used in this study are given in Table
+\ref{tab:exps} and the observational data sets used are given in Table \ref{tab:obs}.
 
 The comparisons with observations are made mostly with the \textit{amip} experiment.   The experiments used 
 in this paper are all part of the GFDL contribution to CMIP6.  We use the \textit{historical, abrupt-4xCO2, and 1pctCO2}
@@ -430,18 +431,17 @@ experiments (AOGCM).
 
 Due to a combination of changing computing power and differing objectives, the sensitivity of Earth's climate to 
 perturbations has been estimated in many different ways over the past few decades.  
-We have computed the climate feedback parameter that appears in Table 1 with multiple methods.  
-Three common methods are briefly described here.  
-First, the climate sensitivity can be estimated from the change in radiative flux at the top of the 
+We have computed the climate feedback parameter that appears in Table 1 with multiple methods.    
+The climate sensitivity can be estimated from the change in radiative flux at the top of the 
 atmosphere after imposing a prescribed change of surface temperature.  This method of using SST changes
 as a proxy for climate change was pioneered by Robert Cess and his colleagues (e.g. 1989, 1990).  
-Second, the climate
+Additionally, the climate
 sensitivity can be estimated from a fully coupled experiment in which the $\rm{CO}_{2}$ concentration is 
-instantaneously quadrupled relative to the pre-Industrial values.  Linear regression can then be used to 
+instantaneously increased relative to the pre-Industrial values.  Linear regression can then be used to 
 estimate the sensitivity of the model (Gregory et al., 2004, Andrews we al., 2012, IPCC).  
 This is the method used to compute the climate sensitivity reported in Andrews et al., 2012 
-and used by the IPCC.  Third, the climate sensitivity
-can be computed from simply measuring the change of surface temperature after the $\rm{CO}_{2}$ concentration
+and used by the IPCC.  The climate sensitivity
+can also be computed from simply measuring the change of surface temperature after the $\rm{CO}_{2}$ concentration
 has been doubled in a fully coupled climate model following an increase of 1\% per year in the 
 $\rm{CO}_{2}$ concentration.   This method is used to define the Transient Climate Response (TCR).
 For a particular climate model, the only way to be sure of the climate sensitivity is to run the 
@@ -455,24 +455,23 @@ essential component of climate science.
 \begin{table}
 \begin{center}
 \caption{Global mean radiative feedbacks ($\rm{W\, m^{-2} K^{-1}}$).  The cloud radiative effect (CRE) is computed as
- the clear sky minus all sky TOA flux. The values for the Abrupt 4xCO2 experiment
-have been estimated from a linear fit of the years 51-300 (\textit{the Net value reported by Zelinka from a 150 yr regression was -0.82}).  The \textit{amip p8K} is not a separate experiment but
+ the clear sky minus all sky TOA flux.   The \textit{amip p8K} is not a separate experiment but
 shows the feedbacks computed from the \textit{amip-p4K} when the \textit{amip-m4K} is the control experiment.}
-    \begin{tabular}{*{8}{c}}
+    \begin{tabular}{*{6}{c}}
     \hline
     \hline
- Feedback & Aqua p4K & Amip m4K & Amip p4K &  Amip p8K & Amip Future & Abrupt 4xCO2  & 1\% $CO_2$  \\ \hline
-    Net  $\alpha$        &   -2.13      &  -1.66          &  -1.62         & -1.64           & -1.84        &    -0.46   & -1.48      \\ 
+ Feedback & Aqua p4K & Amip m4K & Amip p4K &  Amip p8K & Amip Future   \\ \hline
+    Net  $\alpha$        &   -2.13      &  -1.66          &  -1.62         & -1.64           & -1.84           \\ 
     \\
-    Net CRE   & -0.27       &  0.00              & 0.07         & 0.03         & -0.11          & 0.65   & -0.30  \\  
+    Net CRE   & -0.27       &  0.00              & 0.07         & 0.03         & -0.11            \\  
     \\
-    LW CRE   & 0.38        &  0.16              & 0.13           & 0.15        & 0.10          & 0.14  & 0.02    \\  
+    LW CRE   & 0.38        &  0.16              & 0.13           & 0.15        & 0.10             \\  
     \\
-    SW CRE  & -0.65     &  -0.16              & -0.07          & -0.12        & -0.21         & 0.5  & -0.32       \\  
+    SW CRE  & -0.65     &  -0.16              & -0.07          & -0.12        & -0.21            \\  
     \\
-    LW CLR   & -1.96       &  -2.02            & -2.02           & -2.02       & -2.03         & -1.7   & -1.94      \\  
+    LW CLR   & -1.96       &  -2.02            & -2.02           & -2.02       & -2.03            \\  
     \\
-    SW CLR  & 0.09        & 0.36              & 0.32             & 0.34        & 0.30          & 0.6    & 0.76        \\  \hline
+    SW CLR  & 0.09        & 0.36              & 0.32             & 0.34        & 0.30             \\  \hline
 
     \end{tabular}\par
     %\bigskip 
@@ -487,7 +486,7 @@ of the climate system to a perturbation such as increasing concentrations of car
 experiments are the historical simulation (\textit{historical}: years 1850-2014),  the abrupt quadrupling of 
 $\rm{CO}_2$ concentration (\textit{abrupt-4xCO$_2$}: 300 years for this paper), and the experiment in 
 which the concentration of $\rm{CO}_2$ is increased by 1\%  per year from the pre-industrial value of 
-284.262 ppm(?units?) until the concentration is doubled  (\textit{1pctCO$_2$}: 150 years, doubling at year 70).  
+284.262 ppm(?units?) until the concentration is doubled  (\textit{1pctCO$_2$}: total of 150 years, doubling at year 70).  
 The \textit{historical} simulation is our best attempt at using a coupled GCM to reproduce the 
 observed historical record.  This has frequently been used to estimate the climate sensitivity using the 
 energy budget method 
@@ -505,7 +504,7 @@ will reach (insert 2xCO2 value) around the middle of this century.
 
 The radiative feedbacks at the TOA were computed for a collection of CMIP5 models by Ringer et al., 2014.  
 The results from that study provide a convenient point of reference for our findings.  
-Accordingly, we use the same method to compute the radiative feedbacks for the GFDL models.  
+Accordingly, we use the same method to compute the radiative feedbacks for the GFDL models in Table \ref{tab:lambda}.  
 That is, for the coupled abrupt $4xCO_{2}$ experiment, feedbacks are computed as  
 the slopes of a linear regression calculation using annual, global-mean top-of-atmosphere flux anomalies 
 (\cite{Gregory_etal_2004}; Andrews et al., 2012).  For the atmosphere only experiments 
@@ -547,8 +546,8 @@ by the change in surface air temperature.  In addition, we include values that h
 %  lw_cre:   0.16;  0.13;   0.10         range of 0.06
 %  sw_cre: -0.16; -0.07; -0.21         range of 0.14  --> amip -m4K is in the middle
 
-The radiative feedbacks shown in Table \ref{tab:lambda} reveal a large range of net feedback 
-(-0.46 to -2.13 $\rm{W m^{-2}K^{-1}}$, climate feedback parameter?) that results from differences in 
+The radiative feedbacks shown in Table \ref{tab:lambda} reveal a large range of net feedback parameter 
+($\alpha$; -0.46 to -2.13 $\rm{W m^{-2}K^{-1}}$) that results from differences in 
 both the cloudy and clear sky fluxes.   The LW CLR feedback is nearly constant between the 
 aquaplanet and various \textit{amip} experiments (LWCLR for abrupt??).   The SW CLR 
 feedback is nearly constant across the \textit{amip} experiments but varies significantly
@@ -582,6 +581,62 @@ physics of the Planck feedback, the SW CLR varies as we expect it to based on th
 physical configuration of the experiments.  It is the relationship between the LW and SW 
 components of the CRE that reveals the different ways in which clouds are influencing the 
 net climate feedback.  
+
+\begin{table}
+\begin{center}
+\caption{Global mean radiative feedbacks ($\rm{W\, m^{-2} K^{-1}}$).  The cloud radiative effect (CRE) is computed as
+ the clear sky minus all sky TOA flux.  The values for the Abrupt 4x$\rm{CO}_2^{a}$ experiment
+have been estimated from a linear fit of the years 51-300 (\textit{the Net value reported by Zelinka from a 150 yr regression was -0.82}).}
+    \begin{tabular}{*{6}{c}}
+    \hline
+    \hline
+ Feedback   &    Abrupt 4x$\rm{CO}_2^{a}$   &  Abrupt 4x$\rm{CO}_2^{b}$  & 1pct$CO_2$   & Historical    &  Amip   \\ \hline
+    Net $\alpha$    &     -0.46     &   -1.11      &  -1.22          &  -1.83         & -1.77               \\ 
+    \\
+    Net CRE  &    0.65    & -0.06       &  -0.26          & -0.45         & -0.46           \\  
+    \\
+    LW CRE    &   0.14       & 0.14        &  0.10            & -0.14           & -0.03          \\  
+    \\
+    SW CRE  &    0.5     &    -0.20       &  -0.26            & -0.31          & -0.43         \\  
+    \\
+    LW CLR   &   -1.7     &  -1.70       &  -1.71            & -1.94           & -2.25        \\  
+    \\
+    SW CLR  &      0.6         &   0.65        & 0.65              & 0.56             & 0.91          \\  
+    \\
+    $\Delta \rm{T}_s$     &     ?     & 3.99        &  ??                & 0.8              & 0.76          \\  \hline
+
+    \end{tabular}\par
+    %\bigskip 
+    \label{tab:lambdahist}
+\end{center}
+\end{table}
+
+
+
+It is also instructive to examine the values of the climate feedback parameter that result from simulations of 
+recent decades.  In Table \ref{tab:lambdahist} we calculate the feedbacks for the coupled and amip experiments 
+using   the difference in surface temperature  
+relative to the piControl experiment for $T_1$ and as a difference from the first 20 years of the amip experiment for $T_2$.
+\begin{equation}
+  \alpha_{4xCO_2}=-\frac{F_{4xCO_2}-N_1}{T_1}
+\end{equation}
+\begin{equation}
+  \alpha_{1\%CO_2}=-\frac{F_{1\%CO_2}-N_1}{T_1}
+\end{equation}
+\begin{equation}
+  \alpha_{hist}=-\frac{F_{hist}-N_2}{T_2}
+\end{equation}
+\begin{equation}
+  \alpha_{amip}=-\frac{F_{amip}-N_2}{T_2}
+\end{equation}
+
+In the above equations $F_{4xCO_2}=N_{4xCO2}-N_{PiC}$; $F_{hist}=N_{hist(1996-2014)}-N_{PiC}$; 
+$F_{1pctCO_2}=0.79F_{4xCO2}$.  The radiative imbalance at TOA, $N$ is calculated over different periods depending on the experiment.  
+%In all cases the years used for $N$ and $T$ are the same.  
+$N_1$ and $T_1$ corresponds to years 101-150, while $N_2$ and $T_2$ corresponds to years 1996-2015.  
+The relatively small span of years for $T_2$ were chosen to avoid the impact of volcanic behavior in the early 1990's that if included
+complicate the interpretation of the climate feedback.  Feedbacks thus calculated are given in Table \ref{tab:lambdahist}.  
+
 
 As discussed in the previous section and in Z18a,b, both AM4.0 (\textit{amip}) and 
 CM4.0 (\textit{historical}) compare well to the global mean CERES-EBAF TOA radiative fluxes.  
@@ -908,7 +963,7 @@ https://esgdata.gfdl.noaa.gov/search/cmip6-gfdl.
 
     \end{tabular}\par
     %\bigskip 
-    \label{tab:lambda}
+    \label{tab:exps}
 \end{center}
 \end{table}
 
@@ -941,6 +996,7 @@ https://esgdata.gfdl.noaa.gov/search/cmip6-gfdl.
                            & Reference: Chepfer et al. (2010); Cesana and Chepfer (2013)      \\
     \hline
  \multicolumn{2}{l}{$^{a}$Footnote text here.}
+ \label{tab:obs}
  \end{tabular}
  \end{sidewaystable}
  
