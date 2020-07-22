@@ -144,17 +144,6 @@ to CMIP6.  These experiments include \textit{amip, amip-p4K, amip-m4K, amip-futu
 
 \section{Clouds in AM4.0: Comparison between AMIP and observations}
 
-%\begin{figure}
-%% figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 1
-%  \includegraphics[width=0.95\columnwidth]{/Users/silvers/Research/cfmip_paper/cf_misr_cldfrac_allheights.eps}
-%  \caption{Observed and modeled clouds for all heights.  Clouds shown are divided into thick (optical depth between 3.6 and 23) 
-%  and thin (optical depth between 0.3 and 3.6) 
-%  clouds.  The observations (bottom) are from the MISR satellite (2000-2013) and the modeled clouds (top) were 
-%  derived with the MISR simulator.  Mean cloud fraction values for MISR 
-%  (AM4) are 32\% (24\%) for thick clouds and 22\% (12\%) for thin clouds.}
-%  \label{fig:misr}
-%\end{figure}
-
 
 Before discussing the climate sensitivities of AM4/CM4 and how they are influenced by cloud feedbacks we assess
 the clouds and radiative fluxes which are simulated by AM4.0 over the recent period of 1979-2014.  This is done 
@@ -185,13 +174,14 @@ to in the literature as the cloud radiative forcing, CRF).
   \centering
 % figure generated with calip25_isccp_am4_totcld.ncl, figurenumber = 3
   \includegraphics[width=0.6\columnwidth]{/Users/silvers/Research/Silvers_cfmip_paper/cf_misr_cldfrac_below3km.eps}
-  \caption{Observed and modeled clouds below 2.75km.  Clouds shown are divided into thick 
-  (optical depth between 3.6 and 23) and thin (optical depth between 0.3 and 3.6) 
-  clouds.  The observations (bottom) are from the MISR satellite (2000-2013) and the modeled clouds (top) were derived 
+  \caption{Observed and modeled clouds below 3km.  Clouds shown are divided into thick 
+  (optical depth greater than and equal to 3.6) and thin (optical depth less than 3.6) 
+  clouds.  The observations (bottom) are from the MISR satellite (2000-2019) and the modeled clouds (top) were derived 
   with the MISR simulator (amip experiment). Mean cloud fraction values for MISR 
   (AM4) are 18\% (13\%) for thick clouds and 22\% (6\%) for thin clouds}
   \label{fig:cf_misr_lowcl}
 \end{figure}
+% MISR observations are from March 2000 through November 2019 and came from Roger Marchand
 
 \subsection{COSP}
 In order to compare the observed and modeled clouds as consistently as possible across multiple platforms 
@@ -212,7 +202,7 @@ minimizing the known problems and discrepancies of the observational data sets.
 \begin{figure}
   \centering
 % figure generated with cloud_table_AM4fig.ncl
-  \includegraphics[width=0.98\columnwidth]{cfmipfigs/Silvers_cfmip_MISR_cloudtable.pdf}
+  \includegraphics[width=0.98\columnwidth]{cfmipfigs/Silvers_cfmip_MISRv7_cloudtable.pdf}
   \caption{Cloud Fraction (colors and numbers (\%)) in joint histograms showing the variations of cloud fraction 
   as a function of cloud top height and optical depth (tau).
   The top panels show observations from MISR, bottom panels show MISR simulator output from the 
@@ -983,7 +973,7 @@ https://esgdata.gfdl.noaa.gov/search/cmip6-gfdl.
                                      & Long name: Clouds \& Earth's Radiant Energy Systems Energy Balanced \& Filled data, edition 4.1  \\
                                      & Reference:   \\
                                      & URL: \url{http://ceres.larc.nasa.gov}.   \\
-   Cloud amount and optical depth (dates) & Short name:  MISR   \\
+   Cloud amount and optical depth (03 2000 - 11 2019) & Short name:  MISR   \\
                                                                    &  Long name: Multi-angle Imaging SpectroRadiometer.  \\
    Cloud amount and optical depth (dates)  & Short name: MODIS  \\
                                                                    & Long name: Moderate Resolution Imaging Spectroradiometer.  \\
@@ -991,7 +981,7 @@ https://esgdata.gfdl.noaa.gov/search/cmip6-gfdl.
                                                                    & Long name: International Satellite Cloud Climatology Project   \\
                                                                    & Reference: Rossow and Schiffer (1991); Pincus et al. (2012)   \\
                                                                    & URL: \url{ftp://ftp.climserv.ipsl.polytechnique.fr/cfmip/ISCCP}     \\
-   Cloud amount  & Short name: CALIPSO   \\
+   Cloud amount (2007 - 2016)  & Short name: CALIPSO   \\
                            & Long name: Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observations   \\
                            & Reference: Chepfer et al. (2010); Cesana and Chepfer (2013)      \\
     \hline
