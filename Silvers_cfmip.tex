@@ -135,9 +135,13 @@ More details are provided in the appendix.  The CMIP6 and CFMIP experiments used
 \ref{tab:exps} and the observational data sets used are given in Table \ref{tab:obs}.
 
 The comparisons with observations are made mostly with the \textit{amip} experiment.   The experiments used 
-in this paper are all part of the GFDL contribution to CMIP6.  We use the \textit{historical, abrupt-4xCO2, and 1pctCO2}
+in this paper are all part of the GFDL contribution to CMIP6 and as a result, the \textit{amip} and \textit{historical}
+experiments end in the year 2014.  We use the \textit{historical, abrupt-4xCO2, and 1pctCO2}
 experiments from the CMIP6 DECK.  In addition we utilize several experiments from the CFMIP contributions 
-to CMIP6.  These experiments include \textit{amip, amip-p4K, amip-m4K, amip-future4K, aqua-control} and \textit{aqua-p4K}. 
+to CMIP6.  These experiments include \textit{amip, amip-p4K, amip-m4K, amip-future4K, aqua-control} and \textit{aqua-p4K}.  
+In order to utilize as much of the available data as possible much of the analysis of the \textit{amip} experiment uses the 
+full span of years (1979-2014) despite the fact that the satellite observations do not extend as far back in time.  However, 
+some of the analysis for the \textit{amip} and \textit{historical} experiments, in particular for the calculation of a climate feedback parameter over recent years, a shorter period (1996-2014) is used in order to eliminate complications due to radiative forcing in the early 1990's due to volcanic activity.  The relevant time period is stated in the captions of the figures and tables.   
 
 
 
@@ -310,6 +314,9 @@ several of the CFMIP experiments that were run with AM4.0.
   \label{fig:calipso_amip_historical}
 \end{figure}
 
+The comparisons of cloud fraction in Figures 1-4 between observations and the \textit{amip} experiment show a 
+prevailing negative cloud fraction bias across much of the globe for low-, middle-, and upper-level clouds.  Does 
+coupling the AM4.0 atmosphere to a dynamic ocean decrease the cloud bias?   
 \textit{This paragraph should serve as a bridge between the COSP observations, amip and historical experiments, TOA fluxes, and feedbacks.
 While direct comparisons between GCM output and satellite observations are only possible over the recent decades, experiments that use
 historically based data and extend over longer time periods can give insight into the relationship between cloud area, radiative fluxes
@@ -404,8 +411,9 @@ Can we conclude that we have a problem of too few and too bright clouds?   (Webb
 %experiment and the regression method of \cite{Gregory_etal_2004} to be 3.89K while \cite{Winton_etal_2020} found the sensitivity to be 5.0K using years 50-300 of the same experiment.   \citeA{Winton_etal_2020} also showed the TCR of CM4.0 to be 2.1 using the 
 %\textit{1pctCO$_2$} experiment.  Additionally one could calculate the climate sensitivity by running CM4.0 for thousands of years until is equilibrated (as in \citeA{Paynter_etal_2018} for CM2 and CM3) or by using a method similar to that employed by Otto et al., 2014 to infer the sensitivity from \textit{historical} experiment.
 
-The most recent generation of models developed at NOAA's GFDL that have participated in CMIP6 have a large range of climate sensitivities (possibly cite Held et al., Winton et al., Dunne et al.).  
-One way of quantifying this sensitivity is with the climate feedback parameter, which, for the subset of GFDL models and CMIP6 experiments studied in this paper, varies between -0.46 and -2.1 $\rm{W m^{-2}K^{-1}}$ (Table 1).  
+The most recent generation of models developed at NOAA's GFDL that have participated in CMIP6 have a large range of climate 
+sensitivities (possibly cite Winton et al., Dunne et al.) depending on the experiment of interest and the method used for 
+calculation.  One way of quantifying this sensitivity is with the climate feedback parameter, which, for the subset of GFDL models and CMIP6 experiments studied in this paper, varies between -0.46 and -2.1 $\rm{W m^{-2}K^{-1}}$ (Table 1).  
 These models (AM4.0 Aquaplanet, AM4.0, CM4.0) simulate several 
 distinct geophysical configurations which account for some of the range in values of the climate feedback parameter.  
 However, our hypothesis is that the large range of climate sensitivities that are found within this 
@@ -961,6 +969,9 @@ contribute to different sensitivities are in the mid and high latitude regions. 
 the tropical regions was remedied would the differences in cloud fields that are important for sensitivity
 still be in the higher latitudes or would we find significant differences in the tropical clouds among 
 the various warming experiments?     
+
+\textit{Put the results of AM4.0/CM4.0 in the context of other modeling studies.  The AR5, chapter 7 describes the primary 
+cloud feedbacks that are thought to be relevant for future warming.  Are AM4.0/CM4.0 consistent with the expectations from the AR5?  Can we say something about the large cloud fraction in the arctic?  Tie into Kay et al. 2011 and Vavrus et al. (2009 or 2011)}
 
 We have shown that the cloud radiative effect makes up a significant part of the difference 
 among models in the climate feedback parameter.  These differences in the cloud radiative
