@@ -71,10 +71,14 @@ western Pacific region with warm SST and strong deep convection to the eastern P
 be populated more by shallow cumulus and, in the subtropics, stratocumulus clouds.  
 This circulation, now known as the Walker Circulation, is a response to \remove[LGS]{the} 
 longitudinal asymmetries in \remove[LGS]{the} tropical atmospheric heating and is tightly coupled with 
-the El Nino Southern Oscillation.    
-The Walker Circulation is a compelling example of both thermodynamic and dynamic interactions
-between moisture and the large-scale circulation.  It is also a framework that can be compared 
-to observations and tested with a variety of model configurations. 
+the El Ni\~{n}o-Southern Oscillation (ENSO).    
+The Walker Circulation \change[LGS]{is a compelling example} 
+{is composed}
+of both thermodynamic and dynamic interactions
+between moisture and the large-scale circulation.  
+\change[LGS]{It is also a framework that can be compared 
+to observations and tested with a variety of model configurations.}
+{The Walker Circulation provides an excellent example with which to compare the overturning circulation and interactions between clouds and radiation using a variety of model configurations.}
 
 It is also clear that the tropical Pacific plays an important role in the response of the climate to radiative perturbations. 
 Recent work has shown that the interactions between clouds, patterns of \change[LGS]{S}{s}ea \change[LGS]{S}{s}urface \change[LGS]{T}{t}emperature (SST), and the circulation 
@@ -101,7 +105,7 @@ The result is a gap in the types of simulation for this region that is so import
 
 This work uses the framework of a mock-Walker circulation to simulate an overturning tropical circulation with 
 both a GCM-like model and a CRM-like model.
- Idealized models of the Walker circulation were first called `mock-Walker circulations' by \citeA{Raymond_1994}.  
+ Idealized models of the Walker circulation were \change[LGS]{first called}{referred to as}  `mock-Walker circulations' by \citeA{Raymond_1994}.  
 \citeA{Raymond_1994} envisioned an idealized Walker circulation as,``a possible venue for testing ideas 
 about the interaction of dynamics, moist convection, and sea-air transfers that is simple enough to 
 be understandable, but rich enough to be interesting."
@@ -123,12 +127,31 @@ They point to the importance of the interactions between clouds, radiation and t
 avoiding much of the complexity of those processes.   
 
 Current climate models continue to be developed with an increasingly fine resolution and 
-the domain size used with CRMs continues to grow.  As a result the line between these two types 
+the domain size used with CRMs continues to grow.  
+% As a result, the distinction between these two types of models
+% Accordingly, the parameter space of these two types of models has begun to overlap.   As a result, 
+% there is a need to systematically compare the 
+% Nevertheless (or, notwithstanding this,), GCMs and CRMs differ in many ways and there is a need to systematically 
+% compare the simulated clouds from both.  
+As a result the line between these two types 
 of models has become blurred and there is a need to systematically compare the clouds and their 
 influence on the climate produced by each type of model \cite{Schneider_etal_2017}.
 By simulating a mock-Walker Circulation in the context of both a GCM and a CRM we 
 illustrate how inextricable the interactions between clouds and radiation are to the coupling 
 of moisture with the large-scale circulation.     
+%
+% This paper uses a mock-Walker Circulation to study the coupling between atmospheric moisture and the large-scale circulation.
+% Using a single model base in the context of both a GCM and a CRM illustrates how inextricable the interactions between clouds and radiation are 
+%
+% Simulating a mock-Walker Circulation in the context of both a GCM and a CRM 
+% shows how the interactions of clouds and radiation interact
+%
+% the mock-Walker Circulation provides a simple dynamical context within which
+% the inextricable interactions between clouds and radiation can be shown to influence the
+% coupling of moisture with the large-scale circulation.
+%
+% illustrates how inextricable the interactions between clouds and radiation is to the coupling 
+% of moisture with the large-scale circulation. 
 The model used here is based on GFDL's AM4.0 GCM that participated in CMIP6, having a full suite of physics parameterizations.  
 Rather than a full global domain all of our experiments use a doubly-periodic domain.    
 This is conceptually similar to Held et al., (2007), which used an earlier generation GFDL climate model on a doubly-periodic domain to study RCE.   
@@ -260,8 +283,8 @@ by a number indicating the grid-spacing in kilometers while the experiments with
 labelled with an E prefix, followed by the appropriate number.  Thus P25 refers to an experiment with parameterized convection using a 
 grid-spacing of 25km. 
 The naming convention for each of the experiments is shown in Table \ref{tab:experimentspecs}.   
-Throughout this paper the P100 and P25 experiments, with and without the LWCRE are referred to as `GCM-like' and
-`CRM-like'.  The GCM-like experiments only differ from traditional GCMs in the non-global domain and lack of rotation.  
+Throughout this paper the P100 and P25 experiments, with and without the LWCRE, are referred to as `GCM-like' \change[LGS]
+{and `CRM-like'}{while the E2 and E1 experiments are referred to as `CRM-like'.}  The GCM-like experiments \remove[LGS]{only} differ from traditional GCMs in the non-global domain and lack of rotation.  
 The CRM-like terminology acknowledges that this configuration 
 has a vertical resolution that is coarser than many CRMs, and uses the large-scale cloud scheme from the AM4.0/CM4.0 GCM.  
   
@@ -346,7 +369,7 @@ and convective aggregation \cite<e.g., >[]{Bretherton_etal_2005}.
 
 \begin{figure}
   \centering
-      \includegraphics[angle=90,width=0.96\columnwidth]{walkerfigs/rh_psi_cond_25km_6pan_new.eps}
+      \includegraphics[width=0.96\columnwidth]{walkerfigs/rh_psi_cond_25km_6pan_new.eps}
       \caption{The equilibrated state of the Walker cell for three configurations with a grid-spacing of 25km on a domain of 200 $\times$ 4000 $\, \rm{km}^2$.
       Shown in the top panels is the relative humidity (shading) and mass streamfunction (black contours).
       The same contour interval for the mass streamfunction ($6 \times 10^9$ kg/s) is used in all panels.
@@ -518,14 +541,23 @@ Figure \ref{fig:TotCond_P25P100}).
   \label{fig:domdep_lwoff}
 \end{figure}
 
+%\begin{figure}
+%  \centering
+%       \includegraphics[width=0.45\columnwidth]{walkerfigs/Cond_Walker_P100vsP25_lgvsm_lwoff.eps}
+%          \caption{Domain mean total condensate (liquid + ice; grams/kilogram) for P100 (red) and P25 (yellow) on the domain 
+%          with a long dimension of 16,000km (thick) and 4,000 (thin).  Solid lines show experiments with LWCRE on
+%          and dashed lines the LWCRE-off experiments.}
+%  \label{fig:TotCond_P25P100}
+%\end{figure}
 \begin{figure}
   \centering
-       \includegraphics[width=0.45\columnwidth]{walkerfigs/Cond_Walker_P100vsP25_lgvsm_lwoff.eps}
-          \caption{Domain mean total condensate (liquid + ice; grams/kilogram) for P100 (red) and P25 (yellow) on the domain 
-          with a long dimension of 16,000km (thick) and 4,000 (thin).  Solid lines show experiments with LWCRE on
-          and dashed lines the LWCRE-off experiments.}
+       \includegraphics[width=0.90\columnwidth]{DomainMeanCond_SinglePanel.pdf}
+          \caption{Domain mean total condensate (liquid + ice; grams/kilogram) on the domain with a long dimension of 16,000km (a.)
+          and 4,000 km (b.).  P25 experiments are shown with yellow lines and P100 experiments with red.  Solid lines show 
+          experiments with LWCRE on and dashed lines the LWCRE-off experiments.}
   \label{fig:TotCond_P25P100}
 \end{figure}
+
 
 
 The domain mean total precipitation is constrained by the radiative cooling of the atmosphere.  
@@ -561,8 +593,8 @@ The low-level clouds are strongly influenced by both the size of the domain and 
       \includegraphics[width=0.96\columnwidth]{walkerfigs/Conv_vs_LS_Precip.eps}
   \caption{Precipitation due to the large-scale (blue) cloud scheme and to the convective 
   parameterization (black).  
-  Panels on the left show large domains with a long edge width of 16,000 km and
-  panels on the right show domains with a long edge width of 4,000 km.  LWCRE-off experiments are shown with dashed lines.  }
+  Panels on the left (a.,b.) show large domains with a long edge width of 16,000 km and
+  panels on the right (b.,d.) show domains with a long edge width of 4,000 km.  LWCRE-off experiments are shown with dashed lines.  }
   \label{fig:conv_vs_ls}
 \end{figure}
 
@@ -604,7 +636,7 @@ with our simulations when the convection is entirely explicit (E25, E2, and E1),
 
 \begin{figure}
   \centering
-      \includegraphics[angle=90,width=0.96\columnwidth]{walkerfigs/rh_psi_cond_E25E2E1_lwon_new.eps}
+      \includegraphics[width=0.96\columnwidth]{walkerfigs/rh_psi_cond_E25E2E1_lwon_new.eps}
       \caption{The equilibrated state of the Walker cell as a function of resolution.  
       Experiments shown are E25 (left), E2(center), and E1(right). Top panels show the 
       steady state relative humidity (shading) and mass streamfunction (black contours)
@@ -617,7 +649,7 @@ with our simulations when the convection is entirely explicit (E25, E2, and E1),
 
 \begin{figure}
   \centering
-      \includegraphics[angle=90,width=0.96\columnwidth]{walkerfigs/rh_psi_cond_E25E2E1_lwoff_new.eps}
+      \includegraphics[width=0.96\columnwidth]{walkerfigs/rh_psi_cond_E25E2E1_lwoff_new.eps}
           \caption{Same as previous figure except with the longwave CRE turned off.}
   \label{fig:rh_psi_P25E2E1_lwoff}
 \end{figure}
@@ -663,10 +695,10 @@ decreasing resolution an RCE model had a moist bias in the sub-cloud layer and a
  
 \begin{figure}
   \centering
-       \includegraphics[width=0.45\columnwidth]{walkerfigs/Cond_Walker_E25E2E1_lwoff.eps}
-          \caption{Domain mean total condensate (liquid + ice; grams/kilogram) for P25 (thin yellow), E25 (yellow), 
-          E2 (blue), and E1 (green).  Solid lines show experiments with LWCRE on,
-          dashed lines show the LWCRE-off experiments.  All experiments have explicit convection.}
+       %\includegraphics[width=0.45\columnwidth]{walkerfigs/Cond_Walker_E25E2E1_lwoff.eps}
+       \includegraphics[width=0.45\columnwidth]{walkerfigs/DomainMnCond_4mods_new.eps}
+          \caption{Domain mean total condensate (liquid + ice; grams/kilogram).  Solid lines show experiments with LWCRE on,
+          dashed lines show the LWCRE-off experiments.}
   \label{fig:TotCond}
 \end{figure}
  
@@ -759,7 +791,7 @@ reveals the source of the extra atmospheric heating for the E25, P25, and P100 e
 Prescribed SST generates a constant upward flux of LW radiation.  
 The upward flux of sensible heat flux will be mostly fixed (barring variations in surface
 wind) because changes in the downward flux of solar radiation will not warm the surface.   
-Low-level clouds serve as a significant source of LW radiative cooling for the atmosphere (Figure \ref{fig:cf_tdtlw}).  
+Low-level clouds \add[LGS]{, especially in dry regions,} serve as a significant source of \remove[LGS]{LW} radiative cooling for the atmosphere (Figure \ref{fig:cf_tdtlw}) \add[LGS]{because they increase the downwelling longwave radiation}.  
 Making these clouds invisible to radiation creates a source of effective atmospheric warming by removing a source of atmospheric energy loss.  
 Invisible low-level clouds also allow the upwelling LW flux of radiation to play a larger role in warming the atmosphere.
 These two factors more than compensate for the increased OLR at the TOA of the LWCRE-off experiments.
