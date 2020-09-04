@@ -1,0 +1,30 @@
+\documentclass[varwidth, border=10pt]{standalone}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[labelformat=parens,labelsep=quad,skip=3pt]{caption}
+\usepackage{graphicx}
+
+\begin{document}
+% for some reason, including a blank line between the subfigure blocks leads to a vertically aligned figure...
+
+\begin{figure}
+  \centering
+  %\hspace{\fill}
+  \begin{subfigure}{0.48\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{walkerfigs/DomainMnCond_P25P100a.eps}
+\end{subfigure}
+ %\hspace{\fill}
+%\vspace{2pt}
+ %\hspace{\fill}
+\begin{subfigure}{0.48\textwidth}
+\centering
+  \includegraphics[width=\linewidth]{walkerfigs/DomainMnCond_P25LP100Lb.eps}
+\end{subfigure}
+ %\hspace{\fill}
+%\vspace{2pt}
+\end{figure}
+
+
+ \end{document}
