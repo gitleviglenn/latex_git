@@ -113,7 +113,8 @@
 
 \section{Note from LGS and TR}
 
-\textcolor{blue}{All responses and comments by Levi Silvers will be in blue.  Below please find my responses to your particular considerations.  Reviewer \#1 made additional comments in a pdf that was included with the review.  I have responded to those comments within that pdf.  Reviewer \#3 made 15 minor comments in the annotated pdf provided by \textit{JAMES}.  I have responded with my own annotations. }
+\textcolor{blue}{All responses and comments by Levi Silvers will be in blue.  Below please find my responses to your particular considerations.  When referring to line numbers that were used in your revues I have done my best to use the same line numbers (those from the original submission) unless otherwise
+noted.  Reviewer \#1 made additional comments in a pdf that was included with the review.  I have responded to those comments within that pdf.  Reviewer \#3 made 15 minor comments in the annotated pdf provided by \textit{JAMES}.  I have responded with my own annotations. }
 
 \section{Reviewer \# 1 Evaluations}
 
@@ -214,8 +215,7 @@ I think your abstract could benefit from some  reorganization/clarification. It 
   circulation that drives this asymmetry. Because Fig 1. middle panel is very symmetrical (with LWCRE disabled).
 
 Also, I wonder to what extent the domain shape influences 
-  this result 
-  (the asymmetry is not present in P100L and less prominent in P25L)
+  this result (the asymmetry is not present in P100L and less prominent in P25L)
   \textcolor{red}{It should be pointed out that while the middle panel of Fig1 is symmetrical relative to the left panel, 
   the far right panel is even more symmetrical (at least in terms of the RH and streamfunction).}
   
@@ -232,6 +232,7 @@ Also, I wonder to what extent the domain shape influences
 %
 Also, the triangle markers for E25 may be obscuring some details. 
 I wonder if just using a slightly different color for E25 and P25 would be better.
+\textcolor{red}{Figure 13 has been redone as a 2x2 panel figure using a different color for E25 instead of the triangles, larger axis labels, and clearer panel titles.}
   
   \item Ln 534-540: Although I understand the point you are making here, the wording is a bit unclear. If by 'atmospheric radiative cooling' you mean the net cooling of the atmosphere (i.e. difference between OLR and net radiation at the surface), then it is true that the precipitation mirrors the atmospheric radiative cooling.  
   
@@ -264,6 +265,8 @@ I think you need to briefly clarify the above points here.
   \item L584-608: I think it is good to have a summary here, but I'm getting lost in all of the details. It would be helpful for the reader if you could summarize only the most important points (maybe 5-6 bullets max). For example, I think you could probably eliminate the last 2 points in the first set (i.e. about spatial gradients of humidity, etc and about the condensate changes). 
 
 You also do not summarize any of the domain size results here, however they are mentioned in your conclusions. So I'm left a bit confused about the overall importance of the domain size results... to remedy that I suggest 1) mentioning the key domain-size sensitivies here and/or 2)  deleting the discussion of the domain-size sensitivities in the conclusions. Just trying to help you better convey the main points to the reader.
+  \textcolor{blue}{The last bullet point (Lines 592-594) of the first list has been removed.  I have also reorganized and combined the material that was 
+  formerly in sections 6 and 7 into one section with the hope of more clearly distinguishing between the summary of our results and the discussion points.  Hopefully it is not as easy to get lost in the details now.}
   \textcolor{red}{I sympathize with you.  This paper has been hard to write because it has been tough to not get lost in all of the details myself.  The \textit{importance} of several of these results, such as the domain size results, is not clear to me, but they 
   seem both interesting and significant.}
   
@@ -363,6 +366,25 @@ This has been concluded mostly because the simulation is markedly more symmetric
 \textcolor{red}{include Hovmoller figure with four different 25km simulations?}
 
   \item Line 326-343: The focus in Table 2 is on the equilibrium state. Is a time evolution of subsidence fraction available? I'd be curious to see how SF changes from the early stages of the simulation, i.e. if it's becoming more or less aggregated over time. The somewhat inconsistent comparison between LWCRE-on and LWCRE-off experiments here is noteworthy, given that LWCRE is arguably the most important mechanism for maintenance of the aggregated state in non-rotating RCE studies.
+\textcolor{blue}{Good question.  Once the experiments equilibrate the subsidence fraction (SF) is quite steady in time, despite rather large variability (on the order of 0.1-0.15).   Variability increases with grid-spacing to the point that for P100 experiments averages must be taken over at least 3-5 months to obtain the long term mean SF.
+Figure \ref{fig:subsfracTS}  
+shows the subsidence fraction for the control (LWCRE-on) experiments.  The LWCRE-off cases are also very steady in time with a similar degree of variability.  The mean 
+differences of SF between the LWCRE on/off experiments are shown in an updated Table 2.  It should also be noted that SF in the case of the Walker 
+Circulation should be expected to be relatively large, and more consistent across experiments (relative to pure RCE) because of the prescribed SST warm 
+patch that will largely fix the location of deep convection to the middle of the domain and force an overturning circulation.  
+The values used in Table 2 for the originally submitted manuscript were computed 
+using the time averaged mid-tropospheric vertical velocity because I had neglected to save vertical velocity at a daily frequency.  However, I have since 
+found that the daily vertical pressure velocity (omega) was saved on the 500 hPa pressure level.  I have recomputed the SF values using these omega values
+and updated Table 2 (caption has been updated).  The SF values now consistently show that the LWCRE-off experiments have a lower SF, the values are more consistent across experiments, and the surprisingly large difference between the LWCRE off/on experiments for the P100 large domain experiments is reduced to a value of 0.1.  I have deleted 'with the exception of E25' from Line 332 of the submitted manuscript.}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=0.8\columnwidth]{walkerfigs/SubsFrac_TS.eps}  
+  \caption{Subsidence Fraction over the first two years of simulation (E1 and E2 only extend for 6 months.).  Values computed from the pressure 
+  velocity on the 500 mb pressure surface.}
+  \label{fig:subsfracTS}
+\end{figure}  
+  
   
   \item Line 374-378: "An additional unexpected change that results from increasing the domain size is an upward shift of the cloud fields..." This is an interesting result! Do you have any speculation as to why this happened?
   \textcolor{red}{When I first saw this upward shift I thought it must be an error in some part of the setup or analysis... when I convinced myself it was not an error I was fascinated.  However, it is one of several interesting results that I have resisted
@@ -377,7 +399,11 @@ This has been concluded mostly because the simulation is markedly more symmetric
   \textcolor{blue}{I am not aware of other research that has looked into this.  This was one of the points that I found the moist interesting to come out of the analysis.  I am continuously surprised at how infrequently the large-scale vs. convective precipitation is talked about in studies that use GCMs.  I hope that future research does look into this further, whether my own or someone else’s.}
   
   \item Figure 13 caption: How are the subsidence regions defined? Specifically, is any sort of areal averaging conducted and does this vary between simulations of different domain size/resolution? Apologies if this is something that has already been addressed elsewhere in the manuscript.   
-  \textcolor{red}{For the figures which show profiles from the 'subsidence' regions, those regions are defined as the quarter of the domain furthest from the SST maximum, or the two sections, each an eighth of the domain width, which are at the outer edges of the domain.  I played around with this a bit, especially because the asymmetry in some of the runs can complicate things.  But defining the subsidence region as only a quarter of the domain instead of, say, half of the domain, minimizes the influence of asymmetry.}
+  \textcolor{blue}{Subsidence regions are defined as the quarter of the domain furthest from the SST 
+  maximum.  In other words, the two sections, each an eighth of the domain width, which are at the outer edges of the domain.  I played around with this a bit, 
+  especially because the asymmetry in some of the runs can complicate things.  But defining the subsidence region as only a quarter of the domain instead of, 
+  say, half of the domain, minimizes the influence of asymmetry.  This method for defining the subsidence region is systematic across all experiments and while 
+  there are some grid points with subsidence that are not included, the subsidence regions do not include grid-points with ascent.}
   
 \end{itemize}
 
@@ -429,9 +455,21 @@ I would recommend to:
   \item Thoroughly justify why the authors decided to focus on LWCRE only rather than the full CRE. The paragraph
 currently introducing the LWCRE-off experiments (L202) does not justify why the experiment is done in the first
 place, even if the manuscript’s results confirm the importance of this experiment a posteriori.
+\textcolor{blue}{Good question.  It is possible with this configuration to repeat experiments in which the SWCRE is turned off/on.  
+We are using a very similar physics code as that used by \textit{Popp \& Silvers, 2017, J. of Clim.}.   However, we have chosen to limit ourselves in this case to the 
+LWCRE experiments for several reasons, the foremost being practicality.  As you know, the current study varies LWCRE, resolution, domain size, and 
+the convective parameterization.  As a result, organizing the current range of results is already a challenge and we chose not to 
+expand the study further.  I have no doubt that the impact of the SWCRE on the coupling between the LS circulation and clouds will lead 
+to more insight and I hope that it will be investigated in future studies.  Additional reasons for focusing our study on the LWCRE on/off experiments
+are as follow.  First, this provides a clean overlap with CFMIP experiments which emphasize LWCRE over the SWCRE due to the complicating impacts of
+SWCRE on the surface energy budget.  Second, there are numerous studies which have shown that the atmospheric shortwave heating is 
+much smaller than the longwave heating (e.g. Perdergrass \& Hartmann, 2014; Popp \& Silvers, 2017 (their Figures 1 \& 4)).}
 \textcolor{red}{This response should lean heavily on Popp and Silvers.  It should additionally emphasize the many directions which the paper already hints at due the large amount of experiments that are being compared, domain size differences, 
-parameterization differences, resolution differences, and the LWCRE differences.  Adding another tier of simulations would 
-be risky...}
+parameterization differences, resolution differences, and the LWCRE differences.}
+\textcolor{blue}{draft of additions: Both the shortwave and longwave radiation influence the atmospheric radiative heating.  We have chosen to focus on 
+the LWCRE because it is by far the dominant contributor to atmospheric radiative heating.
+In order to present a relatively simple analysis of the cloud radiative effect we have chosen to explore LWCRE on/off experiments but not SWCRE on/off 
+experiments.  }
 \end{itemize}
 
 \subsubsection{Descriptive nature of the manuscript}
