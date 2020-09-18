@@ -173,6 +173,9 @@ I think your abstract could benefit from some  reorganization/clarification. It 
 %%
     I think the abstract should summarize these points in this order to help improve the clarity.
    As it stands, you jump around between 1. and 2. and it makes it a bit more difficult to follow. 
+   
+   \textcolor{blue}{We have taken your advice, mostly by moving the content from the former second to last sentence in the abstract to earlier in the abstract and rewriting lines 27-28 of 
+   the originally submitted manuscript.}
     
 \item Ln 67-68:  The Walker circulation itself is not really a framework, and comparing it to observations does not really follow since it occurs in reality. I think you mean to say that idealized or ‘mock-Walker’ circulations can be used as a framework to understand the interactions between clouds and circulation, both in observations and in comprehensive climate model simulations? 
   \textcolor{blue}{I agree the Walker circulation itself is not a framework.  The sentence in question now reads, ``The Walker Circulation provides an excellent example with which to compare the overturning circulation and interactions between clouds and radiation using a variety of model configurations.''}
@@ -210,6 +213,10 @@ I think your abstract could benefit from some  reorganization/clarification. It 
   \textcolor{blue}{Yes, the end of your statement is correct, the subsiding region is drier, but the convective region is more humid than the other experiments.  This is stated in the lines you mention, as well as directly in lines 276-278.  It is the case that the mean values are a bit different than one might expect from looking at Fig. 1.  This also highlights the difference between the means of water vapor compared to water condensate.}
   
   \item Ln 310: I only see prominent asymmetry in the P25 simulations. The P100 simulation is only slightly asymmetric, and the P100L simulation not asymmetric at all.
+  \textcolor{red}{The language describing this has been changed to reflect off center features, rather than just asymmetric.  Please see the discussion in the subsection which discussed 
+  the comparison between P25 and E25.   While P100 is only slightly asymmetric, it is 
+  consistently off center.  The asymmetry of P25L is greater than may be initially apparent because of the difference in domain size.  A similar asymmetry to the P25 case would 
+  be shown with a shift off-center that appears smaller than for P25 (see Figs 5 and 8 of revised manuscript).  }
   
   \item Ln 321-323:   If I'm understanding this correctly, it seems that Fig. 1 show that it is mostly the interaction between LWCRE and 
   circulation that drives this asymmetry. Because Fig 1. middle panel is very symmetrical (with LWCRE disabled).
@@ -279,9 +286,25 @@ You also do not summarize any of the domain size results here, however they are 
   \textcolor{blue}{Done}
   
   \item Ln 704-706: I know this is not the focus of your study, but I wonder which simulation has the more realistic cloud profile: the CRM or GCM-like simulation? The low-cloud fraction seems quite small in the CRM-like experiments...
-  \textcolor{red}{This comment overlaps with the desire from reviewer \# 3 (section 4.1.3 of their review).  Would a plot of MISR observations from the tropical Pacific work well?  }
+  \textcolor{blue}{I have added a new figure that looks at observations from the tropical Pacific in order to give a sense of how these model results compare to observations.  
+  Figure 15 shows cloud fraction from the MISR instrument on board NASA's Terra satellite.  I focused on a region that is usually identified with the Walker Circulation and plotted profiles for the domain mean, a region with upwelling, and a region with downwelling.  If comparing to figure 14 in our manuscript in which we look at the cloud fraction in the subsidence 
+  region it is seen that both the upper-level and low-level cloud fraction observed by MISR in the downwelling region is closer to that of the GCM-like simulations.  This is 
+  somewhat surprising but it should be kept in mind that this type of comparison is very qualitative and subject to numerous caveats.  For example, impacts from the Hadley cell 
+  have not been filtered out of this observational data.  I am hopefully that a quick look at data like this could help to motivate future studies in which a more detailed comparison 
+  between models of the Walker Circulation and observations.  The following red text has been added to the manuscript:}
+  
+  \textcolor{red}{In order to make a qualitative connection to observed clouds and hopefully motivate a more detailed comparative study we look at the clouds observed with the MISR instrument 
+  on board NASA's Terra satellite.  We use the domain (10N-35S) which was identified by Schwendike et al., 2014 as defining the regional Walker circulation in the Pacific.  
+  The left panel of Figure 15 shows the cloud fraction averaged from March 2000-November 2019 of the full domain of the Pacific regional Walker circulation.  This region 
+  includes much of the so-called warm pool beneath the ascending branch of the Walker Circulation as well as the eastern Pacific subsidence regions that encompass the stratocumulus
+  cloud decks that are common off the west coast of South America.   To calculate profiles of the cloud fraction as a function of height we sum the MISR data over all optical depths 
+  and plot the domain mean (dashed line), a region of subsidence ($10^\circ$ N-$35^\circ$S; $120^\circ$W-$60^\circ$W, solid line), and a regions that is characterized by deep 
+  convection ($10^\circ$N-$35^\circ$S; $120^\circ$E-$180^\circ$, dash-dot line).  Overall, both the upper- and low-level cloud fraction from MISR are closer to the cloud profiles 
+  simulated by the GCM-like models.  It would be interesting in future studies to sample the observations for time periods in which the Walker Circulation is strong}  
   
   \item Ln 737-739: This is certainly an interesting result, but I wouldn't say it is a 'consistent asymmetry' given the results in the P100L simulation. I think this should be rephrased to reflect that.
+  \textcolor{blue}{This sentence now reads: Two examples include the consistently off-center circulations, and precipitation patterns,
+relative to the fixed SST pattern, and the dominance of the large-scale precipitation over the convective precipitation.}
 %
 \end{itemize}
 
@@ -325,19 +348,22 @@ Below, I have organized my comments into a set of general, overarching points fi
   \item I believe that Sections 6 and 7 can be consolidated and combined into one, given that the first half of Section 6 is already a well-constructed and well-divided summary of results.
   \textcolor{red}{related to comments from Reviewer \# 1 on reducing number of points in section 6...}
   \item In several parts of the manuscript, multiple references are made to Figures/Tables that appear 10 or more pages earlier. For ease of reading, perhaps quantities such as the domain-mean precipitation can be incorporated into the Figures. For example, Figure 2's legend can list the domain-mean precipitation values next to the labels.
+  \textcolor{red}{I have added domain-mean values to the precipitation shown in Figure 3, and extended the markers at the end of the time series to make Figure 3 easier to read.  
+  In response to several comments from you and the other reviewers, section 3, 6, and 7 have been somewhat reorganized and hopefully make the manuscript easier to read.}
 \end{enumerate}
 
 \begin{itemize}
   \item Given the overarching goal of linking CRMs with GCMs, it is understandable that a 25 km resolution is chosen for the sensitivity experiment of using parameterized vs. explicit convection, instead of a finer spacing. I would also be interested to see this comparison at resolutions representative of operational NWP models, roughly 10 km or so. There are several key differences noted in the manuscript between P25 and E25, so performing a similar comparison would be useful to assess the robustness of the results, while also providing potential relevance for regional climate modeling efforts. This is more out of my own curiosity, rather than something I request be done within the scope of this manuscript.  
 
-  \textcolor{blue}{This is a good point, and I think that we have similar interests in some of what the paper has not covered.  As you could probably see in the paper, organizing the results was challenging, and interpretation was made difficult by many unexpected complications.  Based on the number of experiments which I was already trying to organize in the writing of the manuscript I chose to keep the focus of the paper rather small.   Another factor which limited the number of experiments that I could include in the paper is that I also performed a number of uninteresting or unsuccessful experiments in which various parameter settings were modified, and in which some minor changes were made in the code of the Tiedtke large scale cloud scheme.  I was already dealing with too many experiments. }
+  \textcolor{blue}{This is a good point, and I think that we have similar interests in some of what the paper has not covered.  As you could probably see in the paper, organizing the results was challenging, and interpretation was made difficult by many unexpected complications.  Based on the number of experiments which I was already trying to organize in the writing of the manuscript I chose to keep the focus of the paper rather small.   Another factor which limited the number of experiments that I could include in the paper is that I also performed a number of uninteresting or unsuccessful experiments in which various parameter settings were modified, and in which some minor changes were made in the code of the Tiedtke large scale cloud scheme.  I have more experiments than I can handle! }
 
   \item Have any additional simulations been conducted at resolutions between 2-25, and 25-100 km? It would be interesting to see how smooth the transition is between these two regimes of cloud distribution and radiative response, and if a specific threshold could be found, holding all other conditions equal, to significantly affect the cloud distribution.  
 
   \textcolor{blue}{No, I have not performed experiments at other resolutions (a few at 5km, at the very beginning with different code base, but the analysis was not carried very far).  Also see answer to you comment just before this one. }
 
   \item Some figures are a bit difficult to read, in particular Figures 6 and 13. In particular, for Figure 6 it is difficult to compare the P25 and P25L simulations because the colors on the lines are the same. Figure 13 would be best oriented as a 2X2 window similar to Figure 12, especially given the subtle differences in the rightmost panel.
-  \textcolor{red}{For several of the figures (6, 11,12, and 13) the labels and axis font size has been increased.  Figure 6 has now been split into two figures, one
+  \textcolor{red}{For several of the figures (6, 11,12, and 13) the labels and axis font size has been increased.}  
+  \textcolor{blue}{Figure 6 has now been split into two figures, one
   showing results on the small/control domain size and the other showing results on the large domain.}
 
   \item For each of the figures, especially those later in the manuscript, it would be helpful to make the font size on the axes a bit larger.
@@ -539,9 +565,10 @@ You will find 15 minor comments attached to the annotated PDF of the manuscript.
 throughout the paper are listed below:
 \begin{itemize}
   \item Labeling all figure panels using the conventional notation a/b/c/d (e.g. Figure 1, 2, etc.)
+  \textcolor{blue}{Figures 1-14 now have panels labelled with a/b etc., when multiple panels are present.}
+  
   \item Make titles more formal (e.g. Figure 13) and using a consistently large font size across figures (for instance, the
 titles are easy to read in Figures 9 and 10, but not in Figures 11, 12, and 13)
-
   \textcolor{blue}{The font size for axis and titles in Figure 12 has been increased, x-axis label for Figure 12d corrected to read only units.}
 \end{itemize}
 
