@@ -1,0 +1,30 @@
+\documentclass[varwidth, border=10pt]{standalone}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[labelformat=parens,labelsep=quad,skip=3pt]{caption}
+\usepackage{graphicx}
+
+\begin{document}
+% for some reason, including a blank line between the subfigure blocks leads to a vertically aligned figure...
+
+\begin{figure}
+  \centering
+  %\hspace{\fill}
+  \begin{subfigure}{0.5\textwidth}
+  \centering
+    \includegraphics[width=\linewidth]{/Users/silvers/code/ncl_git/Full_3doms_10lat35_120lon300-eps-converted-to.pdf}
+ \end{subfigure}
+ %\hspace{\fill}
+%\vspace{2pt}
+ %\hspace{\fill}
+\begin{subfigure}{0.31\textwidth}
+\centering
+  \includegraphics[width=\linewidth]{//Users/silvers/code/ncl_git/Full_3doms_10lat35_120lon300_Prof-eps-converted-to.pdf}
+\end{subfigure}
+%\caption{Observations of cloud fraction in the tropical Pacific from MISR over the years 2000-2019. Panel on the right shows the cloud fraction as a function of height from 
+%a region dominated by subsidence (solid), the mean of the full domain shown in left panel (long dashes), and the mean from a region with deep convection (small dashes).  
+%The latitudinal extent follows that used by Schwendike et al., 2014 in their definition of the regional Walker circulation (see their figure 2).}
+ \end{figure}
+
+\end{document}
