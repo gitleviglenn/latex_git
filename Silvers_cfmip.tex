@@ -73,11 +73,13 @@ Does this work support such a claim?
 This paper has a double motivation.  First, to illustrate the wide range of climate sensitivities to external perturbations 
 that can be achieved with a single base model.  For this purpose we utilize several models from the new suite of GFDL 
 models that participated in CMIP6.  This constitutes a hierarchy of configurations that ranges from an atmosphere only 
-aquaplanet to a fully coupled 
-climate model.  Previously the range of climate sensitivities and feedbacks among the ensemble of climate models 
-the world has to offer have been documented largely by examining the multi-model mean results with less attention to 
-the variability of sensitivity within a single modeling framework (IPCC; \citeA{Andrews_etal_2012, Ringer_etal_2014}).  By 
-focusing on the models from a single modeling center we seek fresh insight that could be buried within a large ensemble.
+aquaplanet to a fully coupled global
+climate model.  Evaluating the range of climate sensitivities and feedbacks among climate models 
+has previously been documented most commonly by examining the multi-model mean results (IPCC; \citeA{Andrews_etal_2012, Ringer_etal_2014}) with less attention to 
+the variability of sensitivity within a single modeling framework.  
+The exception to this multi-model ensemble approach is to examine the impact of a large number of parameter perturbations
+within a single model (referred to as a Perturbed Physics Ensemble, see Murphy et al., 2004; Stainforth et al., 2005; Klocke et al. 2011).  
+In this paper we focusing on a single base model across a range of different warming scenarios and model configurations. 
 
 \begin{figure}
   \centering
@@ -90,10 +92,7 @@ focusing on the models from a single modeling center we seek fresh insight that 
   \label{fig:clt_isccp_calipso}
 \end{figure}
 
-A second motivation for this paper is to document the simulation of clouds in the newly developed GFDL models that 
-have participated in CMIP6.  This will largely be done in the context of the amip experiment and comparisons to observations
-that overlap with parts of that time period (1979-2014).  The experiments and diagnostics used are taken from the latest 
-round of CFMIP which has provided a useful framework with which to evaluate cloud feedbacks.       
+    
 
 It has been known for decades that  the spread of cloud feedbacks among models contributes to a large portion of the 
 spread in climate sensitivity among those same models \cite{Cess_etal_1989, Bony_Dufresne_2005}.  
@@ -114,37 +113,58 @@ abrupt 4xCO2 warming experiments, and that both
 of these measures of sensitivity underestimate the equilibrium sensitivity that is attained when a coupled climate 
 model reaches equilibrium after multiple millennia \cite{Paynter_etal_2018,Rugenstein_etal_2020}.     
 At least part of the reason for this multiplicity of 
-sensitivities obtained from different method of calculation is that variations of the climate sensitivity within 
+sensitivities obtained from different methods of calculation is that variations of the climate feedback within 
 individual models has been tied to the influence of particular surface temperature patterns 
-\cite{Gregory_Andrews_2016, Zhou_etal_2016, Andrews_Webb_2018, Silvers_etal_2018}.   
+\cite{Gregory_Andrews_2016, Zhou_etal_2016, Silvers_etal_2018, Andrews_Webb_2018}.   
 The influence of a pattern in the surface temperature is communicated to the TOA radiative fluxes by the clouds 
-(Gregory and Andrews, 2016; Rose et al.; Silvers et al., 2018).   Thus, clouds are important factors to both the uncertainty 
+(Gregory and Andrews, 2016; Rose et al.; Silvers et al., 2018).  Thus, clouds are important factors to both the uncertainty 
 estimates of climate sensitivity, as well as to the variability in time of the climate sensitivity.  
+
+A second motivation for this paper is to document the simulation of clouds in the newly developed GFDL models that 
+have participated in CMIP6.  This will largely be done in the context of the \textit{amip} experiment and comparisons to observations
+that overlap with parts of the textit{amip} time period (1979-2014).  The experiments and diagnostics used are taken from the latest 
+round of CFMIP which has provided a useful framework with which to evaluate cloud feedbacks.   
 
 This work assesses the fidelity of the clouds in AM4.0/CM4.0 with observations and compares clouds from experiments 
 with differing sensitivities. 
-Section two compares the clouds from the \textit{amip} run of AM4.0 with satellite observations.  That section also 
-analysis the radiative fluxes at the top-of-the-atmosphere (TOA) and compares them to the observations from 
-CERES-EBAF.    Section three documents the climate sensitivities of GFDL models across multiple CMIP6 experiments 
-and discusses the potential role played by clouds.   Conclusions are drawn in section four.  
+Section two briefly outlines the data used and the methods of analysis, with further details presented in the appendix.  Section
+three compares the clouds from the \textit{amip} run of AM4.0 with satellite observations.  That section also 
+analyzes the radiative fluxes at the top-of-the-atmosphere (TOA) and compares them to the observations from 
+CERES-EBAF.    Section four documents the climate sensitivities of GFDL models across multiple CMIP6 experiments 
+and discusses the potential role played by clouds.   Conclusions are drawn in section five.  
 
 \section{Data and Experiments}
 
-We compare output from the AM4.0 GCM to observations from ISCCP, MISR, MODIS, CALIPSO, and CERES-EBAF.
+
+The comparisons with observations are made mostly with the \textit{amip} experiment that serves as one of the DECK CMIP6 
+experiments (\cite{Eyring_etal_2016},  \cite{Webb_etal_2017}).   The experiments used 
+in this paper are all part of the GFDL contribution to CMIP6 and as a result, the \textit{amip} and \textit{historical}
+experiments end in the year 2014.  In addition to the \textit{amip} experiment we use the \textit{historical, abrupt-4xCO2}, and \textit{1pctCO2}
+experiments from the CMIP6 DECK.  Several experiments from the CFMIP contributions 
+to CMIP6 are also utilized.  These experiments include \textit{amip, amip-p4K, amip-m4K, amip-future4K, aqua-control} and \textit{aqua-p4K}.  
+In order to utilize as much of the available data as possible much of the analysis of the \textit{amip} experiment uses the 
+full span of years (1979-2014) despite the fact that the satellite observations do not extend as far back in time.  However, 
+some of the analysis for the \textit{amip} and \textit{historical} experiments, in particular for the calculation of a climate feedback parameter over recent years, a shorter period (1996-2014) is used in order to eliminate complications due to radiative forcing in the early 1990's due to volcanic activity.  The relevant time period is stated in the captions of the figures and tables.   
+
+We compare output from the AM4.0 GCM \textit{amip} experiment to observations from ISCCP (the International Satellite Cloud Climatology Project), MISR (the Multiangle Imaging Spectro-Radiometer), MODIS (the Moderate Resolution Imaging Spectroradiometer), 
+CALIPSO (the Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observation; 
+Chepfer et al., 2010; Cesana and Chepfer, 2013), and CERES-EBAF.
 More details are provided in the appendix.  The CMIP6 and CFMIP experiments used in this study are given in Table
 \ref{tab:exps} and the observational data sets used are given in Table \ref{tab:obs}.  Additional details about all 
 experiments used in this paper are given in \cite{Eyring_etal_2016} and \cite{Webb_etal_2017}.  The experiments are referred to with the
 appropriate CMIP6 labels.   
 
-The comparisons with observations are made mostly with the \textit{amip} experiment.   The experiments used 
-in this paper are all part of the GFDL contribution to CMIP6 and as a result, the \textit{amip} and \textit{historical}
-experiments end in the year 2014.  We use the \textit{historical, abrupt-4xCO2}, and \textit{1pctCO2}
-experiments from the CMIP6 DECK.  In addition we utilize several experiments from the CFMIP contributions 
-to CMIP6.  These experiments include \textit{amip, amip-p4K, amip-m4K, amip-future4K, aqua-control} and \textit{aqua-p4K}.  
-In order to utilize as much of the available data as possible much of the analysis of the \textit{amip} experiment uses the 
-full span of years (1979-2014) despite the fact that the satellite observations do not extend as far back in time.  However, 
-some of the analysis for the \textit{amip} and \textit{historical} experiments, in particular for the calculation of a climate feedback parameter over recent years, a shorter period (1996-2014) is used in order to eliminate complications due to radiative forcing in the early 1990's due to volcanic activity.  The relevant time period is stated in the captions of the figures and tables.   
-
+Throughout the paper we utilize what has come to be known as the Cloud Radiative Effect (CRE), calculated 
+as the difference between the full-sky and clear-sky radiative fluxes.  
+The CRE is a simple and effective tool for evaluating the influence of 
+clouds on the climate.  Note that CRE is often referred to as the Cloud Radiative Forcing (CRF) in earlier literature \cite<e.g.,>[]{Cess_etal_1989, Soden_etal_2004}.  It is well known (Soden et al., 2004) that a change in the CRE is not a direct measure of the cloud 
+feedback, and that the CRE can be influenced by non-cloud factors.  However, there are many examples of 
+the productive use of the CRE as a way to diagnose cloud effects (e.g. Cess et al., 1989; Webb et al., 2001; 
+\citeA{Ringer_etal_2014}; Andrews et al., 2015), it is simple to calculate, and
+it allows for direct comparisons with previous studies.  Cloud feedbacks calculated with either the so-called 
+`partial radiative purturbation' or `radiative kernels' method correspond
+to a positive shift (on the order of 0.5 $\rm{W m^{-2}K^{-1}}$) of the change in CRE values (Soden et al., 2004; Soden et al., 2008).  
+The total cloud feedback of a model is therefore usually more positive than will be implied by the CRE.     
 
 
 \section{Clouds in AM4.0: Comparison between AMIP and observations}
@@ -164,25 +184,14 @@ Based on the initial analysis for those papers, the cloud properties of AM4.0 we
 at least as consistent with observations as previous generations of GFDL models.  Z18a also noted 
 that AM4.0 underestimates the liquid droplet number over oceans and downwind of the aerosol emission 
 sources.   
-Comparisons of AM4.0 with observations from ISCCP and MODIS showed an underestimate of 
-the optically thin low clouds and the mid-level clouds (Z18a, Figure 10).  
+Comparisons of AM4.0 with observations from ISCCP and MODIS in Z18a (their Figure 10) showed an underestimate of 
+the optically thin low clouds and the mid-level clouds.  
 However, the observational uncertainty for some of these properties prohibited firm conclusions.  This paper
 uses additional observations and a more thorough analysis of the clouds in AM4/CM4 to better determine 
 the quality of the cloud simulations.        
 In this section we first compare the simulated and observed cloud fraction.  We then compare  
 the simulated TOA radiative fluxes from AM4.0 to those observed by CERES.    
-Throughout the paper we utilize what has come to be known as the Cloud Radiative Effect (CRE), calculated 
-as the difference between the full-sky and clear-sky radiative fluxes.  Earlier literature \cite<e.g.,>[]{Cess_etal_1989, Soden_etal_2004} often referred to the CRE as the Cloud 
-Radiative Forcing (CRF). 
 
-The CRE is a simple and effective tool for evaluating the influence of 
-clouds on the climate.  It is well known (Soden et al., 2004) that a change in the CRE is not a direct measure of the cloud 
-feedback, and that non-cloud related values of CRE can occur.  However, there are many examples of 
-the productive use of the CRE as a way to diagnose cloud effects (e.g. Cess et al., 1989; Webb et al., 2001; 
-\citeA{Ringer_etal_2014}; Andrews et al., 2015), it is simple to calculate, and
-it allows for direct comparisons with previous studies.  The pure cloud feedback usually corresponds 
-to a positive shift of the change in CRE values by roughly 0.3 $\rm{W m^{-2}K^{-1}}$ (Soden et al., 2004).  The total cloud 
-feedback of a model is therefore more positive than will be implied by the CRE.     
 
 \begin{figure}
   \centering
@@ -203,13 +212,12 @@ GFDL has implemented a collection of satellite simulators which are part of the
 CFMIP (Cloud Feedback Model Intercomparison Project; see \cite{Webb_etal_2017}).  Satellite simulator
 are software tools that are used in coordination with GCMs to allow for model variables 
 to be translated to variables that are more directly comparable with what satellites observe.  
-These simulators are often referred to as the CFMIP Observation Simulator Package (COSP); for
-details see Bodas-Salcedo et al. 2011.  This paper highlights simulators of the algorithms for 
-four satellite datasets: ISCCP (the International Satellite Cloud Climatology Project), 
-MODIS (the Moderate Resolution Imaging Spectroradiometer), 
-MISR (the Multiangle Imaging Spectro-Radiometer), and 
-CALIPSO (the Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observation; 
-Chepfer et al., 2010; Cesana and Chepfer, 2013).  By using multiple complimentary satellite 
+These simulators are often referred to as the CFMIP Observation Simulator Package (COSP; see Bodas-Salcedo et al. 2011).  
+This paper highlights simulators of the algorithms for 
+four satellite datasets: ISCCP, 
+MODIS, 
+MISR, and 
+CALIPSO.  By using multiple complimentary satellite 
 datasets and simulators we can benefit from the different strengths of each satellite while largely 
 minimizing the known problems and discrepancies of the observational data sets.      
 
@@ -250,11 +258,12 @@ occuring over land (particularly north of 30) and the region with deep convectio
 The MISR satellite provides good observations of low-level cloud heights and amounts.  
 For this reason and for comparison with both Kay et al., 2012, and Zhang et al., 2019 we compare the cloud fraction 
 between observations from MISR and the AM4.0 simulator output for clouds below 3km in Figure \ref{fig:cf_misr_lowcl}.  
-The optical depth is used to distinguish between the thick and thin clouds.  
+The optical depth is used to distinguish between the thick and thin clouds (optical depth greater than (thick), or less than (thin) 3.6).  
 Consistent with comparisons with ISCCP and CALIPSO we see that AM4.0 has fewer clouds than observed.
 For thick low-level clouds the negative cloud fraction bias is about 14\%, and 12\% for thin clouds.   
 For thick clouds AM4.0 does reasonably well producing the observed spatial distribution of clouds, except in the tropical Indian Ocean. 
-The pattern of thin clouds is not reproduced as well, particularly in the southern hemisphere and the tropics.   
+The observed pattern of thin clouds is not reproduced as well by the model in the tropics, and this is largely due to the 
+presence of small cumulus. 
 
 The MISR observations also allow the distribution of clouds to be divided into different cloud types based on the height of the cloud and
 the optical thickness to create a joint histogram.  
@@ -273,7 +282,8 @@ region there are even a few cloud types that overestimate the cloud fraction.
   \centering
   \includegraphics[angle=90,width=0.85\columnwidth]{cfmipfigs/calip_9pan_amip_obs_vs_AM4.eps}
   \caption{Cloud Fraction observed by CALIPSO (2007-2016) and modeled with the CALIPSO satelite simulator 
-  (amip experiment).
+  (amip experiment) over the three vertical ranges of upper-level (top row), mid-level (middle row), 
+  and low-level (bottom row).
   Dashed line shows meridional profiles of AM4.0 cloud fraction and solid line shows
   the meridional profile of observed cloud fraction.  With only a few exceptions in the polar regions, AM4 underestimates
   clouds in all three vertical ranges with the largest underestimate being of tropical ($\pm \, 30^\circ$) low-level clouds.}
@@ -294,8 +304,9 @@ The global maps  in the center and right columns detail where the biases are occ
 In the upper levels the clouds are underestimated over most land regions and the storm tracks but are 
 slightly overestimated in several tropical oceanic regions.  In the mid-levels the negative bias tends to be larger 
 over tropical land and in the region of the inter-tropical convergence zone.  
-The low-levels have large biases over much of the tropical Pacific ocean, as well as in the stratocumulus zones 
-and the southern tropical Atlantic ocean.   
+As was noted in the comparison with MISR thin cloud amount, much of the underestimation in tropical and subtropical low
+cloud coverage over ocean occurs in regions where small cumulus are prevalent.  Low clouds also show obvious large biases in 
+regions dominated by stratocumulus clouds.
 AM4.0 produces more Low-level clouds than observed over land in the high-latitudes.  
 The zonal mean cloud fraction profiles from CALIPSO that are shown in the left panel of  Figure \ref{fig:calipso_9pan}
 will be discussed more in the next section in comparison to some of the coupled model CM4 experiments and
@@ -318,12 +329,12 @@ several of the CFMIP experiments that were run with AM4.0.
 The comparisons of cloud fraction in Figures 1-4 between observations and the \textit{amip} experiment show a 
 prevailing negative cloud fraction bias across much of the globe for low-, middle-, and upper-level clouds.  Does 
 coupling the AM4.0 atmosphere to a dynamic ocean decrease the cloud bias?   
-\textit{This paragraph should serve as a bridge between the COSP observations, amip and historical experiments, TOA fluxes, and feedbacks.
+\textit{This paragraph should serve as a bridge between the COSP observations, amip and historical experiments, TOA fluxes, and feedbacks.}
 While direct comparisons between GCM output and satellite observations are only possible over the recent decades, experiments that use
 historically based data and extend over longer time periods can give insight into the relationship between cloud area, radiative fluxes
 and the decadal variability of the climate feedback parameter.  The \textit{amip}, \textit{amipPIforcing}, and \textit{historical} experiments are useful
 for these purposes.  Pronounced decadal variability of the climate feedback parameter has been shown to be closely tied to 
-variations of the SW CRE and the low-level clouds (Gregory and Andrews, 2016; Zhou et al., 2016; Silvers et al., 2018).}
+variations of the SW CRE and the low-level clouds (Gregory and Andrews, 2016; Zhou et al., 2016; Silvers et al., 2018).
 Plotting the cloud fields as a function of latitude and height emphasizes the similarities and differences 
 between the various experiments while also allowing for a comparison with the high-, mid-, and low-level clouds 
 that have been observed by CALIPSO.  Overall the clouds in the $amip$ and $historical$ simulations are similar to 
@@ -1074,6 +1085,8 @@ low-level cloud amount (references).}
 Which clouds (high, mid, low, thick, thin, geographic regions) contribute to this uncertainty?
 Why do we do a poor job with these clouds in models? }
 
+\textit{There have been several papers that suggest that changes in cloud phase have led to an increased shortwave cloud feedback in CMIP6 models (Flynn and Mauritsen, 2020).  With the exception of the aquaplanet experiment, all the experiments examined in this paper have identical microphysics parameterizations and tuning.  So the changes in high-latitude cloud feedback and distribution must be due to differences in boundary conditions or the atmospheric circulations.}
+
 %Probably have to cite Armour, 2017.  He does put the time varying sensitivity in context, and discusses the use of the energy budget constraints.  But then I also need to determine how to contextualize the information published by Armour, Andrews, and Lewis.  What are the takeaways?  
 
 
@@ -1189,7 +1202,9 @@ https://esgdata.gfdl.noaa.gov/search/cmip6-gfdl.
 
  \begin{table}
 \begin{center}
-\caption{Experiments used.   Should I list the years the experiment simulate or just the years used in the analysis?}
+\caption{Experiments used.   The years listed for each experiment correspond to the years specified by 
+CMIP6, except for \textit{piControl}.  In most cases these are also the years used for analysis, but some 
+figures use shorter time periods, see Figure captions for details.  }
     \begin{tabular}{*{4}{c}}
     \hline
     \hline
