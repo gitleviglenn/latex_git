@@ -1,0 +1,65 @@
+\documentclass[draft]{agujournal2019}
+\usepackage{url} %this package should fix any errors with URLs in refs.
+\usepackage{lineno}
+\usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
+\usepackage{soul}
+\linenumbers
+
+\draftfalse
+
+\journalname{Journal of Advances in Modeling Earth Systems (JAMES)}
+
+\begin{document}
+
+We calculate feedbacks for the coupled experiments, and amip, as follows.     The difference in surface temperature is calculated 
+relative to the piControl experiment for $T_1$ and as a difference from the first 20 years of the amip experiment for $T_2$.   
+The radiative imbalance at TOA, $N$ is calculated over different periods depending on the experiment.  In all cases
+the years used for $N$ and $T$ are the same.  $N_1$ and $T_1$ corresponds to years 101-150, while $N_2$ and $T_2$ corresponds
+to years 1996-2015.     
+
+\begin{equation}
+  \alpha_{4xCO_2}=-\frac{F_{4xCO_2}-N_1}{T_1}
+\end{equation}
+\begin{equation}
+  \alpha_{1\%CO_2}=-\frac{F_{1\%CO_2}-N_1}{T_1}
+\end{equation}
+\begin{equation}
+  \alpha_{hist}=-\frac{F_{hist}-N_2}{T_2}
+\end{equation}
+\begin{equation}
+  \alpha_{amip}=-\frac{F_{amip}-N_2}{T_2}
+\end{equation}
+
+In the above equations $F_{4xCO_2}=N_{4xCO2}-N_{PiC}$; $F_{hist}=N_{hist(1996-2014)}-N_{PiC}$; 
+$F_{1pctCO_2}=0.79F_{4xCO2}$.
+
+\begin{table}
+\begin{center}
+\caption{Global mean radiative feedbacks ($\rm{W\, m^{-2} K^{-1}}$).  The cloud radiative effect (CRE) is computed as
+ the clear sky minus all sky TOA flux.}
+    \begin{tabular}{*{5}{c}}
+    \hline
+    \hline
+ Feedback   & Abrupt 4x$\rm{CO}_2$ & 1pct$CO_2$.   & Historical    &  Amip   \\ \hline
+    Net $\alpha$         &   -1.11      &  -1.22          &  -1.83         & -1.77               \\ 
+    \\
+    Net CRE   & -0.06       &  -0.26          & -0.45         & -0.46           \\  
+    \\
+    LW CRE   & 0.14        &  0.10            & -0.14           & -0.03          \\  
+    \\
+    SW CRE  & -0.20       &  -0.26            & -0.31          & -0.43         \\  
+    \\
+    LW CLR   & -1.70       &  -1.71            & -1.94           & -2.25        \\  
+    \\
+    SW CLR  & 0.65        & 0.65              & 0.56             & 0.91          \\  
+    \\
+    $\Delta \rm{T}_s$        & 3.99        &  ??                & 0.8              & 0.76          \\  \hline
+
+    \end{tabular}\par
+    %\bigskip 
+    \label{tab:lambda}
+\end{center}
+\end{table}
+
+
+\end{document}

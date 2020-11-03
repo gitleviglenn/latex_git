@@ -1,0 +1,734 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AGUJournalTemplate.tex: this template file is for articles formatted with LaTeX
+%
+% This file includes commands and instructions
+% given in the order necessary to produce a final output that will
+% satisfy AGU requirements, including customized APA reference formatting.
+%
+% You may copy this file and give it your
+% article name, and enter your text.
+%
+%
+% Step 1: Set the \documentclass
+%
+%
+
+%% To submit your paper:
+\documentclass[draft]{agujournal2019}
+\usepackage{url} %this package should fix any errors with URLs in refs.
+\usepackage{lineno}
+\usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
+\usepackage{soul}
+\linenumbers
+%%%%%%%
+% As of 2018 we recommend use of the TrackChanges package to mark revisions.
+% The trackchanges package adds five new LaTeX commands:
+%
+%  \note[editor]{The note}
+%  \annote[editor]{Text to annotate}{The note}
+%  \add[editor]{Text to add}
+%  \remove[editor]{Text to remove}
+%  \change[editor]{Text to remove}{Text to add}
+%
+% complete documentation is here: http://trackchanges.sourceforge.net/
+%%%%%%%
+
+\draftfalse
+
+
+\journalname{JAMES}
+
+
+\begin{document}
+
+
+\title{Response to Reviewers for: `Clouds and Radiation in a mock-Walker Circulation'}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  AUTHORS AND AFFILIATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+
+\authors{Levi G. Silvers\affil{1,*}, and Thomas Robinson\affil{2}}
+
+\affiliation{1}{Princeton University/GFDL, Princeton, New Jersey, USA}
+\affiliation{2}{NOAA/GFDL, SAIC, Science Applications International Corporation, Reston, VA, USA}
+\affiliation{*}{Current Affiliation: School of Marine and Atmospheric Sciences, Stony Brook University, Stony Brook, NY, USA}
+
+\correspondingauthor{Levi Silvers}{levi.silvers@stonybrook.edu}
+
+
+
+
+
+% (include name and email addresses of the corresponding author.  More
+% than one corresponding author is allowed in this LaTeX file and for
+% publication; but only one corresponding author is allowed in our
+% editorial system.)
+
+% Example: \correspondingauthor{First and Last Name}{email@address.edu}
+
+
+
+
+%% ------------------------------------------------------------------------ %%
+
+\section{Note from LGS and TR}
+
+\textcolor{blue}{All responses and comments by the authors are in blue.  Below please find my responses to your particular considerations.  When referring to line numbers that were used in your revues I have done my best to use the same line numbers (those from the original submission) unless otherwise
+noted.  Reviewer \#1 made additional comments in a pdf that was included with the review.  I have imported those comments to this document.  Reviewer \#3 made 15 minor comments in the annotated pdf provided by \textit{JAMES}.  I have responded with my own annotations in the annotated pdf. }
+
+\section{Reviewer \# 1 Evaluations}
+
+Recommendation: Return to author for minor revisions
+
+Significant: The paper has some unclear or incomplete reasoning but will likely be a significant contribution with revision and 
+clarification.
+
+Supported: Yes
+
+Referencing: Yes
+
+Quality: The organization of the manuscript and presentation of the data and results need some improvement.
+
+Data: No
+
+Accurate Key Points: Yes
+
+This paper presents a number of interesting results on the interactions between longwave cloud
+radiative effects and the Walker circulation using GCM-like and CRM-like simulations. This
+approach provides an important link between more idealized, smaller-scale simulations of the
+tropical atmosphere where convection is resolved (i.e. RCE with a CRM) with less-idealized,
+larger-scale simulations of the tropical atmosphere where convection is not resolved (i.e.
+prescribed SST gradients with a GCM). As such, this work is critical for improving our
+understanding of the observed tropical atmosphere.
+
+The central finding is that the CRM-like simulations produce substantially less low clouds than
+the GCM-like simulations, and this leads to important differences in the atmospheric response to
+longwave cloud radiative effects (LWCRE). In particular, LWCRE act to increase precipitation
+in the GCM-like experiments, and act to decrease the precipitation in the CRM-like experiments.
+The results have important implications for our understanding of the interactions of clouds and
+the tropical circulation in nature as well as in more sophisticated global climate simulations.
+
+In my view the main weakness of the paper is lack of clarity in a few areas. The paper could
+benefit from emphasizing the main points, as well as clarification of some of the science ideas.
+The figures generally illustrate the main points nicely, but I have included a few notes for
+improvements, as well as suggestions for additional plots (particularly a plot of the longwave
+heating rate as a function of distance). See attached document for comments*, which have been
+highlighted throughout the paper. The suggestions are generally minor, but I think the clarity of
+the paper could be improved substantially with these changes.
+
+\textcolor{blue}{Thank you for your review and the encouraging synopsis, it has helped me to improve the paper.  I think that 
+the changes made as a result of the comments from you and the other reviewers has substantially improved the clarity of the 
+results and descriptions.  Your comments have helped to better emphasize the main points and to improve the representation
+of the data with the figures.}
+
+\subsection{General Comments}
+
+\begin{itemize}
+\item Abstract: 
+I think your abstract could benefit from some  reorganization/clarification. It seems to me that there are two overarching themes to your paper:
+%%
+    \begin{enumerate}
+  \item There are significant differences between the CRM-like and GCM-simulated Walker circulation, including a stronger/more symmetric and less low clouds in the CRM-like simulations.
+%% 
+  \item The substantial differences in cloud type between the CRM-like and GCM-like simulations lead to substantial differences in the  atmospheric responses to the longwave cloud radiative effect (e.g. more precipitation in the GCM-like simulation, and less precipation in the CRM-like simulation). 
+    \end{enumerate}
+%%
+    I think the abstract should summarize these points in this order to help improve the clarity.
+   As it stands, you jump around between 1. and 2. and it makes it a bit more difficult to follow. 
+   
+   \textcolor{blue}{We have taken your advice, mostly by moving the content from the former second to last sentence in the abstract to earlier in the abstract and rewriting lines 27-28 of 
+   the originally submitted manuscript.}
+    
+\item Ln 67-68:  The Walker circulation itself is not really a framework, and comparing it to observations does not really follow since it occurs in reality. I think you mean to say that idealized or ‘mock-Walker’ circulations can be used as a framework to understand the interactions between clouds and circulation, both in observations and in comprehensive climate model simulations? 
+  \textcolor{blue}{I agree the Walker circulation itself is not a framework.  The sentence in question now reads, ``The Walker Circulation provides an excellent example with which to compare the overturning circulation and interactions between clouds and radiation using a variety of model configurations.''}
+
+\item Ln 71: Change to lowercase: 'sea surface temperature'  
+  \textcolor{blue}{Done}
+  
+  \item Ln 119-120: Best to avoid colloquial phrases. I gather that you are saying that it is difficult to compare, for example, a CRM with a large domain, to a GCM, because there the model physics differ in many ways, not just how convection is treated. So differences between those models are not necessarily due to the convection alone. Your work helps clarify these issues by using the same model.
+  \textcolor{blue}{The text now reads: Current climate models continue to be developed with an increasingly fine resolution and 
+the domain sizes used with CRMs continues to grow.  The parameter space of GCMs and CRMs has begun to overlap but the representation of 
+physics continues to differ by much more than grid-spacing and the treatment of convection.  As a result there is a need to systematically compare the 
+clouds and their influence on the climate produced by each type of model.
+By simulating a mock-Walker Circulation in the context of both a GCM and a CRM that have been derived from the same model we 
+illustrate how inextricable the interactions between clouds and radiation are to the coupling of moisture with the large-scale circulation.}
+  
+  \item Ln 123-124: Can you be more specific here?
+  \textcolor{blue}{Please see my response to your previous comment, on Ln 119-120, I trust this has clarified the statement for readers.}
+  
+  \item Ln 139-144: Split into two sentences. This also gives the impression that you were not able achieve your goal. Maybe rephrase as 'By simulating a tropical Pacific-like region in GCM-like and CRM-like models, we are able to better understand..."
+  \textcolor{blue}{I have used the sentence that you suggested.}
+  
+  \item Ln 193: Although not necessary, it might be good to make some reference to 'cloud-locking' experiments in this paragraph (e.g. Radel et al. 2016).  The cloud-locking method is useful for studying the impact of cloud-radiation-circulation interactions on the atmospheric variability (e.g. ENSO), whereas your methodology is useful for understanding the impacts of cloud-radiation-circulation interactions on the mean state. 
+  \textcolor{blue}{I have added the reference to Radel et al. and briefly mentioned cloud-locking.  I also inserted 'mean state' into the first sentence of this paragraph to highlight the point that you make about the difference between the uses of cloud-locking compared to the LWCRE-off technique.}
+  
+  \item Ln 216-218: It seems to me that it would be better to refer to any experiment in the range of P100-P25 as 'GCM-like' and any experiment in the range of E25-E1 as 'CRM-like'. Then, the E25 and P25 experiments serve as the link between GCM-like and CRM-like experiments.
+  \textcolor{blue}{There was a mistake in this sentence, it has been corrected to include, ``...`GCM-like' while the E2 and E1
+  experiments are referred to as CRM-like''. Additionally, you make a good point here, that the distinction between GCMs and CRMs could be made based on whether a 
+  parameterization is used for the convection.  However, in my opinion, a model with 25km grid-spacing should not be called cloud-resolving.  I also considered the possibility of referring to the two classes of model-types as 'explicit models' and 'parameterized models' as a way to more clearly distinguish them.  But I chose against that naming convention because I think it then blurs the natural similarities that my P100, P25, E25 simulations have with GCMs and the natural similarities my E1, E2 simulations have with CRMs.  Using parameterized and explicit in the naming also overly emphasizes the convective parameterization despite all simulations involving many identical parameterizations.}
+  
+  \item Table 2:  This table is helpful. I wonder if adding two columns for high cloud and low cloud fraction could help further summarize some of your key results?
+  \textcolor{blue}{Good suggestion.  I have made several additions to the paper that I think further clarify the results as related to the cloud and moisture 
+  distributions with height.  The new Figure 4 shows profiles of cloud fraction and cloud condensate for the P100, P25, and E25 experiments.  I have also 
+  added a panel to Figure 13 which  shows the profiles of specific humidity.}
+  
+  \item Figure 1: Nice figure. It is interesting that the middle and right panels are so similar to each other. Does this suggest that the cloud longwave effects are weak in the E25 simulation? And potentially much too strong in the P25 simulation? It might be useful to show a plot of the longwave heating rate for each simulation...  
+  \textcolor{blue}{I agree, the similarity of panels b and c is interesting.  However, I hesitate to conclude that LW CRE is very weak in E25 LWCRE-on and 
+  too strong in the P25 simulation.  Mostly because I don't know what constitutes a LW CRE that is `too strong'.  I interpret the difference between panels
+  a and b to indicate how important the LWCRE is to the atmospheric state, and the symmetry of panel c to indicate the more regular behavior of explicit convection.
+  While panel b is much more symmetric than panel a, there are still notable asymmetries present which supports the idea that part of the asymmetry comes from the convective parameterization and part of it comes from the LWCRE.  Figure 5 of the revised manuscript, with five year Hovmoller diagrams for the cases in Figure 1 will be interesting for you to see.  I have almost added plots of the 2D longwave heating many times to this paper.  However, they don't add much insight and the paper is already bordering on unwieldy, so I have refrained.}
+  
+  \item Ln 282-284:  Doesn't Fig. 1 show that P25 control yields a drier atmosphere? You also state this in lines 278-280. I guess it yields a drier subsiding region, but also a much more humid convective region. 
+  \textcolor{blue}{Yes, the end of your statement is correct, the subsiding region is drier, but the convective region is more humid than the other experiments.  This is stated in the lines you mention, as well as directly in lines 276-278.  It is the case that the mean values are a bit different than one might expect from looking at Fig. 1.  This also highlights the difference between the means of water vapor compared to water condensate.}
+  
+  \item Ln 310: I only see prominent asymmetry in the P25 simulations. The P100 simulation is only slightly asymmetric, and the P100L simulation not asymmetric at all.
+  \textcolor{blue}{The language describing this (in multiple places) has been changed to reflect off center features, rather than just asymmetric.  Please see the discussion in 
+  the new subsection (3.2) which discusses the comparison between P100, P25 and E25.   While P100 is only slightly asymmetric, it is 
+  consistently off center.  The asymmetry of P25L is greater than may be initially apparent because of the difference in domain size.  I am happy to change 
+  the language here as I don't think the 'asymmetry' is important scientifically.}
+  
+  \item Ln 321-323:   If I'm understanding this correctly, it seems that Fig. 1 show that it is mostly the interaction between LWCRE and 
+  circulation that drives this asymmetry. Because Fig 1. middle panel is very symmetrical (with LWCRE disabled).
+Also, I wonder to what extent the domain shape influences 
+  this result (the asymmetry is not present in P100L and less prominent in P25L)
+  \textcolor{blue}{The new subsection, 3.2, and especially the new Figure 5, will clarify this further.  It should be pointed out that while the middle panel of Fig1 is symmetrical relative to the left panel, 
+  the far right panel is even more symmetrical (at least in terms of the RH and streamfunction).}
+  
+  \item Ln 338-343: Yes, but maybe clarify that you must compare similar domain sizes in Table 2. The variation in SF is also influenced by domain size. 
+  \textcolor{blue}{I agree in principle that the cleanest comparisons will be with similar domain sizes, but comparing similar domain sizes does not help to clarify the numbers in Table 2.  For example, both the largest and smallest SF are found on the large domain.  I also think there is still some value 
+  in the comparison even across different domain sizes.}
+  
+  \item Figure 6: I think there are too many lines on this plot. Maybe two separate plots would be best: one for P25 and one for P100.
+  \textcolor{blue}{Done.  Splitting this into two panels was a good suggestion.}
+  
+  \item Ln 461: 'more' instead of 'better'
+  \textcolor{blue}{Done}
+  
+  \item Figure 13: These plots are useful, however I still think it might be helpful to show a profile of the longwave heating rate vs. horizontal distance (like Fig. 10)
+%
+Also, the triangle markers for E25 may be obscuring some details. 
+I wonder if just using a slightly different color for E25 and P25 would be better.
+\textcolor{blue}{Figure 13 has been redone as a 2x2 panel figure using a different color for E25 instead of the triangles, larger axis labels, and clearer panel 
+titles.  I have opted to not include figures of the longwave heating vs horizontal distance.  I have not found them to provide unique insight and are best 
+understood in combination with the shortwave heating, convective heating, and heating due to large-scale physics plots.  Including this all would significantly 
+bulk up the paper with minimal gain.}
+  
+  \item Ln 534-540: Although I understand the point you are making here, the wording is a bit unclear. If by 'atmospheric radiative cooling' you mean the net cooling of the atmosphere (i.e. difference between OLR and net radiation at the surface), then it is true that the precipitation mirrors the atmospheric radiative cooling.  
+  
+However, the changes in OLR will not necessarily mirror the changes in precipitation, because the net surface radiation has to be considered as well (as you discuss in the next paragraph). 
+%
+I think you need to briefly clarify the above points here.
+  \textcolor{blue}{To help clarify, I have added 'Net' to the beginning of the sentence that used to start with, 'atmospheric radiative cooling'.  You comments on lines 536 and 538, and my response to those shown below also help to further clarify the text here.
+  Part of what you are seeing is my attempt to write out the way in which I worked through these ideas.  The clarity of the paragraph which starts on Line 541 only came after I had to stumble through some of the ideas in the current paragraph.  I 
+  wrote these paragraphs in this way  
+  hopeing that readers will be guided through a similar process and find it helpful.}
+  
+  \item Ln 536: This is assuming the net surface radiation does not change.
+  \textcolor{blue}{True.  To make this crystal clear I have added, 'All else remaining equal' to the beginning of the sentence.}
+  
+  \item Ln 538: I think this should read 'OLR' not 'atmospheric cooling'. The atmospheric radiative cooling actually decreases in the experiments without LWCRE (as you discuss in the following paragraph). 
+  \textcolor{blue}{Good catch, 'atmospheric cooling' has been changed to, 'OLR'.}
+  
+  \item Ln 541: Great discussion in this paragraph.  
+  \textcolor{blue}{Thank you}
+  
+  \item Ln 545-546: This is particularly true because the low clouds are found in relatively dry regions. Without low clouds, the dry atmosphere would emit less downwelling longwave radiation and roughly the same outgoing longwave radiation. In other words, the low clouds effectively increase the downwelling radiation in dry regions, which leads to more atmospheric cooling.   
+  \textcolor{blue}{This is a good way of stating the underlying reasons.  I have made some modifications so the sentence now 
+  reads, ``Low-level clouds, especially in dry regions, serve as a significant source of  radiative cooling for the atmosphere (Figure 
+  13) because they increase the downwelling longwave radiation.''}
+  
+  \item Ln 556-557: A bit unclear. What decrease of low-level clouds are you referring to here? Are you referring to the fact that the CRM-like simulations have fewer low clouds?
+  \textcolor{blue}{I have added, `when the LWCRE is off' to this sentence to make my meaning clear.  I am not referring to the fact that CRM-like simulations have fewer clouds, but to the fact that there are far less low-level clouds in the LWCRE-off simulations 
+  especially for the GCM-like simulations. }
+  
+  \item L584-608: I think it is good to have a summary here, but I'm getting lost in all of the details. It would be helpful for the reader if you could summarize only the most important points (maybe 5-6 bullets max). For example, I think you could probably eliminate the last 2 points in the first set (i.e. about spatial gradients of humidity, etc and about the condensate changes). 
+
+You also do not summarize any of the domain size results here, however they are mentioned in your conclusions. So I'm left a bit confused about the overall importance of the domain size results... to remedy that I suggest 1) mentioning the key domain-size sensitivies here and/or 2)  deleting the discussion of the domain-size sensitivities in the conclusions. Just trying to help you better convey the main points to the reader.
+  \textcolor{blue}{The last bullet point (Lines 592-594) of the first list has been removed.  I have also reorganized and combined the material that was 
+  formerly in sections 6 and 7 into one section with the hope of more clearly distinguishing between the summary of our results and the discussion points.  Hopefully it is not as easy to get lost in the details now.}
+ 
+  
+  \item Ln 690-692: Can you speculate about why this might be? Could the smaller low-cloud amounts in the CRM-like experiment be due to the stronger overturning circulations, and hence stronger subsidence drying? 
+  \textcolor{blue}{I have included the following in the freshly organized concluding section: 
+  Our results show a stronger of the overturning circulation (Figures 1,2, and 11)
+ in the CRM-like experiments compared to the GCM-like experiments.  
+ Accompanying this is a difference in the vertical mixing of water condensate, specific
+ humidity and temperature (Figures 4, 8, and 13).  We conclude that the CRM-like experiments (E1 and E2) transport more specific humidity 
+ and liquid water from the lowest 200 hPa of the atmosphere into the troposphere above than do the GCM-like experiments 
+ (P100 and P25).  While the E25 experiment does not use convective parameterizations, in terms of the vertical distribution of water
+ species and clouds it is more similar to the GCM-like experiments than to the CRM-like experiments.}
+  
+  \item Ln 701: 5\%
+  \textcolor{blue}{Done}
+  
+  \item Ln 704: context 'of' 
+  \textcolor{blue}{Done}
+  
+  \item Ln 704-706: I know this is not the focus of your study, but I wonder which simulation has the more realistic cloud profile: the CRM or GCM-like simulation? The low-cloud fraction seems quite small in the CRM-like experiments...
+  \textcolor{blue}{I have added a new figure that looks at observations from the tropical Pacific in order to give a sense of how these model results compare to observations.  
+  Figure 15 shows cloud fraction from the MISR instrument on board NASA's Terra satellite.  I focused on a region that is usually identified with the Walker Circulation and plotted profiles for the domain mean, a region with upwelling, and a region with downwelling.  If comparing to figure 14 in our manuscript in which we look at the cloud fraction in the subsidence 
+  region it is seen that both the upper-level and low-level cloud fraction observed by MISR in the downwelling region is closer to that of the GCM-like simulations.  This is 
+  somewhat surprising but it should be kept in mind that this type of comparison is very qualitative and subject to numerous caveats.  For example, impacts from the Hadley cell 
+  have not been filtered out of this observational data.  I am hopefully that a quick look at data like this could help to motivate future studies in which a more detailed comparison 
+  between models of the Walker Circulation and observations.  The following text has been added to the manuscript:}
+  
+  \textcolor{blue}{In order to make a qualitative connection to observed clouds and hopefully motivate a more detailed comparative 
+study we look 
+at the clouds observed with the Multiangle Imaging Spectro-Radiometer (MISR) instrument on board NASA's Terra satellite (see 
+Marchand et al., 2010 for details).  We use the domain (10N-35S) which was identified by Schwendike et al., 2014 as defining the 
+regional Walker circulation in the Pacific.  The left panel of Figure 16 shows the cloud fraction averaged from March 2000-
+November 2019 of the full domain of the Pacific regional Walker circulation.  This region includes much of the so-called warm pool 
+beneath the ascending branch of the Walker Circulation as well as the eastern Pacific subsidence regions that encompass the 
+stratocumulus cloud decks that are common off the west coast of South America.   To calculate profiles of the cloud fraction as a 
+function of height we sum the MISR data over all optical depths  and plot the domain mean (dashed line), a region of subsidence 
+($10^\circ$ N-$35^\circ$S; $120^\circ$W-$60^\circ$W, solid line), and a region that is characterized by deep 
+convection ($10^\circ$N-$35^\circ$S; $120^\circ$E-$180^\circ$, dash-dot line).  Overall, both the upper- and low-level cloud fraction 
+from MISR are closer to the cloud profiles simulated by the GCM-like models.  However, it should be kept in mind that there are 
+several substantial differences between our mock Walker circulation and the observed Walker circulation.}
+    
+  \item Ln 737-739: This is certainly an interesting result, but I wouldn't say it is a 'consistent asymmetry' given the results in the P100L simulation. I think this should be rephrased to reflect that.
+  \textcolor{blue}{This sentence now reads: Two examples include the consistently off-center circulations, and precipitation patterns,
+relative to the fixed SST pattern, and the dominance of the large-scale precipitation over the convective precipitation.}
+%
+\end{itemize}
+
+\section{Reviewer \# 2 Evaluations}
+
+Recommendation: Return to author for major revisions
+
+Significant: The paper has some unclear or incomplete reasoning but will likely be a significant contribution with revision and clarification.
+
+Supported: Yes
+
+Referencing: Yes
+
+Quality: The organization of the manuscript and presentation of the data and results need some improvement.
+
+Data: Yes
+
+Accurate Key Points: Yes
+
+This manuscript examines a simulated Walker circulation-like setup, making use of a flexible model that can be configured into GCM-like and CRM-like states. By focusing primarily on the equilibrium state attained in each simulation, the coupling of clouds, radiation, and circulation is studied. These each change substantially as domain size, resolution, use of a convective parameterization, and interactions between clouds and longwave radiation are altered separately. Results also have potential implications toward studying the complex cloud radiative feedbacks that affect our future climate projections.
+
+The manuscript offers a thorough analysis of this intricate coupling, and will undoubtedly be a significant contribution to the literature. As you will see below, the bulk of my comments relate to the organization of the manuscript, which I believe should be revisited and can be improved to present these meaningful results in a more cohesive and concise manner. In addition, I believe more attention should be given to the comparison between the two 25 km-resolution simulations: those with parameterized convection and explicit convection, respectively. While these suggested organizational edits may be more of a significant undertaking, I ultimately believe this set of revisions to be more minor, and look forward to reading the finished product!
+
+Below, I have organized my comments into a set of general, overarching points first, followed by a handful of individual, line-by-line comments.
+
+\textcolor{blue}{Thank you for your review and the encouraging synopsis, it has helped me to improve the paper.  I think that 
+the changes made as a result of the comments from you and the other reviewers has substantially improved the clarity of the 
+results and descriptions.  I have incorporated most of you recommendations and trust that you will find the manuscript substantially 
+improved.}
+
+\subsection{GENERAL COMMENTS}
+*In terms of organization, I believe some reworking and consolidation of results are useful and fairly straightforward. Some examples include:
+
+\begin{enumerate}
+  \item Section 3 is meant to focus on the impact of LWCRE, but subsequent sections frequently reference the comparison between LWCRE-on and LWCRE-off as well (i.e. lines 361-373, 398-401, 459-462).
+  \textcolor{blue}{I have added this sentence to the end of the introduction where the layout of the paper is described: 'The longwave 
+  cloud radiative effect (LWCRE) is an important element for all of the experiments and will be discussed throughout the paper.'  My 
+  response to your next point is also relevant to this point.   During the writing I attempted consolidating the comparison between 
+  LWCRE on/off to one section but found it to 
+  create more problems than it solved because the LWCRE on/off experiments have such a strong influence on all of the other   
+  sections.  You mention lines 361-373, which happens to be a perfect example of the difficulty.  Figures 5 and 6 illustrate the 
+  overlapping influence of the LWCRE on/off effects and domain size dependence.  As a result, I have chosen to largely focus on your 
+  other excellent recommendations for reworking the organization of the manuscript.}
+  \item Comparisons between E25 and P25 are made in multiple sections, and some of these results are referenced in passing (i.e. lines 518-519, "It is also worth noting that in contrast to the P25 case which has strong domain shear..."). Given the importance of this resolution in the manuscript to link GCMs and CRMs, I believe that this deserves its own section.
+  \textcolor{blue}{Your review has convinced me.  I have reorganized the paper to include a new subsection 3.2 in which P100, P25, and E25 are compared to highlight the impact that resolution and the convective parameterization have.  I think this makes the overall 
+  comparison between GCM-like and CRM-like models more logical.   The new subsection shows domain mean profiles of RH, domain mean condensate, cloud fraction, atmospheric heating, and temperature.  I have also included a figure with additional Hovmoller precipitation diagrams focusing on P25 and E25. To further aid in the comparison between E25 and P25, the P25 control and P25 LWCRE-off profiles of total condensate have been added to Figure 11 (note the number of this figure will change depending on the E25/P25 section).  An additional panel was added to that figure showing the vertical distribution of specific humidity.  The color used to show the E25 profiles has also been changed from yellow to purple in several of the figures and I think this also helps readers to compare E25 and P25.}
+  \item Figure 10, in the context of its section on resolution dependence, seems to convey a similar picture as Figure 9, and its already been well-established that removing LWCRE seems to broaden/weaken the mass circulation robustly.  
+  
+  \textcolor{blue}{You are right that there is some redundancy of message in Figure 10, but I think there is enough interest in the results of the 1 and 2km simulations to warrant inclusion of Figure 10. }
+  
+  \item I believe that Sections 6 and 7 can be consolidated and combined into one, given that the first half of Section 6 is already a well-constructed and well-divided summary of results.
+  \textcolor{blue}{Section 6 and 7 have been combined and reorganized into one section with two subsections, one with results and one with discussion.  I think this improves the clarity.  Please see the revised manuscript.}
+  \item In several parts of the manuscript, multiple references are made to Figures/Tables that appear 10 or more pages earlier. For ease of reading, perhaps quantities such as the domain-mean precipitation can be incorporated into the Figures. For example, Figure 2's legend can list the domain-mean precipitation values next to the labels.
+  \textcolor{blue}{I have added domain-mean values to the precipitation shown in Figure 3, and extended the markers at the end of the time series to make Figure 3 easier to read.  
+  In response to several comments from you and the other reviewers, section 3, 6, and 7 have been somewhat reorganized and hopefully make the manuscript easier to read. }
+\end{enumerate}
+
+\begin{itemize}
+  \item Given the overarching goal of linking CRMs with GCMs, it is understandable that a 25 km resolution is chosen for the sensitivity experiment of using parameterized vs. explicit convection, instead of a finer spacing. I would also be interested to see this comparison at resolutions representative of operational NWP models, roughly 10 km or so. There are several key differences noted in the manuscript between P25 and E25, so performing a similar comparison would be useful to assess the robustness of the results, while also providing potential relevance for regional climate modeling efforts. This is more out of my own curiosity, rather than something I request be done within the scope of this manuscript.  
+
+  \textcolor{blue}{This is a good point, and I think that we have similar interests in some of what the paper has not covered.  As you could probably see in the paper, organizing the results was challenging, and interpretation was made difficult by many unexpected complications.  Based on the number of experiments which I was already trying to organize in the writing of the manuscript I chose to keep the focus of the paper rather small.   Another factor which limited the number of experiments that I could include in the paper is that I also performed a number of uninteresting or unsuccessful experiments in which various parameter settings were modified, and in which some minor changes were made in the code of the Tiedtke large scale cloud scheme.  I have more experiments than I can handle! }
+
+  \item Have any additional simulations been conducted at resolutions between 2-25, and 25-100 km? It would be interesting to see how smooth the transition is between these two regimes of cloud distribution and radiative response, and if a specific threshold could be found, holding all other conditions equal, to significantly affect the cloud distribution.  
+
+  \textcolor{blue}{Because this study focuses on LWCRE, convective parameterizations, and domain size in addition to grid-spacing I have not performed experiments at other resolutions (a few at 5km, at the very beginning with different code base, but the analysis was not carried very far).  Also see answer to you comment just before this one. }
+
+  \item Some figures are a bit difficult to read, in particular Figures 6 and 13. In particular, for Figure 6 it is difficult to compare the P25 and P25L simulations because the colors on the lines are the same. Figure 13 would be best oriented as a 2X2 window similar to Figure 12, especially given the subtle differences in the rightmost panel.
+  \textcolor{blue}{For most of the figures (3, 6, 7, 11,12, and 13) the labels and axis font size has been increased.  
+  Figure 6 has now been split into two figures, one showing results on the small/control domain size and the other showing 
+  results on the large domain.  Figure 13 have been shift to a 2x2 panel format, the color used for E25 is now purple, and the 
+  title are clearer.}
+
+  \item For each of the figures, especially those later in the manuscript, it would be helpful to make the font size on the axes a bit larger.
+  \textcolor{blue}{The font size has been increased.}
+  
+  \item Line 63-64, 78, 81, 132-133: These are a few examples within the introduction, but in several spots throughout the manuscript, content could be made more concise by omitting "the".  
+  
+  \textcolor{blue}{Duly noted and changed.}
+  
+  \item Line 180-183: "...The kilometer of atmosphere just above the surface is resolved by 8 model levels." Can you provide a couple of additional details on the vertical grid spacing? Is it a stretched grid with roughly evenly-spaced pressure intervals? Since you point out in line 219-220 that this is coarser than traditional CRMs, these details would be useful to assess the model's upper-tropospheric resolution.  
+  
+  \textcolor{blue}{Table S1 of the supplementary material that was published as part of Zhao et al., 2018, part 1 lists the model interface levels in pressure and height.  The interface pressure is computing using $p=p_k+(b_k)(p_s)$ with the coefficients also given in Table S1.}
+  
+  \item Line 217-220, 276, 302, 485-494: While initially denoting the simulations as "CRM-like" and "GCM-like", there are some inconsistencies later in the manuscript where these are referred to as just "GCMs and CRMs". I would suggest sticking with the latter naming scheme for simplicity, making sure to state the caveats in Section 2 as you already did for the CRM-like cases.  
+  
+  \textcolor{blue}{I have gone back and forth about what terminology to use.  I hesitate to call a doubly periodic simulation a GCM but you can see the difficulties that arise with the terminology that appends ‘-like’ to the GCMs and CRMs.  For now I have added ‘-like’ in the places that you noticed inconsistencies. }
+  
+  \item Line 321-323: "...but also due to an interaction between the convective parameterization and the LWCRE." If this is known, can you elaborate on it? I take this to be the cause of the domain-mean shear alluded to in lines 315-316, and believe this explanation would strengthen the comparison.
+  
+  \textcolor{blue}{The new subsection, 3.2 should clarify this, especially Figure 5. In contrast to the P25 (lwcre-on) simulation (Figure 1, left; Figure 4d), the initial several months of both P25 
+  (lwcre-off; Figure 5d) and E25 (lwcre-on; Figure 8b) show a precipitation maximum that is centered closely on the SST 
+  maximum in the middle of the domain.  The steady state solutions from the equilibrated period of these simulations (Figure 1) are 
+  also both more symmetric about the center of the domain.  This implies that the source of asymmetry could be either the lwcre, 
+  or the parameterized convection.  However, both P25(lwcre-off) and E25(lwcre-on) eventually transition to a much more irregular evolution of precipitation (see Figure 5d after 600 days) in which the precipitation maximum can reside well off of the 
+  precipitation maximum for several months at a time.  However, both of these simulations have a more symmetric time-averaged distribution than the P25 case.  I then made the inference that it is the interaction between the two that leads to an asymmetric distribution of the steady state. }
+
+\textcolor{blue}{
+This has been concluded mostly because the simulation is markedly more symmetrical when the LWCRE is off but the convection parameterization is still on, and the equilibrium state is more symmetrical when the LWCRE is on but the convection parameterization is off (Figure 1).  The time evolution of precipitation for the LWCRE-off, Conv-off (E25 lwcre off) also shows regular oscillations (large) about the SST maximum in a way that is distinct from either P25 lwcre-off or E25 lwcre-on. } 
+
+  \item Line 326-343: The focus in Table 2 is on the equilibrium state. Is a time evolution of subsidence fraction available? I'd be curious to see how SF changes from the early stages of the simulation, i.e. if it's becoming more or less aggregated over time. The somewhat inconsistent comparison between LWCRE-on and LWCRE-off experiments here is noteworthy, given that LWCRE is arguably the most important mechanism for maintenance of the aggregated state in non-rotating RCE studies.
+\textcolor{blue}{Good question, please see the included Figure 1.  Once the experiments equilibrate the subsidence fraction (SF) is quite steady in time, despite rather large variability (on the order of 0.1-0.15).   Variability increases with grid-spacing to the point that for P100 experiments averages must be taken over at least 3-5 months to obtain the long term mean SF.
+Figure \ref{fig:subsfracTS}  
+shows the subsidence fraction for the control (LWCRE-on) experiments.  The LWCRE-off cases are also very steady in time with a similar degree of variability.  The mean 
+differences of SF between the LWCRE on/off experiments are shown in an updated Table 2.  It should also be noted that SF in the case of the Walker 
+Circulation should be expected to be relatively large, and more consistent across experiments (relative to pure RCE) because of the prescribed SST warm 
+patch that will largely fix the location of deep convection to the middle of the domain and force an overturning circulation.  
+The values used in Table 2 for the originally submitted manuscript were computed 
+using the time averaged mid-tropospheric vertical velocity because I had neglected to save vertical velocity at a daily frequency.  However, I have since 
+found that the daily vertical pressure velocity (omega) was saved on the 500 hPa pressure level.  I have recomputed the SF values using these omega values
+and updated Table 2 (caption has been updated).  The SF values now consistently show that the LWCRE-off experiments have a lower SF, the values are more consistent across experiments, and the surprisingly large difference between the LWCRE off/on experiments for the P100 large domain experiments is reduced to a value of 0.1.  I have deleted 'with the exception of E25' from Line 332 of the submitted manuscript.}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=0.8\columnwidth]{walkerfigs/SubsFrac_TS.eps}  
+  \caption{Subsidence Fraction over the first two years of simulation (E1 and E2 only extend for 6 months.).  Values computed from the pressure 
+  velocity on the 500 mb pressure surface.}
+  \label{fig:subsfracTS}
+\end{figure}  
+  
+  
+  \item Line 374-378: "An additional unexpected change that results from increasing the domain size is an upward shift of the cloud fields..." This is an interesting result! Do you have any speculation as to why this happened?
+  \textcolor{blue}{When I first saw this upward shift I thought it must be an error in some part of the setup or analysis... when I convinced myself it was not an error I was fascinated.  However, it is one of several interesting results that I have resisted
+  pursuing in this paper for fear of being pulled in two many directions.  My speculation is that this is due to a difference of mixing between the BL and the lower troposphere for the large domain experiments, there are much higher values of specific humidity in the BL for the P100L.  Perhaps with a larger physical extent of the SST warm patch there is simply more convective mixing?}
+  
+  \item Line 588-589: Is the decrease in surface enthalpy flux from turning on LWCRE mainly due to latent, or sensible heat flux?  
+  
+  \textcolor{blue}{It is due mostly to the changes in the latent heat flux (~5-10 W/m2) rather than the sensible heat flux (~1 W/m2).}
+
+  \item Line 676-678: This can be a significant result that warrants future research. Has there been any other work into the sensitivity of the large-scale cloud scheme in GCMs besides Held et al. (2007)? If so, this would be useful to cite and elaborate on, either in this section or back in Section 4.  
+  
+  \textcolor{blue}{I am not aware of other research that has looked into this.  This was one of the points that I found the moist interesting to come out of the analysis.  I am continuously surprised at how infrequently the large-scale vs. convective precipitation is talked about in studies that use GCMs.  I hope that future research does look into this further, whether my own or someone else’s.}
+  
+  \item Figure 13 caption: How are the subsidence regions defined? Specifically, is any sort of areal averaging conducted and does this vary between simulations of different domain size/resolution? Apologies if this is something that has already been addressed elsewhere in the manuscript.   
+  \textcolor{blue}{Subsidence regions are defined as the quarter of the domain furthest from the SST 
+  maximum.  In other words, the two sections, each an eighth of the domain width, which are at the outer edges of the domain.  I played around with this a bit, 
+  especially because the asymmetry in some of the runs can complicate things.  But defining the subsidence region as only a quarter of the domain instead of, 
+  say, half of the domain, minimizes the influence of asymmetry.  This method for defining the subsidence region is systematic across all experiments and while 
+  there are some grid points with subsidence that are not included, the subsidence regions do not include grid-points with ascent.}
+  
+\end{itemize}
+
+\section{Reviewer \# 3 Evaluations}
+
+Recommendation: Return to author for minor revisions
+
+Significant: Yes, the paper is a significant contribution and worthy of prompt publication.
+
+Supported: Yes
+
+Referencing: Yes
+
+Quality: The organization of the manuscript and presentation of the data and results need some improvement.
+
+Data: Yes
+
+Accurate Key Points: Yes
+
+The present manuscript investigates the effect of longwave cloud radiative effect and spatial resolution on the mock-
+Walker circulation in a model that can consistently switch between explicit and parametrized convection. More specifically,
+the authors design a series of seven experiments using the Geophysical Fluid Dynamics Laboratory (GFDL) general circu-
+lation model (GCM) AM 4.0. with prescribed surface temperature and different domain sizes, grid spacing, active/inactive
+longwave cloud radiative effect (LWCRE), and explicit/parametrized convection (Section 2). They find that LWCRE orga-
+nizes the Walker cell’s mean precipitation and circulation (Section 3), and increases large-scale precipitation while domain
+size leads to a more modest increase in precipitation as the condensate peak shifts from high-level clouds to low-level clouds
+(Section 4). In contrast, explicit convection tends to lead to more high-level clouds and more convective aggregation, i.e.
+stronger circulation, thermodynamic spatial gradients, smaller precipitation mean but larger precipitation variance, and
+lower surface enthalpy fluxes, a lot of it forced by LWCRE (Section 5). The findings are then thoroughly summarized in
+the discussion (Section 6) and conclusion (Section 7) sections.
+
+This series of mock-Walker cell simulation is new, the manuscript is well-written, the results are consistent with past
+literature, and the topic is of interest to the climate community as it fits well within the “climate model hierarchy” [3, 1],
+all of which warrant eventual publication in the Journal of Advances in Modeling Earth Systems. I list a few comments
+below and would be happy to help with another round of minor revisions if necessary.
+
+\textcolor{blue}{Thank you for your review and the encouraging synopsis, it has helped me to improve the paper.  I think that 
+the changes made as a result of the comments from you and the other reviewers has substantially improved the clarity of the 
+results and descriptions.  I have incorporated many of your suggestions, in particular a panel looking at the vertically resolved 
+specific humidity and a simple look at observations from MISR.}
+
+\subsection{Major comments}
+\subsubsection{Why limit the investigation of cloud radiative effect to LWCRE?}
+While the climate dynamics and self-aggregation literature consistently find that the LWCRE is the most important
+radiative forcing when it comes to convective aggregation (e.g. [6, 4, 2]), the consensus is less clear when it comes to
+shortwave cloud radiative effect (SWCRE). Given the clean simulation setup and the insight obtained from the LWCRE-off
+simulations, \textbf{would it be possible to repeat the experiments with SWCRE and/or the full cloud radiative
+effect (CRE) turned off?}
+
+I would recommend to:
+
+\begin{itemize}
+  \item Rerun at least one simulation with SWCRE-off or the full CRE-off, or
+  \item Thoroughly justify why the authors decided to focus on LWCRE only rather than the full CRE. The paragraph
+currently introducing the LWCRE-off experiments (L202) does not justify why the experiment is done in the first
+place, even if the manuscript’s results confirm the importance of this experiment a posteriori.
+\textcolor{blue}{Good question.  It is possible with this configuration to repeat experiments in which the SWCRE is turned off/on.  
+We are using a very similar physics code as that used by \textit{Popp \& Silvers, 2017, J. of Clim.}.   However, we have chosen to limit ourselves in this case to the 
+LWCRE experiments for several reasons, the foremost being simplicity of focus.  In addition, the current study varies LWCRE, resolution, domain size, and 
+the convective parameterization.  As a result, organizing the current range of results is already a challenge and we chose not to 
+expand the study further.  I have no doubt that the impact of the SWCRE on the coupling between the LS circulation and clouds will lead 
+to more insight and I hope that it will be investigated in future studies.  Additional reasons for focusing our study on the LWCRE on/off experiments
+are as follow.  First, this provides a clean overlap with CFMIP experiments which emphasize LWCRE over the SWCRE due to the complicating impacts of
+SWCRE on the surface energy budget.  Second, there are numerous studies which have shown that the atmospheric shortwave heating is 
+much smaller than the longwave heating (e.g. Pendergrass \& Hartmann, 2014; Popp \& Silvers, 2017 (their Figures 1 \& 4)).}
+
+\textcolor{blue}{The following has been added to the text: One of the ways in which clouds influence the flow of energy through the 
+atmosphere is by absorbing and 
+reemitting longwave radiation....  and later in the same paragraph..... Clouds also interact with shortwave radiation.  We have chosen 
+to only focus on the LWCRE for several reasons.  
+On timescales of years and over large domains, the LWCRE has been shown (e.g. Popp \& Silvers, 2017) to have a much larger 
+influence on the atmospheric 
+heating and the large-scale circulations compared to the SWCRE.  The SWCRE is important on diurnal timescales and for the surface
+energy budget.  However, we choose to leave simulations exploring the SWCRE in the context of the mock-Walker circulation
+for a later study.}
+\end{itemize}
+
+\subsubsection{Descriptive nature of the manuscript}
+
+I appreciated the explicit questions from line 80 to 84, which respectively correspond to Sections 3, 4, and 5:
+
+\begin{itemize}
+  \item How do clouds influence the overturning circulation?
+  \item To what extent are the deep convective clouds and the low-level clouds coupled through the overturning circulation?
+  \item When simulating tropical overturning circulations, how well does a GCM compare to a cloud-resolving model (CRM)?
+\end{itemize}
+
+However, I found the manuscript to be overly descriptive at times, possibly restricting the insight readers could get from
+the AM4.0 Walker setup. For each of the three questions, it could be helpful to use the simulation data to offer a simple
+rationale if not a quantitative explanation for why the authors find the results summarized in Section 6.  
+
+\textcolor{blue}{Sections 6 and 7 have been combined and edited to help clarify the end of the paper.  The goal has been to 
+maximize the insight that readers can get without overloading them with too many details.  I think the revised manuscript 
+succeeds in this and is also more quantitative than the original submission.}
+
+\begin{enumerate}
+  \item (Section 3)
+    \begin{itemize}
+      \item Is it possible to simply relate the difference in circulation/vertical velocity to the difference in CRE (e.g. using the
+two box model for a given value of evaporation minus precipitation)?
+      \item How does CRE compare to circulation strength throughout each simulation once the simulation has equilibrium
+(this would give more data points than a single mean circulation/mean CRE comparison per simulation)?
+    \end{itemize}
+  \textcolor{blue}{These are good questions.  There is great appeal to me in the simplicity and physical reasoning that drives many of the two box models, and other idealized
+  theoretical studies of overturning circulations.  However, the focus of this work has always been more on the comparison between the
+  GCM-like and CRM-like configurations.  I think a comparison between a two-box model and some of these simulations would be 
+  very interesting, but in my opinion I needed to get a sense of what was happening with these experiments before bringing in an 
+  additional framework for comparison.  In addition, the interesting differences in the structure of precipitation, the strong influence
+  on the LWCRE and the significant differences in the vertical structure of the condensate between the GCM-like and CRM-like 
+  models essentially distracted me from two-box model type work that helped to motivate the original study.  It is also not immediately clear to me which two-box model, which measure of CRE and which measure of circulation strength you have in mind.  I would hope
+  that multiple two-box models, various measures of CRE (TOA CRE, ACRE, or differences of particular variables between a control and LWCRE-off experiment), and various measures of the circulation strength would all point to similar insights into the underlying physics, but the ambiguity of the current questions highlights the need for a future study rather than quick inclusion in this paper.}  
+  \item (Section 4, Lines 407-409)
+    \begin{itemize}
+      \item Could the authors show correlations or scatter plots across simulations and across time within a given simulation
+to back up their claim about the link between low-level cloud fraction, LWCRE, and convective versus large-scale
+fraction of total precipitation?
+      \item The causality claim also seems a bit bold given that LWCRE is the only effect that the authors turned on/off; it could
+be for instance that surface latent heat fluxes plays as big of a role, which could be tested by turning the dependence
+of latent heat fluxes on surface wind speed on/off, or by making the surface latent heat fluxes horizontally uniform
+at each timestep. If the authors decide not to run additional experiments, I recommend nuancing that statement
+given that Figure 7 shows that LWCRE is only responsible for part of this partitioning, and given that Figure 6 is
+so hard to read (which could be easily improve by making the P25 and P25L different colors, etc.).
+    \end{itemize}
+  \textcolor{blue}{These are good points you are making.  I have rewritten the lines in question here to be more consistent
+  with what is clearly shown in this paper, and to not so strongly implicate a connection with low-level clouds.  
+  I have concluded that more research is needed before drawing firm conclusions about the connection 
+  between low-level clouds and the fraction of precipitation that is due to either the convection or the large-scale schemes.  In response 
+  to your questions I have computed correlations in time (on monthly data because I don't have daily) between the convective precipitation and the 
+  low-level clouds, as well as with the high-level clouds.  There are a lot of high correlation numbers, but clear conclusions are not obvious and I 
+  would prefer to not commit to conclusions in print yet.  In short, several of the experiments (but not all) show high correlations between low-level 
+  clouds and convective precip.  But the correlations with high-level clouds are also high.  In addition, the correlation is still high for the experiments 
+  with the LWCRE-off.  So I am left desiring more information or experiments, but not for this paper.
+  Figure 6 has been split into two panels and is now easier to read. }
+  \item (Section 5)
+    \begin{itemize}
+      \item The logical flow of the CRM/GCM comparison is relatively easy to follow, but I was wondering if the authors
+could expand on their baseline result that the CRM configuration leads to more upper-level clouds while the GCM
+configuration leads to more lower-level clouds. Would it be possible to compare the vertically-resolved water species
+budget across simulations to understand this difference?
+      \item It is reassuring that this result is consistent with [5]; would it be possible to similarly trace back this difference to a
+discrepancy in shallow cloud mixing, e.g. by comparing the vertical transport of water vapor between the boundary
+layer and the lower troposphere across experiments?
+    \end{itemize}
+    \textcolor{blue}{I have worked to clarify what was Figure 11 in the submitted manuscript.  An additional panel has been added showing 
+    the vertical profiles of specific humidity, similar to figure 2 in Pauluis and Garner, 2006.  I have also noted in the caption, that the liquid
+    condensate is less than 0.005 g/kg above 600 hPa.  I hesitate to add the sperate profiles of liquid and ice because when combined with 
+    lwcre-off profiles, it makes for a very busy figure and I am not sure that it adds much.  }
+\end{enumerate}
+
+\subsubsection{Assessing the realism of the simulated mock-Walker cell}
+
+As the authors point out (L67), the Walker cell setup can be compared to observations from the Pacific region. As their
+results show large differences between the E25/P25 and the E2/E1 simulations (e.g. L420-421), how can the reader
+assess which simulation best captures the Walker cell’s hydrological cycle?
+Although a direct comparison is impossible because of the idealized mock-Walker cell setup, I would highly suggest
+adding observational and/or meteorological reanalysis data to at least some of Section 5’s figures (Figure 8-13) to comment
+on which configuration leads to the most observationally consistent Walker cell. To facilitate the comparison, the authors
+could e.g. choose a period of time where the Pacific’s zonal surface temperature gradient is in the range of the experiments
+listed in Table 1 $(\Delta SST/ \Delta x = 10^{-4} - 10^{-3} K/km).  $
+
+\textcolor{blue}{As you imply, it is challenging to compare a mock-Walker circulation to observations.  I have added 
+figure 16 which uses cloud fraction data from the MISR instrument in the tropical Pacific.  The following text was added near the 
+end of section 5: }
+
+\textcolor{blue}{In order to make a qualitative connection to observed clouds and hopefully motivate a more detailed comparative 
+study we look 
+at the clouds observed with the Multiangle Imaging Spectro-Radiometer (MISR) instrument on board NASA's Terra satellite (see 
+Marchand et al., 2010 for details).  We use the domain (10N-35S) which was identified by Schwendike et al., 2014 as defining the 
+regional Walker circulation in the Pacific.  The left panel of Figure 16 shows the cloud fraction averaged from March 2000-
+November 2019 of the full domain of the Pacific regional Walker circulation.  This region includes much of the so-called warm pool 
+beneath the ascending branch of the Walker Circulation as well as the eastern Pacific subsidence regions that encompass the 
+stratocumulus cloud decks that are common off the west coast of South America.   To calculate profiles of the cloud fraction as a 
+function of height we sum the MISR data over all optical depths  and plot the domain mean (dashed line), a region of subsidence 
+($10^\circ$ N-$35^\circ$S; $120^\circ$W-$60^\circ$W, solid line), and a region that is characterized by deep 
+convection ($10^\circ$N-$35^\circ$S; $120^\circ$E-$180^\circ$, dash-dot line).  Overall, both the upper- and low-level cloud fraction 
+from MISR are closer to the cloud profiles simulated by the GCM-like models.  However, it should be kept in mind that there are 
+several substantial differences between our mock Walker circulation and the observed Walker circulation.} 
+
+\subsection{Minor comments}
+
+You will find 15 minor comments attached to the annotated PDF of the manuscript. 
+\textcolor{blue}{Thank you.  I have responded to your comments in the annotated PDF.}
+
+Additional comments that apply
+throughout the paper are listed below:
+\begin{itemize}
+  \item Labeling all figure panels using the conventional notation a/b/c/d (e.g. Figure 1, 2, etc.)
+  \textcolor{blue}{Figures 1-15 now have panels labelled with a/b etc., when multiple panels are present.}
+  
+  \item Make titles more formal (e.g. Figure 13) and using a consistently large font size across figures (for instance, the
+titles are easy to read in Figures 9 and 10, but not in Figures 11, 12, and 13)
+  \textcolor{blue}{The font size for axis and titles in Figure 12 has been increased, x-axis label for Figure 12d corrected to read only units.}
+\end{itemize}
+
+%%
+
+
+
+
+
+
+
+\bibliography{ enter your bibtex bibliography filename here }
+
+
+\end{document}
+
+
+
+More Information and Advice:
+
+%% ------------------------------------------------------------------------ %%
+%
+%  SECTION HEADS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Capitalize the first letter of each word (except for
+% prepositions, conjunctions, and articles that are
+% three or fewer letters).
+
+% AGU follows standard outline style; therefore, there cannot be a section 1 without
+% a section 2, or a section 2.3.1 without a section 2.3.2.
+% Please make sure your section numbers are balanced.
+% ---------------
+% Level 1 head
+%
+% Use the \section{} command to identify level 1 heads;
+% type the appropriate head wording between the curly
+% brackets, as shown below.
+%
+%An example:
+%\section{Level 1 Head: Introduction}
+%
+% ---------------
+% Level 2 head
+%
+% Use the \subsection{} command to identify level 2 heads.
+%An example:
+%\subsection{Level 2 Head}
+%
+% ---------------
+% Level 3 head
+%
+% Use the \subsubsection{} command to identify level 3 heads
+%An example:
+%\subsubsection{Level 3 Head}
+%
+%---------------
+% Level 4 head
+%
+% Use the \subsubsubsection{} command to identify level 3 heads
+% An example:
+%\subsubsubsection{Level 4 Head} An example.
+%
+
+% Single-line equations are centered.
+% Equation arrays will appear left-aligned.
+
+Math coded inside display math mode \[ ...\]
+ will not be numbered, e.g.,:
+ \[ x^2=y^2 + z^2\]
+
+ Math coded inside \begin{equation} and \end{equation} will
+ be automatically numbered, e.g.,:
+ \begin{equation}
+ x^2=y^2 + z^2
+ \end{equation}
+
+
+% To create multiline equations, use the
+% \begin{eqnarray} and \end{eqnarray} environment
+% as demonstrated below.
+\begin{eqnarray}
+  x_{1} & = & (x - x_{0}) \cos \Theta \nonumber \\
+        && + (y - y_{0}) \sin \Theta  \nonumber \\
+  y_{1} & = & -(x - x_{0}) \sin \Theta \nonumber \\
+        && + (y - y_{0}) \cos \Theta.
+\end{eqnarray}
+
+%If you don't want an equation number, use the star form:
+%\begin{eqnarray*}...\end{eqnarray*}
+
+% Break each line at a sign of operation
+% (+, -, etc.) if possible, with the sign of operation
+% on the new line.
+
+% Indent second and subsequent lines to align with
+% the first character following the equal sign on the
+% first line.
+
+% Use an \hspace{} command to insert horizontal space
+% into your equation if necessary. Place an appropriate
+% unit of measure between the curly braces, e.g.
+% \hspace{1in}; you may have to experiment to achieve
+% the correct amount of space.
+
+
+
+
+
