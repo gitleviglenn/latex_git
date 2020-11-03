@@ -92,8 +92,6 @@ In this paper we focusing on a single base model across a range of different war
   \label{fig:clt_isccp_calipso}
 \end{figure}
 
-    
-
 It has been known for decades that  the spread of cloud feedbacks among models contributes to a large portion of the 
 spread in climate sensitivity among those same models \cite{Cess_etal_1989, Bony_Dufresne_2005}.  
 This has recently been confirmed \cite{Zelinka_etal_2020} for a collection of CMIP6 models.  \citeA{Zelinka_etal_2020} also showed that 
@@ -135,6 +133,9 @@ and discusses the potential role played by clouds.   Conclusions are drawn in se
 
 \section{Data and Experiments}
 
+\subsection{Overall assessment of AM4 and CM4? Here or beginning of next section?}
+
+\subsection{data and experiments}
 
 The comparisons with observations are made mostly with the \textit{amip} experiment that serves as one of the DECK CMIP6 
 experiments (\cite{Eyring_etal_2016},  \cite{Webb_etal_2017}).   The experiments used 
@@ -183,7 +184,7 @@ higher priority partly because of the large observational uncertainties of those
 Based on the initial analysis for those papers, the cloud properties of AM4.0 were determined to be
 at least as consistent with observations as previous generations of GFDL models.  Z18a also noted 
 that AM4.0 underestimates the liquid droplet number over oceans and downwind of the aerosol emission 
-sources.   
+sources.    \textcolor{red}{Could be a good place to state phase related findings and results from Fan et al.}
 Comparisons of AM4.0 with observations from ISCCP and MODIS in Z18a (their Figure 10) showed an underestimate of 
 the optically thin low clouds and the mid-level clouds.  
 However, the observational uncertainty for some of these properties prohibited firm conclusions.  This paper
@@ -358,6 +359,8 @@ There is a particularly large positive bias poleward of about 60N in the low-lev
 
 \subsection {Top-of-Atmosphere Radiative Fluxes}
 
+\textit{should this go in the section that is a general summary of AM4/CM4?}
+
 Clouds have an enormous regional impact on the climate and ecology at the surface of the Earth.   Precipitation 
 at a given point can range from zero to XX mm/day and a range of incoming solar radiation at the surface of 
 (range of rsus (contrasting with rsuscs?)).  However, the impact of clouds on climate is felt, not at the surface, 
@@ -376,7 +379,7 @@ the bias in CRE due to longwave radiative fluxes is $-2.4 \rm{W m^{-2}} $ and th
 is $-1.1 \rm{W m^{-2}} $.  
 % https://eosweb.larc.nasa.gov/project/ceres/ebaf_toa_table.    % webpage with CERES info
 After the AM4.0 development was frozen and the process of documentation 
-was underway, the CERES-EBAF data version 4.1 was released.  When comparing the same 
+was underway, the CERES-EBAF data version 4.1 was released (Loeb et al., 2018).  When comparing the same 
 AM4.0 \textit{amip} experiment to the 
 newer version of CERES-EBAF data we find biases of $-2.2 \rm{W m^{-2}} $ for the longwave CRE and 
 $-2.9 \rm{W m^{-2}} $ for the shortwave CRE (Figure \ref{fig:ceres_cre_4p1}).  Although the magnitude of bias 
@@ -424,8 +427,8 @@ Can we conclude that we have a problem of too few and too bright clouds?   (Webb
 %\textit{1pctCO$_2$} experiment.  Additionally one could calculate the climate sensitivity by running CM4.0 for thousands of years until is equilibrated (as in \citeA{Paynter_etal_2018} for CM2 and CM3) or by using a method similar to that employed by Otto et al., 2014 to infer the sensitivity from \textit{historical} experiment.
 
 The most recent generation of models developed at NOAA's GFDL that have participated in CMIP6 have a large range of climate 
-sensitivities (possibly cite Winton et al., Dunne et al.) depending on the experiment of interest and the method used for 
-calculation.  One way of quantifying this sensitivity is with the climate feedback parameter, which, for the subset of GFDL models and CMIP6 experiments studied in this paper, varies between -0.46 and -2.1 $\rm{W m^{-2}K^{-1}}$ (Table 1).  
+sensitivities (possibly cite Winton et al., Dunne et al.) depending on the experiment of interest, the method used for 
+calculation, and the particular model configuration.  One way of quantifying this sensitivity is with the climate feedback parameter, which, for the subset of GFDL models and CMIP6 experiments studied in this paper, varies between -0.46 and -2.1 $\rm{W m^{-2}K^{-1}}$ (Table 1).  
 These models (AM4.0 Aquaplanet, AM4.0, CM4.0) simulate several 
 distinct geophysical configurations which account for some of the range in values of the climate feedback parameter.  
 However, our hypothesis is that the large range of climate sensitivities that are found within this 
@@ -565,8 +568,8 @@ Sherwood et al. 2015).  This is expressed as $N=F-R$ where the global heat uptak
 ($N; W\, m^{-2}$) is equal to the radiative forcing ($F;  W\, m^{-2}$) minus the radiative response, ($R; W\, m^{-2}$) which is 
 often assumed to be $-\alpha T$, the product of the climate feedback parameter ($\alpha;  W\, m^{-2} K^{-1}$) and the change 
 of the surface air temperature ($T; K$).  
-Rather than using the linear regression method to calculate the ECS from the \textit{abrupt-4xCO$_2$} experiment, or calculating the 
-traditional TCR value from the \textit{1pctCO2} experiment we use the differences in the global mean energy budget between control 
+Rather than using the linear regression method to calculate the ECS from the \textit{abrupt-4xCO$_2$} experiment (ECS of CM4.0 = 34543, Zelinka et al., 2019), or calculating the 
+traditional TCR value from the \textit{1pctCO2} experiment (TCR of CM4.0 = 345, Winton et al., 2020) we use the differences in the global mean energy budget between control 
 periods and the period of interest to calculate the climate feedback parameter as $-\alpha = (F-N)/T$. 
 The advantage of this is that we can then use the same method to compute radiative feedback values from particular periods of the 
 \textit{abrupt-4xCO$_2$}, \textit{1pctCO2} , \textit{historical} and \textit{amip} experiments.     
@@ -629,7 +632,8 @@ only changes to a limited degree.  However, the fully coupled experiments \texti
 feedback that results in part from the positive ice-albedo feedback.  
 Thus, part of the range of values in the clear sky radiative fluxes is the result of differences in the physical configuration 
 of the various experiments.  
-However, the range of total feedback parameter among experiments that is due to differences in cloud feedbacks is not as easily connected to particular experimental configurations.  
+However, the range of total feedback parameter among experiments that is due to differences in cloud feedbacks is not as easily connected to particular experimental configurations and requires further investigation.  One of the aims of this paper is to clarify the role that clouds play in 
+these different feedback values.  
 
 
 %The LW CLR is nearly uniform across experiments due to the fundamental physics of the Planck feedback.  
@@ -687,15 +691,11 @@ have been calculated using linear regression of 1 year means over years 1-150 an
   \centering
   %\includegraphics[width=\columnwidth]{cfmipfigs/Silvers_cfmip_CRE_SinglePanel_negativesign.pdf}
   \includegraphics[width=0.5\columnwidth]{cfmipfigs/Silvers_cfmip_CRE_3Pan_vert.pdf}
-  \caption{The Cloud Radiative Effect (CRE) and CRE feedback of several CMIP6 experiments.  The top panel 
-  shows (black) the CRE from two versions of the CERES-EBAF observations compared to 
-  simulations of CRE using AM4.0 driven by the observed SST (\textit{amip}).  Also 
-  shown in the top panel is the simulated CRE from three fully coupled CM4.0 experiments (\textit{historical} (yrs. 1950-2014),
-  \textit{abrupt-4$\times$CO2} (yrs. 101-150), and \textit{1pctCO2} (yrs. 101-150)).  The middle panel shows an estimate of the 
-  CRE feedback of the data in the top panels, computed by normalized according to the warming of surface air temperature over 
-  the relevant time period.  The bottom panel shows the CRE feedback from four 
-  CFMIP experiments (\textit{amip-p4K, amip-m4K, amip-future4K, aqua-p4K}).  The sign of the \textit{amip-m4K} experiment has 
-  been reversed.}
+  \caption{The observed and modeled Cloud Radiative Effect (CRE) and CRE feedback.  The top panel 
+  shows the CRE from two versions of the CERES-EBAF observations (dashed black, version 2.8; solid black, version 4.1) as well as the CRE from four CMIP6 experiments.  These include one atmosphere only (\textit{amip}), and three fully coupled (\textit{historical} (yrs. 1950-2014), \textit{abrupt-4$\times$CO2} (yrs. 101-150), and \textit{1pctCO2} (yrs. 101-150)) experiments.  
+  The middle panel shows an estimate of the CRE feedback of the experiments in the top panel, computed by normalizing according to the     
+  warming of surface air temperature over the time period indicated in this caption, relative to the CMIP6 \textit{piControl} experiment.  
+  The bottom panel shows the CRE feedback from four CFMIP experiments (\textit{amip-p4K, amip-m4K, amip-future4K, aqua-p4K}), computed relative to the \textit{amip} and \textit{aqua-Control} experiments.  The sign of the \textit{amip-m4K} experiment has been reversed.}
   \label{fig:CRE_feedback}
 \end{figure}    
 
@@ -742,14 +742,14 @@ have been calculated using linear regression of 1 year means over years 1-150 an
 %To compute the cloud feedback based on the CRE, the control state CRE of 
 %the \textit{amip} and \textit{aqua} experiments is subtracted from the CRE in the perturbed experiment.  
 To gain further insight into the sources of differences among the CRE values in Tables  \ref{tab:lambda_AGCM}  and  
-\ref{tab:lambda_AOGCM}  we plot the observed CRE as a function of latitude alongside the CRE from the 
+\ref{tab:lambda_AOGCM}  we plot (Figure \ref{fig:CRE_feedback}) the observed CRE as a function of latitude alongside the CRE from the 
 experiments shown in Table  \ref{tab:lambda_AOGCM}.  Observations from CERES-EBAF are shown for version 
-2.8 (black dashed) and for version 4.1 (black).  During the development of AM4.0 version 2.8 of CERES-EBAF was 
-used extensively \cite{Zhao_etal_2018a}.  The distributions of CRE in warming experiments are not directly comparable 
-to observations from recent periods but rather show how potential changes in the effects of clouds vary with latitude.   
+2.8 (black dashed) and for version 4.1 (black).  
+%During the development of AM4.0 version 2.8 of CERES-EBAF was used extensively \cite{Zhao_etal_2018a}.  
+While the distributions of CRE in warming experiments are not directly comparable to observations from recent periods, they provide context for how potential changes in the effects of clouds could vary with latitude.   
 Note the large differences in the arctic and the shift poleward in the SH of the minimum in CRE.    
 
-The middle panel of Figure \ref{fig:CRE_feedback} shows the CRE feedback in the three coupled CM4.0 experiments and in the \textit{amip} experiment.  Values shown in Table \ref{tab:lambda_AOGCM} imply that the clouds present in the \textit{1pctCO$_2$} and \textit{abrupt4xCO$_2$} experiments
+The middle panel of Figure \ref{fig:CRE_feedback} shows the CRE feedback from three coupled CM4.0 experiments and the \textit{amip} experiment.  Values shown in Table \ref{tab:lambda_AOGCM} imply that the clouds present in the \textit{1pctCO$_2$} and \textit{abrupt4xCO$_2$} experiments
 do not have as much of a cooling effect as they do in the \textit{historical} and \textit{amip} experiments.  The middle panel of Figure \ref{fig:CRE_feedback} illustrates that this is due to the warming experiments having a CRE feedback that is near zero or slightly positive throughout much of the mid-latitudes and tropics while the \textit{historical} experiment shows a negative CRE feedback at nearly all latitudes.  Comparing the \textit{amip} CRE feedback to the warming experiments in the 
 middle panel of Figure \ref{fig:CRE_feedback} is more difficult due to the large positive CRE in the tropics and the very strong negative feedback between about 40-65$^{\circ}$S.  Anomalies in the middle panel of Figure \ref{fig:CRE_feedback} have been computed relative to the \textit{piControl} experiment.  The CRE and warming in Table \ref{tab:lambda_AOGCM} are 
 computed for the years 1996-2014 (\textit{historical} and \textit{amip}) and years 100-150 (\textit{1pctCO$_2$} and \textit{abrupt4xCO$_2$}).   
@@ -925,6 +925,9 @@ SST.  All experiments have far more clouds in the arctic than does the \textit{a
 \end{figure}
 
 
+While potentially confusing, we show cloud fraction anomalies computed relative to two different control experiments, \textit{piControl} and \textit{amip}.  This is important because the cloud feedback values are usually computed relative to these control experiments and we find it instructive to see how the control experiment used can influence the cloud anomalies which are found.  First, there are many similarities in the cloud anomalies regardless of the control used (e.g. Increased upper-level deep tropical and polar clouds, decreased mid-level mid-latitude clouds, and in some cases, decreases of low-level tropical clouds).  Where the anomalies differ substantively is between the low-level clouds in the high-latitude regions.  If we take the \textit{amip} experiment to be the one that is closest to the observations, then the bottom center panel shows a different of about 8\% in the cloud fraction between the \textit{amip} and \textit{piControl} experiments between $60-80^\circ$.  Is this an artifact of sea ice being prescribed in \textit{amip}??  It seems that the large diffference between the low-level clouds of this region in the amip-like and coupled experiments indicates either a sensitivity to the configuration (sea-ice differences), or the result of SST biases that are created by the coupled models.  
+
+The bottom right panel shows very clearly the different responses of clouds to the amip-p4K and amip-future4K experiments.  The low-level cloud fraction of the amip-p4K and amip-future4K are nearly identical in the NH but are not even the same sign in the SH.   
 
 %Figure \ref{fig:CF_warming}  is similar to Figure \ref{fig:calipso_amip_comparison} but focuses on
 %warming experiments.  
@@ -1205,25 +1208,25 @@ https://esgdata.gfdl.noaa.gov/search/cmip6-gfdl.
 \caption{Experiments used.   The years listed for each experiment correspond to the years specified by 
 CMIP6, except for \textit{piControl}.  In most cases these are also the years used for analysis, but some 
 figures use shorter time periods, see Figure captions for details.  }
-    \begin{tabular}{*{4}{c}}
+    \begin{tabular}{*{5}{c}}
     \hline
     \hline
- Experiment & Class & Configuration & Years   \\ \hline
-    \textit{historical}        &   DECK      &  atmosphere \& ocean   &  Jan 1850 -Dec 2014               \\ 
+ Experiment & Class & Configuration & Years  &   Data doi  \\ \hline
+    \textit{historical}        &   DECK      &  CM4.0: AOGCM   &  Jan 1850 -Dec 2014               \\ 
     \\
-    \textit{abrupt-4xCO$_2$}   & DECK       &  atmosphere \& ocean       & 150 years  \\  
+    \textit{abrupt-4xCO$_2$}   & DECK       &  CM4.0: AOGCM       & 150 years  \\  
     \\
-    \textit{1pctCO$_2$}   & DECK        &  atmosphere \& ocean  & 150 years \\  
+    \textit{1pctCO$_2$}   & DECK        &  CM4.0: AOGCM  & 150 years \\  
     \\
-    \textit{piControl}  & DECK   &  atmosphere \& ocean  &   years 250-350  \\  
+    \textit{piControl}  & DECK   &  CM4.0: AOGCM  &   years 250-350  \\  
     \\
-    \textit{amip}  & DECK \& CFMIP   &  atmosphere   & Jan 1979 - Dec 2014  \\  
+    \textit{amip}  & DECK/CFMIP   &  AM4.0: AGCM   & Jan 1979 - Dec 2014  \\  
     \\
-    \textit{amip-p4K}  & CFMIP       &  atmosphere   & Jan 1979 - Dec 2014  \\ 
-    \textit{amip-m4K}   & CFMIP       &  atmosphere   & Jan 1979 - Dec 2014 \\ 
-    \textit{amip-future4K}  & CFMIP  & atmosphere & Jan 1979 - Dec 2014 \\
-    \textit{aqua-control}        & CFMIP  & atmosphere  & 10 years \\
-    \textit{aqua-p4K}  & CFMIP    & atmosphere  &  10 years \\ \hline
+    \textit{amip-p4K}  & CFMIP       &  AM4.0: AGCM   & Jan 1979 - Dec 2014  & 10.22033/ESGF/CMIP6.8508  \\ 
+    \textit{amip-m4K}   & CFMIP       &  AM4.0: AGCM   & Jan 1979 - Dec 2014 \\ 
+    \textit{amip-future4K}  & CFMIP  & AM4.0: AGCM & Jan 1979 - Dec 2014 \\
+    \textit{aqua-control}        & CFMIP  & AM4.0: Aqua  & 10 years \\
+    \textit{aqua-p4K}  & CFMIP    & AM4.0: Aqua &  10 years \\ \hline
 
     \end{tabular}\par
     %\bigskip 
